@@ -36,7 +36,7 @@ La plus simple est de créer un objet dont le nom absolu est préfixé par ``moc
    $stdObject     = new \mock\StdClass;
 
    // création d'un bouchon à partir d'une classe inexistante
-   $anonymousMock = new \mock\My\Unknown\Class;
+   $anonymousMock = new \mock\My\Unknown\Classz;
 
 
 Le générateur de bouchon
@@ -196,7 +196,7 @@ Le ``mockController`` vous permet de redéfinir **uniquement les méthodes publi
    $this->calling($mockDbClient)->query = function(Query $query) use($result) {
        switch($query->type) {
            case Query::SELECT:
-               return $result
+               return $result;
 
            default;
                return null;

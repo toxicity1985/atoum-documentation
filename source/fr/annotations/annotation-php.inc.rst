@@ -9,12 +9,15 @@ Par défaut, sans fournir d'opérateur, le test ne sera exécuté que si la vers
 
 .. code-block:: php
 
-   /**
-    * @php 7.0
-    */
-   public function testMethod()
+   class testedClassname extends atoum\test
    {
-      // contenu du test
+      /**
+       * @php 7.0
+       */
+      public function testMethod()
+      {
+         // contenu du test
+      }
    }
 
 Dans cette exemple, le test ne sera exécuté que si la version de PHP est supérieur ou égale à PHP 7.0. Dans le cas contraire, le test sera passé et le message suivant sera affiché :
@@ -35,12 +38,15 @@ Par exemple :
 
 .. code-block:: php
 
-   /**
-    * @php < 5.4
-    */
-   public function testMethod()
+   class testedClassname extends atoum\test
    {
-      // contenu du test
+      /**
+       * @php < 5.4
+       */
+      public function testMethod()
+      {
+         // contenu du test
+      }
    }
 
 Va passé le test si la version de PHP est supérieur ou égal à PHP 5.4
@@ -53,11 +59,14 @@ Vous pouvez aussi utilisé de multiple condition, avec l'annotation ``@php``. Pa
 
 .. code-block:: php
 
-   /**
-    * @php >= 5.4
-    * @php <= 7.0
-    */
-   public function testMethod()
+   class testedClassname extends atoum\test
    {
-      // contenu du test
+      /**
+       * @php >= 5.4
+       * @php <= 7.0
+       */
+      public function testMethod()
+      {
+         // contenu du test
+      }
    }

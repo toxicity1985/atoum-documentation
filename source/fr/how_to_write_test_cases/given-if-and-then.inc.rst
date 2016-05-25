@@ -78,7 +78,7 @@ L'un d'entre eux est ``when``. Il dispose d'une fonctionnalité spécifique intr
 
 .. code-block:: php
 
-   <?php
+   <?php # ignore
    $this
        ->if($array = array(uniqid()))
        ->and(unset($array[0]))

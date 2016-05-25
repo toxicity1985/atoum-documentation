@@ -401,9 +401,8 @@ All the arguments of atoum are available.
 
 It's therefore, for example, possible to give a configuration file like this :
 
-.. code-block:: php
+.. code-block:: shell
 
-   <?php
    php symfony atoum:test -c config/atoum/hudson.php
 
 

@@ -46,7 +46,7 @@ Pour l'obtenir, il suffit de se baser sur les modèles de fichiers de configurat
 
 Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande suivante :
 
-.. code-block:: php
+.. code-block:: shell
 
    php mageekguy.atoum.phar -er /path/to/destination/directory
 
@@ -158,7 +158,7 @@ Sous OS X, vous avez la possibilité de définir une commande qui sera exécuté
    $coverage->setRootUrl('file://' . $path);
 
    $notifier = new \mageekguy\atoum\report\fields\runner\result\notifier\terminal();
-   $notifier->setCallbackCommand('open 'file://' . $path . '/index.html);
+   $notifier->setCallbackCommand('open file://' . $path . '/index.html');
 
    $report = $script->AddDefaultReport();
    $report

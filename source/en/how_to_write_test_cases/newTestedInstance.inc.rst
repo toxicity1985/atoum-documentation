@@ -60,7 +60,7 @@ To pass some arguments to the constructor, it's easy through ``newTestedInstance
 
 .. code-block:: php
 
-   $this->newTestedInstance($argument1, $argument2)
+   $this->newTestedInstance($argument1, $argument2);
 
 
 If you want to test a static method of your class, you can retrieve the tested class with this syntax:
@@ -79,4 +79,7 @@ If you want to test a static method of your class, you can retrieve the tested c
            ->if($class = $this->testedClass->getClass())
            ->then
              ->object($class::bar())
+          ;
+       }
+    }
 

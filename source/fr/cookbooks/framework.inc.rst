@@ -401,9 +401,8 @@ Toutes les paramètres d'atoum sont disponibles.
 
 Il est donc, par exemple, possible de passer un fichier de configuration comme ceci :
 
-.. code-block:: php
+.. code-block:: bash
 
-   <?php
    php symfony atoum:test -c config/atoum/hudson.php
 
 

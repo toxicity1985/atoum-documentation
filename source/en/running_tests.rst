@@ -168,7 +168,7 @@ This is easily done through annotations and the @tags tag:
    {
        public function testBar()
        {
-           ...
+           // ...
        }
    }
 
@@ -195,7 +195,7 @@ In the same way, it is also possible to tag test methods.
         */
        public function testBar()
        {
-           ...
+           // ...
        }
    }
 

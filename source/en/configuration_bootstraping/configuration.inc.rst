@@ -46,7 +46,7 @@ To get it, simply rely on models of configuration files included in atoum.
 
 If you use the PHAR archive, it must retrieve them by using the following command:
 
-.. code-block:: php
+.. code-block:: shell
 
    php mageekguy.atoum.phar -er /path/to/destination/directory
 
@@ -158,7 +158,7 @@ On OS X, you can define a command to be executed when the user clicks on the not
    $coverage->setRootUrl('file://' . $path);
 
    $notifier = new \mageekguy\atoum\report\fields\runner\result\notifier\terminal();
-   $notifier->setCallbackCommand('open 'file://' . $path . '/index.html);
+   $notifier->setCallbackCommand('open file://' . $path . '/index.html');
 
    $report = $script->AddDefaultReport();
    $report
