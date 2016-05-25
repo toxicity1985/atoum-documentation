@@ -78,7 +78,7 @@ One of them is ``when``. It has a specific feature introduced to work around tha
 
 .. code-block:: php
 
-   <?php
+   <?php # ignore
    $this
        ->if($array = array(uniqid()))
        ->and(unset($array[0]))

@@ -36,7 +36,7 @@ The simplest one is to create an object with the absolute name prefixed by ``moc
    $stdObject     = new \mock\StdClass;
 
    // creation of a mock from a non-existing class
-   $anonymousMock = new \mock\My\Unknown\Class;
+   $anonymousMock = new \mock\My\Unknown\Claass;
 
 
 The mock generator
@@ -196,7 +196,7 @@ The ``mockController`` allows you to redefine **only public and abstract protect
    $this->calling($mockDbClient)->query = function(Query $query) use($result) {
        switch($query->type) {
            case Query::SELECT:
-               return $result
+               return $result;
 
            default;
                return null;

@@ -65,12 +65,12 @@ It's also the reason why the methods  ``beforeTestMethod()`` and ``afterTestMeth
 
        public function testGetOwner()
        {
-           ...
+           // ...
        }
 
        public function testGetOperations()
        {
-           ...
+           // ...
        }
 
        public function afterTestMethod($method)

@@ -211,7 +211,7 @@ length
 .. code-block:: php
 
    <?php
-   $string = 'atoum'
+   $string = 'atoum';
 
    $this
        ->string($string)

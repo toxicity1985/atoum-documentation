@@ -20,7 +20,7 @@ To illustrate its operation, the following test will be used :
                ->call('doOtherThing')
                    ->once()
 
-       ->if($bar->setValue(uniqid())
+       ->if($bar->setValue(uniqid()))
        ->then
            ->mock($foo)
                ->call('doOtherThing')
@@ -47,7 +47,7 @@ To resolve this problem, you can reset a mock in 2 different ways :
 
        // first way
        ->given($foo->getMockController()->resetCalls())
-       ->if($bar->setValue(uniqid())
+       ->if($bar->setValue(uniqid()))
        ->then
            ->mock($foo)
                ->call('doOtherThing')
@@ -55,7 +55,7 @@ To resolve this problem, you can reset a mock in 2 different ways :
 
        // 2nd way
        ->given($this->resetMock($foo))
-       ->if($bar->setValue(uniqid())
+       ->if($bar->setValue(uniqid()))
        ->then
            ->mock($foo)
                ->call('doOtherThing')
@@ -82,7 +82,7 @@ Thanks to it, it's possible to write the previous test in a simpler and more rea
                        ->once()
 
        ->assert('Bar has a value')
-           ->if($bar->setValue(uniqid())
+           ->if($bar->setValue(uniqid()))
            ->then
                ->mock($foo)
                    ->call('doOtherThing')
