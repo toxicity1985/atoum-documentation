@@ -44,10 +44,10 @@ L'exemple ci-dessous n'a aucun sens, mais il permet de présenter plus en détai
        protected $protected;
        private $private = array();
 
-       public function publicFunction($parameter, hinting\class $optional = null)
+       public function publicFunction($parameter, hinting\claass $optional = null)
        {
            $this->public = trim((string) $parameter);
-           $this->protected = $optional ?: new hinting\class();
+           $this->protected = $optional ?: new hinting\claass();
 
            if (($variable = $this->protectedFunction()) === null)
            {
@@ -124,7 +124,7 @@ Voici également un exemple de test unitaire :
                ->then
                    ->boolean($object->publicFunction(testedClass::standardsConst))->isFalse()
                    ->boolean($object->publicFunction(testedClass::secondStandardsConst))->isTrue()
-               ->if($mock = new \mock\type\hinting\class())
+               ->if($mock = new \mock\type\hinting\claass())
                ->and($this->calling($mock)->get = null)
                ->and($object = new testedClass())
                ->then

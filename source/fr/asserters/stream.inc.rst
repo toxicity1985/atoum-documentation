@@ -18,7 +18,7 @@ isRead
 
 .. code-block:: php
 
-   <?
+   <?php
    $this
        ->given(
            $streamController = \atoum\mock\stream::get(),
@@ -49,7 +49,7 @@ isWritten
 
 .. code-block:: php
 
-   <?
+   <?php
    $this
        ->given(
            $streamController = \atoum\mock\stream::get(),
