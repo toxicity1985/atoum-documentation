@@ -1,0 +1,7 @@
+{
+    "require": {
+        "kphoen/rusty": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
