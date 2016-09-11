@@ -6,12 +6,12 @@ Running tests
 Executable
 **********
 
-atoum has an executable that allows you to run your tests with command line.
+atoum has an executable that allows you to run your tests from the command line.
 
 With phar archive
 =================
 
-If you used the phar archive, it's executable itself.
+If you used the phar archive it is already executable.
 
 linux / mac
 -----------
@@ -31,7 +31,7 @@ windows
 With sources
 ============
 
-If you use sources, the executable could be found in path/to/atoum/bin.
+If you use sources, the executable should be found in path/to/atoum/bin.
 
 linux / mac
 -----------
@@ -52,7 +52,7 @@ windows
    C:\> X:\Path\To\php.exe X:\Path\To\bin\atoum\bin
 
 
-Example in the rest of the documentation
+Examples in the rest of the documentation
 ========================================
 
 In the following examples, the commands to launch tests with atoum will be written with this syntax:
@@ -70,7 +70,7 @@ Files to run
 ************
 
 
-By files
+For specific files
 ========
 
 To run a specific file test, simply use the -f option or --files.
@@ -80,7 +80,7 @@ To run a specific file test, simply use the -f option or --files.
    $ ./bin/atoum -f tests/units/MyTest.php
 
 
-By folders
+For a folder
 ==========
 
 To run a test in a folder, simply use the -d option or --directories.
@@ -90,7 +90,7 @@ To run a test in a folder, simply use the -d option or --directories.
    $ ./bin/atoum -d tests/units
 
 
-You can find more useful arguments to give to the :ref`command line<cli-options>` in the appropriate sections.
+You can find more useful arguments to pass to the :ref`command line<cli-options>` in the relevant sections.
 
 Filters
 *******
@@ -109,7 +109,7 @@ To filter on the namespace, i.e. execute only test on given namespace, you have 
    $ ./bin/atoum -d tests/units -ns mageekguy\\atoum\\tests\\units\\asserters
 
 .. note::
-   It's important to double each backslash to prevent them from being interpreted by the shell.
+   It's important to use double backslashes to prevent them from being interpreted by the shell.
 
 
 .. _filtres-par-classe-ou-methode:
@@ -124,10 +124,10 @@ To filter on a class or a method, i.e. only run tests of a class or a method, ju
    $ ./bin/atoum -d tests/units -m mageekguy\\atoum\\tests\\units\\asserters\\string::testContains
 
 .. note::
-   It's important to double each backslash to prevent them from being interpreted by the shell.
+   It's important to use double backslashes to prevent them from being interpreted by the shell.
 
 
-You can replace the name of the class or the method by ``*`` to mean ``all``.
+You can replace the name of the class or the method with ``*`` to mean ``all``.
 
 .. code-block:: shell
 
@@ -147,7 +147,7 @@ Tags
 
 Like many tools including `Behat <http://behat.org>`_, atoum allows you to tag your unit tests and run only this with one or more specific tags.
 
-For this, we must start by defining one or more tags to one or several classes of unit tests.
+To do this, we must start by defining one or more tags to one or several classes of unit tests.
 
 This is easily done through annotations and the @tags tag:
 
@@ -199,13 +199,13 @@ In the same way, it is also possible to tag test methods.
        }
    }
 
-Once the necessary tags defined, just have to run the tests with the appropriate tags by using the option ``--tags``, or ``-t`` in its short version:
+Once the required tags are defined, just run the tests with the appropriate tags by using the option ``--tags``, or ``-t`` in its short version:
 
 .. code-block:: shell
 
    $ ./bin/atoum -d tests/units -t thisIsOneTag
 
-Be careful, this statement only makes sense if there is one or more classes of unit testing and at least one of them has the specified tag. Otherwise, no test will be executed.
+Be careful, this statement only makes sense if there is one or more classes of unit testing and at least one of them has the specified tag. If not, no test will be executed.
 
 It's possible to define several tags:
 
