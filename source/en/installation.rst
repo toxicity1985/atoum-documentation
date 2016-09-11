@@ -4,13 +4,13 @@
 Installation
 ************
 
-If you want to use it, simply download the latest version.
+If you want to use atoum, simply download the latest version.
 
-You can install atom from several ways:
+You can install atom in several ways:
 
-* by downloading the `PHAR archive`_ ;
-* with `composer`_;
-* by cloning the `Github`_ repository;
+* download the `PHAR archive`_ ;
+* use `composer`_;
+* clone the `Github`_ repository;
 * see also the :ref:`integration with your frameworks <utilisation-avec-frameworks>`.
 
 
@@ -33,17 +33,17 @@ You can download the latest stable version of atoum directly from the official w
 Update
 -----------
 
-The process to update the archive is very simple. Just run the following command:
+To update the PHAR archive, just run the following command:
 
 .. code-block:: shell
 
    $ php -d phar.readonly=0 mageekguy.atoum.phar --update
 
 .. note::
-	Update process modify the PHAR archive. But the default PHP configuration doesn't allow it. This is why it is mandatory to use the directive ``-d phar.readonly=0``.
+	The update process modifies the PHAR archive. But the default PHP configuration doesn't allow this. So it is mandatory to use the directive ``-d phar.readonly=0``.
 
 
-If a newer version is available then it will be downloaded automatically and installed in the archive:
+If a newer version is available it will be downloaded automatically and installed in the archive:
 
 .. code-block:: shell
 
@@ -66,7 +66,7 @@ atoum doesn't require any confirmation from the user to be upgraded, because it'
 List the versions contained in the archive
 --------------------------------------------
 
-You can list archive contained versions by using the argument ``--list-available-versions``, or ``-lav``:
+You can list versions in the archive by using the argument ``--list-available-versions``, or ``-lav``:
 
 .. code-block:: shell
 
@@ -75,7 +75,7 @@ You can list archive contained versions by using the argument ``--list-available
      nightly-1568-201210311708
    * nightly-2416-201402121146
 
-The list of versions in the archive is displayed, the currently active version being preceded by ``*``.
+The list of versions in the archive is displayed. The currently active version is preceded by ``*``.
 
 Change the current version
 ---------------------------
@@ -87,13 +87,13 @@ To activate another version, just use the argument ``--enable-version``, or ``-e
    $ php -d phar.readonly=0 mageekguy.atoum.phar -ev DEVELOPMENT
 
 .. note::
-	The modification of the current version requires the modification of the PHAR archive. However, by default, the configuration of PHP desn't allow it. This is why it is mandatory to use the directive ``-d phar.readonly=0``.
+	Modification of the current version requires the modification of the PHAR archive. The default PHP configuration doesn't allow this. So it is mandatory to use the directive ``-d phar.readonly=0``.
 
 
 Deleting older versions
 --------------------------------
 
-Over time, the archive may contain multiple versions of atoum who are no longer used.
+Over time, the archive may contain multiple versions of atoum which are no longer required.
 
 To remove them, just use the argument ``--delete-version``, or ``-dv`` followed by the name of the version to deleted:
 
@@ -107,7 +107,8 @@ The version is then removed.
 	It's not possible to delete the current version.
 
 .. note::
-	Deleting a version requires the modification of the PHAR archive. However, by default, the configuration of PHP desn't allow it. This is why it is mandatory to use the directive ``-d phar.readonly=0``.
+	Deleting a version requires the modification of the PHAR archive. the default PHP configuration doesn't allow this. 
+	So it is mandatory to use the directive ``-d phar.readonly=0``.
 
 
 .. _installation-par-composer:
@@ -145,4 +146,4 @@ Finally, run the following command:
 Github
 ======
 
-If you want to use atoum directly from its sources, you can clone or « fork » the github repository: git://github.com/atoum/atoum.git
+If you want to use atoum directly from source code, you can clone or « fork » the github repository: git://github.com/atoum/atoum.git
