@@ -9,7 +9,7 @@ You need to write a test class for each tested class.
 Imagine that you want to test the traditional class ``HelloWorld``, then you must create the test class ``test\units\HelloWorld``.
 
 .. note::
-	atoum use namespace. For example, to test the ``Vendor\Project\HelloWorld`` class, you must create the class ``Vendor\Project\tests\units\HelloWorld`` or ``tests\units\Vendor\Project\HelloWorld``.
+	atoum uses namespaces. For example, to test the ``Vendor\Project\HelloWorld`` class, you must create the class ``Vendor\Project\tests\units\HelloWorld`` or ``tests\units\Vendor\Project\HelloWorld``.
 
 Here is the code of the ``HelloWorld`` class that we will test.
 
@@ -40,7 +40,7 @@ Now, here is the code of the test class that we could write.
    // The namespace of the tested class + "test\units"
    namespace Vendor\Project\tests\units;
 
-   // You must include the tested class (if you have no autoloader)
+   // You must include the tested class (if you don't have an autoloader)
    require_once __DIR__ . '/../../HelloWorld.php';
 
    use atoum;
@@ -100,14 +100,14 @@ We just test that the method ``getHiAtoum``:
 * returns a :ref:`string<string-anchor>`;
 * that :ref:`is equals to<string-is-equal-to>` ``"Hi atoum !"``.
 
-The tests are passed, everything is green. Here, your code is solid as a rock with atoum!
+The tests passed, everything is green. Your code is solid as a rock with atoum!
 
 
 Dissecting the test
 *******************
-It's important you understand each thung we use in this test. So here is some information about it.
+It's important to understand each part of the test. Let's look at each section.
 
-We use the namespace ``Vendor\Project\tests\units`` where ``Vendor\Project`` is the namespace of the class and ``tests\units`` the part of the namespace use by atoum to understand that we are on test namespace. This special namespace is configurable and it's explain in the :ref:`appropriate section<cookbook_change_default-namespace>`.
-Inside the test method, we use a special syntax :ref:`given and then<given-if-and-then>` that do nothing excepting making the test more readable.
-Finally we use another simple tricks with :ref:`newTestedInstance and testedInstance<newTestedInstance>` to get a new instance of the tested class.
+First, we use the namespace ``Vendor\Project\tests\units`` where ``Vendor\Project`` is the namespace of the class and ``tests\units`` the part of the namespace use by atoum to understand that we are in the test namespace. This special namespace is configurable as explained in the :ref:`appropriate section<cookbook_change_default-namespace>`.
+Then, inside the test method, we use a special syntax :ref:`given and then<given-if-and-then>`. They do nothing other than making the test more readable.
+Finally we use a couple more simple tricks, :ref:`newTestedInstance and testedInstance<newTestedInstance>` to get a new instance of the tested class.
 
