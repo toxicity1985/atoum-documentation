@@ -11,9 +11,9 @@ What is atoum?
 atoum is a unit test framework like PHPUnit or SimpleTest, but it has a few advantages over these:
 
 * It's modern and uses the innovations of latest PHP versions;
-* It is simple and easy to learn;
-* It is intuitive, its syntax is to be as close to the English natural language;
-* despite the constant changes of atoum, backward compatibility is one of the priorities of its developers.
+* It's simple and easy to learn;
+* It's intuitive because its syntax is close to the English natural language;
+* despite constant changes to atoum, backward compatibility is one of the priorities of its developers.
 
 You can find more information on the `official website <http://atoum.org/>`_.
 
