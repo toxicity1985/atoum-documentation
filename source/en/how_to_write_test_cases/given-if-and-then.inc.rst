@@ -1,5 +1,5 @@
 
-There are several ways to write unit test with atoum, one of them is to use keywords like ``given``, ``if``, ``and`` and even ``then``, ``when``  or ``assert`` so you can structure the tests, making them more readable.
+There are several ways to write unit test with atoum, one of them is to use keywords like ``given``, ``if``, ``and`` and even ``then``, ``when``  or ``assert`` so you can structure your tests to make them more readable.
 
 .. _given-if-and-then:
 
@@ -25,13 +25,13 @@ You can use these keywords very intuitively:
                ->isEqualTo(4)
    ;
 
-It's important to note that these keywords don't have any another purpose than giving the test a more readable form. They don't supplement the test with any technical effect. The only goal here is to help the reader, human or more specifically developer, to understand what's happening in the test.
+It's important to note that these keywords don't have any another purpose than presenting the test in a more readable format. They don't serve any technical purpose. The only goal is to help the reader, human or more specifically developer, to quickly understand what's happening in the test.
 
-Thus, ``given``, ``if`` and ``and`` specify the prerequisites assertions that follows the keyword ``then`` pass.
+Thus, ``given``, ``if`` and ``and`` specify the prerequisite assertions that follow the keyword ``then`` to pass.
 
-However, no grammar is ruling the order nor the syntax of these keywords in atoum.
+However, there are no rules or grammar that dictate the order ot syntax of these keywords in atoum.
 
-As a result, the developer has to use the keywords wisely in order to make the test as readable as possible. Wrongly used, you could end up with tests written like the following :
+As a result, the developer should use the keywords wisely in order to make the test as readable as possible. If used incorrectly you could end up with tests like the following :
 
 .. code-block:: php
 
@@ -65,7 +65,7 @@ Notice that you can write the exact same test without using any of the previous 
            ->isEqualTo(4)
    ;
 
-The test will not be slower or faster to run and there is no advantage to use one notation or another, the important thing is to choose one and stick to it. In this way it will facilitate maintenance of the tests (the problem is exactly the same as coding conventions).
+The test will not be slower or faster to run and there is no advantage to use one notation or another, the important thing is to choose one format and stick to it. This facilitates maintenance of the tests (the problem is exactly the same as coding conventions).
 
 .. _when:
 
@@ -74,7 +74,7 @@ when
 
 In addition to ``given``, ``if``, ``and`` and ``then``, there are also other keywords.
 
-One of them is ``when``. It has a specific feature introduced to work around that it is illegal to write the following PHP code :
+One of them is ``when``. It has a specific feature introduced to work around the fact that it is illegal to write the following PHP code :
 
 .. code-block:: php
 
@@ -87,7 +87,7 @@ One of them is ``when``. It has a specific feature introduced to work around tha
                ->isZero()
    ;
 
-Indeed, the language generate in this case a fatal error: ``Parse error: syntax error, unexpected 'unset' (T_UNSET), expecting ')'``
+In this case the language will generate a fatal error: ``Parse error: syntax error, unexpected 'unset' (T_UNSET), expecting ')'``
 
 It is impossible to use ``unset()`` as an argument of a function.
 
@@ -108,4 +108,4 @@ To resolve this problem, the keyword ``when`` is able to interpret the possible 
            ->isZero()
    ;
 
-Of course, if ``when`` doesn't received an anonymous function as an argument, it behaves exactly as ``given``, ``if``, ``and`` and ``then``, namely that it does absolutely nothing functionally speaking.
+Of course, if ``when`` doesn't receive an anonymous function as an argument, it behaves exactly as ``given``, ``if``, ``and`` and ``then``, namely that it does absolutely nothing functionally speaking.
