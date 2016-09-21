@@ -58,7 +58,7 @@ In this directory, there is, among other interesting things, a template of confi
 
 After copying the file, just have to change it with the editor of your choice to define the directory where the HTML files will be generated and the URL from which the report should be accessible.
 
-For exemple:
+For example:
 
 .. code-block:: php
 
