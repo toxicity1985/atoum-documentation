@@ -22,7 +22,7 @@ Il faut donc modifier l'expression régulière utilisée, ceci est possible de p
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -47,7 +47,7 @@ Cette méthode est simple et rapide à mettre en œuvre, mais elle présente l'i
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -75,7 +75,7 @@ La méthode ``atoum\test::setTestNamespace()`` accepte en effet un unique argume
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -98,7 +98,7 @@ Ainsi, vous n'aurez plus qu'à faire dériver vos classes de tests unitaires de 
 
    namespace vendor\project\my\tests\modules;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
    use vendor\project\my\tests;
@@ -132,7 +132,7 @@ Cependant, en règle général, l'espace de nom utilisé pour les classes de tes
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 

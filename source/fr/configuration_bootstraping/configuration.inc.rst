@@ -48,7 +48,7 @@ Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande su
 
 .. code-block:: shell
 
-   php mageekguy.atoum.phar -er /path/to/destination/directory
+   php atoum.phar -er /path/to/destination/directory
 
 Une fois l'extraction effectuée, vous devriez avoir dans le répertoire /path/to/destination/directory un répertoire nommé resources/configurations/runner.
 

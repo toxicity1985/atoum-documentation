@@ -30,7 +30,7 @@ Il est donc nécessaire de définir une classe de test de base, dérivée de ``\
 
 	use mageekguy\atoum;
 
-	require_once __DIR__ . '/mageekguy.atoum.phar';
+	require_once __DIR__ . '/atoum.phar';
 
 	// Autoloading : eZ
 	require 'autoload.php';
@@ -86,7 +86,7 @@ Une fois une classe de test créée, il suffit d'exécuter en ligne de commande 
 
 .. code-block:: shell
 
-	# php tests/atoum/mageekguy.atoum.phar -d tests/atoum/units
+	# php tests/atoum/atoum.phar -d tests/atoum/units
 
 
 Merci `Jérémy Poulain <https://github.com/Tharkun>`_ pour ce tutoriel.
@@ -183,7 +183,7 @@ Créez un fichier Test.php qui servira de base à tous les futurs tests de ce Bu
    use mageekguy\atoum;
 
    // Pour Symfony 2.0 uniquement !
-   require_once __DIR__ . '/../../../../../vendor/mageekguy.atoum.phar';
+   require_once __DIR__ . '/../../../../../vendor/atoum.phar';
 
    abstract class Test extends atoum
    {
@@ -254,10 +254,10 @@ Si vous utilisez Symfony 2.0:
 .. code-block:: shell
 
    # Lancement des tests d'un fichier
-   $ php vendor/mageekguy.atoum.phar -f src/Acme/DemoBundle/Tests/Units/Entity/Car.php
+   $ php vendor/atoum.phar -f src/Acme/DemoBundle/Tests/Units/Entity/Car.php
 
    # Lancement de tous les tests du Bundle
-   $ php vendor/mageekguy.atoum.phar -d src/Acme/DemoBundle/Tests/Units
+   $ php vendor/atoum.phar -d src/Acme/DemoBundle/Tests/Units
 
 Si vous utilisez Symfony 2.1+:
 
