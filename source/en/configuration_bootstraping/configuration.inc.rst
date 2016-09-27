@@ -1,13 +1,13 @@
 .. _fichier-de-configuration:
 
 Configuration file
-************************
+******************
 
 If you name your configuration file ``.atoum.php``, atoum will load it automatically if this file is located in the current directory. The ``-c`` parameter is optional in this case.
 
 
 Code coverage
-==================
+=============
 
 By default, if PHP has the extension `Xdebug <http://xdebug.org>`_, atoum indicates in command line report, the rate of tests code coverage.
 
