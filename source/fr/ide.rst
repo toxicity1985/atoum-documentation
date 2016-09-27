@@ -33,7 +33,7 @@ Si vous utilisez l'archive PHAR, il faut extraire le fichier à l'aide de la com
 
 .. code-block:: shell
 
-   $ php mageekguy.atoum.phar --extractResourcesTo path/to/a/directory
+   $ php atoum.phar --extractResourcesTo path/to/a/directory
 
 Une fois l'extraction réalisée, le fichier ``atoum.vmb`` correspondant au plug-in pour VIM sera dans le répertoire ``path/to/a/directory/resources/vim``.
 

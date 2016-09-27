@@ -36,7 +36,7 @@ Le fichier de ``bootstrap`` doit donc au minimum contenir ceci :
    <?php
 
    // si l'archive PHAR est utilisée :
-   require_once path/to/mageekguy.atoum.phar;
+   require_once path/to/atoum.phar;
 
    // ou si les sources sont utilisées :
    // require_once path/atoum/scripts/runner.php
