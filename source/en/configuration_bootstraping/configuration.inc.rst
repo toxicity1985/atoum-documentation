@@ -127,6 +127,7 @@ Will disable the coverage of the methods.
        ->hideClassesCoverageDetails()
        ->hideMethodsCoverageDetails();
 
+.. _reports-configuration:
 
 Report configuration
 ''''''''''''''''''''
