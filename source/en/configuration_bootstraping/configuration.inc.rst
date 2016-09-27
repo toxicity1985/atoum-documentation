@@ -191,9 +191,9 @@ Treemap report
    <?php
    $report = $script->addDefaultReport();
 
-   $coverageField = new atoum\report\fields\runner\coverage\html('Your Project Name', __DIR__ . '/reports');
+   $coverageHtmlField = new atoum\report\fields\runner\coverage\html('Your Project Name', __DIR__ . '/reports');
    // Please replace in next line http://url/of/web/site by the root url of your code coverage web site.
-   $coverageField->setRootUrl('http://url/of/web/site');
+   $coverageHtmlField->setRootUrl('http://url/of/web/site');
    $report->addField($coverageField);
 
    $coverageTreemapField = new atoum\report\fields\runner\coverage\treemap('Your project name', __DIR__ . '/reports');
