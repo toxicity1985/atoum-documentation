@@ -94,6 +94,19 @@ For more details on the use of plug-in, help is available in VIM with the follow
 
    :help atoum
 
+Coverage reports inide vim
+==========================
+
+You can configure a specific :ref:`report<reports-using>` for the coverage in vim. In you atoum configuration file, set:
+
+... code-block:: php
+
+   <?php
+   use \mageekguy\atoum;
+   $vimReport = new atoum\reports\asynchronous\vim();
+   $vimReport->addWriter($stdOutWriter);
+   $runner->addReport($vimReport);
+
 .. _ide_phpstorm:
 
 PhpStorm

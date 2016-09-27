@@ -1,3 +1,5 @@
+.. _fun-with-atoum:
+
 Having fun with atoum
 *********************
 
@@ -16,3 +18,5 @@ To do this in the  :ref:`configuration file <fichier-de-configuration>` of atoum
 	$stdout = new \mageekguy\atoum\writers\std\out;
 	$report = new \mageekguy\atoum\reports\realtime\nyancat;
 	$script->addReport($report->addWriter($stdout));
+
+You should also try ``\mageekguy\atoum\reports\realtime\santa`` reports ;)

@@ -7,7 +7,7 @@ The configuration file is the way you can configure the way atoum works.
 
 The default name of the file is ``.atoum.php``, atoum will load it automatically if this file is located in the current directory. You can define it through the cli with ``-c``.
 
-If you have in one of the parent directory a ``.atoum.php`` it will be also loaded. So you can have a default configuration to have the loop or debug mode activated by default.
+If you have in one of the parent directory a ``.atoum.php`` it will also be loaded. So you can have a default configuration to have the loop or debug mode activated by default.
 
 
 .. _coverage-code-config:
@@ -15,7 +15,8 @@ If you have in one of the parent directory a ``.atoum.php`` it will be also load
 Code coverage
 =============
 
-By default, if PHP has the extension `Xdebug <http://xdebug.org>`_, atoum indicates in command line report, the rate of tests code coverage.
+By default, if PHP has the extension `Xdebug <http://xdebug.org>`_, atoum indicates in command line report, the rate of tests code coverage. Some change in the behaviour of
+coverage can be adapt through the :ref:`cli options<cli-options-coverage_reports>`.
 
 If the coverage rate is 100%, atoum merely indicated. But otherwise, it displays the overall coverage and that of each method of the class tested in the form of a percentage.
 
@@ -99,44 +100,23 @@ Once the tests run, atoum generate the code coverage report in HTML format in th
 .. note::
    The calculation of code coverage by tests as well as the generation of the corresponding report may slow significantly the performance of the tests. Then it can be interesting, not to systematically use the corresponding configuration file, or disable them temporarily using the -ncc argument.
 
+.. _reports-using:
+
 Using standard reports
-----------------------
+======================
 
-To help you making reports, there is an :ref:`extension<extensions>` dedicated to the reports called ``reports-extension``.
-
-.. _reports-cli:
-
-CLI report
-''''''''''
-
-The CLI report is the report you have when you launch the test. Some options are directly available :
-
-hideClassesCoverageDetails
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Will disable the coverage of the class.
-
-hideMethodsCoverageDetails
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Will disable the coverage of the methods.
-
-.. code-block:: php
-
-   $script->addDefaultReport()
-       ->hideClassesCoverageDetails()
-       ->hideMethodsCoverageDetails();
+To help you making reports, there is an :ref:`extension<extensions>` dedicated to the reports called ``reports-extension``. But there is some :ref:`fun reports<fun-with-atoum>`  too.
 
 .. _reports-configuration:
 
 Report configuration
-''''''''''''''''''''
+--------------------
 
-enableBranchAndPathCoverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Branch and path coverage
+''''''''''''''''''''''''
 
 You can enable the coverage of branch and path inside the configuration with ``enableBranchAndPathCoverage``. This will improve the value of the code coverage by not only
-checking that the method in the code are called but also that each branch is called. To make it simple, if you have an ``if`` the coverage report will change if you check the
+checking  the method in the code called, but also that each branch is called. To make it simple, if you have an ``if`` the coverage report will change if you check the
 else.
 
 .. code-block:: php
@@ -149,6 +129,79 @@ else.
    # with branch and path coverage
    => Class Foo\Bar: Line: 31.46% Path: 1.50% Branch: 26.06%
 
+Disabling coverage for a class
+''''''''''''''''''''''''''''''
+
+If you want to exclude some class from coverage, you can use ``$script->noCodeCoverageForClasses(\myClass::class)``.
+
+.. _report-html-basic:
+
+HTML report
+-----------
+
+By default atoum provide a basic html report. For advanced html report, you should use the reports-extension.
+
+.. code-block:: php
+
+   <?php
+   $report = $script->addDefaultReport();
+   $coverageField = new atoum\report\fields\runner\coverage\html('Your Project Name', __DIR__ . '/reports');
+   // Please replace in next line http://url/of/web/site by the root url of your code coverage web site.
+   $coverageField->setRootUrl('http://url/of/web/site');
+   $report->addField($coverageField);
+
+.. _reports-cli:
+
+CLI report
+----------
+
+The CLI report is the report you have when you launch the test. there is several options available
+
+* hideClassesCoverageDetails: Will disable the coverage of the class.
+* hideMethodsCoverageDetails: Will disable the coverage of the methods.
+
+.. code-block:: php
+
+   <?php
+   $script->addDefaultReport() // in default reports there is the cli report
+       ->hideClassesCoverageDetails()
+       ->hideMethodsCoverageDetails();
+
+Displaying the logo of atoum
+''''''''''''''''''''''''''''
+
+.. code-block:: php
+
+   <?php
+   $report = $script->addDefaultReport();
+
+   // This will add the atoum logo before each run.
+   $report->addField(new atoum\report\fields\runner\atoum\logo());
+
+   // This will add a green or red logo after each run depending on its status.
+   $report->addField(new atoum\report\fields\runner\result\logo());
+
+
+Treemap report
+--------------
+
+
+.. code-block:: php
+
+   <?php
+   $report = $script->addDefaultReport();
+
+   $coverageField = new atoum\report\fields\runner\coverage\html('Your Project Name', __DIR__ . '/reports');
+   // Please replace in next line http://url/of/web/site by the root url of your code coverage web site.
+   $coverageField->setRootUrl('http://url/of/web/site');
+   $report->addField($coverageField);
+
+   $coverageTreemapField = new atoum\report\fields\runner\coverage\treemap('Your project name', __DIR__ . '/reports');
+   $coverageTreemapField
+      ->setTreemapUrl('http://url/of/treemap')
+      ->setHtmlReportBaseUrl($coverageHtmlField->getRootUrl())
+
+   $report->addField($coverageTreemapField);
 
 .. _notifications-anchor:
 
@@ -261,3 +314,34 @@ Then just add the following code to your configuration file:
    $report = $script->AddDefaultReport();
    $report->addField($notifier, array(atoum\runner::runStop));
 
+.. _configuration-test:
+
+Configuration of the test
+=========================
+
+A lot of possibility to configure the way atoum will find and execute the test is available. You can use the arguments in the cli or the configuration file.
+Because, a simple code will explain a lot more than a long text, just read this:
+
+.. code-block:: php
+
+   <?php
+   $testGenerator = new atoum\test\generator();
+
+   // your unit test's directory. (-d)
+   $testGenerator->setTestClassesDirectory(__DIR__ . '/test/units');
+
+   // your unit test's namespace.
+   $testGenerator->setTestClassNamespace('your\project\namespace\tests\units');
+
+   // your unit test's runner.
+   $testGenerator->setRunnerPath('path/to/your/tests/units/runner.php');
+
+   $script->getRunner()->setTestGenerator($testGenerator);
+
+You can also define the directory of your test with ``$runner->addTestsFromDirectory(path)``. atoum will load all the class that can be tested from this directory like you can do
+with :ref:`-d<cli-options-directories>` argument in cli.
+
+.. code-block:: php
+
+   <?php
+   $runner->addTestsFromDirectory(__DIR__ . '/test/units');
