@@ -104,6 +104,50 @@ Using standard reports
 
 To help you making reports, there is an :ref:`extension<extensions>` dedicated to the reports called ``reports-extension``.
 
+.. _reports-cli:
+
+CLI report
+''''''''''
+
+The CLI report is the report you have when you launch the test. Some options are directly available :
+
+hideClassesCoverageDetails
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Will disable the coverage of the class.
+
+hideMethodsCoverageDetails
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Will disable the coverage of the methods.
+
+.. code-block:: php
+
+   $script->addDefaultReport()
+       ->hideClassesCoverageDetails()
+       ->hideMethodsCoverageDetails();
+
+
+Report configuration
+''''''''''''''''''''
+
+enableBranchAndPathCoverage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can enable the coverage of branch and path inside the configuration with ``enableBranchAndPathCoverage``. This will improve the value of the code coverage by not only
+checking that the method in the code are called but also that each branch is called. To make it simple, if you have an ``if`` the coverage report will change if you check the
+else.
+
+.. code-block:: php
+
+   $script->enableBranchAndPathCoverage();
+
+.. code-block:: shell
+
+   => Class Foo\Bar: Line: 31.46%
+   # with branch and path coverage
+   => Class Foo\Bar: Line: 31.46% Path: 1.50% Branch: 26.06%
+
 
 .. _notifications-anchor:
 
