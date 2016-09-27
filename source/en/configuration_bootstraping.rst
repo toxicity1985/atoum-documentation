@@ -11,6 +11,9 @@ We can have a simplified view of theses special files with:
 #. Load the configuration file
 #. Load the bootstrap file
 
+.. note::
+	All of theses files are optional!
+
 .. include:: configuration_bootstraping/autoloader.inc.rst
 .. include:: configuration_bootstraping/configuration.inc.rst
 .. include:: configuration_bootstraping/bootstrap.inc.rst

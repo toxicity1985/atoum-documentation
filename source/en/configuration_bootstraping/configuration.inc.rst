@@ -50,6 +50,9 @@ However, it is possible to get a more accurate representation of the rate of cod
 
 To get it, simply rely on models of configuration files included in atoum.
 
+Phar users
+----------
+
 If you use the PHAR archive, it must retrieve them by using the following command:
 
 .. code-block:: shell
@@ -58,7 +61,13 @@ If you use the PHAR archive, it must retrieve them by using the following comman
 
 Once the extraction is done, you should have in the "directory/path/to/destination/directory" a directory called "resources/configurations/runner".
 
+Composer users
+--------------
+
 If you are using atoum with a github repository clone :ref:`installation-par-github` or with composer :ref:`installation-par-composer`, the models can be found in ``/path/to/atoum/resources/configurations/runner``
+
+Custom coverage reports
+-----------------------
 
 In this directory, there is, among other interesting things, a template of configuration file for atoum named ``coverage.php.dist`` that you need to copy to the location of your choice. Rename the ``coverage.php``.
 
@@ -79,7 +88,7 @@ For example:
    It is also possible to change the title of the report using the first argument to the constructor of the class ``mageekguy\atoum\report\fields\runner\coverage\html``.
 
 
-Once this is done, you just have to use the configuration file when running the tests, as follows:
+Once this is done, you just have to use the configuration file (or include it in your configuration file) when running the tests, as follows:
 
 .. code-block:: shell
 
@@ -89,6 +98,11 @@ Once the tests run, atoum generate the code coverage report in HTML format in th
 
 .. note::
    The calculation of code coverage by tests as well as the generation of the corresponding report may slow significantly the performance of the tests. Then it can be interesting, not to systematically use the corresponding configuration file, or disable them temporarily using the -ncc argument.
+
+Using standard reports
+----------------------
+
+To help you making reports, there is an :ref:`extension<extensions>` dedicated to the reports called ``reports-extension``.
 
 
 .. _notifications-anchor:
