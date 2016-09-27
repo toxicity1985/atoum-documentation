@@ -18,14 +18,14 @@ linux / mac
 
 .. code-block:: shell
 
-   $ php path/to/mageekguy.atoum.phar
+   $ php path/to/atoum.phar
 
 windows
 -------
 
 .. code-block:: shell
 
-   C:\> X:\Path\To\php.exe X:\Path\To\mageekguy.atoum.phar
+   C:\> X:\Path\To\php.exe X:\Path\To\atoum.phar
 
 
 With sources
@@ -157,7 +157,7 @@ This is easily done through annotations and the @tags tag:
 
    namespace vendor\project\tests\units;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -184,7 +184,7 @@ In the same way, it is also possible to tag test methods.
 
    namespace vendor\project\tests\units;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 

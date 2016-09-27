@@ -54,7 +54,7 @@ If you use the PHAR archive, it must retrieve them by using the following comman
 
 .. code-block:: shell
 
-   php mageekguy.atoum.phar -er /path/to/destination/directory
+   php atoum.phar -er /path/to/destination/directory
 
 Once the extraction is done, you should have in the "directory/path/to/destination/directory" a directory called "resources/configurations/runner".
 

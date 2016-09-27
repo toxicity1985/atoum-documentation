@@ -27,7 +27,7 @@ PHAR est un format d'archive applicative pour PHP.
 Installation
 ------------
 
-Vous pouvez télécharger la dernière version stable d'atoum directement depuis le site officiel : `http://downloads.atoum.org/nightly/mageekguy.atoum.phar <http://downloads.atoum.org/nightly/mageekguy.atoum.phar>`_
+Vous pouvez télécharger la dernière version stable d'atoum directement depuis le site officiel : `http://downloads.atoum.org/nightly/atoum.phar <http://downloads.atoum.org/nightly/atoum.phar>`_
 
 
 Mise à jour
@@ -37,7 +37,7 @@ La mise à jour de l'archive est très simple. Il vous suffit de lancer la comma
 
 .. code-block:: shell
 
-   $ php -d phar.readonly=0 mageekguy.atoum.phar --update
+   $ php -d phar.readonly=0 atoum.phar --update
 
 .. note::
 	Le processus de mise à jour modifie l'archive PHAR. Cependant, par défaut la configuration de PHP ne l'autorise pas. Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
@@ -47,7 +47,7 @@ Si une version plus récente existe, elle sera alors téléchargée automatiquem
 
 .. code-block:: shell
 
-   $ php -d phar.readonly=0 mageekguy.atoum.phar --update
+   $ php -d phar.readonly=0 atoum.phar --update
    Checking if a new version is available... Done !
    Update to version 'nightly-2416-201402121146'... Done !
    Enable version 'nightly-2416-201402121146'... Done !
@@ -57,7 +57,7 @@ S'il n'existe pas de version plus récente, atoum s'arrêtera immédiatement :
 
 .. code-block:: shell
 
-   $ php -d phar.readonly=0 mageekguy.atoum.phar --update
+   $ php -d phar.readonly=0 atoum.phar --update
    Checking if a new version is available... Done !
    There is no new version available !
 
@@ -70,7 +70,7 @@ Vous pouvez lister les versions disponibles dans les archives en utilisant ``--l
 
 .. code-block:: shell
 
-   $ php mageekguy.atoum.phar -lav
+   $ php atoum.phar -lav
      nightly-941-201201011548
      nightly-1568-201210311708
    * nightly-2416-201402121146
@@ -84,7 +84,7 @@ Pour activer une autre version, il suffit d'utiliser l'argument ``--enable-versi
 
 .. code-block:: shell
 
-   $ php -d phar.readonly=0 mageekguy.atoum.phar -ev DEVELOPMENT
+   $ php -d phar.readonly=0 atoum.phar -ev DEVELOPMENT
 
 .. note::
 	La modification de la version courante nécessite la modification de l'archive PHAR. Or par défaut, la configuration de php ne l'autorise pas. Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
@@ -99,7 +99,7 @@ Pour les supprimer, il suffit d'utiliser l'argument ``--delete-version``, ou ``-
 
 .. code-block:: shell
 
-   $ php -d phar.readonly=0 mageekguy.atoum.phar -dv nightly-941-201201011548
+   $ php -d phar.readonly=0 atoum.phar -dv nightly-941-201201011548
 
 La version est alors supprimée.
 
