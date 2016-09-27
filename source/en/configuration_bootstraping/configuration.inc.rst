@@ -199,7 +199,7 @@ Treemap report
    $coverageTreemapField = new atoum\report\fields\runner\coverage\treemap('Your project name', __DIR__ . '/reports');
    $coverageTreemapField
       ->setTreemapUrl('http://url/of/treemap')
-      ->setHtmlReportBaseUrl($coverageHtmlField->getRootUrl())
+      ->setHtmlReportBaseUrl($coverageHtmlField->getRootUrl());
 
    $report->addField($coverageTreemapField);
 
