@@ -10,6 +10,10 @@ Asserters collection
 ..    :depth: 2
 ..    :local:
 
+
+.. note::
+	All asserters can be called with or without parenthesis. ``$this->integer(0)->isZero()`` is the same as ``$this->integer(0)->isZero``.
+
 .. include:: asserters/afterDestructionOf.inc.rst
 .. include:: asserters/array.inc.rst
 .. include:: asserters/boolean.inc.rst
