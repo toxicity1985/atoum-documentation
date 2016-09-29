@@ -16,7 +16,7 @@ In atoum we have several asserters and related assertions. All are listed here. 
 .. note::
 	At the end of this chapter you will find several :ref:`tips & tricks<asserter_tips>` related to assertion and asserter, don't forget to read it!
 
-.. please keep this ordered in an alphabetic wayi thanks
+.. please keep this ordered in an alphabetic way thanks
 
 .. include:: asserters/afterDestructionOf.inc.rst
 .. include:: asserters/array.inc.rst

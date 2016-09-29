@@ -3,7 +3,7 @@
 Configuration & bootstraping
 ############################
 
-When atoum start several steps will be involved, some of them can be influenced by some special files.
+When atoum start, several steps will be involved, some of them can be influenced by some special files.
 
 We can have a simplified view of theses special files with:
 
@@ -12,7 +12,10 @@ We can have a simplified view of theses special files with:
 #. Load the bootstrap file
 
 .. note::
-	All of theses files are optional! You can use atoum ``--init`` to generate theses files.
+	All of theses files are optional!
+
+.. note::
+	You can use atoum ``--init`` to generate theses files.
 
 .. include:: configuration_bootstraping/autoloader.inc.rst
 .. include:: configuration_bootstraping/configuration.inc.rst

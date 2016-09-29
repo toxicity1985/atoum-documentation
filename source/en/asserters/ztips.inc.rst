@@ -5,9 +5,10 @@ Asserter & assertion tips
 
 Several tips & trick are available for the assertion. Knowing them can simplify your life ;)
 
-The first one is that all assertion are fluent. So you can chain them, just look at the previous example.
+The first one is that all assertion are fluent. So you can chain them, just look at the previous examples.
 
-You should also know that all assertions can be written with or without parenthesis. So ``$this->integer(0)->isZero()`` is the same as ``$this->integer(0)->isZero``.
+You should also know that all assertions without parameter can be written with or without parenthesis. So ``$this->integer(0)->isZero()`` is the same as ``$this->integer(0)
+->isZero``.
 
 .. _asserter_tips-alias:
 
@@ -46,8 +47,6 @@ TODO
 
 Custom asserter
 ===============
-
-TODO
 
 .. https://github.com/jubianchi/jubianchi.github.io/blob/371b9da3232cfa5b8ad5b7b9dc8860ff39fb663b/atoum-alias.md
 
@@ -88,8 +87,6 @@ TODO
 
 Short syntax
 ============
-
-TODO
 
 .. code-block:: php
 
