@@ -86,8 +86,8 @@ TODO
 
 .. _asserter_tips-short:
 
-Short synthaxe
-==============
+Short syntax
+============
 
 TODO
 

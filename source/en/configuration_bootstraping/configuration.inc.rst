@@ -3,7 +3,7 @@
 Configuration file
 ******************
 
-The configuration file is the way you can configure the way atoum works.
+The configuration file is the way you can configure how atoum works.
 
 The default name of the file is ``.atoum.php``, atoum will load it automatically if this file is located in the current directory. You can define it through the cli with ``-c``.
 
@@ -318,8 +318,7 @@ Then just add the following code to your configuration file:
 
 Configuration of the test
 =========================
-
-A lot of possibility to configure the way atoum will find and execute the test is available. You can use the arguments in the cli or the configuration file.
+A lot of possibility to configure how atoum will find and execute the test is available. You can use the arguments in the cli or the configuration file.
 Because, a simple code will explain a lot more than a long text, just read this:
 
 .. code-block:: php
