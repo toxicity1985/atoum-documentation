@@ -7,9 +7,9 @@ When atoum start, several steps will be involved, some of them can be influenced
 
 We can have a simplified view of theses special files with:
 
-#. Load the autoloader file
-#. Load the configuration file
-#. Load the bootstrap file
+#. Load the :ref:`autoloader file<autoloader_file>`
+#. Load the :ref:`configuration file<fichier-de-configuration>`
+#. Load the :ref:`bootstrap file<bootstrap_file>`
 
 .. note::
 	All of theses files are optional!

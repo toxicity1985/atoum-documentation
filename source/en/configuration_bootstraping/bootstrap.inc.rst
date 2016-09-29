@@ -8,9 +8,9 @@ atoum allows the definition of a ``bootstrap`` file, which will be run before ea
 
 The default name of the file is ``.bootstrap.atoum.php``, atoum will load it automatically if this file is located in the current directory. You can define it through the cli with ``-bf`` or ``--bootstrap-file``.
 
-This makes possible to define, for example, the reading of a configuration file or perform any other operation necessary for the proper performance of the tests.
+This makes possible to define, for example, the reading of a configuration file or perform any other operation necessary for the proper execution of the tests.
 
-The definition of this ``bootstrap`` file can be done in two different ways, either in command line, or via a configuration file.
+The definition of this bootstrap file can be done in two different ways, either in command line, or via a configuration file.
 
 .. code-block:: shell
 
