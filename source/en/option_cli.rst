@@ -1,7 +1,7 @@
 .. _cli-options:
 
 Command line options
-##############################
+####################
 
 Most options exist in 2 forms, a short from 1 to 6 characters and a long more explicit. These two forms do strictly the same thing. You can use indifferently the both form.
 
@@ -28,12 +28,24 @@ Some options accept multiple values:
 Configuration & bootstrap
 *************************
 
+.. _cli-options-autoloader_file:
+
+-af <file> / --autoloader-file <file>
+=====================================
+
+This option allows you to specify the path to the :ref:`autoloader file<autoloader_file>`.
+
+.. code-block:: shell
+
+   $ ./bin/atoum -af /path/to/autloader.php
+   $ ./bin/atoum --autoloader-file /path/to/autoloader.php
+
 .. _cli-options-bootstrap_file:
 
 -bf <file> / --bootstrap-file <file>
 ====================================
 
-This option allows you to specify the path to the bootstrap file.
+This option allows you to specify the path to the :ref:`bootstrap file<bootstrap_file>`.
 
 .. code-block:: shell
 
@@ -46,7 +58,7 @@ This option allows you to specify the path to the bootstrap file.
 -c <file> / --configuration <file>
 ==================================
 
-This option allows you to specify the path to the configuration file used for running the tests.
+This option allows you to specify the path to the :ref:`configuration file<fichier-de-configuration>` used for running the tests.
 
 .. code-block:: shell
 
@@ -219,6 +231,7 @@ This option allows you to activate the loop mode of atoum.
 .. note::
    Refer to the section on the :ref:`mode-loop` for more information.
 
+.. _cli-options-coverage_reports:
 
 Coverage & reports
 ******************

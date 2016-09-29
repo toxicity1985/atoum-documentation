@@ -53,7 +53,7 @@ windows
 
 
 Examples in the rest of the documentation
-========================================
+=========================================
 
 In the following examples, the commands to launch tests with atoum will be written with this syntax:
 
@@ -71,7 +71,7 @@ Files to run
 
 
 For specific files
-========
+==================
 
 To run a specific file test, simply use the -f option or --files.
 
@@ -81,7 +81,7 @@ To run a specific file test, simply use the -f option or --files.
 
 
 For a folder
-==========
+============
 
 To run a test in a folder, simply use the -d option or --directories.
 

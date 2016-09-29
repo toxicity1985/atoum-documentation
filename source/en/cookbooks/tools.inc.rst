@@ -105,6 +105,8 @@ It's very simple to  the results of atoum to `Jenkins <http://jenkins-ci.org/>`_
 Step1: Add a xUnit report to the configuration of atoum
 -------------------------------------------------------
 
+Like other coverage report, you can use specific :ref:`report<reports-using>` from the configuration.
+
 If you don't have a configuration file
 """"""""""""""""""""""""""""""""""""""
 
@@ -131,7 +133,7 @@ There is one last step, edit this file to set the path to the xUnit report where
 If you already have a configuration file
 """"""""""""""""""""""""""""""""""""""""
 
-If you already have a configuration file, simply add the following lines :
+If you already have a configuration file, simply add the following lines:
 
 .. code-block:: php
 
