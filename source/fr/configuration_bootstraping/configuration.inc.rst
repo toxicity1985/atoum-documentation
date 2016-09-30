@@ -106,41 +106,7 @@ Une fois les tests exécutés, atoum génèrera alors le rapport de couverture d
 Utilisation de rapports standards
 =================================
 
-atoum est fourni avec de nombreux rapports standards: tap, xunit, html, cli, phing, vim, ...  Il y a aussi quelques :ref:`rapports funs<amusons_nous_avec_atoum.inc>`. Vous trouverez les plus importants ici.
-
-.. note::
-  Si vous souhaitez aller plus loin, il y a une :ref:`extension<extensions>` dédiée aux rapports appelée ``reports-extension``.
-
-.. _reports-configuration:
-
-Configuration de rapports
-------------------------
-
-Couverture des branches et chemins
-''''''''''''''''''''''''''''''''''
-
-Dans le fichier de configuration, vous pouvez activer la couverture des branches et chemins à l'aide de l'option ``enableBranchAndPathCoverage``.
-Cette action améliorera la qualité de la couverture du code car elle ne se limitera pas à vérifier qu'une fonction est appelée, mais également
-que chaque branche l'est également.
-
-Pour faire simple, si vous avez un ``if``, le rapport changera si vous checkez le else.
-
-.. code-block:: php
-
-  $script->enableBranchAndPathCoverage();
-
-.. code-block:: shell
-
-  => Class Foo\Bar: Line: 31.46%
-  # avec la couverture des branches et chemins
-  => Class Foo\Bar: Line: 31.46% Path: 1.50% Branch: 26.06%
-
-.. _reports-using:
-
-Utilisation de rapports standards
-=================================
-
-atoum est fourni avec de nombreux rapports standards: tap, xunit, html, cli, phing, vim, ...  Il y a aussi quelques :ref:`rapports funs<amusons_nous_avec_atoum.inc>`. Vous trouverez les plus importants ici.
+atoum est fourni avec de nombreux rapports standards: tap, xunit, html, cli, phing, vim, ...  Il y a aussi quelques :ref:`rapports funs<fun-with-atoum>`. Vous trouverez les plus importants ici.
 
 .. note::
    Si vous souhaitez aller plus loin, il y a une :ref:`extension<extensions>` dédiée aux rapports appelée ``reports-extension``.
