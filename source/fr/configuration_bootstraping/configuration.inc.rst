@@ -196,3 +196,33 @@ Il suffit ensuite d'ajouter le code suivant à votre fichier de configuration :
    $report = $script->AddDefaultReport();
    $report->addField($notifier, array(atoum\runner::runStop));
 
+.. _configuration-test:
+
+Configuration du test
+=====================
+De nombreuses possibilités sont disponibles pour configurer comment atoum va exécuter le test. Vous pouvez utiliser les arguments en ligne de commande ou le fichier de configuration.
+Un code simple valant une longue explication, l'exemple suivant devrait être explicite :
+
+.. code-block:: php
+
+   <?php
+   $testGenerator = new atoum\test\generator();
+
+   // répertoire contenant le test unitaire. (-d)
+   $testGenerator->setTestClassesDirectory(__DIR__ . '/test/units');
+
+   // le namespace du test unitaire.
+   $testGenerator->setTestClassNamespace('your\project\namespace\tests\units');
+
+   // le runner de votre test unitaire.
+   $testGenerator->setRunnerPath('path/to/your/tests/units/runner.php');
+
+   $script->getRunner()->setTestGenerator($testGenerator);
+
+Vous pouvez également définir le répertoire du test avec ``$runner->addTestsFromDirectory(path)``. atoum chargera toutes les classes qui puissent être testées présentes dans ce dossier tout comme vous pouvez faire
+avec l'argument en ligne de commande :ref:`-d<cli-options-directories>`.
+
+.. code-block:: php
+
+   <?php
+   $runner->addTestsFromDirectory(__DIR__ . '/test/units');
