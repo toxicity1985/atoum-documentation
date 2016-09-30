@@ -3,13 +3,13 @@
 Configuration & bootstraping
 ############################
 
-Plusieurs étapes vont se succéder au lancement d'atoum, Quand atoum se lance, certaines d'entre elles peuvent être influencées par des fichiers spéciaux.
+Plusieurs étapes vont se succéder au lancement d'atoum, certaines d'entre elles peuvent être influencées par des fichiers spéciaux.
 
 On peut avoir une vue simplifiée de ces fichiers spéciaux en :
 
-#. Chargeant le :ref:`autoloader file<autoloader_file>`
-#. Chargeant le :ref:`configuration file<fichier-de-configuration>`
-#. Chargeant le :ref:`bootstrap file<bootstrap_file>`
+#. Chargeant l':ref:`autoloader<autoloader_file>`
+#. Chargeant le :ref:`fichier de configuration<fichier-de-configuration>`
+#. Chargeant le :ref:`fichier de bootstrap<bootstrap_file>`
 
 .. note::
 	Tous ces fichiers sont optionnels!
