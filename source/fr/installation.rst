@@ -4,14 +4,14 @@
 Installation
 ************
 
-Si vous souhaitez l'utiliser, il vous suffit de télécharger la dernière version.
+Si vous souhaitez utiliser atoum, il vous suffit de télécharger la dernière version.
 
 Vous pouvez installer atoum de plusieurs manières :
 
 * en téléchargeant l'`archive PHAR`_ ;
-* à l'aide de `Composer`_ ;
+* à l'aide de `composer`_ ;
 * en clonant le dépôt `Github`_ ;
-* voir aussi :ref:`l'integration d'atoum dans votre frameworks <utilisation-avec-frameworks>`.
+* voir aussi :ref:`l'integration d'atoum dans votre framework <utilisation-avec-frameworks>`.
 
 
 .. _archive-phar:
@@ -33,7 +33,7 @@ Vous pouvez télécharger la dernière version stable d'atoum directement depuis
 Mise à jour
 ----------------------
 
-La mise à jour de l'archive est très simple. Il vous suffit de lancer la commande suivante :
+Pour mettre à jour le PHAR, utiliser simplement la commande :
 
 .. code-block:: shell
 
@@ -75,7 +75,7 @@ Vous pouvez lister les versions disponibles dans les archives en utilisant ``--l
      nightly-1568-201210311708
    * nightly-2416-201402121146
 
-La liste des versions présentes dans l'archive est alors affichée, la version actuellement active étant précédée de ``*``.
+La liste des versions de l’archive est affichée. La version actuellement active est précédée par '' *''.
 
 Changer la version courante
 -----------------------------------
@@ -87,7 +87,7 @@ Pour activer une autre version, il suffit d'utiliser l'argument ``--enable-versi
    $ php -d phar.readonly=0 atoum.phar -ev DEVELOPMENT
 
 .. note::
-	La modification de la version courante nécessite la modification de l'archive PHAR. Or par défaut, la configuration de php ne l'autorise pas. Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
+	La modification de la version courante nécessite la modification de l'archive PHAR. Cependant, par défaut la configuration de PHP ne l'autorise pas. Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
 
 
 Suppression d'anciennes versions
@@ -107,7 +107,8 @@ La version est alors supprimée.
 	Il n'est pas possible de supprimer la version active.
 
 .. note::
-	La suppression d'une version nécessite la modification de l'archive PHAR. Or par défaut, la configuration de php ne l'autorise pas. Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
+	La suppression d'une version nécessite la modification de l'archive PHAR. par défaut la configuration de PHP ne l'autorise pas. 
+	Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
 
 
 .. _installation-par-composer:

@@ -80,6 +80,7 @@ Grâce à lui, il est donc possible d'écrire le test précédent d'une façon p
                ->mock($foo)
                    ->call('doOtherThing')
                        ->once()
+
        ->assert('Bar a une valeur')
            ->if($bar->setValue(uniqid()))
            ->then

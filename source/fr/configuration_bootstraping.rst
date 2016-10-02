@@ -7,9 +7,9 @@ Plusieurs étapes vont se succéder au lancement d'atoum, certaines d'entre elle
 
 On peut avoir une vue simplifiée de ces fichiers spéciaux en :
 
-#. Chargeant l':ref:`autoloader<autoloader_file>`
-#. Chargeant le :ref:`fichier de configuration<fichier-de-configuration>`
-#. Chargeant le :ref:`fichier de bootstrap<bootstrap_file>`
+#. Chargement de l':ref:`autoloader<autoloader_file>`
+#. Chargement du :ref:`fichier de configuration<fichier-de-configuration>`
+#. Chargement du :ref:`fichier de bootstrap<bootstrap_file>`
 
 .. note::
 	Tous ces fichiers sont optionnels!

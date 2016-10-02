@@ -253,6 +253,11 @@ files:
     translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
 
   -
+    source      : '/source/en/configuration_bootstraping/autoloader.inc.rst'
+    dest        : '/source/en/configuration_bootstraping/autoloader.inc.txt'
+    translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
+
+  -
     source      : '/source/en/configuration_bootstraping/having_fun_with_atoum.inc.rst'
     dest        : '/source/en/configuration_bootstraping/having_fun_with_atoum.inc.txt'
     translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'

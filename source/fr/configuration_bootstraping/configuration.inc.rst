@@ -1,7 +1,7 @@
 .. _fichier-de-configuration:
 
 Fichier de configuration
-************************
+******************
 
 Le fichier de configuration vous permet de configurer comment atoum fonctionne.
 
@@ -13,10 +13,10 @@ Si vous avez un fichier ``.atoum.php`` dans le répertoire parent, il sera égal
 .. _coverage-code-config:
 
 Couverture du code
-==================
+=============
 
-Par défaut, si PHP dispose de l'extension `Xdebug <http://xdebug.org>`_, atoum indique en ligne de commande le taux de couverture du code par les tests venant d'être exécutés.
-Certains comportements de la couverture de code peuvent être adaptés via les :ref:`options de l'interface en ligne de commande<cli-options-coverage_reports>`.
+Par défaut, si PHP dispose de l'extension `Xdebug <http://xdebug.org>`_, atoum indique en ligne de commande le taux de couverture du code par les tests venant d'être exécutés. Certains comportements de la couverture de code peuvent être adaptés via les :ref:`options de l'interface en ligne de commande<cli-options-coverage_reports>`.
+ 
 
 Si le taux de couverture est de 100%, atoum se contente de l'indiquer. Mais dans le cas contraire, il affiche le taux de couverture globale ainsi que celui de chaque méthode de la classe testée sous la forme d'un pourcentage.
 
@@ -51,8 +51,8 @@ Il est cependant possible d'obtenir une représentation plus précise du taux de
 
 Pour l'obtenir, il suffit de se baser sur les modèles de fichiers de configuration inclus dans atoum.
 
-Utilisateurs de Phar
---------------------
+Utilisateur du phar
+-----------
 
 Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande suivante :
 
@@ -62,13 +62,13 @@ Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande su
 
 Une fois l'extraction effectuée, vous devriez avoir dans le répertoire /path/to/destination/directory un répertoire nommé resources/configurations/runner.
 
-Utilisateurs de Composer
-------------------------
+Utilisateur de composer
+--------------
 
 Dans le cas où vous utilisez atoum en ayant cloné le dépôt :ref:`installation-par-github` ou l'ayant installé via :ref:`installation-par-composer`, les modèles se trouvent dans ``/path/to/atoum/resources/configurations/runner``
 
-Rapports de couverture de code
-------------------------------
+Rapport de couverture personalisée
+-----------------------
 
 Dans ce répertoire, il y a, entre autre chose intéressante, un modèle de fichier de configuration pour atoum nommé ``coverage.php.dist`` qu'il vous faudra copier à l'emplacement de votre choix. Renommez le ``coverage.php``.
 
@@ -89,7 +89,7 @@ Par exemple :
    Il est également possible de modifier le titre du rapport à l'aide du premier argument du constructeur de la classe ``mageekguy\atoum\report\fields\runner\coverage\html``.
 
 
-Une fois tout cela effectué, il n'y a plus qu'à utiliser le fichier de configuration lors de l'exécution des tests, de la manière suivante :
+Une fois ceci en place, vous avez simplement a utiliser le fichier de configuration (ou l'inclure dans le fichier de configuration) lorsque vous lancer les tests, comme ceci :
 
 .. code-block:: shell
 
@@ -100,13 +100,12 @@ Une fois les tests exécutés, atoum génèrera alors le rapport de couverture d
 .. note::
    Le calcul du taux de couverture du code par les tests ainsi que la génération du rapport correspondant peuvent ralentir de manière notable l'exécution des tests. Il peut être alors intéressant de ne pas utiliser systématiquement le fichier de configuration correspondant, ou bien de les désactiver temporairement à l'aide de l'argument -ncc.
 
-
 .. _reports-using:
 
 Utilisation de rapports standards
 =================================
 
-atoum est fourni avec de nombreux rapports standards: tap, xunit, html, cli, phing, vim, ...  Il y a aussi quelques :ref:`rapports funs<fun-with-atoum>`. Vous trouverez les plus importants ici.
+atoum est fourni avec de nombreux rapports standards : tap, xunit, html, cli, phing, vim, ...  Il y a aussi quelques :ref:`rapports funs<fun-with-atoum>`. Vous trouverez les plus importants ici.
 
 .. note::
    Si vous souhaitez aller plus loin, il y a une :ref:`extension<extensions>` dédiée aux rapports appelée ``reports-extension``.
@@ -114,16 +113,15 @@ atoum est fourni avec de nombreux rapports standards: tap, xunit, html, cli, phi
 .. _reports-configuration:
 
 Configuration de rapports
-------------------------
+-------------------------
 
 Couverture des branches et chemins
 ''''''''''''''''''''''''''''''''''
 
-Dans le fichier de configuration, vous pouvez activer la couverture des branches et chemins à l'aide de l'option ``enableBranchAndPathCoverage``.
-Cette action améliorera la qualité de la couverture du code car elle ne se limitera pas à vérifier qu'une fonction est appelée, mais également
+Dans le fichier de configuration, vous pouvez activer la couverture des branches et chemins à l'aide de l'option ``enableBranchAndPathCoverage``. Cette action améliorera la qualité de la couverture du code car elle ne se limitera pas à vérifier qu'une fonction est appelée, mais également
 que chaque branche l'est également.
-
-Pour faire simple, si vous avez un ``if``, le rapport changera si vous checkez le else.
+  Pour faire simple, si vous avez un ``if``, le rapport changera si vous cherchez le 
+else.
 
 .. code-block:: php
 
@@ -149,13 +147,12 @@ Par défaut, atoum fournit un rapport HTML basique. Pour un rapport plus avancé
 
 .. code-block:: php
 
-  <?php
-  $report = $script->addDefaultReport();
-  $coverageField = new atoum\report\fields\runner\coverage\html('Your Project Name', __DIR__ . '/reports');
-
-  // Remplacez cette url par l'url racine de votre site de couverture de code.
-  $coverageField->setRootUrl('http://url/of/web/site');
-  $report->addField($coverageField);
+   <?php
+   $report = $script->addDefaultReport();
+   $coverageField = new atoum\report\fields\runner\coverage\html('Your Project Name', __DIR__ . '/reports');
+   // Remplacez cette url par l'url racine de votre site de couverture de code.
+   $coverageField->setRootUrl('http://url/of/web/site');
+   $report->addField($coverageField);
 
 .. _reports-cli:
 
@@ -169,28 +166,28 @@ Le rapport CLI est celui qui s'affiche quand vous lancez le test. Ce rapport a q
 
 .. code-block:: php
 
-  <?php
-  $script->addDefaultReport() // les rapports par défaut incluent celui-ci
-      ->hideClassesCoverageDetails()
-      ->hideMethodsCoverageDetails();
+   <?php
+   $script->addDefaultReport() // les rapports par défaut incluent celui-ci
+       ->hideClassesCoverageDetails()
+       ->hideMethodsCoverageDetails();
 
 Afficher le logo d'atoum
 ''''''''''''''''''''''''
 
 .. code-block:: php
 
-  <?php
-  $report = $script->addDefaultReport();
+   <?php
+   $report = $script->addDefaultReport();
 
-  // Cette ligne ajoute le logo d'atoum à chaque exécution
-  $report->addField(new atoum\report\fields\runner\atoum\logo());
+   // Cette ligne ajoute le logo d'atoum à chaque exécution
+   $report->addField(new atoum\report\fields\runner\atoum\logo());
 
-  // Celle-ci va ajouter un logo vert ou rouge après chaque exécution en fonction du status de cette dernière
-  $report->addField(new atoum\report\fields\runner\result\logo());
+   // Celle-ci va ajouter un logo vert ou rouge après chaque exécution en fonction du status de cette dernière
+   $report->addField(new atoum\report\fields\runner\result\logo());
 
 
 Rapport Treemap
----------------
+--------------
 
 
 .. code-block:: php
@@ -198,8 +195,7 @@ Rapport Treemap
    <?php
    $report = $script->addDefaultReport();
 
-   $coverageHtmlField = new atoum\report\fields\runner\coverage\html('Nom de votre projet', __DIR__ . '/reports');
-
+   $coverageHtmlField = new atoum\report\fields\runner\coverage\html('Your Project Name', __DIR__ . '/reports');
    // Remplacez cette url par l'url racine de votre site de couverture de code.
    $coverageHtmlField->setRootUrl('http://url/of/web/site');
    $report->addField($coverageField);

@@ -94,6 +94,19 @@ Pour plus de détails sur l'utilisation du plug-in, une aide est disponible dans
 
    :help atoum
 
+Rapports de couverture pour vim
+===========================
+
+Vous pouvez configurer un rapport :ref:`spécifique<reports-using>` pour la couverture au sein de vim. Dans votre fichier de configuration atoum, définissez  :
+
+... code-block:: php
+
+   <?php
+   use \mageekguy\atoum;
+   $vimReport = new atoum\reports\asynchronous\vim();
+   $vimReport->addWriter($stdOutWriter);
+   $runner->addReport($vimReport);
+
 .. _ide_phpstorm:
 
 PhpStorm

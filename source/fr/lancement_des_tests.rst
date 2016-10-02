@@ -11,7 +11,7 @@ atoum dispose d'un exécutable qui vous permet de lancer vos tests en ligne de c
 Avec l'archive phar
 ===================
 
-Si vous utilisez l'archive phar, elle est elle-même l'exécutable.
+Si vous utiliser l'archive phar, elle est déjà exécutable.
 
 linux / mac
 -----------
@@ -53,7 +53,7 @@ windows
 
 
 Exemples dans le reste de la documentation
-==========================================
+=========================================
 
 Dans les exemples suivants, les commandes pour lancer les tests avec atoum seront écrites avec la forme suivante :
 
@@ -70,8 +70,8 @@ Fichiers à exécuter
 *******************
 
 
-Par fichiers
-============
+For specific files
+==================
 
 Pour lancer les tests d'un fichier, il vous suffit d'utiliser l'option -f ou --files.
 
@@ -80,8 +80,8 @@ Pour lancer les tests d'un fichier, il vous suffit d'utiliser l'option -f ou --f
    $ ./bin/atoum -f tests/units/MyTest.php
 
 
-Par répertoires
-===============
+Pour un dossier
+================
 
 Pour lancer les tests d'un répertoire, il vous suffit d'utiliser l'option -d ou --directories.
 
@@ -100,7 +100,7 @@ Une fois que vous avez préciser à atoum les :ref:`fichiers à exécuter <fichi
 .. _filtres-par-namespace:
 
 Par espace de noms
-==================
+================
 
 Pour filtrer sur les espace de nom, par example exécuter le test seulement sur un espace de nom, il suffit d'utiliser l'option ``-ns`` or ``--namespaces``.
 
@@ -199,7 +199,7 @@ De la même manière, il est également possible de taguer les méthodes de test
        }
    }
 
-Une fois les tags nécessaires définis, il n'y a plus qu'à exécuter les tests avec le ou les tags adéquates à l'aide de l'option --tags, ou -t dans sa version courte :
+Une fois les tags nécessaires définis, il n'y a plus qu'à exécuter les tests avec le ou les tags adéquates à l'aide de l'option ``--tags``, ou ``-t`` dans sa version courte :
 
 .. code-block:: shell
 
