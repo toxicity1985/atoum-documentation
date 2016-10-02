@@ -105,6 +105,8 @@ Il est très simple d'intégrer les résultats de tests atoum à `Jenkins <http:
 Étape 1 : Ajout d'un rapport xUnit à la configuration atoum
 -----------------------------------------------------------
 
+Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifique <reports-using>' dans la configuration.
+
 Si vous n'avez pas de fichier de configuration
 """"""""""""""""""""""""""""""""""""""""""""""
 
@@ -180,7 +182,7 @@ Il existe pour cela plusieurs possibilités selon la façon dont vous construise
 
    <target name="unitTests">
      <exec executable="/usr/bin/php" failonerror="yes" failifexecutionfails="yes">
-       <arg line="/path/to/atoum.phar -p /chemin/vers/php -d /path/to/test/folder -c /path/to/atoumConfig.php" />
+       <arg line="/path/to/atoum.phar -p /path/to/php -d /path/to/test/folder -c /path/to/atoumConfig.php" />
      </exec>
    </target>
 

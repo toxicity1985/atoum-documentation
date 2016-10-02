@@ -247,7 +247,7 @@ Créons notre fichier de test:
 
 
 Étape 4: lancement des tests
-----------------------------
+---------------------------
 
 Si vous utilisez Symfony 2.0:
 
@@ -389,7 +389,7 @@ Les tests doivent inclure le fichier de bootstrap se trouvant dans le plugin :
 
 
 Lancer les tests
-----------------
+------------
 
 La commande symfony ``atoum:test`` est disponible. Les tests peuvent alors se lancer de cette façon :
 
@@ -401,7 +401,7 @@ Toutes les paramètres d'atoum sont disponibles.
 
 Il est donc, par exemple, possible de passer un fichier de configuration comme ceci :
 
-.. code-block:: bash
+.. code-block:: shell
 
    php symfony atoum:test -c config/atoum/hudson.php
 

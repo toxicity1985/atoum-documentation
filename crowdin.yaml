@@ -23,20 +23,20 @@ files:
     translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
 
   -
-    source      : '/source/en/cookbooks/tools.inc.rst'
-    dest        : '/source/en/cookbooks/tools.inc.txt'
-    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
-    languages_mapping:
-      file_name:
-        fr: outils.inc
-
-  -
     source      : '/source/en/cookbooks/receipt.inc.rst'
     dest        : '/source/en/cookbooks/receipt.inc.txt'
     translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
     languages_mapping:
       file_name:
         fr: recette.inc
+
+  -
+    source      : '/source/en/cookbooks/tools.inc.rst'
+    dest        : '/source/en/cookbooks/tools.inc.txt'
+    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
+    languages_mapping:
+      file_name:
+        fr: outils.inc
 
   -
     source      : '/source/en/extensions.rst'
@@ -225,6 +225,11 @@ files:
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
 
   -
+    source      : '/source/en/asserters/ztips.inc.rst'
+    dest        : '/source/en/asserters/ztips.inc.txt'
+    translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
+
+  -
     source      : '/source/en/running_tests.rst'
     dest        : '/source/en/running_tests.txt'
     translation : '/source/%two_letters_code%/%file_name%.rst'
@@ -250,6 +255,11 @@ files:
   -
     source      : '/source/en/configuration_bootstraping/configuration.inc.rst'
     dest        : '/source/en/configuration_bootstraping/configuration.inc.txt'
+    translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
+
+  -
+    source      : '/source/en/configuration_bootstraping/autoloader.inc.rst'
+    dest        : '/source/en/configuration_bootstraping/autoloader.inc.txt'
     translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
 
   -

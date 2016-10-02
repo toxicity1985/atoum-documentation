@@ -35,13 +35,12 @@ Pour mettre en place le hook, il vous faut donc créer le fichier ``.git/hook/pr
    {
       echo $phpFilesNumber . ' PHP files staged, launch all unit test...' . PHP_EOL;
 
-      foreach (new \recursiveIteratorIterator(new \recursiveDirectoryIterator(__DIR__ . '/../../')) as $path => $file)
+      foreach (new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator(__DIR__ . '/../../')) as $path => $file)
       {
         if (substr($path, -4) === '.php' && strpos($path, '/Tests/Units/') !== false)
         {
           require_once $path;
         }
-
       }
    }
 
