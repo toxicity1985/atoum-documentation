@@ -10,7 +10,7 @@ Sublime Text 2
 
 A `plug-in for SublimeText 2 <https://github.com/toin0u/Sublime-atoum>`_ allows the execution of unit tests by atoum and the visualization of the result without leaving the editor.
 
-The information necessary for it's installation and it's configuration are available `on the blog's author <http://sbin.dk/2012/05/19/atoum-sublime-text-2-plugin/>`_.
+Installation and configuration information for the plugin is available `on the author's blog <http://sbin.dk/2012/05/19/atoum-sublime-text-2-plugin/>`_.
 
 .. _ide_vim:
 
