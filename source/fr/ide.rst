@@ -17,9 +17,9 @@ Les informations nécessaires à son installation et à sa configuration sont di
 VIM
 ***
 
-atoum est livré avec un plug-in facilitant son utilisation dans l'éditeur VIM.
+atoum est livré avec un plug-in facilitant son utilisation dans l’éditeur VIM.
 
-Il permet d'exécuter les tests sans quitter VIM et d'obtenir le rapport correspondant dans une fenêtre de l'éditeur.
+Il permet d’exécuter les tests sans quitter VIM et d’obtenir le rapport correspondant dans une fenêtre de l’éditeur.
 
 Il est alors possible de naviguer parmi les éventuelles erreurs, voire de se rendre à la ligne correspondant à une assertion ne passant pas à l'aide d'une simple combinaison de touches.
 
@@ -37,7 +37,7 @@ Si vous utilisez l'archive PHAR, il faut extraire le fichier à l'aide de la com
 
 Une fois l'extraction réalisée, le fichier ``atoum.vmb`` correspondant au plug-in pour VIM sera dans le répertoire ``path/to/a/directory/resources/vim``.
 
-Une fois en possession du fichier ``atoum.vmb``, il faut l'éditer à l'aide de VIM :
+Une fois en possession du fichier ``atoum.vmb``, il faut l’éditer à l’aide de VIM :
 
 .. code-block:: shell
 
