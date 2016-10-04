@@ -9,20 +9,20 @@ How to contribute
 ------------------
 
 .. important::
-   We need help to write this section !
+   We need help writing this section !
 
 
 .. _convention-de-codage:
 
 Coding convention
 --------------------
-The source code of atoum follows some conventions. If you wish to contribute to this project, your code must need to follow the same rules:
+The source code of atoum follows some conventions. If you wish to contribute to this project, your code must follow the same rules:
 
-* The indentation must be done with tab character,
-* The names of namespaces, classes, members, methods, and constants follow the ``lowerCamelCase`` convention,
-* The code must be tested.
+* Indentation must be done with tabs,
+* Namespaces, classes, members, methods, and constants follow the ``lowerCamelCase`` convention,
+* Code must be tested.
 
-The example below makes no sense but it allows to present more in detail the way in which the code is written:
+The example below makes no sense but shows in more in detail the way in which the code is written:
 
 .. code-block:: php
 
