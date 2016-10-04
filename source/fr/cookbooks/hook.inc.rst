@@ -22,7 +22,7 @@ Lors de l'ajout de code à un dépôt, Git recherche le fichier ``.git/hook/pre-
 
 Pour mettre en place le hook, il vous faut donc créer le fichier ``.git/hook/pre-commit`` et y ajouter le code suivant :
 
-.. code-block:: php
+.. code-block::
 
    #!/usr/bin/env php
    <?php

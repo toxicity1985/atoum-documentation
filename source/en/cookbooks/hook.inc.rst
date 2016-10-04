@@ -22,7 +22,7 @@ When adding code to a repository, Git looks for the file ``.git/hook/pre-commit`
 
 To set up the hook, you must therefore create the ``.git/hook/pre-commit`` file and add the following code:
 
-.. code-block:: php
+.. code-block::
 
    #!/usr/bin/env php
    <?php
