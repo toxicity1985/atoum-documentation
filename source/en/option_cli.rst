@@ -3,7 +3,7 @@
 Command line options
 ####################
 
-Most options exist in 2 forms, a short from 1 to 6 characters and a long more explicit. These two forms do strictly the same thing. You can use indifferently the both form.
+Most options exist in two forms, a short form of 1 to 6 characters and a longer more explicit form. The two different forms do exactly the same thing and can be used interchangeably.
 
 Some options accept multiple values:
 
@@ -13,7 +13,7 @@ Some options accept multiple values:
 
 
 .. note::
-   You must use once only each option. Otherwise, only the last one is used.
+   If you use an option multiple times, only the last one will be used.
 
 
 .. code-block:: shell
@@ -33,7 +33,7 @@ Configuration & bootstrap
 -af <file> / --autoloader-file <file>
 =====================================
 
-This option allows you to specify the path to the :ref:`autoloader file<autoloader_file>`.
+This option lets you specify the path to the :ref:`autoloader file<autoloader_file>`.
 
 .. code-block:: shell
 
@@ -45,7 +45,7 @@ This option allows you to specify the path to the :ref:`autoloader file<autoload
 -bf <file> / --bootstrap-file <file>
 ====================================
 
-This option allows you to specify the path to the :ref:`bootstrap file<bootstrap_file>`.
+This option lets you specify the path to the :ref:`bootstrap file<bootstrap_file>`.
 
 .. code-block:: shell
 
@@ -58,7 +58,7 @@ This option allows you to specify the path to the :ref:`bootstrap file<bootstrap
 -c <file> / --configuration <file>
 ==================================
 
-This option allows you to specify the path to the :ref:`configuration file<fichier-de-configuration>` used for running the tests.
+This option lets you specify the path to the :ref:`configuration file<fichier-de-configuration>` used for running the tests.
 
 .. code-block:: shell
 
@@ -73,7 +73,7 @@ Filtering
 -d <directories> / --directories <directories>
 ==============================================
 
-This option allows you to specify the tests directory(ies) to run.
+This option lets you specify the tests directory(ies) to run.
 
 .. code-block:: shell
 
@@ -86,7 +86,7 @@ This option allows you to specify the tests directory(ies) to run.
 -f <files> / --files <files>
 ============================
 
-This option allows you to specify the test files to run.
+This option lets you specify the test files to run.
 
 .. code-block:: shell
 
@@ -99,7 +99,7 @@ This option allows you to specify the test files to run.
 -g <pattern> / --glob <pattern>
 ===============================
 
-This option allows you to specify the test files to launch based on a pattern.
+This option lets you specify the test files to launch based on a pattern.
 
 .. code-block:: shell
 
@@ -112,7 +112,7 @@ This option allows you to specify the test files to launch based on a pattern.
 -m <class::method> / --methods <class::methods>
 ===============================================
 
-This option allows you to filter the classes and methods to launch.
+This option lets you filter the classes and methods to launch.
 
 .. code-block:: shell
 
@@ -120,11 +120,11 @@ This option allows you to filter the classes and methods to launch.
    $ ./bin/atoum -m vendor\\project\\test\\units\\myClass::testMyMethod
    $ ./bin/atoum --methods vendor\\project\\test\\units\\myClass::testMyMethod
 
-   # launche all the test methods in class vendor\\project\\test\\units\\myClass
+   # launch all the test methods in class vendor\\project\\test\\units\\myClass
    $ ./bin/atoum -m vendor\\project\\test\\units\\myClass::*
    $ ./bin/atoum --methods vendor\\project\\test\\units\\myClass::*
 
-   # launche only methods named testMyMethod fromm all test classes
+   # launch only methods named testMyMethod from all test classes
    $ ./bin/atoum -m *::testMyMethod
    $ ./bin/atoum --methods *::testMyMethod
 
@@ -137,7 +137,7 @@ This option allows you to filter the classes and methods to launch.
 -ns <namespaces> / --namespaces <namespaces>
 ============================================
 
-This option allows you to filter the classes and methods tested, based on namespaces.
+This option lets you filter the classes and methods tested, based on namespaces.
 
 .. code-block:: shell
 
@@ -152,7 +152,7 @@ This option allows you to filter the classes and methods tested, based on namesp
 -t <tags> / --tags <tags>
 =========================
 
-This option allows you to filter the classes and methods to launch based on tags.
+This option lets you filter the classes and methods to launch based on tags.
 
 .. code-block:: shell
 
@@ -168,7 +168,7 @@ This option allows you to filter the classes and methods to launch based on tags
 --test-all
 ==========
 
-This option allows you to run the tests in directories defined in the configuration file through ``$script->addTestAllDirectory('path/to/directory')``.
+This option lets you run the tests in directories defined in the configuration file through ``$script->addTestAllDirectory('path/to/directory')``.
 
 .. code-block:: shell
 
@@ -179,7 +179,7 @@ This option allows you to run the tests in directories defined in the configurat
 --test-it
 =========
 
-This option allows you to launch atoum own unit tests to check that it runs smoothly on your server.
+This option lets you launch atoum own unit tests to check that it runs smoothly on your server.
 
 .. code-block:: shell
 
@@ -191,7 +191,7 @@ This option allows you to launch atoum own unit tests to check that it runs smoo
 -tfe <extensions> / --test-file-extensions <extensions>
 =======================================================
 
-This option allows you to specify the extensions of test files to run.
+This option lets you specify the extensions of test files to run.
 
 .. code-block:: shell
 
@@ -241,7 +241,7 @@ Coverage & reports
 -drt <string> / --default-report-title <string>
 ===============================================
 
-This option allow you to specify atoum reports default title.
+This option lets you specify atoum reports default title.
 
 .. code-block:: shell
 
@@ -257,7 +257,7 @@ This option allow you to specify atoum reports default title.
 -ft / --force-terminal
 ======================
 
-This option allows you to force the output to the terminal.
+This option lets you force the output to the terminal.
 
 .. code-block:: shell
 
@@ -270,7 +270,7 @@ This option allows you to force the output to the terminal.
 -sf <file> / --score-file <file>
 ================================
 
-This option allows you to specify the path to the output file created by atoum.
+This option lets you specify the path to the output file created by atoum.
 
 .. code-block:: shell
 
@@ -282,7 +282,7 @@ This option allows you to specify the path to the output file created by atoum.
 -ncc / --no-code-coverage
 =========================
 
-This option allows you to disable the generation of the code coverage report.
+This option lets you disable the generation of the code coverage report.
 
 .. code-block:: shell
 
@@ -295,7 +295,7 @@ This option allows you to disable the generation of the code coverage report.
 -nccfc <classes> / --no-code-coverage-for-classes <classes>
 ===========================================================
 
-This option allows you to disable the generation of the code coverage report for one or more class.
+This option lets you disable the generation of the code coverage report for one or more class.
 
 .. code-block:: shell
 
@@ -303,7 +303,7 @@ This option allows you to disable the generation of the code coverage report for
    $ ./bin/atoum --no-code-coverage-for-classes vendor\\project\\db\\mysql vendor\\project\\db\\pgsql
 
 .. note::
-   It's important to double each backslash to avoid they interpretation by the shell.
+   It's important to double each backslash to avoid them being interpreted by the shell.
 
 
 .. _cli-options-nccfns:
@@ -311,7 +311,7 @@ This option allows you to disable the generation of the code coverage report for
 -nccfns <namespaces> / --no-code-coverage-for-namespaces <namespaces>
 =====================================================================
 
-This option allows you to disable the generation of the code coverage report for one or more namespaces.
+This option lets you disable the generation of the code coverage report for one or more namespaces.
 
 .. code-block:: shell
 
@@ -319,7 +319,7 @@ This option allows you to disable the generation of the code coverage report for
    $ ./bin/atoum --no-code-coverage-for-namespaces vendor\\outside\\lib1 vendor\\outside\\lib2
 
 .. note::
-   It's important to double each backslash to avoid they interpretation by the shell.
+   It's important to double each backslash to avoid them being interpreted by the shell.
 
 
 .. _cli-options-nccid:
@@ -327,7 +327,7 @@ This option allows you to disable the generation of the code coverage report for
 -nccid <directories> / --no-code-coverage-in-directories <directories>
 ======================================================================
 
-This option allows you to disable the generation of the code coverage report for one or more directories.
+This option lets you disable the generation of the code coverage report for one or more directories.
 
 .. code-block:: shell
 
@@ -339,7 +339,7 @@ This option allows you to disable the generation of the code coverage report for
 -ulr / --use-light-report
 =========================
 
-This option allows you to reduce the output generated by atoum.
+This option lets youv reduce the output generated by atoum.
 
 .. code-block:: shell
 
@@ -405,7 +405,7 @@ Other arguments
 -mcn <integer> / --max-children-number <integer>
 ================================================
 
-This option allows you to set the maximum number of processes launched to run the tests.
+This option lets you set the maximum number of processes launched to run the tests.
 
 .. code-block:: shell
 
@@ -417,7 +417,7 @@ This option allows you to set the maximum number of processes launched to run th
 -p <file> / --php <file>
 ========================
 
-This option allows you to specify the path to the php executable used to run your tests.
+This option lets you specify the path to the php executable used to run your tests.
 
 .. code-block:: shell
 
@@ -436,7 +436,7 @@ By default, the value is search amongst the following values (in order):
 -h / --help
 ===========
 
-This option allows you to display a list of available options.
+This option lets you display a list of available options.
 
 .. code-block:: shell
 
@@ -448,7 +448,7 @@ This option allows you to display a list of available options.
 -v / --version
 ==============
 
-This option allows you to display the current version of atoum.
+This option lets you display the current version of atoum.
 
 .. code-block:: shell
 
