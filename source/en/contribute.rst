@@ -9,7 +9,7 @@ How to contribute
 ------------------
 
 .. important::
-   We need help writing this section !
+   We need help writing this section!
 
 
 .. _convention-de-codage:
