@@ -4,20 +4,20 @@
 Loop mode
 #########
 
-When a developer id doing TDD (test-driven development), it usually works as follows:
+When a developer is doing TDD (Test-Driven Development), it usually works as follows:
 
-#. start writing a test corresponding to what they want to develop;
-#. run the test created;
-#. write the code to pass the test;
-#. then amends or complete their test and go back to step 2.
+#. Start writing a test corresponding to what they want to develop,
+#. run the test created,
+#. write the code to pass the test,
+#. then amend or complete the test and go back to step 2.
 
 In practice, this means that they must:
 
-* create the code in their favourite editor;
-* exit the editor and run the test in a console;
-* return to their editor to write the code that enables the test to pass;
-* return to the console to restart the test execution;
-* return to their editor in order to amend or supplement its test;
+* Create the code in their favourite editor,
+* exit the editor and run the test in a console,
+* return to their editor to write the code that enables the test to pass,
+* return to the console to restart the test execution,
+* return to their editor in order to amend or supplement its test
 
 There is therefore a cycle that will be repeated until the functionality is complete.
 
@@ -50,7 +50,7 @@ Once the tests are complete, if the tests passed, atoum simply waits:
 
 If the developer presses the ``Enter`` key, atoum will reexecute the same test, without any other action from the developer.
 
-In the case where the code doesn't pass the tests successfully, i.e. If assertions fails or if there were errors or exceptions, atoum also starts waiting :
+In the case where the code doesn't pass the tests successfully, i.e. if assertions fails or if there were errors or exceptions, atoum also starts waiting :
 
 .. code-block:: shell
 
@@ -82,7 +82,7 @@ If the developer presses the ``Enter`` key, instead of replaying the same tests 
 
 The developer can pops issues and replay error tests as many times as necessary simply by pressing ``Enter``.
 
-Once all failed tests pass successfully, atoum will automatically run all of the test suite to detect any regressions introduced by the corrections made by the developer.
+Once all failed tests pass successfully, atoum will automatically run all test suites to detect any potential regressions introduced by the corrections made by the developer.
 
 .. code-block:: shell
 
