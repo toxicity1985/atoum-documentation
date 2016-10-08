@@ -4,30 +4,30 @@
 Loop mode
 #########
 
-When a developer doing TDD (test-driven development), it usually works as following:
+When a developer is doing TDD (Test-Driven Development), it usually works as follows:
 
-#. He start writing test corresponding to what he wants to develop ;
-#. then runs the test created ;
-#. then writes the code to pass the test ;
-#. then amends or complete his test and go back to step 2.
+#. Start writing a test corresponding to what they want to develop,
+#. run the test created,
+#. write the code to pass the test,
+#. then amend or complete the test and go back to step 2.
 
-In practice, this means that he must:
+In practice, this means that they must:
 
-* create its code in his favourite editor ;
-* exit the editor and then run its test in a console ;
-* return to his editor to write the code that enables the test to pass ;
-* return to the console to restart its test execution ;
-* return to his publisher in order to amend or supplement its test ;
+* Create the code in their favourite editor,
+* exit the editor and run the test in a console,
+* return to their editor to write the code that enables the test to pass,
+* return to the console to restart the test execution,
+* return to their editor in order to amend or supplement its test
 
-There is therefore a cycle that will be repeated as long as the functionality haven't been developed entirely.
+There is therefore a cycle that will be repeated until the functionality is complete.
 
-We can notice that, during this cycle, the developer must relaunch repeatedly the same command in the terminal to run the unit tests.
+During this cycle, the developer must repeatedly run the same terminal command to run the unit tests.
 
-atoum offers the ``loop`` mode via the arguments ``-l`` or ``--loop``, which allows the developer to not restart manually the test and thus to streamline the development process.
+atoum offers the ``loop`` mode via the arguments ``-l`` or ``--loop``, which lets the developer avoid restarting the test manually and streamline the development process.
 
-In this mode, atoum begins run once the tests that are requested.
+In this mode, atoum runs the required tests.
 
-Once the tests are complete, if tests successfully pass, atoum simply wait:
+Once the tests are complete, if the tests passed, atoum simply waits:
 
 .. code-block:: shell
 
@@ -48,9 +48,9 @@ Once the tests are complete, if tests successfully pass, atoum simply wait:
    Press <Enter> to reexecute, press any other key and <Enter> to stop...
 
 
-If the developer press the ``Enter`` key, atoum will reexecute the same test again, without any other action from the developer.
+If the developer presses the ``Enter`` key, atoum will reexecute the same test, without any other action from the developer.
 
-In the case where the code doesn't pass the tests successfully, i.e. If assertions fails or if there were errors or exceptions, atoum also start waiting :
+In the case where the code doesn't pass the tests successfully, i.e. if assertions fails or if there were errors or exceptions, atoum also starts waiting :
 
 .. code-block:: shell
 
@@ -78,11 +78,11 @@ In the case where the code doesn't pass the tests successfully, i.e. If assertio
    Press <Enter> to reexecute, press any other key and <Enter> to stop...
 
 
-If the developer press the ``Enter`` key, instead of replay the same tests again like if the tests have been passed successfully, atoum will only execute the tests that have failed, rather than replay them all.
+If the developer presses the ``Enter`` key, instead of replaying the same tests again, atoum will only execute the tests that have failed, rather than replaying them all.
 
 The developer can pops issues and replay error tests as many times as necessary simply by pressing ``Enter``.
 
-Moreover, once all failed tests pass again successfully, atoum will automatically run all of the test suite to detect any regressions introduced by the corrections made by the developer.
+Once all failed tests pass successfully, atoum will automatically run all test suites to detect any potential regressions introduced by the corrections made by the developer.
 
 .. code-block:: shell
 
