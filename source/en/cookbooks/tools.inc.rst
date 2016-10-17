@@ -176,7 +176,7 @@ Step 3: Launching tests via Jenkins (or Hudson)
 There are several possibilities depending on how you build your project :
 
 * If you use a script, simply add the previous command.
-* If you use a utility tool like `phing <https://www.phing.info/>`_ or `ant <http://ant.apache.org/>`_, simply add a task. In the case of ant, an exec task type :
+* If you use a utility tool like `phing <https://www.phing.info/>`_ or `ant <http://ant.apache.org/>`_, simply add an exec task like :
 
 .. code-block:: xml
 
@@ -225,3 +225,98 @@ Here is an example file `.travis.yml` where the unit tests in the `tests` folder
    script: php atoum.phar -d tests/
 
 
+.. _cookbook_utilisation_phing:
+
+Use with `Phing <https://www.phing.info/>`_
+*******************************************
+
+atoum test suite can be easily ran inside your phing configuration using the integrated *phing/AtoumTask.php* task.
+A valid build example can be found in the `resources/phing/build.xml <https://github.com/atoum/atoum/blob/master/resources/phing/build.xml>`_ file.
+
+You must register the custom task using the `taskdef <https://www.phing.info/docs/guide/stable/TaskdefTask.html>`_ native phing task :
+
+.. code-block:: xml
+
+  <taskdef name="atoum" classpath="vendor/atoum/atoum/resources/phing" classname="AtoumTask"/>
+
+Then you can use it inside one of your buildfile target :
+
+.. code-block:: xml
+
+    <target name="test">
+      <atoum
+        atoumautoloaderpath="vendor/atoum/atoum/classes/autoloader.php"
+        phppath="/usr/bin/php"
+        codecoverage="true"
+        codecoveragereportpath="reports/html/"
+        showcodecoverage="true"
+        showmissingcodecoverage="true"
+        maxchildren="5"
+      >
+        <fileset dir="tests/units/">
+          <include name="**/*.php"/>
+        </fileset>
+      </atoum>
+    </target>
+
+The paths given in these examples have been taken from a standard composer installation. All the possible parameters
+are defined below, you can change values or omit some to rely on defaults. There is three kind of parameters:
+
+atoum configurations:
+
+- :ref:`bootstrap<bootstrap_file>`: Bootstrap file to be included before executing each test method
+
+  - default: ``.bootstrap.atoum.php``
+- :ref:`atoumpharpath<archive-phar>`: If atoum is used as phar, path to the phar file
+- :ref:`atoumautoloaderpath<autoloader_file>`: Autoloader file before executing each test method
+
+  - default: ``.autoloader.atoum.php``
+- :ref:`phppath<cli-options-php>`: Path to ``php`` executable
+- :ref:`maxchildren<cli-options-max_children_number>`: Maximum number of sub-processus which will be run simultaneously
+
+Flags:
+
+- `codecoverage`: Enable code coverage (only possible if XDebug in installed)
+
+  - default: ``false``
+- `showcodecoverage`: Display code coverage report
+
+  - default: ``true``
+- `showduration`: Display test execution duration
+
+  - default: ``true``
+- `showmemory`: Display consumend memory
+
+  - default: ``true``
+- `showmissingcodecoverage`: Display missing code coverage
+
+  - default: ``true``
+- `showprogress`: Display test execution progress bar
+
+  - default: ``true``
+- `branchandpathcoverage`: Enable branch and path coverage
+
+  - default: ``false``
+- `telemetry <http://extensions.atoum.org/extensions/telemetry>`_: Enable telemetry report (`atoum/reports-extension` must be installed)
+
+  - default: ``false``
+
+Reports:
+
+- `codecoveragexunitpath`: Path to xunit report file
+- `codecoveragecloverpath`: Path to clover report file
+- :ref:`Code Coverage Basic<report-html-basic>`
+
+  - `codecoveragereportpath`: Path to HTML report
+  - `codecoveragereporturl`: URL to HTML report
+- :ref:`Code Coverage Tree Map<report-treemap>`:
+
+  - `codecoveragetreemappath`: Path to tree map
+  - `codecoveragetreemapurl`: URL to tree map
+- `Code Coverage Advanced <http://extensions.atoum.org/extensions/reports>`_
+
+  - `codecoveragereportextensionpath`: Path to HTML report
+  - `codecodecoveragereportextensionurl`: URL to HTML report
+- `Telemetry <http://extensions.atoum.org/extensions/telemetry>`_
+
+  - `telemetryprojectname`: Name of telemetry report to be sent
