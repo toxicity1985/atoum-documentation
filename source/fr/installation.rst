@@ -8,10 +8,26 @@ Si vous souhaitez utiliser atoum, il vous suffit de télécharger la dernière v
 
 Vous pouvez installer atoum de plusieurs manières :
 
+* via `composer`_ ;
 * en téléchargeant l'`archive PHAR`_ ;
-* à l'aide de `composer`_ ;
 * en clonant le dépôt `Github`_ ;
 * voir aussi :ref:`l'integration d'atoum dans votre framework <utilisation-avec-frameworks>`.
+
+
+.. _installation-par-composer:
+
+Composer
+========
+
+`Composer <http://getcomposer.org>`_ est un outil de gestion de dépendance en PHP.
+
+Assurez vous de disposer d'une installation fonctionnelle de Composer (`documentation officielle (EN)<https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
+
+Ajoutez ``atoum/atoum`` comme dépendance de développement :
+
+.. code-block:: shell
+
+   composer require --dev atoum/atoum
 
 
 .. _archive-phar:
@@ -109,36 +125,6 @@ La version est alors supprimée.
 .. note::
 	La suppression d'une version nécessite la modification de l'archive PHAR. par défaut la configuration de PHP ne l'autorise pas. 
 	Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
-
-
-.. _installation-par-composer:
-
-Composer
-========
-
-`Composer <http://getcomposer.org>`_ est un outil de gestion de dépendance en PHP.
-
-Commencez par installer composer :
-
-.. code-block:: shell
-
-   $ curl -s https://getcomposer.org/installer | php
-
-Créez ensuite un fichier ``composer.json`` contenant le JSON (JavaScript Object Notation) suivant :
-
-.. code-block:: json
-
-   {
-       "require-dev": {
-           "atoum/atoum": "~2.5"
-       }
-   }
-
-Enfin, exécutez la commande suivante :
-
-.. code-block:: shell
-
-   $ php composer.phar install
 
 
 .. _installation-par-github:
