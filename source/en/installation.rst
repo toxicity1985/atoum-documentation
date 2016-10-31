@@ -8,10 +8,25 @@ If you want to use atoum, simply download the latest version.
 
 You can install atom in several ways:
 
+* using `composer`_;
 * download the `PHAR archive`_ ;
-* use `composer`_;
 * clone the `Github`_ repository;
 * see also the :ref:`integration with your frameworks <utilisation-avec-frameworks>`.
+
+.. _installation-par-composer:
+
+Composer
+========
+
+`Composer <http://getcomposer.org>`_ is a dependency management tool in PHP.
+
+Be sure you have a working composer installation (`official documentation<https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
+
+Add ``atoum/atoum`` as a dev dependency :
+
+.. code-block:: json
+
+   composer require --dev atoum/atoum
 
 
 .. _archive-phar:
@@ -109,37 +124,6 @@ The version is then removed.
 .. note::
 	Deleting a version requires the modification of the PHAR archive. the default PHP configuration doesn't allow this. 
 	So it is mandatory to use the directive ``-d phar.readonly=0``.
-
-
-.. _installation-par-composer:
-
-Composer
-========
-
-`Composer <http://getcomposer.org>`_ is a dependency management tool in PHP.
-
-Start by installing composer:
-
-.. code-block:: shell
-
-   $ curl -s https://getcomposer.org/installer | php
-
-Then create a file ``composer.json`` containing the following JSON (JavaScript Object Notation):
-
-.. code-block:: json
-
-   {
-       "require-dev": {
-           "atoum/atoum": "~2.5"
-       }
-   }
-
-Finally, run the following command:
-
-.. code-block:: shell
-
-   $ php composer.phar install
-
 
 .. _installation-par-github:
 
