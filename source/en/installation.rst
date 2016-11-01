@@ -20,7 +20,7 @@ Composer
 
 `Composer <http://getcomposer.org>`_ is a dependency management tool in PHP.
 
-Be sure you have a working composer installation (`official documentation<https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
+Be sure you have a working composer installation (`official documentation <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
 
 Add ``atoum/atoum`` as a dev dependency :
 
