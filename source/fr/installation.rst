@@ -21,7 +21,7 @@ Composer
 
 `Composer <http://getcomposer.org>`_ est un outil de gestion de dépendance en PHP.
 
-Assurez vous de disposer d'une installation fonctionnelle de Composer (`documentation officielle (EN)<https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
+Assurez vous de disposer d'une installation fonctionnelle de Composer (`documentation officielle (EN) <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
 
 Ajoutez ``atoum/atoum`` comme dépendance de développement :
 
