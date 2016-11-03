@@ -4,7 +4,7 @@ Amusons-nous avec atoum
 ***********************
 
 Rapport
-======
+=======
 
 Les rapports de tests peuvent être décorés afin d'être plus agréables ou sympa à lire.
 Pour cela, dans le :ref:`fichier de configuration <fichier-de-configuration>` d'atoum, ajoutez le code suivant

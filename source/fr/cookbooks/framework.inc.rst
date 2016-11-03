@@ -95,7 +95,7 @@ Merci `Jérémy Poulain <https://github.com/Tharkun>`_ pour ce tutoriel.
 .. _utilisation-avec-symfony-2:
 
 Utilisation avec Symfony 2
-===========================
+==========================
 
 Si vous souhaitez utiliser atoum au sein de vos projets Symfony, vous pouvez installer le Bundle `AtoumBundle <https://github.com/atoum/AtoumBundle>`_.
 
@@ -103,7 +103,7 @@ Si vous souhaitez installer et configurer atoum manuellement, voici comment fair
 
 
 Étape 1: installation d'atoum
----------------------------------------
+-----------------------------
 
 Si vous utilisez Symfony 2.0, :ref:`téléchargez l'archive PHAR <archive-phar>` et placez-la dans le répertoire vendor qui est à la racine de votre projet.
 
@@ -111,7 +111,7 @@ Si vous utilisez Symfony 2.1+, :ref:`ajoutez atoum dans votre fichier composer.j
 
 
 Étape 2: création de la classe de test
----------------------------------------
+--------------------------------------
 
 Imaginons que nous voulions tester cet Entity:
 
@@ -247,7 +247,7 @@ Créons notre fichier de test:
 
 
 Étape 4: lancement des tests
----------------------------
+----------------------------
 
 Si vous utilisez Symfony 2.0:
 
@@ -389,7 +389,7 @@ Les tests doivent inclure le fichier de bootstrap se trouvant dans le plugin :
 
 
 Lancer les tests
-------------
+----------------
 
 La commande symfony ``atoum:test`` est disponible. Les tests peuvent alors se lancer de cette façon :
 

@@ -53,7 +53,7 @@ windows
 
 
 Exemples dans le reste de la documentation
-=========================================
+==========================================
 
 Dans les exemples suivants, les commandes pour lancer les tests avec atoum seront écrites avec la forme suivante :
 
@@ -81,7 +81,7 @@ Pour lancer les tests d'un fichier, il vous suffit d'utiliser l'option -f ou --f
 
 
 Pour un dossier
-================
+===============
 
 Pour lancer les tests d'un répertoire, il vous suffit d'utiliser l'option -d ou --directories.
 
@@ -100,7 +100,7 @@ Une fois que vous avez préciser à atoum les :ref:`fichiers à exécuter <fichi
 .. _filtres-par-namespace:
 
 Par espace de noms
-================
+==================
 
 Pour filtrer sur les espace de nom, par example exécuter le test seulement sur un espace de nom, il suffit d'utiliser l'option ``-ns`` or ``--namespaces``.
 

@@ -1,7 +1,7 @@
 .. _cli-options:
 
 Option de la ligne de commande
-####################
+##############################
 
 La plupart des options existent sous 2 formes, une courte de 1 à 6 caractères et une longue, plus explicative. Ces 2 formes font strictement la même chose. Vous pouvez utiliser indifféremment l'une ou l'autre forme.
 
@@ -200,7 +200,7 @@ Cette option vous permet de spécifier le ou les extensions des fichiers de test
 
 
 Débugage & boucle
-*******************
+*****************
 
 .. _cli-options-debug:
 
@@ -234,7 +234,7 @@ Cette option vous permet d'activer le mode loop d'atoum.
 .. _cli-options-coverage_reports:
 
 Couverture & rapports
-***********************
+*********************
 
 .. _cli-options-report-title:
 

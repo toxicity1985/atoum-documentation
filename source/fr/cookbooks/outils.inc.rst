@@ -105,7 +105,7 @@ Il est très simple d'intégrer les résultats de tests atoum à `Jenkins <http:
 Étape 1 : Ajout d'un rapport xUnit à la configuration atoum
 -----------------------------------------------------------
 
-Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifique <reports-using>' dans la configuration.
+Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifique <reports-using>` dans la configuration.
 
 Si vous n'avez pas de fichier de configuration
 """"""""""""""""""""""""""""""""""""""""""""""
