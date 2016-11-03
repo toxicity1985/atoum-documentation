@@ -21,20 +21,52 @@ In order to simplify the writing of tests with arrays, some syntactic sugar is a
 
 .. code-block:: php
 
-	$a = [
-		'foo' => 42,
-		'bar' => '1337' 
-	];
+   $a = [
+      'foo' => 42,
+      'bar' => '1337'
+   ];
 
-	$this
-		->array($a)
-			->integer['foo']->isEqualTo(42)
-			->string['bar']->isEqualTo('1337')
-	;
+   $this
+      ->array($a)
+         ->integer['foo']->isEqualTo(42)
+         ->string['bar']->isEqualTo('1337')
+   ;
 
 .. note::
    This writing form is available from PHP 5.4.
 
+.. _array-child:
+
+child
+=====
+
+With ``child`` you can assert on a subarray.
+
+.. code-block:: php
+
+   $array = array(
+      'ary' => array(
+         'key1' => 'abc',
+         'key2' => 123,
+         'key3' => array(),
+      ),
+   );
+
+	$this
+      ->array($array)
+		->child['ary'](function($child)
+		{
+            $child->hasSize(3)
+               ->hasKeys(array('key1', 'key2', 'key3'))
+               ->contains(123)
+               ->child['key3'](function($child)
+               {
+                  $child->isEmpty;
+               });
+        });
+
+.. note::
+   This is available from PHP 5.4.
 
 .. _array-contains:
 
