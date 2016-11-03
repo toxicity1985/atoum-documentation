@@ -97,12 +97,8 @@ Like with ``testedInstance``, you can use ``testedClass`` to writer more compreh
 	<?php
 	$this
 		->testedClass
-			->isFinal()		// passes
-	;
-
-	$this
-		->testedClass
-			->isFinal		// passes too
+            ->hasConstant('FOO')
+			->isFinal()
 	;
 
 You can do more with the :ref:`class asseters<class-anchor>`.

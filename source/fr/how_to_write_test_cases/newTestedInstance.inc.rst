@@ -96,6 +96,7 @@ Comme avec ``testedInstance``, vous pouvez utiliser ``testedClass`` pour éccrir
 	<?php
 	$this
 		->testedClass
+            ->hasConstant('FOO')
 			->isFinal()
 	;
 
