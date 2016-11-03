@@ -34,6 +34,7 @@ In atoum we have several asserters and related assertions. All are listed here. 
 .. include:: asserters/mysqlDateTime.inc.rst
 .. include:: asserters/object.inc.rst
 .. include:: asserters/output.inc.rst
+.. include:: asserters/resource.inc.rst
 .. include:: asserters/sizeOf.inc.rst
 .. include:: asserters/stream.inc.rst
 .. include:: asserters/string.inc.rst
