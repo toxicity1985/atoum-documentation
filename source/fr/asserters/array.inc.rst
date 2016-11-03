@@ -54,18 +54,20 @@ Avec ``child`` vous pouvez effectuer des assertions sur un sous-array.
       ),
    );
 
-	$this
+   $this
       ->array($array)
-		->child['ary'](function($child)
-		{
-            $child->hasSize(3)
+         ->child['ary'](function($child)
+         {
+            $child
+               ->hasSize(3)
                ->hasKeys(array('key1', 'key2', 'key3'))
                ->contains(123)
                ->child['key3'](function($child)
                {
                   $child->isEmpty;
                });
-        });
+         });
+
 
 .. note::
    Ceci n'est disponible qu'à partir de PHP 5.4.

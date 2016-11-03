@@ -53,18 +53,19 @@ With ``child`` you can assert on a subarray.
       ),
    );
 
-	$this
+   $this
       ->array($array)
-		->child['ary'](function($child)
-		{
-            $child->hasSize(3)
+         ->child['ary'](function($child)
+         {
+            $child
+               ->hasSize(3)
                ->hasKeys(array('key1', 'key2', 'key3'))
                ->contains(123)
                ->child['key3'](function($child)
                {
                   $child->isEmpty;
                });
-        });
+         });
 
 .. note::
    This is available from PHP 5.4.
