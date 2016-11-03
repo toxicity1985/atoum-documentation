@@ -44,6 +44,7 @@ With ``child`` you can assert on a subarray.
 
 .. code-block:: php
 
+   <?php
    $array = array(
       'ary' => array(
          'key1' => 'abc',

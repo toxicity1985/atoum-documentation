@@ -45,6 +45,7 @@ Avec ``child`` vous pouvez effectuer des assertions sur un sous-array.
 
 .. code-block:: php
 
+   <?php
    $array = array(
       'ary' => array(
          'key1' => 'abc',
