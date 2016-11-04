@@ -88,7 +88,7 @@ Custom asserter
 Short syntax
 ============
 
-Avec les :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs chsoes intéressantes. Mais, parce qu'atoum essaie de vous aider dans la rédaction de vos test, nous avons ajouter une série d'alias de base.
+Avec les :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses intéressantes. Mais, parce qu'atoum essaie de vous aider dans la rédaction de vos test, nous avons ajouté une série d'alias de base.
 
 * `==` est la même chose que l'asserter :ref`isEqualTo<variable-is-equal-to>`
 * `===` est la même chose que l'asserter :ref`isIdenticalTo<variable-is-identical-to>`
