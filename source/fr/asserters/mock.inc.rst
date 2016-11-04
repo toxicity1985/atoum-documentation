@@ -368,7 +368,7 @@ C'est un alias de  :ref:`call-anchor`.
    <?php
    $this
        ->given(
-           $connection = new mock\connection,
+           $connection = new mock\connection
        )
        ->if(
            $this->newTestedInstance($connection)
