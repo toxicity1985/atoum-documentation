@@ -88,6 +88,17 @@ Custom asserter
 Short syntax
 ============
 
+With :ref:`alias<asserter_tips-alias>` you can defined some intresting things. But because atoum try to help you in the redaction of your test, we add several alias.
+
+* `==` is the same as the asserter :ref`isEqualTo<variable-is-equal-to>`
+* `===` is the same as the asserter :ref`isIdenticalTo<variable-is-identical-to>`
+* `!=` is the same as the asserter :ref`isNotEqualTo<variable-is-not-equal-to>`
+* `!==` is the same as the asserter :ref`isIdenticalTo<variable-is-not-identical-to>`
+* `<` is the same as the asserter :ref`isLessThan<integer-is-less-than>`
+* `<=` is the same as the asserter :ref`isLessThanOrEqualTo<integer-is-less-than-or-equal-to>`
+* `>` is the same as the asserter :ref`isGreaterThan<integer-is-greater-than>`
+* `>=` is the same as the asserter :ref`isGreaterThanOrEqualTo<integer-is-greater-than-or-equal-to>`
+
 .. code-block:: php
 
 	<?php
@@ -115,8 +126,3 @@ Short syntax
 	        ;
 	    }
 	}
-
-
-
-
-
