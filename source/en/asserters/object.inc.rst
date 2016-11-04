@@ -205,6 +205,16 @@ isInstanceOf
 .. hint::
    Notice that with PHP ``>= 5.5`` you can use the keyword ``class`` to get the absolute class names, for example ``$this->object($foo)->isInstanceOf(FooClass::class)``.
 
+.. _object-is-instance-of-tested-class:
+
+isInstanceOfTestedClass
+=======================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $this->object($this->testedInstance)->isInstanceOfTestedClass;
 
 .. _object-is-not-callable:
 
@@ -267,3 +277,14 @@ Two objects are considered identical when they refer to the same instance of sam
 .. hint::
    ``isNotIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
+
+.. _object-is-not-tested-instance:
+
+isNotTestedInstance
+===================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $this->object($this->testedInstance)->isNotTestedInstance; // fail
