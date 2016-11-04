@@ -13,6 +13,9 @@ Currently, there is three execution modes :
 * *isolate*: tests run sequentially in a subprocess of PHP. This form of execution is quite slow.
 * *concurrent*: the default mode, the tests run in parallel, in PHP sub-processes. 
 
+.. important::
+  If you use xdebug to debug (so not for code coverage), the test or your code, the only execution engine available will be `concurrent`.
+
 Here's an example :
 
 .. code-block:: php
