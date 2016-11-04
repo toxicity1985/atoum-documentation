@@ -112,6 +112,7 @@ With :ref:`alias<asserter_tips-alias>` you can defined some intresting things. B
 	    {
 	        $this
 	            ->variable('foo')->{'=='}('foo')
+	            ->variable('foo')->{'foo'} // same as previous line
 	            ->variable('foo')->{'!='}('bar')
 
 	            ->object($this->newInstance)->{'=='}($this->newInstance)

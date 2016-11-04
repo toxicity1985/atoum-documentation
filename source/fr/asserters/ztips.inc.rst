@@ -112,6 +112,7 @@ Avec les :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs chsoes
 	    {
 	        $this
 	            ->variable('foo')->{'=='}('foo')
+	            ->variable('foo')->{'foo'} // équivalent à la ligne précédente
 	            ->variable('foo')->{'!='}('bar')
 
 	            ->object($this->newInstance)->{'=='}($this->newInstance)
