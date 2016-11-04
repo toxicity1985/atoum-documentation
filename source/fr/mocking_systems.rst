@@ -292,7 +292,7 @@ Dans le cas du dernier exemple, vous devriez plutôt utiliser `methodsMatching`_
 
 
 methodsMatching
------------------
+---------------
 
 ``methodsMatching`` vous permet de définir les méthodes où le comportement doit être modifié grâce à l'expression rationnelle passée en argument :
 
@@ -365,6 +365,7 @@ atoum vous permet de vérifier qu'un bouchon a été utilisé correctement.
 .. note::
    Reportez-vous à la documentation sur l'assertion :ref:`mock-asserter` pour obtenir plus d'informations sur les tests des bouchons.
 
+.. _mock-native-function:
 
 Le bouchonnage (mock) des fonctions natives de PHP
 **************************************************
@@ -409,3 +410,73 @@ atoum permet de très facilement simuler le comportement des fonctions natives d
       ->object($this->testedInstance->loadConfigFile())
          ->isTestedInstance()
    ;
+.. _mock-constant:
+
+Le bouchonage des contantes
+***************************
+
+Les contantes PHP sont déclarée par ``defined``, mais avec atoum vous pouvez bouchonner celles-ci de cette manière:
+
+.. code-block:: php
+
+   <?php
+   $this->constant->PHP_VERSION_ID = '606060'; // troll \o/
+
+   $this
+       ->given($this->newTestedInstance())
+       ->then
+           ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+       ->if($this->constant->PHP_VERSION_ID = uniqid())
+       ->then
+           ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+   ;
+
+Attention, cependant du à lanature de PHP, suivant l':ref:`engine<@engine>` utiliser, vous pouvez rencontrer certains soucis.
+
+.. code-block:: php
+
+   <?php
+
+   namespace foo {
+       class foo {
+           public function hello()
+           {
+               return PHP_VERSION_ID;
+           }
+       }
+   }
+
+   namespace tests\units\foo {
+       use atoum;
+
+       /**
+        * @engine inline
+        */
+       class foo extends atoum
+       {
+           public function testFoo()
+           {
+               $this
+                   ->given($this->newTestedInstance())
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+                   ->if($this->constant->PHP_VERSION_ID = uniqid())
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+               ;
+           }
+
+           public function testBar()
+           {
+               $this
+                   ->given($this->newTestedInstance())
+                   ->if($this->constant->PHP_VERSION_ID = $mockVersionId = uniqid()) // inline engine will fail here
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo($mockVersionId)
+                   ->if($this->constant->PHP_VERSION_ID = $mockVersionId = uniqid()) // isolate/concurrent engines will fail here
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo($mockVersionId)
+               ;
+           }
+       }
+   }
