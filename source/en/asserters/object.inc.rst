@@ -214,7 +214,9 @@ isInstanceOfTestedClass
 
    <?php
    $this->newTestedInstance;
+   $object = new TestedClass();
    $this->object($this->testedInstance)->isInstanceOfTestedClass;
+   $this->object($object)->isInstanceOfTestedClass;
 
 .. _object-is-not-callable:
 
@@ -288,3 +290,18 @@ isNotTestedInstance
    <?php
    $this->newTestedInstance;
    $this->object($this->testedInstance)->isNotTestedInstance; // fail
+
+
+.. _object-is-tested-instance:
+
+isTestedInstance
+================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $this->object($this->testedInstance)->isTestedInstance;
+
+   $object = new TestedClass();
+   $this->object($object)->isTestedInstance; // fail

@@ -54,7 +54,7 @@ Comme on le voit, c'est légèrement plus simple, mais surtout cela présente de
 * On ne manipule pas le nom de la classe testée
 * On ne manipule pas l'instance ainsi créée
 
-Par ailleurs, on peut facilement valider que l'on a bien l'instance testée avec ``isTestedInstance``, comme expliqué dans l'exemple précédent.
+Par ailleurs, on peut facilement valider que l'on a bien l'instance testée avec :ref:`isTestedInstance<object-is-tested-instance>`, comme expliqué dans l'exemple précédent.
 
 Pour passer des arguments au constructeur, il suffit de le faire au travers de ``newTestedInstance`` :
 

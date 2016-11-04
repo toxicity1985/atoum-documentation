@@ -410,6 +410,10 @@ atoum permet de très facilement simuler le comportement des fonctions natives d
       ->object($this->testedInstance->loadConfigFile())
          ->isTestedInstance()
    ;
+
+.. note::
+   N'hesitez pas a regarder les information sur :ref:`isTestedInstance()<object-is-tested-instance>`.
+
 .. _mock-constant:
 
 Le bouchonage des contantes
