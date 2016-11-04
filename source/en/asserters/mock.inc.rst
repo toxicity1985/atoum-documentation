@@ -17,7 +17,6 @@ It's the assertion dedicated to mocks.
 .. note::
    Refer to the documentation of :ref:`mock <les-bouchons-mock>` for more information on how to create and manage mocks.
 
-
 .. _call-anchor:
 
 call
@@ -41,6 +40,40 @@ call
                ->once()
    ;
 
+.. _mock-after:
+
+after
+`````
+
+``after`` checks if the method has been called after the one passed as parameter.
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test2(),
+           $mock->test()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->after($this->mock($mock)->call('test2')->once())
+           ->once() // passes
+   ;
+
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test(),
+           $mock->test2()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->after($this->mock($mock)->call('test2')->once())
+           ->once() // fails
+   ;
+
 .. _at-least-once:
 
 atLeastOnce
@@ -59,6 +92,40 @@ atLeastOnce
        ->mock($mock)
            ->call('myMethod')
                ->atLeastOnce()
+   ;
+
+.. _mock-before:
+
+before
+``````
+
+``before`` checks if the method has been called before the one passed as parameter.
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test(),
+           $mock->test2()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->before($this->mock($mock)->call('test2')->once())
+           ->once() // passes
+   ;
+
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test2(),
+           $mock->test()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->before($this->mock($mock)->call('test2')->once())
+           ->once() // fails
    ;
 
 .. _exactly-anchor:
@@ -287,6 +354,30 @@ withoutAnyArgument
 .. note::
       ``withoutAnyArgument`` is equivalent to call :ref:`withAtLeastArguments<with-at-least-arguments>` with an empty array: ``->withAtLeastArguments(array())``.
 
+.. _mock-receive:
+
+receive
+=======
+
+It's an alias of :ref:`call-anchor`.
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->given(
+           $connection = new mock\connection,
+       )
+       ->if(
+           $this->newTestedInstance($connection)
+       )
+       ->then
+           ->object($this->testedInstance->noMoreValue())->isTestedInstance
+           ->mock($connection)->receive('newPacket')->withArguments(new packet)->once;
+
+      // same as
+      $this->mock($connection)->call('newPacket')->withArguments(new packet)->once;
+
 .. _was-called:
 
 wasCalled
@@ -323,68 +414,4 @@ wasNotCalled
 
        ->mock($mock)
            ->wasNotCalled()
-   ;
-
-before
-======
-
-``before`` checks if the method has been called before the one passed as parameter.
-
-.. code-block:: php
-
-   <?php
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test(),
-           $mock->test2()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->before($this->mock($mock)->call('test2')->once())
-           ->once() // passes
-   ;
-
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test2(),
-           $mock->test()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->before($this->mock($mock)->call('test2')->once())
-           ->once() // fails
-   ;
-
-after
-=====
-
-``after`` checks if the method has been called after the one passed as parameter.
-
-.. code-block:: php
-
-   <?php
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test2(),
-           $mock->test()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->after($this->mock($mock)->call('test2')->once())
-           ->once() // passes
-   ;
-
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test(),
-           $mock->test2()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->after($this->mock($mock)->call('test2')->once())
-           ->once() // fails
    ;
