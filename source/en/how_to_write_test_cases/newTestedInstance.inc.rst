@@ -83,3 +83,22 @@ If you want to test a static method of your class, you can retrieve the tested c
        }
     }
 
+
+
+.. _testedClass:
+
+testedClass
+***********
+
+Like with ``testedInstance``, you can use ``testedClass`` to writer more comprehensible test. ``testedClass`` allow you to assert on the class you test:
+
+.. code-block:: php
+
+	<?php
+	$this
+		->testedClass
+            ->hasConstant('FOO')
+			->isFinal()
+	;
+
+You can do more with the :ref:`class asseters<class-anchor>`.

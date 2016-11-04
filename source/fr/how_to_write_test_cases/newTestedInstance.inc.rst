@@ -83,3 +83,21 @@ Si vous voulez tester une méthode statique de votre classe, vous pouvez récup�
        }
     }
 
+
+.. _testedClass:
+
+testedClass
+***********
+
+Comme avec ``testedInstance``, vous pouvez utiliser ``testedClass`` pour éccrire des tests plus compréhensible. ``testedClass`` vous permet d'effectuer des assertion sur la class testée :
+
+.. code-block:: php
+
+	<?php
+	$this
+		->testedClass
+            ->hasConstant('FOO')
+			->isFinal()
+	;
+
+Vous pouvez faire bien plus avec les :ref:`assertions sur les classes<class-anchor>`.
