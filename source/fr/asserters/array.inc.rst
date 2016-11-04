@@ -33,8 +33,44 @@ Il est à noter, qu'afin de simplifier l'écriture des tests sur les tableaux, d
 	;
 
 .. note::
-   This writing form is available from PHP 5.4.
+   Cette forme d'écriture est disponible dès PHP 5.4.
 
+
+.. _array-child:
+
+child
+=====
+
+Avec ``child`` vous pouvez effectuer des assertions sur un sous-array.
+
+.. code-block:: php
+
+   <?php
+   $array = array(
+      'ary' => array(
+         'key1' => 'abc',
+         'key2' => 123,
+         'key3' => array(),
+      ),
+   );
+
+   $this
+      ->array($array)
+         ->child['ary'](function($child)
+         {
+            $child
+               ->hasSize(3)
+               ->hasKeys(array('key1', 'key2', 'key3'))
+               ->contains(123)
+               ->child['key3'](function($child)
+               {
+                  $child->isEmpty;
+               });
+         });
+
+
+.. note::
+   Ceci n'est disponible qu'à partir de PHP 5.4.
 
 .. _array-contains:
 
