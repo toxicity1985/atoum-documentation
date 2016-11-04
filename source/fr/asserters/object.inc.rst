@@ -267,3 +267,28 @@ Deux objets sont considérés identiques lorsqu'ils font référence à la même
 .. hint::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
+
+.. _object-is-not-instance-of:
+
+isNotInstanceOf
+===============
+
+``isNotInstanceOf`` vérifie qu'un objet n'est pas :
+
+* une instance de la classe donnée,
+* une sous-classe de la classe donnée (abstraite ou non),
+* une instance d'une classe qui implémente l'interface donnée.
+
+.. code-block:: php
+
+   <?php
+   $object = new \StdClass();
+
+   $this
+       ->object($object)
+           ->isNotInstanceOf('\StdClass')     // échoue
+           ->isNotInstanceOf('\Iterator')     // passe
+   ;
+
+.. note::
+Tout comme pour :ref:`isInstanceOf<object-is-instance-of>`, les noms des classes et des interfaces doivent être absolus, car les éventuelles importations d'espace de nommage ne sont pas prises en compte.
