@@ -27,6 +27,7 @@ atoum possède une série d'asserter et d'assertion relative a ceux-ci. Tous son
 .. include:: asserters/dateTime.inc.rst
 .. include:: asserters/error.inc.rst
 .. include:: asserters/exception.inc.rst
+.. include:: asserters/extension.inc.rst
 .. include:: asserters/float.inc.rst
 .. include:: asserters/hash.inc.rst
 .. include:: asserters/integer.inc.rst
