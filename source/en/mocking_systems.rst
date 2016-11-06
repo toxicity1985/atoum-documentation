@@ -411,6 +411,9 @@ atoum allow to easyly simulate the behavious of native PHP functions.
          ->isTestedInstance()
    ;
 
+.. note::
+   Check the detail about :ref:`isTestedInstance()<object-is-tested-instance>`.
+
 .. _mock-constant:
 
 The mocking of constant

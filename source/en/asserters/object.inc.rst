@@ -205,6 +205,18 @@ isInstanceOf
 .. hint::
    Notice that with PHP ``>= 5.5`` you can use the keyword ``class`` to get the absolute class names, for example ``$this->object($foo)->isInstanceOf(FooClass::class)``.
 
+.. _object-is-instance-of-tested-class:
+
+isInstanceOfTestedClass
+=======================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $object = new TestedClass();
+   $this->object($this->testedInstance)->isInstanceOfTestedClass;
+   $this->object($object)->isInstanceOfTestedClass;
 
 .. _object-is-not-callable:
 
@@ -292,3 +304,29 @@ isNotInstanceOf
 
 .. note::
    As for :ref:`isInstanceOf<object-is-instance-of>`, the name of the classes and the interfaces must be absolute, because any namespace imports are ignored.
+
+.. _object-is-not-tested-instance:
+
+isNotTestedInstance
+===================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $this->object($this->testedInstance)->isNotTestedInstance; // fail
+
+
+.. _object-is-tested-instance:
+
+isTestedInstance
+================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $this->object($this->testedInstance)->isTestedInstance;
+
+   $object = new TestedClass();
+   $this->object($object)->isTestedInstance; // fail
