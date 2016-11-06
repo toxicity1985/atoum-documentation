@@ -22,4 +22,4 @@ Test if the extension is loaded.
 		;
 
 .. note::
-	You can also use the tag :ref:`extension<annotation-php-extension>`, in some case.
+	If you need to run tests only if an extension is present, you can use the :ref:`PHP annotation<annotation-php-extension>`.

@@ -4,14 +4,14 @@
 extension
 *********
 
-It's the assertion dedicated to PHP extension.
+C'est l'assertion dédiée aux extension PHP.
 
 .. _extension-is-loaded:
 
 isLoaded
 ========
 
-Test if the extension is loaded.
+Test si l'extension est chargée.
 
 .. code-block:: php
 
@@ -22,4 +22,4 @@ Test if the extension is loaded.
 		;
 
 .. note::
-	You can also use the tag :ref:`extension<annotation-php-extension>`, in some case.
+	Si vous devez exécuté certains tests uniquement dans le cas où une extension est présente, vous pouvez utiliser :ref:`l'annotation PHP<annotation-php-extension>`.
