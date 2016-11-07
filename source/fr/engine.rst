@@ -5,7 +5,7 @@
 Les moteurs d'exécution
 ***********************
 
-Plusieurs moteurs d'exécutions des tests (au niveau de la classe ou des méthodes) existent. Ceux-ci sont configurables via l'annotation ``@engine``. Par défaut, les différents tests s'exécutent en parallèle, dans des sous-processus PHP, c'est le mode ``concurrent``.
+Plusieurs moteurs d'exécution des tests (au niveau de la classe ou des méthodes) existent. Ceux-ci sont configurables via l'annotation ``@engine``. Par défaut, les différents tests s'exécutent en parallèle, dans des sous-processus PHP, c'est le mode ``concurrent``.
 
 Il existe actuellement trois modes d'exécution :
 
@@ -14,7 +14,7 @@ Il existe actuellement trois modes d'exécution :
 * *concurrent* : le mode par défaut, les tests s'exécutent en parallèle, dans des sous-processus PHP. 
 
 .. important::
-  Si vous utiliser xdebug pour debuguer (donc pas dans le cadre du code coverage) vos test ou votre code, le seul moteur d'exécution disponible sera `concurrent`.
+  Si vous utilisez xdebug pour debuguer (donc pas dans le cadre du code coverage) vos tests ou votre code, le seul moteur d'exécution disponible sera `concurrent`.
 
 Voici un exemple :
 
