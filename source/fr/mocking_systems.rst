@@ -435,7 +435,7 @@ Les contantes PHP sont déclarée par ``defined``, mais avec atoum vous pouvez b
            ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
    ;
 
-Attention, cependant du à lanature de PHP, suivant l':ref:`engine<@engine>` utiliser, vous pouvez rencontrer certains soucis.
+Attention, cependant dû à la nature de PHP, suivant l':ref:`engine<@engine>` utilisé, vous pouvez rencontrer certains soucis.
 
 .. code-block:: php
 
