@@ -90,7 +90,7 @@ If you want to test a static method of your class, you can retrieve the tested c
 testedClass
 ***********
 
-Like ``testedInstance``, you can use ``testedClass`` to write more comprehensible test. ``testedClass`` allow you to dynamically assert on the class you test:
+Like ``testedInstance``, you can use ``testedClass`` to write more comprehensible test. ``testedClass`` allows you to dynamically assert on the class being tested:
 
 .. code-block:: php
 
