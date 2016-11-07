@@ -4,21 +4,21 @@
 extension
 *********
 
-It's the assertion dedicated to PHP extension.
+It's the asserter dedicated to PHP extension.
 
 .. _extension-is-loaded:
 
 isLoaded
 ========
 
-Test if the extension is loaded.
+Check if the extension is loaded (installed and enabled).
 
 .. code-block:: php
 
 	<?php
 	$this
 		->extension('json')
-		->isLoaded()
+			->isLoaded()
 		;
 
 .. note::
