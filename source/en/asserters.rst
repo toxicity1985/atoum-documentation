@@ -10,8 +10,47 @@ Asserters collection
 ..    :depth: 2
 ..    :local:
 
-In atoum we have several asserters and related assertions. All are listed here. atoum tries to help you to write test. So you have always a syntax like this
-``$this->[asserter]($value)->[assertion];``. Most of the assertions are fluent, like you will see in the the given examples.
+To write more explicit and less wordy tests, atoum provide several asserters who give access to specific assertions related to tested var.
+
+As atoum different asserters are specializations of manipulated items, asserters inherits from asserters they specialize.
+It help keep consistency between asserters and force to use same assertion names.
+
+This is the asserters inheritance tree:
+
+.. code-block:: shell
+
+    -- asserter (abstract)
+        |-- error
+        |-- mock
+        |-- stream
+        `-- variable
+            |-- array
+            |    `-- castToArray
+            |-- boolean
+            |-- class
+            |    `-- testedClass
+            |-- integer
+            |   |-- float
+            |   `-- sizeOf
+            |-- object
+            |   |-- dateInterval
+            |   |-- dateTime
+            |   |   `-- mysqlDateTime
+            |   `-- exception
+            |-- resource
+            `-- string
+                |-- castToString
+                |-- hash
+                |-- output
+                `-- utf8String
+
+
+.. note::
+    The general asserter/assertion syntaxe is:
+    ``$this->[asserter]($value)->[assertion];``
+
+.. note::
+    Most of the assertions are fluent, as you will see below.
 
 .. note::
 	At the end of this chapter you will find several :ref:`tips & tricks<asserter_tips>` related to assertion and asserter, don't forget to read it!
