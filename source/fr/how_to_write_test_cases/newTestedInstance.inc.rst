@@ -89,7 +89,7 @@ Si vous voulez tester une méthode statique de votre classe, vous pouvez récup�
 testedClass
 ***********
 
-Comme avec ``testedInstance``, vous pouvez utiliser ``testedClass`` pour éccrire des tests plus compréhensible. ``testedClass`` vous permet d'effectuer des assertion sur la class testée :
+Comme avec ``testedInstance``, vous pouvez utiliser ``testedClass`` pour écrire des tests plus compréhensibles. ``testedClass`` vous permet d'effectuer des assertion sur la classe testée :
 
 .. code-block:: php
 
