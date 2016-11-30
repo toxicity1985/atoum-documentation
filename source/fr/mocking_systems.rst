@@ -416,10 +416,10 @@ atoum permet de très facilement simuler le comportement des fonctions natives d
 
 .. _mock-constant:
 
-Le bouchonage des contantes
+Le bouchonnage des constantes
 ***************************
 
-Les contantes PHP sont déclarée par ``defined``, mais avec atoum vous pouvez bouchonner celles-ci de cette manière:
+Les constantes PHP sont déclarées par ``defined``, mais avec atoum vous pouvez bouchonner celles-ci de cette manière:
 
 .. code-block:: php
 
