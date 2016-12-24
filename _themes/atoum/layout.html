@@ -74,95 +74,7 @@
 
   {# Keep modernizr in head - http://modernizr.com/docs/#installing #}
   <script src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
-
-
-<style type="text/css">
-
-#menu {
-    position: fixed;
-    top: 0;
-    left: -50px;
-    height: 100vh;
-    width: 250px;
-}
-
-    #menu[aria-selected='true'] {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-    }
-
-    #menu > ul {
-        display: table;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-    }
-
-    #menu > ul > li {
-        display: table-row;
-    }
-
-    #menu > ul > li::before {
-        content: '';
-    }
-
-    #menu > ul > li > a {
-        display: table-cell;
-        vertical-align: middle;
-        color: #f0e9dd;
-        font-variant: all-small-caps;
-        text-decoration: none;
-        padding-left: 50px;
-        cursor: pointer;
-    }
-
-    #menu > ul > li > a > img {
-        display: block;
-        width: 50px;
-        height: 50px;
-        margin: 0 auto;
-        vertical-align: middle;
-    }
-
-      @media all and (max-height: 450px) {
-          nav > ul > li > a > img {
-              display: inline-block;
-              width: 30px;
-              height: 30px;
-              margin-left: .5em;
-              float: left;
-          }
-      }
-
-      #nav-features {
-          background: rgba(131, 93, 91, .6);
-      }
-
-      #nav-source {
-          background: rgba(162, 107, 97, .6);
-      }
-
-      #nav-documentation {
-          background: rgba(227, 143, 113, .6);
-      }
-
-      #nav-extensions {
-          background: rgba(252, 218, 186, .6);
-      }
-
-      #nav-posts {
-          background: rgba(240, 178, 112, .6);
-      }
-
-      #nav-about {
-          background: rgba(111, 95, 93, .6);
-      }
-
-      #nav-telemetry {
-          background: rgba(187, 73, 68, 0.6);
-      }
-
-</style>
+  <script src="{{ pathto('_static/js/menu.js', 1) }}"></script>
 
   <style type="text/css">
     .wy-side-nav-search, .wy-nav-content-wrap  {
@@ -278,11 +190,229 @@
       }
     }
   </style>
+
+
+  <style>
+    .atoum-mobile-menu, .atoum-menu-desktop--primary, .atoum-menu-desktop--secondary {
+      position: fixed;
+      top: 0;
+      height: 100%;
+      z-index: 9;
+    }
+
+    .atoum-mobile-menu, .atoum-menu-desktop--secondary {
+      overflow-y: auto;
+      background-color: #343131;
+    }
+    .atoum-mobile-menu > ul > li, .atoum-menu-desktop--secondary > ul > li {
+      padding: 5px 40px 5px 40px;
+    }
+    .atoum-mobile-menu > ul > li > ul, .atoum-menu-desktop--secondary > ul > li > ul {
+      margin: 10px 0 40px;
+    }
+
+    .atoum-menu--icon-container {
+      z-index: 1;
+      position: fixed;
+      top: 10px;
+      width: 2.5em;
+      height: 2.5em;
+      transform: rotate(-360deg) translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
+    .atoum-menu--container__primary ~ .atoum-menu--icon-container {
+      left: 10px;
+    }
+
+    .atoum-menu--icon {
+      background-color: #6f5f5d;
+      border-radius: 20px;
+    }
+
+    .atoum-menu--icon circle,
+    .atoum-menu--icon line {
+      fill: none;
+      stroke: #f5f2e7;
+      stroke-width: 4;
+    }
+
+    .atoum-menu--container, .atoum-menu--icon-container {
+      transition: 500ms cubic-bezier(0.26, 1.59, 0.64, 1);
+      transition-property: transform, left, right;
+      -webkit-transition: 500ms cubic-bezier(0.26, 1.59, 0.64, 1);
+      -webkit-transition-property: -webkit-transform, left, right;
+    }
+
+    .atoum-menu--container[aria-selected='true'] ~ .atoum-menu--icon-container {
+      transform: rotate(45deg) translateZ(0);
+      -webkit-transform: rotate(405deg) translateZ(0);
+    }
+
+    .atoum-menu--container__secondary[aria-selected='true'] ~ .atoum-menu--icon-container {
+      margin-right: 300px;
+    }
+
+    @media all and (min-width: 800px) {
+      .atoum-menu--icon-container {
+        display: none;
+      }
+    }
+    .atoum-mobile-menu {
+      width: 300px;
+      left: -300px;
+    }
+    .atoum-mobile-menu[aria-selected='true'] {
+      left: 0;
+    }
+    .atoum-mobile-menu[aria-selected='true'] ~ .atoum-menu--icon-container {
+      margin-left: 300px;
+    }
+    .atoum-mobile-menu .menu-item--brand {
+      height: 40px;
+      padding: 5px 40px 5px 20px !important;
+      color: #fff;
+      text-decoration: none;
+      vertical-align: middle;
+    }
+    .atoum-mobile-menu .menu-item--brand img {
+      height: 20px;
+      vertical-align: middle;
+    }
+    .atoum-mobile-menu .menu-item--primary {
+      line-height: 40px;
+      padding: 0 !important;
+    }
+    .atoum-mobile-menu .menu-item--primary img {
+      height: 30px;
+      vertical-align: middle;
+    }
+    .atoum-mobile-menu .menu-item--primary a {
+      display: block;
+      padding: 12px 40px 12px 20px !important;
+      color: #fff;
+      text-decoration: none;
+      vertical-align: middle;
+    }
+    .atoum-mobile-menu .menu-item--current {
+      margin: 20px 0;
+    }
+
+    .atoum-menu-desktop--primary {
+      display: none;
+      width: 200px;
+      background-color: #6f5f5d;
+    }
+    .atoum-menu-desktop--primary > ul {
+      display: table;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    .atoum-menu-desktop--primary > ul > li {
+      display: table-row;
+    }
+    .atoum-menu-desktop--primary > ul > li::before {
+      content: '';
+    }
+    .atoum-menu-desktop--primary > ul > li > a {
+      display: table-cell;
+      vertical-align: middle;
+      color: #f0e9dd;
+      font-variant: all-small-caps;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .atoum-menu-desktop--primary > ul > li > a > img {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+
+    .atoum-menu-desktop--secondary {
+      display: none;
+      margin-left: 200px;
+      width: 300px;
+    }
+
+    @media all and (min-width: 800px) {
+      .atoum-menu-desktop--primary, .atoum-menu-desktop--secondary {
+        display: block;
+      }
+    }
+    #nav-features {
+      background: rgba(131, 93, 91, 0.6);
+    }
+
+    #nav-source {
+      background: rgba(162, 107, 97, 0.6);
+    }
+
+    #nav-documentation {
+      background: rgba(227, 143, 113, 0.6);
+    }
+
+    #nav-extensions {
+      background: rgba(252, 218, 186, 0.6);
+    }
+
+    #nav-posts {
+      background: rgba(240, 178, 112, 0.6);
+    }
+
+    #nav-about {
+      background: rgba(111, 95, 93, 0.6);
+    }
+
+    #nav-telemetry {
+      background: rgba(187, 73, 68, 0.6);
+    }
+  </style>
+
+
+  <style>
+    @media all and (max-width: 800px) {
+      .wy-grid-for-nav {
+        margin-left: 0;
+      }
+      .wy-nav-side {
+        display: none;
+      }
+      .wy-nav-content-wrap {
+        margin-left: 0;
+      }
+      .wy-nav-top {
+        display: none;
+      }
+      .rst-content > div[role="navigation"] {
+          margin: -26px;
+          padding: 0 0 0 55px;
+      }
+    }
+
+    .atoum-mobile-menu img {
+      width: auto;
+    }
+
+    .atoum-mobile-menu li.toctree-l1,
+    .atoum-mobile-menu li.toctree-l2,
+    .atoum-mobile-menu li.toctree-l3 {
+      padding: 13px 0 5px 20px;
+    }
+
+    .atoum-mobile-menu a.reference {
+      color: #fff;
+    }
+  </style>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   {% include "menu_atoum.html" %}
+  {% include "menu_mobile.html" %}
 
   <div class="wy-grid-for-nav">
 
