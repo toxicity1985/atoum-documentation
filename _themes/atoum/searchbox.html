@@ -1,9 +1,60 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+
 {%- if builder != 'singlehtml' %}
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="{{ pathto('search') }}" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" id="algolia-search" onFocus="toggleSearch(true)" onBlur="toggleSearch(false)" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 {%- endif %}
+
+<script>
+function toggleSearch(isOnFocus)
+{
+  if (isOnFocus) {
+    document.body.classList.add("search-focused");
+  } else {
+    document.body.classList.remove('search-focused');
+  }
+}
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+    apiKey: '0f252c26c36d6ef21fb74be147e94b14',
+    indexName: 'atoum',
+    inputSelector: '#algolia-search',
+    algoliaOptions: { 'facetFilters': [["language:en", 'tags:extensions']] },
+    debug: true
+});
+</script>
+<style>
+  .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu {
+    left: 520px !important;
+    right: inherit !important;
+    max-width: 700px;
+    position: fixed !important;
+    top: 50px !important;
+  }
+  .algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu::before {
+    left: -7px;
+    top: 70px;
+    transform: rotate(-135deg);
+  }
+
+  .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+    background-color: rgba(131, 93, 91, .2);
+    padding: 0 5px;
+  }
+
+  body.search-column .algolia-autocomplete {
+    width: 90%;
+    transition: width 0.5s ease;
+  }
+
+  body.search-focused .algolia-autocomplete {
+    width: 100%;
+  }
+</style>
