@@ -88,6 +88,17 @@ Custom asserter
 Short syntax
 ============
 
+Avec les :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses intéressantes. Mais, parce qu'atoum essaie de vous aider dans la rédaction de vos test, nous avons ajouté une série d'alias de base.
+
+* `==` est la même chose que l'asserter :ref`isEqualTo<variable-is-equal-to>`
+* `===` est la même chose que l'asserter :ref`isIdenticalTo<variable-is-identical-to>`
+* `!=` est la même chose que l'asserter :ref`isNotEqualTo<variable-is-not-equal-to>`
+* `!==` est la même chose que l'asserter :ref`isIdenticalTo<variable-is-not-identical-to>`
+* `<` est la même chose que l'asserter :ref`isLessThan<integer-is-less-than>`
+* `<=` est la même chose que l'asserter :ref`isLessThanOrEqualTo<integer-is-less-than-or-equal-to>`
+* `>` est la même chose que l'asserter :ref`isGreaterThan<integer-is-greater-than>`
+* `>=` est la même chose que l'asserter :ref`isGreaterThanOrEqualTo<integer-is-greater-than-or-equal-to>`
+
 .. code-block:: php
 
 	<?php
@@ -101,6 +112,7 @@ Short syntax
 	    {
 	        $this
 	            ->variable('foo')->{'=='}('foo')
+	            ->variable('foo')->{'foo'} // équivalent à la ligne précédente
 	            ->variable('foo')->{'!='}('bar')
 
 	            ->object($this->newInstance)->{'=='}($this->newInstance)
@@ -115,8 +127,3 @@ Short syntax
 	        ;
 	    }
 	}
-
-
-
-
-

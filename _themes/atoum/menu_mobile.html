@@ -1,0 +1,70 @@
+<div class="atoum-menu--container atoum-menu--container__primary sidebar extension-list atoum-mobile-menu" id="mobile-menu">
+    <ul>
+        <li class="menu-item--brand">
+            <img src="http://atoum.org/images/logo/atoum.png"> atoum
+        </li>
+        <li id="nav-about" class="menu-item--primary" >
+            <a href="http://atoum.org/">
+                <img src="{{ pathto('_static/images/icon/about.svg', 1) }}" />
+                about
+            </a>
+        </li>
+        <li id="nav-features" class="menu-item--primary">
+            <a href="http://atoum.org/features.html">
+                <img src="{{ pathto('_static/images/icon/features.svg', 1) }}" />
+                features
+            </a>
+        </li>
+        <li id="nav-source" class="menu-item--primary">
+            <a href="http://atoum.org/sources.html">
+                <img src="{{ pathto('_static/images/icon/source.svg', 1) }}" />
+                sources
+            </a>
+        </li>
+        <li id="nav-posts" class="menu-item--primary">
+            <a href="http://atoum.org/news.html">
+                <img src="{{ pathto('_static/images/icon/news.svg', 1) }}" />
+                news
+            </a>
+        </li>
+        <li id="nav-extensions" class="menu-item--primary">
+            <a href="http://extensions.atoum.org">
+                <img src="{{ pathto('_static/images/icon/puzzle.svg', 1) }}" />
+                extensions
+            </a>
+        </li>
+        <li id="nav-telemetry" class="menu-item--primary">
+            <a href="https://dashboard.telemetry.atoum.org" target="telemetry">
+                <img src="{{ pathto('_static/images/icon/telemetry.svg', 1) }}" />
+                telemetry
+            </a>
+        </li>
+
+        <li id="nav-documentation" class="menu-item--primary menu-item--current">
+            <a href="http://docs.atoum.org/">
+                <img src="{{ pathto('_static/images/icon/documentation.svg', 1) }}" />
+                documentation
+            </a>
+        </li>
+    </ul>
+
+    {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
+    {% if toctree %}
+        {{ toctree }}
+    {% else %}
+        <!-- Local TOC -->
+        <div class="local-toc">{{ toc }}</div>
+    {% endif %}
+
+</div>
+
+<div aria-controls="mobile-menu" onclick="toggleMenu(this)" class="atoum-menu--icon-container">
+    <svg viewBox="0 0 100 100" class="atoum-menu--icon">
+        <title>Open menu icon</title>
+        <desc>N-ARY CIRCLED PLUS OPERATOR</desc>
+
+        <circle cx="50" cy="50" r="40" />
+        <line x1="20" y1="50" x2="80" y2="50" transform="rotate(90 50 50)" />
+        <line x1="20" y1="50" x2="80" y2="50" />
+    </svg>
+</div>

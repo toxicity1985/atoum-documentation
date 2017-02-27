@@ -54,7 +54,7 @@ As seen, it's slightly simpler but especially this has two advantages:
 * We do not manipulate the name of the tested class
 * We do not manipulate the tested instance
 
-Furthermore, we can easily validate that the instance is available with ``isTestedInstance``, as explained in the previous example.
+Furthermore, we can easily validate that the instance is available with :ref:`isTestedInstance<object-is-tested-instance>`, as explained in the previous example.
 
 To pass some arguments to the constructor, it's easy through ``newTestedInstance``:
 
@@ -83,3 +83,22 @@ If you want to test a static method of your class, you can retrieve the tested c
        }
     }
 
+
+
+.. _testedClass:
+
+testedClass
+***********
+
+Like ``testedInstance``, you can use ``testedClass`` to write more comprehensible test. ``testedClass`` allows you to dynamically assert on the class being tested:
+
+.. code-block:: php
+
+	<?php
+	$this
+		->testedClass
+            ->hasConstant('FOO')
+			->isFinal()
+	;
+
+You can go further with the :ref:`class asseters<class-anchor>`.
