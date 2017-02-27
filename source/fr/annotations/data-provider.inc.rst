@@ -29,7 +29,7 @@ Vous pouvez également définir manuellement le nom de la méthode du data provi
            ;
        }
 
-       ...
+       // ...
    }
 
 Bien évidemment, il faut penser a définir les arguments de la méthode de test qui vont recevoir les données retournées par le data provider. Dans le cas contraire, atoum va retourner des erreurs lors de l'exécution des tests.
@@ -41,7 +41,7 @@ Un data provider est une méthode protégée qui retourne un tableau ou un itér
    <?php
    class calculator extends atoum
    {
-       ...
+       // ...
 
        // Fourni des données pour testSum().
        protected function sumDataProvider()

@@ -205,6 +205,18 @@ isInstanceOf
 .. hint::
    Notice that with PHP ``>= 5.5`` you can use the keyword ``class`` to get the absolute class names, for example ``$this->object($foo)->isInstanceOf(FooClass::class)``.
 
+.. _object-is-instance-of-tested-class:
+
+isInstanceOfTestedClass
+=======================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $object = new TestedClass();
+   $this->object($this->testedInstance)->isInstanceOfTestedClass;
+   $this->object($object)->isInstanceOfTestedClass;
 
 .. _object-is-not-callable:
 
@@ -267,3 +279,54 @@ Two objects are considered identical when they refer to the same instance of sam
 .. hint::
    ``isNotIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
+
+.. _object-is-not-instance-of:
+
+isNotInstanceOf
+===============
+
+``isNotInstanceOf`` check that an object is not:
+
+* an instance of the given class,
+* a subclass from the given class (abstract or not),
+* an instance of class that implements a given interface.
+
+.. code-block:: php
+
+   <?php
+   $object = new \StdClass();
+
+   $this
+       ->object($object)
+           ->isNotInstanceOf('\StdClass')     // fail
+           ->isNotInstanceOf('\Iterator')     // pass
+   ;
+
+.. note::
+   As for :ref:`isInstanceOf<object-is-instance-of>`, the name of the classes and the interfaces must be absolute, because any namespace imports are ignored.
+
+.. _object-is-not-tested-instance:
+
+isNotTestedInstance
+===================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $this->object($this->testedInstance)->isNotTestedInstance; // fail
+
+
+.. _object-is-tested-instance:
+
+isTestedInstance
+================
+
+.. code-block:: php
+
+   <?php
+   $this->newTestedInstance;
+   $this->object($this->testedInstance)->isTestedInstance;
+
+   $object = new TestedClass();
+   $this->object($object)->isTestedInstance; // fail

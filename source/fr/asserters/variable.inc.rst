@@ -137,7 +137,7 @@ isNotEqualTo
            ->isNotEqualTo('a')     // échoue
 
        ->variable($aString)
-           ->isNotEqualTo($1)      // échoue
+           ->isNotEqualTo($a)      // échoue
    ;
 
 .. warning::

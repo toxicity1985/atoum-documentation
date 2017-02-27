@@ -11,21 +11,21 @@ atoum dispose d'un exécutable qui vous permet de lancer vos tests en ligne de c
 Avec l'archive phar
 ===================
 
-Si vous utilisez l'archive phar, elle est elle-même l'exécutable.
+Si vous utiliser l'archive phar, elle est déjà exécutable.
 
 linux / mac
 -----------
 
 .. code-block:: shell
 
-   $ php path/to/mageekguy.atoum.phar
+   $ php path/to/atoum.phar
 
 windows
 -------
 
 .. code-block:: shell
 
-   C:\> X:\Path\To\php.exe X:\Path\To\mageekguy.atoum.phar
+   C:\> X:\Path\To\php.exe X:\Path\To\atoum.phar
 
 
 Avec les sources
@@ -70,8 +70,8 @@ Fichiers à exécuter
 *******************
 
 
-Par fichiers
-============
+For specific files
+==================
 
 Pour lancer les tests d'un fichier, il vous suffit d'utiliser l'option -f ou --files.
 
@@ -80,7 +80,7 @@ Pour lancer les tests d'un fichier, il vous suffit d'utiliser l'option -f ou --f
    $ ./bin/atoum -f tests/units/MyTest.php
 
 
-Par répertoires
+Pour un dossier
 ===============
 
 Pour lancer les tests d'un répertoire, il vous suffit d'utiliser l'option -d ou --directories.
@@ -157,7 +157,7 @@ Cela se fait très simplement grâce aux annotations et à la balise @tags :
 
    namespace vendor\project\tests\units;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -168,7 +168,7 @@ Cela se fait très simplement grâce aux annotations et à la balise @tags :
    {
        public function testBar()
        {
-           ...
+           // ...
        }
    }
 
@@ -184,7 +184,7 @@ De la même manière, il est également possible de taguer les méthodes de test
 
    namespace vendor\project\tests\units;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -195,11 +195,11 @@ De la même manière, il est également possible de taguer les méthodes de test
         */
        public function testBar()
        {
-           ...
+           // ...
        }
    }
 
-Une fois les tags nécessaires définis, il n'y a plus qu'à exécuter les tests avec le ou les tags adéquates à l'aide de l'option --tags, ou -t dans sa version courte :
+Une fois les tags nécessaires définis, il n'y a plus qu'à exécuter les tests avec le ou les tags adéquates à l'aide de l'option ``--tags``, ou ``-t`` dans sa version courte :
 
 .. code-block:: shell
 

@@ -28,12 +28,24 @@ Certaines options acceptent plusieurs valeurs :
 Configuration & bootstrap
 *************************
 
+.. _cli-options-autoloader_file:
+
+-af <file> / --autoloader-file <file>
+=====================================
+
+Cette option vous permet de spécifier le chemin du :ref:`fichier d'autoloader <autoloader_file>`.
+
+.. code-block:: shell
+
+   $ ./bin/atoum -af /path/to/autloader.php
+   $ ./bin/atoum --autoloader-file /path/to/autoloader.php
+
 .. _cli-options-bootstrap_file:
 
 -bf <file> / --bootstrap-file <file>
 ====================================
 
-Cette option vous permet de spécifier le chemin vers le fichier de bootstrap.
+Cette option vous permet de spécifier le chemin du :ref:`fichier de bootstrap <bootstrap_file>`.
 
 .. code-block:: shell
 
@@ -46,7 +58,7 @@ Cette option vous permet de spécifier le chemin vers le fichier de bootstrap.
 -c <file> / --configuration <file>
 ==================================
 
-Cette option vous permet de spécifier le chemin vers le fichier de configuration à utiliser pour lancer les tests.
+Cette option vous permet de spécifier le chemin vers le :ref:`fichier de configuration<fichier-de-configuration>` à utiliser pour lancer les tests.
 
 .. code-block:: shell
 
@@ -188,7 +200,7 @@ Cette option vous permet de spécifier le ou les extensions des fichiers de test
 
 
 Débugage & boucle
-*******************
+*****************
 
 .. _cli-options-debug:
 
@@ -219,9 +231,10 @@ Cette option vous permet d'activer le mode loop d'atoum.
 .. note::
    Reportez-vous à la section sur le :ref:`mode-loop` pour avoir plus d'informations.
 
+.. _cli-options-coverage_reports:
 
 Couverture & rapports
-***********************
+*********************
 
 .. _cli-options-report-title:
 

@@ -36,7 +36,7 @@ La plus simple est de créer un objet dont le nom absolu est préfixé par ``moc
    $stdObject     = new \mock\StdClass;
 
    // création d'un bouchon à partir d'une classe inexistante
-   $anonymousMock = new \mock\My\Unknown\Class;
+   $anonymousMock = new \mock\My\Unknown\Claass;
 
 
 Le générateur de bouchon
@@ -196,7 +196,7 @@ Le ``mockController`` vous permet de redéfinir **uniquement les méthodes publi
    $this->calling($mockDbClient)->query = function(Query $query) use($result) {
        switch($query->type) {
            case Query::SELECT:
-               return $result
+               return $result;
 
            default;
                return null;
@@ -292,7 +292,7 @@ Dans le cas du dernier exemple, vous devriez plutôt utiliser `methodsMatching`_
 
 
 methodsMatching
------------------
+---------------
 
 ``methodsMatching`` vous permet de définir les méthodes où le comportement doit être modifié grâce à l'expression rationnelle passée en argument :
 
@@ -365,6 +365,7 @@ atoum vous permet de vérifier qu'un bouchon a été utilisé correctement.
 .. note::
    Reportez-vous à la documentation sur l'assertion :ref:`mock-asserter` pour obtenir plus d'informations sur les tests des bouchons.
 
+.. _mock-native-function:
 
 Le bouchonnage (mock) des fonctions natives de PHP
 **************************************************
@@ -409,3 +410,77 @@ atoum permet de très facilement simuler le comportement des fonctions natives d
       ->object($this->testedInstance->loadConfigFile())
          ->isTestedInstance()
    ;
+
+.. note::
+   N'hesitez pas a regarder les information sur :ref:`isTestedInstance()<object-is-tested-instance>`.
+
+.. _mock-constant:
+
+Le bouchonnage des constantes
+***************************
+
+Les constantes PHP sont déclarées par ``defined``, mais avec atoum vous pouvez bouchonner celles-ci de cette manière:
+
+.. code-block:: php
+
+   <?php
+   $this->constant->PHP_VERSION_ID = '606060'; // troll \o/
+
+   $this
+       ->given($this->newTestedInstance())
+       ->then
+           ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+       ->if($this->constant->PHP_VERSION_ID = uniqid())
+       ->then
+           ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+   ;
+
+Attention, cependant dû à la nature de PHP, suivant l':ref:`engine<@engine>` utilisé, vous pouvez rencontrer certains soucis.
+
+.. code-block:: php
+
+   <?php
+
+   namespace foo {
+       class foo {
+           public function hello()
+           {
+               return PHP_VERSION_ID;
+           }
+       }
+   }
+
+   namespace tests\units\foo {
+       use atoum;
+
+       /**
+        * @engine inline
+        */
+       class foo extends atoum
+       {
+           public function testFoo()
+           {
+               $this
+                   ->given($this->newTestedInstance())
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+                   ->if($this->constant->PHP_VERSION_ID = uniqid())
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+               ;
+           }
+
+           public function testBar()
+           {
+               $this
+                   ->given($this->newTestedInstance())
+                   ->if($this->constant->PHP_VERSION_ID = $mockVersionId = uniqid()) // inline engine will fail here
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo($mockVersionId)
+                   ->if($this->constant->PHP_VERSION_ID = $mockVersionId = uniqid()) // isolate/concurrent engines will fail here
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo($mockVersionId)
+               ;
+           }
+       }
+   }

@@ -37,7 +37,7 @@ It's also the reason why the methods  ``beforeTestMethod()`` and ``afterTestMeth
        vendor\project
    ;
 
-   require __DIR__ . '/mageekguy.atoum.phar';
+   require __DIR__ . '/atoum.phar';
 
    class bankAccount extends atoum
    {
@@ -65,12 +65,12 @@ It's also the reason why the methods  ``beforeTestMethod()`` and ``afterTestMeth
 
        public function testGetOwner()
        {
-           ...
+           // ...
        }
 
        public function testGetOperations()
        {
-           ...
+           // ...
        }
 
        public function afterTestMethod($method)

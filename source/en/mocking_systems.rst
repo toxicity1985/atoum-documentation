@@ -38,7 +38,7 @@ The simplest one is to create an object with the absolute name prefixed by ``moc
    $stdObject     = new \mock\StdClass;
 
    // creation of a mock from a non-existing class
-   $anonymousMock = new \mock\My\Unknown\Class;
+   $anonymousMock = new \mock\My\Unknown\Claass;
 
 
 The mock generator
@@ -209,7 +209,7 @@ The ``mockController`` allows you to redefine **only public and abstract protect
    $this->calling($mockDbClient)->query = function(Query $query) use($result) {
        switch($query->type) {
            case Query::SELECT:
-               return $result
+               return $result;
 
            default;
                return null;
@@ -341,7 +341,7 @@ Particular case of the constructor
 
 To mock class constructor, you need:
 
-* create an instance of \atoum\mock\controller class before you call the constructor of the mock ;
+* create an instance of \\atoum\\mock\\controller class before you call the constructor of the mock ;
 * set via this control the behaviour of the constructor of the mock using an anonymous function ;
 * inject the controller during the instantiation of the mock in the last argument.
 
@@ -382,9 +382,10 @@ atoum lets you verify that a mock was used properly.
 .. note::
    Refer to the documentation on the :ref:`mock-asserter` for more information on testing mocks.
 
+.. _mock-native-function:
 
 The mocking (mock) of native PHP functions
-**************************************************
+******************************************
 
 atoum allow to easyly simulate the behavious of native PHP functions.
 
@@ -426,3 +427,77 @@ atoum allow to easyly simulate the behavious of native PHP functions.
       ->object($this->testedInstance->loadConfigFile())
          ->isTestedInstance()
    ;
+
+.. note::
+   Check the detail about :ref:`isTestedInstance()<object-is-tested-instance>`.
+
+.. _mock-constant:
+
+The mocking of constant
+***********************
+
+PHP constant can be declared with ``defined``, but with atoum you can mock it like this:
+
+.. code-block:: php
+
+   <?php
+   $this->constant->PHP_VERSION_ID = '606060'; // troll \o/
+
+   $this
+       ->given($this->newTestedInstance())
+       ->then
+           ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+       ->if($this->constant->PHP_VERSION_ID = uniqid())
+       ->then
+           ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+   ;
+
+Warning, due to the nature of constant in PHP, following the :ref:`engine<@engine>` you can meet some issue.
+
+.. code-block:: php
+
+   <?php
+
+   namespace foo {
+       class foo {
+           public function hello()
+           {
+               return PHP_VERSION_ID;
+           }
+       }
+   }
+
+   namespace tests\units\foo {
+       use atoum;
+
+       /**
+        * @engine inline
+        */
+       class foo extends atoum
+       {
+           public function testFoo()
+           {
+               $this
+                   ->given($this->newTestedInstance())
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+                   ->if($this->constant->PHP_VERSION_ID = uniqid())
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
+               ;
+           }
+
+           public function testBar()
+           {
+               $this
+                   ->given($this->newTestedInstance())
+                   ->if($this->constant->PHP_VERSION_ID = $mockVersionId = uniqid()) // inline engine will fail here
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo($mockVersionId)
+                   ->if($this->constant->PHP_VERSION_ID = $mockVersionId = uniqid()) // isolate/concurrent engines will fail here
+                   ->then
+                       ->variable($this->testedInstance->hello())->isEqualTo($mockVersionId)
+               ;
+           }
+       }
+   }

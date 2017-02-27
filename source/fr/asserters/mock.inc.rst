@@ -41,6 +41,40 @@ call
                ->once()
    ;
 
+.. _mock-after:
+
+after
+`````
+
+``after`` vérifie que la méthode a été appelée après la méthode passée en paramètre.
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test2(),
+           $mock->test()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->after($this->mock($mock)->call('test2')->once())
+           ->once() // passe
+   ;
+
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test(),
+           $mock->test2()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->after($this->mock($mock)->call('test2')->once())
+           ->once() // échoue
+   ;
+
 .. _at-least-once:
 
 atLeastOnce
@@ -59,6 +93,41 @@ atLeastOnce
        ->mock($mock)
            ->call('myMethod')
                ->atLeastOnce()
+   ;
+
+
+.. _mock-before:
+
+before
+``````
+
+``before`` vérifie que la méthode a été appelée avant la méthode passée en paramètre.
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test(),
+           $mock->test2()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->before($this->mock($mock)->call('test2')->once())
+           ->once() // passe
+   ;
+
+   $this
+       ->when($mock = new \mock\example)
+       ->if(
+           $mock->test2(),
+           $mock->test()
+       )
+       ->mock($mock)
+       ->call('test')
+           ->before($this->mock($mock)->call('test2')->once())
+           ->once() // échoue
    ;
 
 .. _exactly-anchor:
@@ -287,6 +356,30 @@ withoutAnyArgument
 .. note::
       ``withoutAnyArgument`` reviens à appeler :ref:`withAtLeastArguments<with-at-least-arguments>` avec un tableau vide : ``->withAtLeastArguments(array())``.
 
+.. _mock-receive:
+
+receive
+=======
+
+C'est un alias de  :ref:`call-anchor`.
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->given(
+           $connection = new mock\connection
+       )
+       ->if(
+           $this->newTestedInstance($connection)
+       )
+       ->then
+           ->object($this->testedInstance->noMoreValue())->isTestedInstance
+           ->mock($connection)->receive('newPacket')->withArguments(new packet)->once;
+
+      // same as
+      $this->mock($connection)->call('newPacket')->withArguments(new packet)->once;
+
 .. _was-called:
 
 wasCalled
@@ -323,68 +416,4 @@ wasNotCalled
 
        ->mock($mock)
            ->wasNotCalled()
-   ;
-
-before
-======
-
-``before`` vérifie que la méthode a été appelée avant la méthode passée en paramètre.
-
-.. code-block:: php
-
-   <?php
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test(),
-           $mock->test2()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->before($this->mock($mock)->call('test2')->once())
-           ->once() // passe
-   ;
-
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test2(),
-           $mock->test()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->before($this->mock($mock)->call('test2')->once())
-           ->once() // échoue
-   ;
-
-after
-=====
-
-``after`` vérifie que la méthode a été appelée après la méthode passée en paramètre.
-
-.. code-block:: php
-
-   <?php
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test2(),
-           $mock->test()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->after($this->mock($mock)->call('test2')->once())
-           ->once() // passe
-   ;
-
-   $this
-       ->when($mock = new \mock\example)
-       ->if(
-           $mock->test(),
-           $mock->test2()
-       )
-       ->mock($mock)
-       ->call('test')
-           ->after($this->mock($mock)->call('test2')->once())
-           ->once() // échoue
    ;

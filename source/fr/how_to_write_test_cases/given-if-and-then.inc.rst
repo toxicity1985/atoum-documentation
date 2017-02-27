@@ -25,13 +25,13 @@ L'utilisation de ces mots-clefs est très intuitive :
                ->isEqualTo(4)
    ;
 
-Il est important de noter que ces mots-clés n'ont pas un autre but que de donner aux tests une forme plus lisible. Elles n'ont aucun effet technique sur les tests. Le seul but est d'aider le lecteur, les humains ou plus précisément le développeur, à comprendre ce qui se passe dans le test.
+Il est important de noter que ces mots-clés n'ont pas un autre but que de donner aux tests une forme plus lisible. Il ne serve aucun but technique. Le seul but est d'aider le lecteur, les humains ou plus précisément le développeur, à comprendre ce qui se passe dans le test.
 
 Ainsi, ``given``, ``if`` et ``and`` permettent de définir les conditions préalables pour que les assertions qui suivent le mot-clef ``then`` passent avec succès.
 
-Cependant, il n'y a pas de grammaire régissant l'ordre d'utilisation de ces mots-clefs et aucune vérification syntaxique n'est effectuée par atoum.
+Cependant, il n’y a aucune règle ou grammaire qui régissent la syntaxe de l’ordre de ces mots-clés pour atoum.
 
-Ainsi, le développeurs utiliseras ces mots-clés a bon escient  pour rendre les tests aussi lisibles que possible. Mal utilisé, vous finiriez avec des tests écrit de la manière suivante :
+Ainsi, le développeurs utiliseras ces mots-clés a bon escient pour rendre les tests aussi lisibles que possible. Cependant, si elle est utilisé de façon incorrecte, vous pourriez finir avec tests comme suit :
 
 .. code-block:: php
 
@@ -78,7 +78,7 @@ L'un d'entre eux est ``when``. Il dispose d'une fonctionnalité spécifique intr
 
 .. code-block:: php
 
-   <?php
+   <?php # ignore
    $this
        ->if($array = array(uniqid()))
        ->and(unset($array[0]))

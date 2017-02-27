@@ -22,7 +22,7 @@ We must therefore change the regular expression we used, this is possible in sev
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -47,7 +47,7 @@ This method is quick and simple to implement, but it has the disadvantage of hav
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -75,7 +75,7 @@ The ``atoum\test:setTestNamespace()`` method indeed accepts a single argument wh
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 
@@ -98,7 +98,7 @@ Thus, you will only have to do derive your unit test classes from this abstract 
 
    namespace vendor\project\my\tests\modules;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
    use vendor\project\my\tests;
@@ -132,7 +132,7 @@ However, in general, the namespace used to test classes is fixed, and it's not n
 
    namespace vendor\project\my\tests;
 
-   require_once __DIR__ . '/mageekguy.atoum.phar';
+   require_once __DIR__ . '/atoum.phar';
 
    use mageekguy\atoum;
 

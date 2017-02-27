@@ -20,7 +20,7 @@ Pour illustrer son fonctionnement, le test suivant va être utilisé :
                ->call('doOtherThing')
                    ->once()
 
-       ->if($bar->setValue(uniqid())
+       ->if($bar->setValue(uniqid()))
        ->then
            ->mock($foo)
                ->call('doOtherThing')
@@ -47,7 +47,7 @@ Pour remédier à ce problème, vous pouvez remettre à zéro un mock de 2 mani�
 
        // 1ère manière
        ->given($foo->getMockController()->resetCalls())
-       ->if($bar->setValue(uniqid())
+       ->if($bar->setValue(uniqid()))
        ->then
            ->mock($foo)
                ->call('doOtherThing')
@@ -55,7 +55,7 @@ Pour remédier à ce problème, vous pouvez remettre à zéro un mock de 2 mani�
 
        // 2ème manière
        ->given($this->resetMock($foo))
-       ->if($bar->setValue(uniqid())
+       ->if($bar->setValue(uniqid()))
        ->then
            ->mock($foo)
                ->call('doOtherThing')
@@ -82,7 +82,7 @@ Grâce à lui, il est donc possible d'écrire le test précédent d'une façon p
                        ->once()
 
        ->assert('Bar a une valeur')
-           ->if($bar->setValue(uniqid())
+           ->if($bar->setValue(uniqid()))
            ->then
                ->mock($foo)
                    ->call('doOtherThing')

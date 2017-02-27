@@ -105,6 +105,8 @@ Il est très simple d'intégrer les résultats de tests atoum à `Jenkins <http:
 Étape 1 : Ajout d'un rapport xUnit à la configuration atoum
 -----------------------------------------------------------
 
+Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifique <reports-using>` dans la configuration.
+
 Si vous n'avez pas de fichier de configuration
 """"""""""""""""""""""""""""""""""""""""""""""
 
@@ -114,7 +116,7 @@ Si vous ne disposez pas encore d'un fichier de configuration pour atoum, nous vo
 
 .. code-block:: shell
 
-   $ php mageekguy.atoum.phar --extractRessourcesTo /tmp/atoum-src
+   $ php atoum.phar --extractRessourcesTo /tmp/atoum-src
    $ cp /tmp/atoum-src/resources/configurations/runner/xunit.php.dist /mon/projet/.atoum.php
 
 * Si vous utilisez les sources d'atoum :
@@ -180,7 +182,7 @@ Il existe pour cela plusieurs possibilités selon la façon dont vous construise
 
    <target name="unitTests">
      <exec executable="/usr/bin/php" failonerror="yes" failifexecutionfails="yes">
-       <arg line="/path/to/mageekguy.atoum.phar -p /chemin/vers/php -d /path/to/test/folder -c /path/to/atoumConfig.php" />
+       <arg line="/path/to/atoum.phar -p /path/to/php -d /path/to/test/folder -c /path/to/atoumConfig.php" />
      </exec>
    </target>
 
@@ -205,8 +207,8 @@ Il est assez simple d'utiliser atoum dans l'outil qu'est `Travis-CI <https://tra
 
 .. code-block:: yaml
 
-   before_script: wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
-   script: php mageekguy.atoum.phar
+   before_script: wget http://downloads.atoum.org/nightly/atoum.phar
+   script: php atoum.phar
 
 
 Voici un exemple de fichier `.travis.yml` dont les tests présents dans le dossier `tests` seront exécuter.
@@ -219,7 +221,7 @@ Voici un exemple de fichier `.travis.yml` dont les tests présents dans le dossi
      - 5.5
      - 5.6
 
-   before_script: wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
-   script: php mageekguy.atoum.phar -d tests/
+   before_script: wget http://downloads.atoum.org/nightly/atoum.phar
+   script: php atoum.phar -d tests/
 
 

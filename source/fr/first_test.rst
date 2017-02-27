@@ -94,6 +94,7 @@ Vous devriez voir quelque chose comme ça :
    > Running duration: 0.04 second.
    Success (1 test, 1/1 method, 0 void method, 0 skipped method, 2 assertions)!
 
+
 Nous venons de tester que la méthode ``getHiAtoum`` :
 
 * retourne une :ref:`chaîne de caractère <string-anchor>`;
@@ -104,9 +105,9 @@ Les tests sont passés, tout est au vert. Voilà, votre code est solide comme un
 
 Dissection du test
 ******************
-Il est important que vous compreniez chaque chose que nous utilisons dans ce test. Voici quelques informations à ce sujet.
+Il est important que vous compreniez chaque chose que nous utilisons dans ce test. Regardons chaque partie.
 
-Nous utilisons l'espace de noms ``Vendor\Project\tests\units`` où ``Vendor\Project`` est l'espace de noms de la classe et  ``tests\units`` la partie de l'espace de noms utiliser par atoum pour comprendre que nous sommes dans l'espace de nom de test. Cette espace de nom est configurable et ceci est expliqué dans la  :ref:`section appropriée <cookbook_change_default-namespace>`.
-Dans la méthode de test, nous utilisons une syntaxe particulière :ref:`given et then<given-if-and-then>` qui ne fais rien excepté rendre le test plus lisible.
-Finalement, nous utilisons un autre truc simple :ref:`newTestedInstance et testedInstance<newTestedInstance>` pour obtenir une instance de la class testée.
+Nous utilisons l'espace de noms ``Vendor\Project\tests\units`` où ``Vendor\Project`` est l'espace de noms de la classe et ``tests\units`` la partie de l'espace de noms utiliser par atoum pour comprendre que nous sommes dans l'espace de nom de test. Cette espace de nom est configurable et ceci est expliqué dans la :ref:`section appropriée <cookbook_change_default-namespace>`.
+Ensuite, à l'intérieur de la méthode testée, nous utilisons une synthaxe spécial :ref:`given et then<given-if-and-then>`. Ils ne font rien d’autre que rendre le test plus lisible.
+Finalement, nous utilisons un autre truc simple :ref:`newTestedInstance et testedInstance<newTestedInstance>` pour obtenir une instance de la classe testée.
 

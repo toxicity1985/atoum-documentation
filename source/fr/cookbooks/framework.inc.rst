@@ -30,7 +30,7 @@ Il est donc nécessaire de définir une classe de test de base, dérivée de ``\
 
 	use mageekguy\atoum;
 
-	require_once __DIR__ . '/mageekguy.atoum.phar';
+	require_once __DIR__ . '/atoum.phar';
 
 	// Autoloading : eZ
 	require 'autoload.php';
@@ -86,7 +86,7 @@ Une fois une classe de test créée, il suffit d'exécuter en ligne de commande 
 
 .. code-block:: shell
 
-	# php tests/atoum/mageekguy.atoum.phar -d tests/atoum/units
+	# php tests/atoum/atoum.phar -d tests/atoum/units
 
 
 Merci `Jérémy Poulain <https://github.com/Tharkun>`_ pour ce tutoriel.
@@ -95,7 +95,7 @@ Merci `Jérémy Poulain <https://github.com/Tharkun>`_ pour ce tutoriel.
 .. _utilisation-avec-symfony-2:
 
 Utilisation avec Symfony 2
-===========================
+==========================
 
 Si vous souhaitez utiliser atoum au sein de vos projets Symfony, vous pouvez installer le Bundle `AtoumBundle <https://github.com/atoum/AtoumBundle>`_.
 
@@ -103,7 +103,7 @@ Si vous souhaitez installer et configurer atoum manuellement, voici comment fair
 
 
 Étape 1: installation d'atoum
----------------------------------------
+-----------------------------
 
 Si vous utilisez Symfony 2.0, :ref:`téléchargez l'archive PHAR <archive-phar>` et placez-la dans le répertoire vendor qui est à la racine de votre projet.
 
@@ -111,7 +111,7 @@ Si vous utilisez Symfony 2.1+, :ref:`ajoutez atoum dans votre fichier composer.j
 
 
 Étape 2: création de la classe de test
----------------------------------------
+--------------------------------------
 
 Imaginons que nous voulions tester cet Entity:
 
@@ -153,7 +153,7 @@ Imaginons que nous voulions tester cet Entity:
    }
 
 .. note::
-   Pour plus d'informations sur la création d'Entity dans Symfony 2, reportez-vous au `manuel Symfony <http://symfony.com/fr/doc/current/book/doctrine.html#creer-une-classe-entite>`_.
+   Pour plus d'informations sur la création d'Entity dans Symfony 2, reportez-vous au `manuel Symfony (EN) <http://symfony.com/doc/current/doctrine.html#creating-an-entity-class>`_.
 
 
 Créez le répertoire Tests/Units dans votre Bundle (par exemple src/Acme/DemoBundle/Tests/Units). C'est dans ce répertoire que seront stockés tous les tests de ce Bundle.
@@ -183,7 +183,7 @@ Créez un fichier Test.php qui servira de base à tous les futurs tests de ce Bu
    use mageekguy\atoum;
 
    // Pour Symfony 2.0 uniquement !
-   require_once __DIR__ . '/../../../../../vendor/mageekguy.atoum.phar';
+   require_once __DIR__ . '/../../../../../vendor/atoum.phar';
 
    abstract class Test extends atoum
    {
@@ -254,10 +254,10 @@ Si vous utilisez Symfony 2.0:
 .. code-block:: shell
 
    # Lancement des tests d'un fichier
-   $ php vendor/mageekguy.atoum.phar -f src/Acme/DemoBundle/Tests/Units/Entity/Car.php
+   $ php vendor/atoum.phar -f src/Acme/DemoBundle/Tests/Units/Entity/Car.php
 
    # Lancement de tous les tests du Bundle
-   $ php vendor/mageekguy.atoum.phar -d src/Acme/DemoBundle/Tests/Units
+   $ php vendor/atoum.phar -d src/Acme/DemoBundle/Tests/Units
 
 Si vous utilisez Symfony 2.1+:
 
@@ -401,9 +401,8 @@ Toutes les paramètres d'atoum sont disponibles.
 
 Il est donc, par exemple, possible de passer un fichier de configuration comme ceci :
 
-.. code-block:: php
+.. code-block:: shell
 
-   <?php
    php symfony atoum:test -c config/atoum/hudson.php
 
 

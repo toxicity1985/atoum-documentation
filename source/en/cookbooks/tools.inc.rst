@@ -105,6 +105,8 @@ It's very simple to  the results of atoum to `Jenkins <http://jenkins-ci.org/>`_
 Step1: Add a xUnit report to the configuration of atoum
 -------------------------------------------------------
 
+Like other coverage report, you can use specific :ref:`report<reports-using>` from the configuration.
+
 If you don't have a configuration file
 """"""""""""""""""""""""""""""""""""""
 
@@ -114,7 +116,7 @@ If you don't have a configuration file for atoum yet, we recommend that you extr
 
 .. code-block:: shell
 
-   $ php mageekguy.atoum.phar --extractRessourcesTo /tmp/atoum-src
+   $ php atoum.phar --extractRessourcesTo /tmp/atoum-src
    $ cp /tmp/atoum-src/resources/configurations/runner/xunit.php.dist /my/project/atoum.php
 
 * If you are using the sources of atoum :
@@ -131,7 +133,7 @@ There is one last step, edit this file to set the path to the xUnit report where
 If you already have a configuration file
 """"""""""""""""""""""""""""""""""""""""
 
-If you already have a configuration file, simply add the following lines :
+If you already have a configuration file, simply add the following lines:
 
 .. code-block:: php
 
@@ -180,7 +182,7 @@ There are several possibilities depending on how you build your project :
 
    <target name="unitTests">
      <exec executable="/usr/bin/php" failonerror="yes" failifexecutionfails="yes">
-       <arg line="/path/to/mageekguy.atoum.phar -p /path/to/php -d /path/to/test/folder -c /path/to/atoumConfig.php" />
+       <arg line="/path/to/atoum.phar -p /path/to/php -d /path/to/test/folder -c /path/to/atoumConfig.php" />
      </exec>
    </target>
 
@@ -205,8 +207,8 @@ It's simple to use atoum with a tool like `Travis-CI <https://travis-ci.org>`_. 
 
 .. code-block:: yaml
 
-   before_script: wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
-   script: php mageekguy.atoum.phar
+   before_script: wget http://downloads.atoum.org/nightly/atoum.phar
+   script: php atoum.phar
 
 
 Here is an example file `.travis.yml` where the unit tests in the `tests` folder will be run.
@@ -219,7 +221,7 @@ Here is an example file `.travis.yml` where the unit tests in the `tests` folder
      - 5.5
      - 5.6
 
-   before_script: wget http://downloads.atoum.org/nightly/mageekguy.atoum.phar
-   script: php mageekguy.atoum.phar -d tests/
+   before_script: wget http://downloads.atoum.org/nightly/atoum.phar
+   script: php atoum.phar -d tests/
 
 

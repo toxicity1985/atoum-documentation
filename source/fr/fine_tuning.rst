@@ -37,7 +37,7 @@ C'est d'ailleurs la raison pour laquelle les méthodes ``beforeTestMethod()`` et
        vendor\project
    ;
 
-   require __DIR__ . '/mageekguy.atoum.phar';
+   require __DIR__ . '/atoum.phar';
 
    class bankAccount extends atoum
    {
@@ -65,12 +65,12 @@ C'est d'ailleurs la raison pour laquelle les méthodes ``beforeTestMethod()`` et
 
        public function testGetOwner()
        {
-           ...
+           // ...
        }
 
        public function testGetOperations()
        {
-           ...
+           // ...
        }
 
        public function afterTestMethod($method)

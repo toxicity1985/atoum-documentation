@@ -29,7 +29,7 @@ However, you can manually set the method name of the data provider through the `
            ;
        }
 
-       ...
+       // ...
    }
 
 Obviously, do not forget to define, at the level of the test method, arguments that correspond to those that will be returned by the data provider. If not, atoum will generate an error when running the tests.
@@ -41,7 +41,7 @@ The data provider method is a single protected method that returns an array or a
    <?php
    class calculator extends atoum
    {
-       ...
+       // ...
 
        // Provides data for testSum().
        protected function sumDataProvider()

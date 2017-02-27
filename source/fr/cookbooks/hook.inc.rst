@@ -22,9 +22,8 @@ Lors de l'ajout de code à un dépôt, Git recherche le fichier ``.git/hook/pre-
 
 Pour mettre en place le hook, il vous faut donc créer le fichier ``.git/hook/pre-commit`` et y ajouter le code suivant :
 
-.. code-block:: php
+.. code-block::
 
-   <?php
    #!/usr/bin/env php
    <?php
 
@@ -36,7 +35,7 @@ Pour mettre en place le hook, il vous faut donc créer le fichier ``.git/hook/pr
    {
       echo $phpFilesNumber . ' PHP files staged, launch all unit test...' . PHP_EOL;
 
-      foreach (new \recursiveIteratorIterator(new \recursiveDirectoryIterator(__DIR__ . '/../../')) as $path => $file)
+      foreach (new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator(__DIR__ . '/../../')) as $path => $file)
       {
         if (substr($path, -4) === '.php' && strpos($path, '/Tests/Units/') !== false)
         {
@@ -52,9 +51,8 @@ Le code ci-dessous suppose que vos tests unitaires sont dans des fichiers ayant 
 
 Les tests étant exécutés très rapidement avec atoum, on peut donc lancer l'ensemble des tests unitaires avant chaque commit avec un hook comme celui-ci :
 
-.. code-block:: php
+.. code-block:: bash
 
-   <?php
    #!/bin/sh
    ./bin/atoum -d tests/
 
