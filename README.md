@@ -84,8 +84,7 @@ They must not be translated and remain the same as in the original translation. 
 We use the reStructuredText syntax. You can find it on the [sphinx website](http://sphinx-doc.org/rest.html).
 
 ### What are the title underline order?
-In reStructuredText syntax, you can use a wide variety of character to underline. The order use in the atoum documentation is : #, *, =, -, ", ^, `, :, ., ' . Now if you have more
- than 4 subdivisions you may want to split your document into multiple files.
+In reStructuredText syntax, you can use a wide variety of character to underline. The order use in the atoum documentation is : #, *, =, -, ", ^, `, :, ., ' . Now if you have more than 4 subdivisions you may want to split your document into multiple files.
 
 ### What's the licence of this documentation.
 This documentation is under the CC by-nc-sa 4.0 licence. You can find more information on [this page](LICENCE.md)
