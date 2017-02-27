@@ -32,13 +32,13 @@ isStream
 	        ->isStream()
 	;
 
-phpResource:: is*() will match the type of the stream against a pattern computed from the method name: ->isFooBar() will try to match a stream with type foo bar, fooBar, foo_bar, ...
+->is*() will match the type of the stream against a pattern computed from the method name:
+	->isFooBar() will try to match a stream with type foo bar, fooBar, foo_bar, ...
 
 .. _resource-type:
 
 type
 ====
-
 
 .. code-block:: php
 
@@ -46,12 +46,7 @@ type
 	    ->resource($variable)
 	        ->type
 				->isEqualTo('stream')
+				->matches('/foo.*bar/')
 	;
 
-
-
-    phpResource:: is*() will match the type of the stream against a pattern computed from the method name: ->isFooBar() will try to match a stream with type foo bar, fooBar, foo_bar, ...
-    phpResource::$type is an helper providing a string asserter on the stream type so that the user can do things like ->type->matches('/foo.*bar/')
-
-
-Yup, ->type fallbacks to the string asserters.
+->$type is an helper providing a :ref:`string asserter<string-anchor>` on the stream type.
