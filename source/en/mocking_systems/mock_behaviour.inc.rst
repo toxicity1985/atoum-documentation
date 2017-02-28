@@ -1,8 +1,8 @@
 
 .. _mock_behaviour_change:
 
-Modify the behavior of a mock
-*****************************
+Modify the behaviour of a mock
+******************************
 
 Once the mock is created and instantiated, it is often useful to be able to change the behaviour of its methods. To do this,
 you must use its controller using one of the following methods:
@@ -46,7 +46,7 @@ The ``mockController`` allows you to redefine **only public and abstract protect
        }
    };
 
-   // the method connect will throw an exception
+   // the method connects will throw an exception
    $this->calling($mockDbClient)->connect->throw = new \Database\Client\Exception();
 
 .. note::
@@ -59,8 +59,8 @@ As you can see, it is possible to use several methods to get the desired behavio
 * Use a short implementation thanks to anonymous functions of PHP
 * Use the ``throw`` keyword to throw an exception
 
-Change mock behaviour on multiple call
-======================================
+Change mock behaviour on multiple calls
+=======================================
 
 You can also specify multiple values based on the order of call:
 
@@ -79,11 +79,11 @@ You can also specify multiple values based on the order of call:
    $this->calling($mockDbClient)->count[3] = 42;
 
 * The first call will return 13.
-* The second will be the default behavior, it means a random number.
+* The second will be the default behaviour, it means a random number.
 * The third call will return 42.
 * All subsequent calls will have the default behaviour, i.e. random numbers.
 
-If you want several methods of the mock have the same behavior, you can use the `methods<mock_methods>` or `methodsMatching<mock_method_matching>`.
+If you want several methods of the mock have the same behaviour, you can use the `methods<mock_methods>` or `methodsMatching<mock_method_matching>`.
 
 
 
@@ -93,13 +93,13 @@ If you want several methods of the mock have the same behavior, you can use the 
 methods
 =======
 
-``methods`` allows you, thanks to the anonymous function passed as an argument, to define to what methods the behaviour must be modified:
+``methods`` allow you, thanks to the anonymous function passed as an argument, to define what methods the behaviour must be modified:
 
 .. code-block:: php
 
    <?php
    // if the method has such and such name,
-   // we redefines its behavior
+   // we redefine its behaviour
    $this
        ->calling($mock)
            ->methods(
@@ -116,7 +116,7 @@ methods
                ->return = uniqid()
    ;
 
-   // we redefines the behavior of all methods
+   // we redefines the behaviour of all methods
    $this
        ->calling($mock)
            ->methods()
@@ -124,7 +124,7 @@ methods
    ;
 
    // if the method begins by "get",
-   // we redefines its behavior
+   // we redefine its behaviour
    $this
        ->calling($mock)
            ->methods(
@@ -155,7 +155,7 @@ expression passed as an argument :
 
    <?php
    // if the method begins by "is",
-   // we redefines its behavior
+   // we redefines its behaviour
    $this
        ->calling($mock)
            ->methodsMatching('/^is/')
@@ -163,7 +163,7 @@ expression passed as an argument :
    ;
 
    // if the method starts by "get" (case insensitive),
-   // we redefines its behavior
+   // we redefines its behaviour
    $this
        ->calling($mock)
            ->methodsMatching('/^get/i')
@@ -177,7 +177,7 @@ expression passed as an argument :
 isFluent && returnThis
 ======================
 
-Define a fluent method, so the method return the class.
+Defines a fluent method, so the method return the class.
 
 .. code-block:: php
 
@@ -193,7 +193,7 @@ Define a fluent method, so the method return the class.
 doesNothing && doesSomething
 ============================
 
-Te method do nothing and return null.
+The method do nothing and return null.
 
 .. code-block:: php
 
@@ -223,7 +223,7 @@ To mock class constructor, you need:
    $controller = new \atoum\mock\controller();
    $controller->__construct = function($args)
    {
-		// do something with the args
+        // do something with the args
    };
 
    $mockDbClient = new \mock\Database\Client(DB_HOST, DB_USER, DB_PASS, $controller);

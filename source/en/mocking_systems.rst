@@ -7,7 +7,7 @@ Mocks are virtual class, created on the fly. They are used to isolate your test 
 a powerful and easy-to-implement mock system allowing you to generate mocks from classes or interfaces that exist, are virtual,
 are abstract or an interface.
 
-With these mocks, you can simulate behaviors by redefining the `public` methods of your classes. For the private & protected method,
+With these mocks, you can simulate behaviours by redefining the `public` methods of your classes. For the private & protected method,
 use the `visibility extension <http://extensions.atoum.org/extensions/visibility>`_.
 
 .. warning::

@@ -50,8 +50,8 @@ If you prefer there is method called ``newMockInstance()`` that will generate a 
 The mock generator
 ******************
 
-atoum relies on a specialized component to generate the mock: the ``mockGenerator``.
-You have access to the latter in your tests in order to modify the procedure for generation of the mocks.
+atoum relies on a specialised components to generate the mock: the ``mockGenerator``.
+You have access to the latter in your tests in order to modify the procedure for the generation of the mocks.
 
 By default, the mock will be generated in the "mock" namespace and behave exactly in the same way as
 instances of the original class (mock inherits directly from the original class).
@@ -169,7 +169,7 @@ Make an orphan method
 =====================
 
 It may be interesting to make an orphan method, that is, give him a signature and implementation empty. This can be
-particularly useful for generating mocks without having to instantiate all their dependencies. All the parameter of the method will also set
+particularly useful for generating mocks without having to instantiate all their dependencies. All the parameters of the method will also set
 as default value null. So it's the same a :ref:`shunted method<mock_shunt>`, but with all parameter as null.
 
 .. code-block:: php

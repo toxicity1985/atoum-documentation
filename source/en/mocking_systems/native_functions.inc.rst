@@ -4,7 +4,7 @@
 The mocking (mock) of native PHP functions
 ******************************************
 
-atoum allow to easyly simulate the behavious of native PHP functions.
+atoum allows to easily simulate the behaviours of native PHP functions.
 
 .. code-block:: php
 

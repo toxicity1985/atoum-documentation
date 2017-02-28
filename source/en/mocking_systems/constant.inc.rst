@@ -20,7 +20,7 @@ PHP constant can be declared with ``defined``, but with atoum you can mock it li
            ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
    ;
 
-Warning, due to the nature of constant in PHP, following the :ref:`engine<@engine>` you can meet some issue.
+Warning, due to the nature of constant in PHP, following the :ref:`engine<@engine>` you can meet some issue. Here is an example:
 
 .. code-block:: php
 
