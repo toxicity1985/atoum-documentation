@@ -169,14 +169,14 @@ never
    ;
 
 .. note::
-   ``never`` is equivalent to ``:ref:`exactly <exactly-anchor>`(0)``.
+   ``never`` is equivalent to :ref:`exactly(0)<exactly-anchor>`.
 
 
 .. _once-twice-thrice:
 
 once/twice/thrice
 `````````````````
-This asserters check that the tested method (see :ref:`call <call-anchor>`) from the tested mock has been called exactly:
+This asserters check that the tested method (see :ref:`call<call-anchor>`) from the tested mock has been called exactly:
 
 * once
 * twice
@@ -200,7 +200,7 @@ This asserters check that the tested method (see :ref:`call <call-anchor>`) from
    ;
 
 .. note::
-   ``once``, ``twice`` and ``thrice`` are respectively equivalent to ``:ref:`exactly <exactly-anchor>`(1)``, ``:ref:`exactly <exactly-anchor>`(2)`` and ``:ref:`exactly <exactly-anchor>`(3)``.
+   ``once``, ``twice`` and ``thrice`` are respectively equivalent to :ref:`exactly(1)<exactly-anchor>`, :ref:`exactly(2)<exactly-anchor>` and :ref:`exactly(3)<exactly-anchor>`.
 
 
 .. _with-any-arguments:
@@ -208,7 +208,7 @@ This asserters check that the tested method (see :ref:`call <call-anchor>`) from
 withAnyArguments
 ````````````````
 
-``withAnyArguments`` allow to check any argument, non-specified, when we call the tested method (see :ref:`call <call-anchor>`) of tested mock.
+``withAnyArguments`` allow to check any argument, non-specified, when we call the tested method (see :ref:`call<call-anchor>`) of tested mock.
 
 This method is useful to reset the arguments of tested method, like in the following example:
 
