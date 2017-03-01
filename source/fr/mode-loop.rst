@@ -19,15 +19,15 @@ Concrètement, cela signifie qu'il doit :
 * revenir à la console afin de relancer l'exécution de son test ;
 * revenir à son éditeur afin de modifier ou compléter son test ;
 
-Il y a donc bien un cycle qui se répétera tant que la fonctionnalité n'aura pas été développée dans son intégralité.
+Il y a donc un cycle qui se répète jusqu'à ce que la fonctionnalité soit terminée.
 
-On peut remarquer que, durant ce cycle, le développeur devra saisir de manière récurrente la même commande dans le terminal afin de lancer l'exécution des tests unitaires.
+Au cours de ce cycle, le développeur doit à plusieurs reprises exécuter la même commande pour exécuter les tests unitaires.
 
 atoum propose le mode ``loop`` disponible via les arguments ``-l`` ou ``--loop``, qui permet au développeur de ne pas avoir à relancer manuellement les tests et permet donc de fluidifier le processus de développement.
 
-Dans ce mode, atoum commence par exécuter une première fois les tests qui lui sont demandés.
+Dans ce mode, atoum exécute les tests demandés.
 
-Une fois les tests terminés, si les tests ont été passés avec succès par le code, atoum se met simplement en attente :
+Une fois les tests terminés, si les tests ont été passés avec succès, atoum se met simplement en attente :
 
 .. code-block:: shell
 
@@ -48,9 +48,9 @@ Une fois les tests terminés, si les tests ont été passés avec succès par le
    Press <Enter> to reexecute, press any other key and <Enter> to stop...
 
 
-Si le développeur presse ``Enter``, atoum réexécutera à nouveau les mêmes tests, sans aucune autre action de la part du développeur.
+Si le développeur presse la touche ``Enter``, atoum réexécutera à nouveau les mêmes tests, sans aucune autre action de la part du développeur.
 
-Dans le cas où le code ne passe pas les tests avec succès, c'est-à-dire si des assertions ne sont pas vérifiées ou s'il y a eu des erreurs ou des exceptions, atoum se met également en attente :
+Dans le cas où le code ne passe pas les tests avec succès, c'est-à-dire si les assertions échouent ou s'il y a des erreurs ou des exceptions, atoum se remet en mode d'attente :
 
 .. code-block:: shell
 
@@ -78,7 +78,7 @@ Dans le cas où le code ne passe pas les tests avec succès, c'est-à-dire si de
    Press <Enter> to reexecute, press any other key and <Enter> to stop...
 
 
-Si le développeur presse la touche ``Enter``, au lieu de rejouer les mêmes tests comme dans le cas où les tests ont été passés avec succès, atoum n'exécutera que les tests en échec, au lieu de les rejouer dans leur intégralité.
+Si le développeur presse la touche ``Enter``, au lieu de rejouer les mêmes tests, atoum n'exécutera que les tests en échec, au lieu de rejouer l'ensemble.
 
 Le développeur pourra alors dépiler les problèmes et rejouer les tests en erreur autant de fois que nécessaire simplement en appuyant sur ``Enter``.
 

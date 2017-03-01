@@ -205,7 +205,6 @@ isInstanceOf
 .. hint::
    Notez qu'avec PHP ``>= 5.5`` vous pouvez utiliser le mot-clé ``class`` pour obtenir les noms de classe absolus, par exemple ``$this->object($foo)->isInstanceOf(FooClass::class)``.
 
-
 .. _object-is-instance-of-tested-class:
 
 isInstanceOfTestedClass
@@ -286,11 +285,11 @@ Deux objets sont considérés identiques lorsqu'ils font référence à la même
 isNotInstanceOf
 ===============
 
-``isNotInstanceOf`` vérifie qu'un objet n'est pas :
+``isNotInstanceOf`` check that an object is not:
 
-* une instance de la classe donnée,
-* une sous-classe de la classe donnée (abstraite ou non),
-* une instance d'une classe qui implémente l'interface donnée.
+* an instance of the given class,
+* a subclass from the given class (abstract or not),
+* an instance of class that implements a given interface.
 
 .. code-block:: php
 
@@ -299,12 +298,12 @@ isNotInstanceOf
 
    $this
        ->object($object)
-           ->isNotInstanceOf('\StdClass')     // échoue
-           ->isNotInstanceOf('\Iterator')     // passe
+           ->isNotInstanceOf('\StdClass')     // fail
+           ->isNotInstanceOf('\Iterator')     // pass
    ;
 
 .. note::
-Tout comme pour :ref:`isInstanceOf<object-is-instance-of>`, les noms des classes et des interfaces doivent être absolus, car les éventuelles importations d'espace de nommage ne sont pas prises en compte.
+   As for :ref:`isInstanceOf<object-is-instance-of>`, the name of the classes and the interfaces must be absolute, because any namespace imports are ignored.
 
 .. _object-is-not-tested-instance:
 
@@ -316,6 +315,7 @@ isNotTestedInstance
    <?php
    $this->newTestedInstance;
    $this->object($this->testedInstance)->isNotTestedInstance; // fail
+
 
 .. _object-is-tested-instance:
 

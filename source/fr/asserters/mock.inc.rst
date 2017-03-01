@@ -15,8 +15,7 @@ C'est l'assertion dédiée aux mocks.
    ;
 
 .. note::
-   Reportez-vous à la documentation sur :ref:`les bouchons (mock) <les-bouchons-mock>` pour obtenir plus d'informations sur la façon de créer et gérer les bouchons.
-
+   Refer to the documentation of :ref:`mock <mocking_systems>` for more information on how to create and manage mocks.
 
 .. _call-anchor:
 
@@ -95,7 +94,6 @@ atLeastOnce
                ->atLeastOnce()
    ;
 
-
 .. _mock-before:
 
 before
@@ -150,6 +148,9 @@ exactly
                ->exactly(2)
    ;
 
+.. note::
+   You can have a simplified version with ``->{2}``.
+
 .. _never-anchor:
 
 never
@@ -171,14 +172,14 @@ never
    ;
 
 .. note::
-   ``never`` est équivalent à ``:ref:`exactly <exactly-anchor>`(0)``.
+   ``never`` is equivalent to :ref:`exactly(0)<exactly-anchor>`.
 
 
 .. _once-twice-thrice:
 
 once/twice/thrice
 `````````````````
-Ces assertions vérifient que la méthode testée (voir :ref:`call <call-anchor>`) du mock testé a été appelée exactement :
+This asserters check that the tested method (see :ref:`call<call-anchor>`) from the tested mock has been called exactly:
 
 * une fois (once)
 * deux fois (twice)
@@ -202,7 +203,7 @@ Ces assertions vérifient que la méthode testée (voir :ref:`call <call-anchor>
    ;
 
 .. note::
-   ``once``, ``twice`` et ``thrice`` sont respectivement équivalents à un appel à ``:ref:`exactly <exactly-anchor>`(1)``, ``:ref:`exactly <exactly-anchor>`(2)`` et ``:ref:`exactly <exactly-anchor>`(3)``.
+   ``once``, ``twice`` and ``thrice`` are respectively equivalent to :ref:`exactly(1)<exactly-anchor>`, :ref:`exactly(2)<exactly-anchor>` and :ref:`exactly(3)<exactly-anchor>`.
 
 
 .. _with-any-arguments:
@@ -210,7 +211,7 @@ Ces assertions vérifient que la méthode testée (voir :ref:`call <call-anchor>
 withAnyArguments
 ````````````````
 
-``withAnyArguments`` permet de ne pas spécifier les arguments attendus lors de l'appel à la méthode testée (voir :ref:`call <call-anchor>`) du mock testé.
+``withAnyArguments`` allow to check any argument, non-specified, when we call the tested method (see :ref:`call<call-anchor>`) of tested mock.
 
 Cette méthode est surtout utile pour remettre à zéro les arguments, comme dans l'exemple suivant :
 
@@ -361,7 +362,7 @@ withoutAnyArgument
 receive
 =======
 
-C'est un alias de  :ref:`call-anchor`.
+It's an alias of :ref:`call-anchor`.
 
 .. code-block:: php
 

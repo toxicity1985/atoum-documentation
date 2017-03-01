@@ -21,27 +21,26 @@ Il est à noter, qu'afin de simplifier l'écriture des tests sur les tableaux, d
 
 .. code-block:: php
 
-	$a = [
-		'foo' => 42,
-		'bar' => '1337' 
-	];
+   $a = [
+      'foo' => 42,
+      'bar' => '1337'
+   ];
 
-	$this
-		->array($a)
-			->integer['foo']->isEqualTo(42)
-			->string['bar']->isEqualTo('1337')
-	;
+   $this
+      ->array($a)
+         ->integer['foo']->isEqualTo(42)
+         ->string['bar']->isEqualTo('1337')
+   ;
 
 .. note::
-   Cette forme d'écriture est disponible dès PHP 5.4.
-
+   This writing form is available from PHP 5.4.
 
 .. _array-child:
 
 child
 =====
 
-Avec ``child`` vous pouvez effectuer des assertions sur un sous-array.
+With ``child`` you can assert on a subarray.
 
 .. code-block:: php
 
@@ -68,9 +67,8 @@ Avec ``child`` vous pouvez effectuer des assertions sur un sous-array.
                });
          });
 
-
 .. note::
-   Ceci n'est disponible qu'à partir de PHP 5.4.
+   This is available from PHP 5.4.
 
 .. _array-contains:
 
