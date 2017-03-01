@@ -74,6 +74,7 @@ This is the asserters inheritance tree:
 .. include:: asserters/mysqlDateTime.inc.rst
 .. include:: asserters/object.inc.rst
 .. include:: asserters/output.inc.rst
+.. include:: asserters/resource.inc.rst
 .. include:: asserters/sizeOf.inc.rst
 .. include:: asserters/stream.inc.rst
 .. include:: asserters/string.inc.rst

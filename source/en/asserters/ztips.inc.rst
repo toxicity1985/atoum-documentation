@@ -7,15 +7,16 @@ Several tips & trick are available for the assertion. Knowing them can simplify 
 
 The first one is that all assertion are fluent. So you can chain them, just look at the previous examples.
 
-You should also know that all assertions without parameter can be written with or without parenthesis. So ``$this->integer(0)->isZero()`` is the same as ``$this->integer(0)
-->isZero``.
+You should also know that all assertions without parameter can be written with or without parenthesis.
+So ``$this->integer(0)->isZero()`` is the same as ``$this->integer(0)->isZero``.
 
 .. _asserter_tips-alias:
 
 Alias
 =====
 
-TODO
+Sometimes you want to use something that reflect your vocabulary or your domain. atoum provide a simple mechanism, alias.
+Here is an example:
 
 .. code-block:: php
 
@@ -43,12 +44,16 @@ TODO
 	    }
 	}
 
+In this example, we create an alias that will create an asserter ``equals`` that will act exactly the same
+as ``isEqualTo``. We could also use :ref:`beforeTestMethod<initialization_method>` instead of the constructor. The best is to
+create a base class for all the test inside your project that you can extends instead of ``\atoum\test``.
+
 .. _asserter-custom:
 
 Custom asserter
 ===============
 
-.. https://github.com/jubianchi/jubianchi.github.io/blob/371b9da3232cfa5b8ad5b7b9dc8860ff39fb663b/atoum-alias.md
+Now that we have seen alias, we can go further by creating a custom asserter. Here is an example of an asserter for credit card.
 
 .. code-block:: php
 
@@ -81,7 +86,7 @@ Custom asserter
 	    }
 	}
 
-
+So, like the alias, the best is to create a base class your test and declare your custom asserters there.
 
 .. _asserter_tips-short:
 
@@ -90,14 +95,14 @@ Short syntax
 
 With :ref:`alias<asserter_tips-alias>` you can define some intresting things. But because atoum tries to help you in the redaction of your test, we added several aliases.
 
-* `==` is the same as the asserter :ref`isEqualTo<variable-is-equal-to>`
-* `===` is the same as the asserter :ref`isIdenticalTo<variable-is-identical-to>`
-* `!=` is the same as the asserter :ref`isNotEqualTo<variable-is-not-equal-to>`
-* `!==` is the same as the asserter :ref`isIdenticalTo<variable-is-not-identical-to>`
-* `<` is the same as the asserter :ref`isLessThan<integer-is-less-than>`
-* `<=` is the same as the asserter :ref`isLessThanOrEqualTo<integer-is-less-than-or-equal-to>`
-* `>` is the same as the asserter :ref`isGreaterThan<integer-is-greater-than>`
-* `>=` is the same as the asserter :ref`isGreaterThanOrEqualTo<integer-is-greater-than-or-equal-to>`
+* **==** is the same as the asserter :ref:`isEqualTo<variable-is-equal-to>`
+* **===** is the same as the asserter :ref:`isIdenticalTo<variable-is-identical-to>`
+* **!=** is the same as the asserter :ref:`isNotEqualTo<variable-is-not-equal-to>`
+* **!==** is the same as the asserter :ref:`isIdenticalTo<variable-is-not-identical-to>`
+* **<** is the same as the asserter :ref:`isLessThan<integer-is-less-than>`
+* **<=** is the same as the asserter :ref:`isLessThanOrEqualTo<integer-is-less-than-or-equal-to>`
+* **>** is the same as the asserter :ref:`isGreaterThan<integer-is-greater-than>`
+* **>=** is the same as the asserter :ref:`isGreaterThanOrEqualTo<integer-is-greater-than-or-equal-to>`
 
 .. code-block:: php
 
