@@ -3,270 +3,125 @@ api_key: c967e730da9f8e05551d53fa6f28823e
 
 files:
   -
-    source      : '/source/en/index.rst'
-    dest        : '/source/en/index.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/cookbook.rst'
-    dest        : '/source/en/cookbook.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/cookbooks/framework.inc.rst'
-    dest        : '/source/en/cookbooks/framework.inc.txt'
-    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
-
-  -
-    source      : '/source/en/cookbooks/hook.inc.rst'
-    dest        : '/source/en/cookbooks/hook.inc.txt'
-    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
-
-  -
-    source      : '/source/en/cookbooks/receipt.inc.rst'
-    dest        : '/source/en/cookbooks/receipt.inc.txt'
-    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
-    languages_mapping:
-      file_name:
-        fr: recette.inc
-
-  -
-    source      : '/source/en/cookbooks/tools.inc.rst'
-    dest        : '/source/en/cookbooks/tools.inc.txt'
-    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
-    languages_mapping:
-      file_name:
-        fr: outils.inc
-
-  -
-    source      : '/source/en/extensions.rst'
-    dest        : '/source/en/extensions.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/contribute.rst'
-    dest        : '/source/en/contribute.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-    languages_mapping:
-      file_name:
-        fr: participer
-
-  -
-    source      : '/source/en/how_to_write_test_cases.rst'
-    dest        : '/source/en/how_to_write_test_cases.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/how_to_write_test_cases/given-if-and-then.inc.rst'
-    dest        : '/source/en/how_to_write_test_cases/given-if-and-then.inc.txt'
-    translation : '/source/%two_letters_code%/how_to_write_test_cases/%file_name%.rst'
-
-  -
-    source      : '/source/en/how_to_write_test_cases/asserter.inc.rst'
-    dest        : '/source/en/how_to_write_test_cases/asserter.inc.txt'
-    translation : '/source/%two_letters_code%/how_to_write_test_cases/%file_name%.rst'
-
-  -
-    source      : '/source/en/how_to_write_test_cases/newTestedInstance.inc.rst'
-    dest        : '/source/en/how_to_write_test_cases/newTestedInstance.inc.txt'
-    translation : '/source/%two_letters_code%/how_to_write_test_cases/%file_name%.rst'
-
-  -
-    source      : '/source/en/mode-loop.rst'
-    dest        : '/source/en/mode-loop.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/mode-debug.rst'
-    dest        : '/source/en/mode-debug.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/fine_tuning.rst'
-    dest        : '/source/en/fine_tuning.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/annotations/data-provider.inc.rst'
-    dest        : '/source/en/annotations/data-provider.inc.txt'
-    translation : '/source/%two_letters_code%/annotations/%file_name%.rst'
-
-  -
-    source      : '/source/en/mocking_systems.rst'
-    dest        : '/source/en/mocking_systems.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/engine.rst'
-    dest        : '/source/en/engine.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
     source      : '/source/en/annotations/annotation-extension.inc.rst'
     dest        : '/source/en/annotations/annotation-extension.inc.txt'
     translation : '/source/%two_letters_code%/annotations/%file_name%.rst'
-
   -
     source      : '/source/en/annotations/annotation-php.inc.rst'
     dest        : '/source/en/annotations/annotation-php.inc.txt'
     translation : '/source/%two_letters_code%/annotations/%file_name%.rst'
-
   -
-    source      : '/source/en/asserters.rst'
-    dest        : '/source/en/asserters.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-    languages_mapping:
-      file_name:
-        fr: assertions
-
+    source      : '/source/en/annotations/data-provider.inc.rst'
+    dest        : '/source/en/annotations/data-provider.inc.txt'
+    translation : '/source/%two_letters_code%/annotations/%file_name%.rst'
   -
     source      : '/source/en/asserters/afterDestructionOf.inc.rst'
     dest        : '/source/en/asserters/afterDestructionOf.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/array.inc.rst'
     dest        : '/source/en/asserters/array.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/boolean.inc.rst'
     dest        : '/source/en/asserters/boolean.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/castToString.inc.rst'
     dest        : '/source/en/asserters/castToString.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/class.inc.rst'
     dest        : '/source/en/asserters/class.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/dateInterval.inc.rst'
     dest        : '/source/en/asserters/dateInterval.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/dateTime.inc.rst'
     dest        : '/source/en/asserters/dateTime.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/error.inc.rst'
     dest        : '/source/en/asserters/error.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/exception.inc.rst'
     dest        : '/source/en/asserters/exception.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/extension.inc.rst'
     dest        : '/source/en/asserters/extension.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/float.inc.rst'
     dest        : '/source/en/asserters/float.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/hash.inc.rst'
     dest        : '/source/en/asserters/hash.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/integer.inc.rst'
     dest        : '/source/en/asserters/integer.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/mock.inc.rst'
     dest        : '/source/en/asserters/mock.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/mysqlDateTime.inc.rst'
     dest        : '/source/en/asserters/mysqlDateTime.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/object.inc.rst'
     dest        : '/source/en/asserters/object.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/output.inc.rst'
     dest        : '/source/en/asserters/output.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
+  -
+    source      : '/source/en/asserters/resource.inc.rst'
+    dest        : '/source/en/asserters/resource.inc.txt'
+    translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
   -
     source      : '/source/en/asserters/sizeOf.inc.rst'
     dest        : '/source/en/asserters/sizeOf.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/stream.inc.rst'
     dest        : '/source/en/asserters/stream.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/string.inc.rst'
     dest        : '/source/en/asserters/string.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/utf8String.inc.rst'
     dest        : '/source/en/asserters/utf8String.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/variable.inc.rst'
     dest        : '/source/en/asserters/variable.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
   -
     source      : '/source/en/asserters/ztips.inc.rst'
     dest        : '/source/en/asserters/ztips.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
-
-  -
-    source      : '/source/en/running_tests.rst'
-    dest        : '/source/en/running_tests.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-    languages_mapping:
-      file_name:
-        fr: lancement_des_tests
-
-  -
-    source      : '/source/en/option_cli.rst'
-    dest        : '/source/en/option_cli.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/ide.rst'
-    dest        : '/source/en/ide.txt'
-    translation : '/source/%two_letters_code%/%file_name%.rst'
-
-  -
-    source      : '/source/en/configuration_bootstraping/bootstrap.inc.rst'
-    dest        : '/source/en/configuration_bootstraping/bootstrap.inc.txt'
-    translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
-
-  -
-    source      : '/source/en/configuration_bootstraping/configuration.inc.rst'
-    dest        : '/source/en/configuration_bootstraping/configuration.inc.txt'
-    translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
-
   -
     source      : '/source/en/configuration_bootstraping/autoloader.inc.rst'
     dest        : '/source/en/configuration_bootstraping/autoloader.inc.txt'
     translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
-
+  -
+    source      : '/source/en/configuration_bootstraping/bootstrap.inc.rst'
+    dest        : '/source/en/configuration_bootstraping/bootstrap.inc.txt'
+    translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
+  -
+    source      : '/source/en/configuration_bootstraping/configuration.inc.rst'
+    dest        : '/source/en/configuration_bootstraping/configuration.inc.txt'
+    translation : '/source/%two_letters_code%/configuration_bootstraping/%file_name%.rst'
   -
     source      : '/source/en/configuration_bootstraping/having_fun_with_atoum.inc.rst'
     dest        : '/source/en/configuration_bootstraping/having_fun_with_atoum.inc.txt'
@@ -274,32 +129,145 @@ files:
     languages_mapping:
       file_name:
         fr: amusons_nous_avec_atoum.inc
-
+  -
+    source      : '/source/en/cookbooks/framework.inc.rst'
+    dest        : '/source/en/cookbooks/framework.inc.txt'
+    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
+  -
+    source      : '/source/en/cookbooks/hook.inc.rst'
+    dest        : '/source/en/cookbooks/hook.inc.txt'
+    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
+  -
+    source      : '/source/en/cookbooks/receipt.inc.rst'
+    dest        : '/source/en/cookbooks/receipt.inc.txt'
+    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
+    languages_mapping:
+      file_name:
+        fr: recette.inc
+  -
+    source      : '/source/en/cookbooks/tools.inc.rst'
+    dest        : '/source/en/cookbooks/tools.inc.txt'
+    translation : '/source/%two_letters_code%/cookbooks/%file_name%.rst'
+    languages_mapping:
+      file_name:
+        fr: outils.inc
+  -
+    source      : '/source/en/how_to_write_test_cases/asserter.inc.rst'
+    dest        : '/source/en/how_to_write_test_cases/asserter.inc.txt'
+    translation : '/source/%two_letters_code%/how_to_write_test_cases/%file_name%.rst'
+  -
+    source      : '/source/en/how_to_write_test_cases/given-if-and-then.inc.rst'
+    dest        : '/source/en/how_to_write_test_cases/given-if-and-then.inc.txt'
+    translation : '/source/%two_letters_code%/how_to_write_test_cases/%file_name%.rst'
+  -
+    source      : '/source/en/how_to_write_test_cases/newTestedInstance.inc.rst'
+    dest        : '/source/en/how_to_write_test_cases/newTestedInstance.inc.txt'
+    translation : '/source/%two_letters_code%/how_to_write_test_cases/%file_name%.rst'
+  -
+    source      : '/source/en/mocking_systems/constant.inc.rst'
+    dest        : '/source/en/mocking_systems/constant.inc.txt'
+    translation : '/source/%two_letters_code%/mocking_systems/%file_name%.rst'
+  -
+    source      : '/source/en/mocking_systems/mock_behaviour.inc.rst'
+    dest        : '/source/en/mocking_systems/mock_behaviour.inc.txt'
+    translation : '/source/%two_letters_code%/mocking_systems/%file_name%.rst'
+  -
+    source      : '/source/en/mocking_systems/mocks_generation.inc.rst'
+    dest        : '/source/en/mocking_systems/mocks_generation.inc.txt'
+    translation : '/source/%two_letters_code%/mocking_systems/%file_name%.rst'
+  -
+    source      : '/source/en/mocking_systems/native_functions.inc.rst'
+    dest        : '/source/en/mocking_systems/native_functions.inc.txt'
+    translation : '/source/%two_letters_code%/mocking_systems/%file_name%.rst'
+  -
+    source      : '/source/en/mocking_systems/test_mock.inc.rst'
+    dest        : '/source/en/mocking_systems/test_mock.inc.txt'
+    translation : '/source/%two_letters_code%/mocking_systems/%file_name%.rst'
   -
     source      : '/source/en/annotations.rst'
     dest        : '/source/en/annotations.txt'
     translation : '/source/%two_letters_code%/%file_name%.rst'
-
+  -
+    source      : '/source/en/asserters.rst'
+    dest        : '/source/en/asserters.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+    languages_mapping:
+      file_name:
+        fr: assertions
   -
     source      : '/source/en/configuration_bootstraping.rst'
     dest        : '/source/en/configuration_bootstraping.txt'
     translation : '/source/%two_letters_code%/%file_name%.rst'
-
+  -
+    source      : '/source/en/contribute.rst'
+    dest        : '/source/en/contribute.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+    languages_mapping:
+      file_name:
+        fr: participer
+  -
+    source      : '/source/en/cookbook.rst'
+    dest        : '/source/en/cookbook.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/engine.rst'
+    dest        : '/source/en/engine.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/extensions.rst'
+    dest        : '/source/en/extensions.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
   -
     source      : '/source/en/first_test.rst'
     dest        : '/source/en/first_test.txt'
     translation : '/source/%two_letters_code%/%file_name%.rst'
-
+  -
+    source      : '/source/en/fine_tuning.rst'
+    dest        : '/source/en/fine_tuning.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/how_to_write_test_cases.rst'
+    dest        : '/source/en/how_to_write_test_cases.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/ide.rst'
+    dest        : '/source/en/ide.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/index.rst'
+    dest        : '/source/en/index.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
   -
     source      : '/source/en/installation.rst'
     dest        : '/source/en/installation.txt'
     translation : '/source/%two_letters_code%/%file_name%.rst'
-
   -
     source      : '/source/en/licences.rst'
     dest        : '/source/en/licences.txt'
     translation : '/source/%two_letters_code%/%file_name%.rst'
-
+  -
+    source      : '/source/en/mocking_systems.rst'
+    dest        : '/source/en/mocking_systems.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/mode-debug.rst'
+    dest        : '/source/en/mode-debug.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/mode-loop.rst'
+    dest        : '/source/en/mode-loop.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/option_cli.rst'
+    dest        : '/source/en/option_cli.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/running_tests.rst'
+    dest        : '/source/en/running_tests.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+    languages_mapping:
+      file_name:
+        fr: lancement_des_tests
   -
     source      : '/source/en/start_with_atoum.rst'
     dest        : '/source/en/start_with_atoum.txt'
