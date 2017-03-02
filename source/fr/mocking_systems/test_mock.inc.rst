@@ -1,10 +1,10 @@
 
 .. _mock_test_mock:
 
-Test mock
+Tester un bouchon
 *********
 
-atoum lets you verify that a mock was used properly.
+atoum vous permet de vérifier qu'un bouchon a été utilisé correctement.
 
 .. code-block:: php
 
@@ -15,16 +15,16 @@ atoum lets you verify that a mock was used properly.
 
    $bankAccount = new \Vendor\Project\Bank\Account();
    $this
-       // use of the mock via another object
+       // utilisation du bouchon via un autre objet
        ->array($bankAccount->getOperations($mockDbClient))
            ->isEmpty()
 
-       // test of the mock
+       // test du bouchon
        ->mock($mockDbClient)
            ->call('query')
-               ->once() // check that the query method
-                               // has been called only once
+               ->once() // vérifie que la méthode query
+                               // n'a été appelé qu'une seule fois
    ;
 
 .. note::
-	Refer to the documentation on the :ref:`mock-asserter` for more information on testing mocks.
+	Reportez-vous à la documentation sur l'assertion :ref:`mock-asserter` pour obtenir plus d'informations sur les tests des bouchons.

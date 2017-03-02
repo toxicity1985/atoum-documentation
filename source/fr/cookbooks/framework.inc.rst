@@ -153,7 +153,7 @@ Imaginons que nous voulions tester cet Entity:
    }
 
 .. note::
-   For more information about creating Entity in Symfony 2, refer to the `official documentation <http://symfony.com/doc/current/doctrine.html#creating-an-entity-class>`_
+   Pour plus d'information sur la création d'Entity dans Symfony 2, référé vous au `manuel officiel <http://symfony.com/doc/current/doctrine.html#creating-an-entity-class>`_
 
 Créez le répertoire Tests/Units dans votre Bundle (par exemple src/Acme/DemoBundle/Tests/Units). C'est dans ce répertoire que seront stockés tous les tests de ce Bundle.
 
@@ -262,10 +262,10 @@ Si vous utilisez Symfony 2.1+:
 
 .. code-block:: shell
 
-   # Launch tests of one file
+   # Lancement des tests d'un fichier
    $ ./bin/atoum -f src/Acme/DemoBundle/Tests/Units/Entity/Car.php
 
-   # Launch all tests of the Bundle
+   # Lancement de tous les tests du Bundle
    $ ./bin/atoum -d src/Acme/DemoBundle/Tests/Units
 
 .. note::

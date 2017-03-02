@@ -15,7 +15,7 @@ C'est l'assertion dédiée aux mocks.
    ;
 
 .. note::
-   Refer to the documentation of :ref:`mock <mocking_systems>` for more information on how to create and manage mocks.
+   Reportez-vous à la documentation sur :ref:`les bouchons (mock) <mocking_systems>` pour obtenir plus d'informations sur la façon de créer et gérer les bouchons.
 
 .. _call-anchor:
 
@@ -149,7 +149,7 @@ exactly
    ;
 
 .. note::
-   You can have a simplified version with ``->{2}``.
+   il existe une version simplifier avec ``->{2}``.
 
 .. _never-anchor:
 
@@ -172,14 +172,14 @@ never
    ;
 
 .. note::
-   ``never`` is equivalent to :ref:`exactly(0)<exactly-anchor>`.
+   ``never`` est équivalent à :ref:`exactly(0)<exactly-anchor>`.
 
 
 .. _once-twice-thrice:
 
 once/twice/thrice
 `````````````````
-This asserters check that the tested method (see :ref:`call<call-anchor>`) from the tested mock has been called exactly:
+Ces assertions vérifient que la méthode testée (voir :ref:`call <call-anchor>`) du mock testé a été appelée exactement :
 
 * une fois (once)
 * deux fois (twice)
@@ -203,7 +203,7 @@ This asserters check that the tested method (see :ref:`call<call-anchor>`) from 
    ;
 
 .. note::
-   ``once``, ``twice`` and ``thrice`` are respectively equivalent to :ref:`exactly(1)<exactly-anchor>`, :ref:`exactly(2)<exactly-anchor>` and :ref:`exactly(3)<exactly-anchor>`.
+   ``once``, ``twice`` et ``thrice`` sont respectivement équivalents à un appel à :ref:`exactly(1)<exactly-anchor>`, :ref:`exactly(2)<exactly-anchor>` et :ref:`exactly(3)<exactly-anchor>`.
 
 
 .. _with-any-arguments:
@@ -211,7 +211,7 @@ This asserters check that the tested method (see :ref:`call<call-anchor>`) from 
 withAnyArguments
 ````````````````
 
-``withAnyArguments`` allow to check any argument, non-specified, when we call the tested method (see :ref:`call<call-anchor>`) of tested mock.
+``withAnyArguments`` permet de ne pas spécifier les arguments attendus lors de l'appel à la méthode testée (voir :ref:`call<call-anchor>`) du mock testé.
 
 Cette méthode est surtout utile pour remettre à zéro les arguments, comme dans l'exemple suivant :
 
@@ -362,7 +362,7 @@ withoutAnyArgument
 receive
 =======
 
-It's an alias of :ref:`call-anchor`.
+Est un alias de :ref:`call-anchor`.
 
 .. code-block:: php
 
@@ -378,7 +378,7 @@ It's an alias of :ref:`call-anchor`.
            ->object($this->testedInstance->noMoreValue())->isTestedInstance
            ->mock($connection)->receive('newPacket')->withArguments(new packet)->once;
 
-      // same as
+      // Identique à
       $this->mock($connection)->call('newPacket')->withArguments(new packet)->once;
 
 .. _was-called:

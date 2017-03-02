@@ -40,7 +40,7 @@ Il est à noter, qu'afin de simplifier l'écriture des tests sur les tableaux, d
 child
 =====
 
-With ``child`` you can assert on a subarray.
+Avec ``child`` vous pouvez faire une assertion sur un sous tableau.
 
 .. code-block:: php
 
@@ -68,7 +68,7 @@ With ``child`` you can assert on a subarray.
          });
 
 .. note::
-   This is available from PHP 5.4.
+   Cette forme d'écriture n'est disponible qu'à partir de PHP 5.4.
 
 .. _array-contains:
 

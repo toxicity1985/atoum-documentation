@@ -1,11 +1,11 @@
 
 .. _mock_behaviour_change:
 
-Modify the behaviour of a mock
+Modifier le comportement d'un bouchon
 ******************************
 
-Once the mock is created and instantiated, it is often useful to be able to change the behaviour of its methods. To do this,
-you must use its controller using one of the following methods:
+Une fois le bouchon créé et instancié, il est souvent utile de pouvoir modifier le comportement de ses méthodes. Pour cela,
+il faut passer par son contrôleur en utilisant l'une des méthodes suivantes :
 
 * $yourMock->getMockController()->yourMethod
 * $this->calling($yourMock)->yourMethod
@@ -19,22 +19,22 @@ you must use its controller using one of the following methods:
    // Equivalent to
    $this->calling($mockDbClient)->connect = function() {};
 
-The ``mockController`` allows you to redefine **only public and abstract protected methods** and puts at your disposal several methods:
+Le ``mockController`` vous permet de redéfinir **uniquement les méthodes publiques et abstraites protégées** et met à votre disposition plusieurs méthodes :
 
 .. code-block:: php
 
    <?php
    $mockDbClient = new \mock\Database\Client();
 
-   // Redefine the method connect: it will always return true
+   // redéfinit la méthode connect : elle retournera toujours true
    $this->calling($mockDbClient)->connect = true;
 
-   // Redefine the method select: it will execute the given anonymous function
+   // redéfinit la méthode select : elle exécutera la fonction anonyme passée
    $this->calling($mockDbClient)->select = function() {
        return array();
    };
 
-   // redefine the method query with arguments
+   // redéfinit la méthode query avec des arguments
    $result = array();
    $this->calling($mockDbClient)->query = function(Query $query) use($result) {
        switch($query->type) {
@@ -46,44 +46,44 @@ The ``mockController`` allows you to redefine **only public and abstract protect
        }
    };
 
-   // the method connects will throw an exception
+   // la méthode connect lèvera une exception
    $this->calling($mockDbClient)->connect->throw = new \Database\Client\Exception();
 
 .. note::
-	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Refer
-	to `PHP manual <http://php.net/functions.anonymous>`__ for more information on the subject.
+	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Reportez-vous
+	au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
 
-As you can see, it is possible to use several methods to get the desired behaviour:
+Comme vous pouvez le voir, il est possible d'utiliser plusieurs méthodes afin d'obtenir le comportement souhaité :
 
-* Use a static value that will be returned by the method
-* Use a short implementation thanks to anonymous functions of PHP
-* Use the ``throw`` keyword to throw an exception
+* Utiliser une valeur statique qui sera retournée par la méthode
+* Utiliser une implémentation courte grâce aux fonctions anonymes de PHP
+* Utiliser le mot-clef ``throw`` pour lever une exception
 
-Change mock behaviour on multiple calls
-=======================================
+Changement de comportement du mock sur plusieurs appels
+=======================================================
 
-You can also specify multiple values based on the order of call:
+Vous pouvez également spécifier plusieurs valeurs en fonction de l'ordre d'appel :
 
 .. code-block:: php
 
    <?php
    // default
    $this->calling($mockDbClient)->count = rand(0, 10);
-   // equivalent to
+   // équivalent à
    $this->calling($mockDbClient)->count[0] = rand(0, 10);
 
-   // 1st call
+   // 1er appel
    $this->calling($mockDbClient)->count[1] = 13;
 
-   // 3rd call
+   // 3ème appel
    $this->calling($mockDbClient)->count[3] = 42;
 
-* The first call will return 13.
-* The second will be the default behaviour, it means a random number.
-* The third call will return 42.
-* All subsequent calls will have the default behaviour, i.e. random numbers.
+* Le premier appel retournera 13.
+* Le second aura le comportement par défaut, c'est-à-dire un nombre aléatoire.
+* Le troisième appel retournera 42.
+* Tous les appels suivants auront le comportement par défaut, c'est à dire des nombres aléatoires.
 
-If you want several methods of the mock have the same behaviour, you can use the `methods<mock_methods>` or `methodsMatching<mock_method_matching>`.
+Si vous souhaitez que plusieurs méthodes du bouchon aient le même comportement, vous pouvez utiliser les méthodes :ref:`methods<mock_methods>` ou :ref:`methodsMatching<mock_method_matching>`.
 
 
 
@@ -93,13 +93,13 @@ If you want several methods of the mock have the same behaviour, you can use the
 methods
 =======
 
-``methods`` allow you, thanks to the anonymous function passed as an argument, to define what methods the behaviour must be modified:
+``methods`` vous permet, grâce à la fonction anonyme passée en argument, de définir pour quelles méthodes le comportement doit être modifié :
 
 .. code-block:: php
 
    <?php
-   // if the method has such and such name,
-   // we redefine its behaviour
+   // si la méthode a tel ou tel nom,
+   // on redéfinit son comportement
    $this
        ->calling($mock)
            ->methods(
@@ -116,15 +116,15 @@ methods
                ->return = uniqid()
    ;
 
-   // we redefines the behaviour of all methods
+   // on redéfinit le comportement de toutes les méthodes
    $this
        ->calling($mock)
            ->methods()
                ->return = null
    ;
 
-   // if the method begins by "get",
-   // we redefine its behaviour
+   // si la méthode commence par "get",
+   // on redéfinit son comportement
    $this
        ->calling($mock)
            ->methods(
@@ -136,11 +136,11 @@ methods
    ;
 
 
-In the last example, you should instead use `methodsMatching<mock_method_matching>`.
+Dans le cas du dernier exemple, vous devriez plutôt utiliser :ref:`methodsMatching<mock_method_matching>`.
 
 .. note::
-	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Refer
-	to `PHP manual <http://php.net/functions.anonymous>`__ for more information on the subject.
+	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Reportez-vous
+	au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
 
 
 .. _mock_method_matching:
@@ -148,22 +148,22 @@ In the last example, you should instead use `methodsMatching<mock_method_matchin
 methodsMatching
 ===============
 
-``methodsMatching`` allows you to set the methods where the behaviour must be modified using the regular
-expression passed as an argument :
+``methodsMatching`` vous permet de définir les méthodes où le comportement doit être modifié grâce à l'expression
+rationnelle passée en argument :
 
 .. code-block:: php
 
    <?php
-   // if the method begins by "is",
-   // we redefines its behaviour
+   // si la méthode commence par "is",
+   // on redéfinit son comportement
    $this
        ->calling($mock)
            ->methodsMatching('/^is/')
                ->return = true
    ;
 
-   // if the method starts by "get" (case insensitive),
-   // we redefines its behaviour
+   // si la méthode commence par "get" (insensible à la casse),
+   // on redéfinit son comportement
    $this
        ->calling($mock)
            ->methodsMatching('/^get/i')
@@ -171,13 +171,13 @@ expression passed as an argument :
    ;
 
 .. note::
-	``methodsMatching`` use `preg_match <http://php.net/preg_match>`_ and regular expressions. Refer
-	to the `PHP manual <http://php.net/pcre>`__ for more information on the subject.
+	``methodsMatching`` utilise `preg_match <http://php.net/preg_match>`_ et les expressions rationnelles. Reportez-vous
+	au `manuel de PHP <http://php.net/pcre>`__ pour avoir plus d'informations sur le sujet.
 
 isFluent && returnThis
 ======================
 
-Defines a fluent method, so the method return the class.
+Défini une méthode fluent, ainsi la méthode retourne la classe.
 
 .. code-block:: php
 
@@ -185,15 +185,15 @@ Defines a fluent method, so the method return the class.
 		$foo = new \mock\foo();
 		$this->calling($foo)->bar = $foo;
 
-		// is the same as
+		// est identique à
 		$this->calling($foo)->bar->isFluent;
-		// or this other one
+		// ou a celui-ci
 		$this->calling($foo)->bar->returnThis;
 
 doesNothing && doesSomething
 ============================
 
-The method do nothing and return null.
+Cette méthode ne fait rien et retourne null.
 
 .. code-block:: php
 
@@ -201,21 +201,21 @@ The method do nothing and return null.
 		$foo = new \mock\foo();
 		$this->calling($foo)->bar = null;
 
-		// is the same as
+		// est identique à
 		$this->calling($foo)->bar->doesNothing;
 
-If for any reason, you want to restore the behaviour of the method, use ``doesSomething``.
+Si pour une raison quelconque, vous souhaitez rétablir le comportement de la méthode, utilisez ``doesSomething``.
 
 .. _mock_special_constructor:
 
-Particular case of the constructor
+Cas particulier du constructeur
 ==================================
 
-To mock class constructor, you need:
+Pour mocker le constructeur de la classe, vous avez besoin de :
 
-* create an instance of \\atoum\\mock\\controller class before you call the constructor of the mock ;
-* set via this control the behaviour of the constructor of the mock using an anonymous function ;
-* inject the controller during the instantiation of the mock in the `last` argument.
+* créer une instance de la classe \atoum\mock\controller avant d'appeler le constructeur du bouchon ;
+* définir via ce contrôleur le comportement du constructeur du bouchon à l'aide d'une fonction anonyme ;
+* injecter le contrôleur lors de l'instanciation du bouchon en `dernier` argument.
 
 .. code-block:: php
 
@@ -223,9 +223,9 @@ To mock class constructor, you need:
    $controller = new \atoum\mock\controller();
    $controller->__construct = function($args)
    {
-        // do something with the args
+        // faire quelque chose avec les arguments
    };
 
    $mockDbClient = new \mock\Database\Client(DB_HOST, DB_USER, DB_PASS, $controller);
 
-For simple case you can use :ref:`orphanize('__constructor')<mock_orphan_method>` or :ref:`shunt('__constructor')<mock_shunt>`.
+Pour les cas simple, vous pouvez utilisez :ref:`orphanize('__constructor')<mock_orphan_method>` ou :ref:`shunt('__constructor')<mock_shunt>`.

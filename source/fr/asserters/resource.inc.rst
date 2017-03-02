@@ -3,7 +3,7 @@
 resource
 ********
 
-It's the assertion dedicated to the resources.
+C'est l'assertion dédiée aux ressources.
 
 
 .. _resource-isOfType:
@@ -11,7 +11,7 @@ It's the assertion dedicated to the resources.
 isOfType
 ========
 
-Compare the type of resource with the given type (as string).
+Comparer le type de ressource avec le type de donnée fournie (comme une chaîne de caractère).
 
 .. code-block:: php
 
@@ -32,8 +32,8 @@ isStream
 	        ->isStream()
 	;
 
-->is*() will match the type of the stream against a pattern computed from the method name:
-	->isFooBar() will try to match a stream with type foo bar, fooBar, foo_bar, ...
+->is*() va faire correspondre le type du flux au nom d'une méthode :
+	->isFooBar() va essayer de trouver un flux correspondant à foo bar, fooBar, foo_bar...
 
 .. _resource-type:
 
@@ -49,4 +49,4 @@ type
 				->matches('/foo.*bar/')
 	;
 
-->$type is an helper providing a :ref:`string asserter<string-anchor>` on the stream type.
+->$type est un helper fournissant :ref:`l'assertion des string<string-anchor>` sur le type de stream.

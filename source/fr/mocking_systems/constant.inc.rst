@@ -1,10 +1,10 @@
 
 .. _mock-constant:
 
-The mocking of constant
-***********************
+Les bouchons de constantes
+**************************
 
-PHP constant can be declared with ``defined``, but with atoum you can mock it like this:
+Les constantes PHP peuvent être déclarée avec ``defined``, cependant avec atoum vous pouvez les bouchonner de cette manière :
 
 .. code-block:: php
 
@@ -20,7 +20,7 @@ PHP constant can be declared with ``defined``, but with atoum you can mock it li
            ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
    ;
 
-Warning, due to the nature of constant in PHP, following the :ref:`engine<@engine>` you can meet some issue. Here is an example:
+Attention, due à la nature des constantes en PHP, suivant :ref:`l'engine<@engine>` utiliser vous pouvez différent problème. En voici un exemple :
 
 .. code-block:: php
 

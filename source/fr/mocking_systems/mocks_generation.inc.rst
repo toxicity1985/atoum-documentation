@@ -1,147 +1,147 @@
 
 .. _mock_generate_one:
 
-Generate a mock
+Générer une maquette
 ***************
 
-There are several ways to create a mock from an interface or a class. The simplest one is to create an
-object with the absolute name prefixed by ``mock``:
+Il y a plusieurs manières de créer un bouchon à partir d'une interface ou d'une classe. Le plus simple est de créer un
+objet avec le nom absolu préfixé de ``mock`` :
 
 .. code-block:: php
 
    <?php
-   // creation of a mock of the interface \Countable
+   // création d'un bouchon de l'interface \Countable
    $countableMock = new \mock\Countable;
 
-   // creation of a mock from the abstract class
+   // création d'un bouchon de la classe abstraite
    // \Vendor\Project\AbstractClass
    $vendorAppMock = new \mock\Vendor\Project\AbstractClass;
 
    // creation of mock of the \StdClass class
    $stdObject     = new \mock\StdClass;
 
-   // creation of a mock from a non-existing class
+   // création d'un bouchon à partir d'une classe inexistante
    $anonymousMock = new \mock\My\Unknown\Claass;
 
 .. _mock_generate_fast:
 
-Generate a mock with newMockInstance
+Générer un mock avec newMockInstance
 ====================================
 
-If you prefer there is method called ``newMockInstance()`` that will generate a mock.
+Si vous préférez il existe une méthode ``newMockInstance()`` qui permet la génération d'un mock.
 
 .. code-block:: php
 
    <?php
-   // creation of a mock of the interface \Countable
+   // création d'un bouchon de l'interface \Countable
    $countableMock = new \mock\Countable;
 
-   // is equivalent to
+   // est équivalent à
    $this->newMockInstance('Countable');
 
 .. note::
-	Like the mock generator, you can give extra parameters: ``$this->newMockInstance('class name', 'mock namespace', 'mock class name', ['constructor args']);``
+	Comme le générateur de mock, vous pouvez fournir des paramètres en plus : ``$this->newMockInstance('class name', 'mock namespace', 'mock class name', ['constructor args']);``
 
 
 
 
 .. _mock_generator:
 
-The mock generator
-******************
+Le générateur de bouchon
+************************
 
-atoum relies on a specialised components to generate the mock: the ``mockGenerator``.
-You have access to the latter in your tests in order to modify the procedure for the generation of the mocks.
+atoum s'appuie sur un composant spécialisé pour générer les bouchons : le ``mockGenerator``.
+Vous avez accès à ce dernier dans vos tests afin de modifier la procédure de génération des mocks.
 
-By default, the mock will be generated in the "mock" namespace and behave exactly in the same way as
-instances of the original class (mock inherits directly from the original class).
+Par défaut, le mock sera généré dans le namespace "mock" et fonctionnera exactement de la même manière que
+l'instance de la classe original (le mock hérite directement de la classe d'origine).
 
 .. _mock_change_name:
 
-Change the name of the class
-============================
+Changer le nom de la classe
+===========================
 
-If you wish to change the name of the class or its namespace, you must use the ``mockGenerator``.
+Si vous désirez changer le nom de la classe ou son espace de nom, vous devez utiliser le ``mockGenerator``.
 
-Its ``generate`` method takes 3 parameters:
+La méthode ``generate`` prend trois paramètres :
 
-* the name of the interface or class to mock ;
-* the new namespace, optional ;
-* the new name of class, optional.
+* le nom de l'interface ou de la classe à bouchonner ;
+* le nouvel espace de nom, optionnel ;
+* le nouveau nom de la classe, optionnel.
 
 .. code-block:: php
 
    <?php
-   // creation of a mock of the interface \Countable to \MyMock\Countable
-   // we only change the namespace
+   // création d'un bouchon de l'interface \Countable vers \MyMock\Countable
+   // on ne change que l'espace de nom
    $this->mockGenerator->generate('\Countable', '\MyMock');
 
-   // creation of a mock from the abstract class
+   // création d'un bouchon de la classe abstraite
    // \Vendor\Project\AbstractClass to \MyMock\AClass
-   // change the namespace and class name
+   // on change l'espace de nom et le nom de la classe
    $this->mockGenerator->generate('\Vendor\Project\AbstractClass', '\MyMock', 'AClass');
 
-   // creation of a mock of \StdClass to \mock\OneClass
-   // We only changes the name of the class
+   // création d'un bouchon de la classe \StdClass vers \mock\OneClass
+   // on ne change que le nom de la classe
    $this->mockGenerator->generate('\StdClass', null, 'OneClass');
 
-   // we can now instantiate these mocks
+   // on peut maintenant instancier ces mocks
    $vendorAppMock = new \myMock\AClass;
    $countableMock = new \myMock\Countable;
    $stdObject     = new \mock\OneClass;
 
 .. note::
-	If you use only the first argument and do not change the namespace or the name of the class,
-	then the first solution is equivalent, easiest to read and recommended.
+	Si vous n'utilisez que le premier argument et ne changer pas le namespace ou le nom de la classe,
+	alors la première solution est équivalente, plus simple à lire et recommandé.
 
-	You can access to the code from the class generated by the mock generator by calling
-	``$this->mockGenerator->getMockedClassCode()``, in order to debug, for example. This
-	method takes the same arguments as the method ``generate``.
+	Vous pouvez accéder au code généré pour la classe par le générateur de mock en appelant
+	``$this->mockGenerator->getMockedClassCode()``, pour débuguer par exemple. Cette
+	méthode prend les mêmes arguments que la méthode ``generate``.
 
 .. code-block:: php
 
    <?php
    $countableMock = new \mock\Countable;
 
-   // is equivalent to:
+   // est équivalent à:
 
-   $this->mockGenerator->generate('\Countable');   // useless
+   $this->mockGenerator->generate('\Countable');   // inutile
    $countableMock = new \mock\Countable;
 
 .. note::
-	All what's described here with the mock generator can be apply with :ref:`newMockInstance<mock_generate_fast>`
+	Tout ce qui est décri ici avec le générateur de mock peut être utilisé avec :ref:`newMockInstance<mock_generate_fast>`
 
 .. _mock_shunt_parent_methods:
 
-Shunt calls to parent methods
-=============================
+Shunter les appels aux méthodes parentes
+========================================
 
 .. _mock_shuntParentClassCalls:
 
 shuntParentClassCalls & unShuntParentClassCalls
 -----------------------------------------------
 
-A mock inherits from the class from which it was generated, its methods therefore behave exactly the same way.
+Un bouchon hérite directement de la classe à partir de laquelle il a été généré, ses méthodes se comportent donc exactement de la même manière.
 
-In some cases, it may be useful to shunt calls to parent methods so that their code is not run.
-The ``mockGenerator`` offers several methods to achieve this :
+Dans certains cas, il peut être utile de shunter les appels aux méthodes parentes afin que leur code ne soit plus exécuté.
+Le ``mockGenerator`` met à votre disposition plusieurs méthodes pour y parvenir :
 
 .. code-block:: php
 
    <?php
-   // The mock will not call the parent class
+   // le bouchon ne fera pas appel à la classe parente
    $this->mockGenerator->shuntParentClassCalls();
 
    $mock = new \mock\OneClass;
 
-   // the mock will again call the parent class
+   // le bouchon fera à nouveau appel à la classe parente
    $this->mockGenerator->unshuntParentClassCalls();
 
-Here, all mock methods will behave as if they had no implementation however they will keep the signature of the original methods.
+Ici, toutes les méthodes du bouchon se comporteront comme si elles n'avaient pas d'implémentation par contre elles conserveront la signature des méthodes originales.
 
 .. note::
-	``shuntParentClassCalls`` will *only* be applied to the next generated mock. *But* if you create two mock of the same class,
-	both will have they parent method shunted.
+	``shuntParentClassCalls`` va *seulement* être appliqué à la prochaine génération de mock. *Mais* si vous créer deux mock de la même classe,
+	les deux auront leurs méthodes parente shunté.
 
 
 .. _mock_shunt:
@@ -149,28 +149,28 @@ Here, all mock methods will behave as if they had no implementation however they
 shunt
 -----
 
-You can also specify the methods you want to shunt:
+Vous pouvez également préciser les méthodes que vous souhaitez shunter :
 
 .. code-block:: php
 
    <?php
-   // the mock will not call the parent class for the method firstMethod…...
+   // le bouchon ne fera pas appel à la classe parente pour la méthode firstMethod…...
    $this->mockGenerator->shunt('firstMethod');
-   // ... nor for the method secondMethod
+   // ... ni pour la méthode secondMethod
    $this->mockGenerator->shunt('secondMethod');
 
    $countableMock = new \mock\OneClass;
 
-A shunted method, will have empty method body but like for ``shuntParentClassCalls`` the signature of the method will be the same as the mocked method.
+Une méthode shuntée aura un corps de méthode vide mais comme pour ``shuntParentClassCalls`` la signature de la méthode sera la même que celle bouchonée.
 
 .. _mock_orphan_method:
 
-Make an orphan method
-=====================
+Rendre une méthode orpheline
+============================
 
-It may be interesting to make an orphan method, that is, give him a signature and implementation empty. This can be
-particularly useful for generating mocks without having to instantiate all their dependencies. All the parameters of the method will also set
-as default value null. So it's the same a :ref:`shunted method<mock_shunt>`, but with all parameter as null.
+Il peut parfois être intéressant de rendre une méthode orpheline, c'est-à-dire, lui donner une signature et une implémentation vide. Cela peut être
+particulièrement utile pour générer des bouchons sans avoir à instancier toutes leurs dépendances. Tous les paramètres de la méthode seront également défini
+avec comme valeur par défaut null. C'est donc la même chose que a :ref:`shunté une méthoe<mock_shunt>` mais avec tout les paramètres a null.
 
 .. code-block:: php
 
@@ -194,10 +194,10 @@ as default value null. So it's the same a :ref:`shunted method<mock_shunt>`, but
    $this->mockGenerator->orphanize('__construct');
    $this->mockGenerator->shuntParentClassCalls();
 
-   // We can instantiate the mock without injecting dependencies
+   // Nous pouvons instancier le bouchon sans injecter ses dépendances
    $mock = new \mock\SecondClass();
 
    $object = new FirstClass($mock);
 
 .. note::
-	``orphanize`` will *only* be applied to the next generated mock.
+	``orphanize`` va *seulement* être appliqué à la prochaine génération de mock.

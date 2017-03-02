@@ -4,7 +4,7 @@
 Data providers
 **************
 
-Atoum vous propose plusieurs types de fournisseurs de données pour aider à tester le plus efficacement possible vos classes.
+Afin de permettre de tester efficacement vos classes, atoum fourni des data provider (fournisseur de donnée).
 
 Un data provider est une méthode spécifique d'une classe de test chargée de générer des arguments pour une méthode de test, arguments qui seront utilisés par ladite méthode pour valider des assertions.
 
@@ -92,10 +92,10 @@ Vous pouvez également utiliser une closure pour définir un data provider au li
 
 .. _data-provider-injected:
 
-Data provider injected in test method
-=====================================
+Data provider injecté dans les méthode de test
+==============================================
 
-There is also, an injection of mock in the test method parameters. So take a simple example:
+Il y a aussi, une injection de bouchon dans les paramètres de la méthode de test. Prenons un exemple simple :
 
 .. code-block:: php
 
@@ -112,7 +112,7 @@ There is also, an injection of mock in the test method parameters. So take a sim
        }
    }
 
-You can write this instead:
+Vous pouvez l'écrire ainsi :
 
 .. code-block:: php
 
@@ -128,7 +128,7 @@ You can write this instead:
        }
    }
 
-In this case, no need for data provider. But, if you want to customize the mock you will require it or use :ref:`beforeTestMethod<initialization_method>`.
+Dans ce cas, pas besoin de data provider. Cependant, si vous désirez changer le comportement de vos bouchons, cela requière l'utilisation de  :ref:`beforeTestMethod<initialization_method>`.
 
 .. code-block:: php
 
@@ -145,7 +145,7 @@ In this case, no need for data provider. But, if you want to customize the mock 
 
        public function beforeTestMethod($method)
        {
-           // orphanize the controller for the next mock generated, here $iterator
+           // rend le controlleur orphelin pour le prochain mock généré, ici $iterator
            $this->mockGenerator->orphanize('__construct');
        }
    }

@@ -10,12 +10,12 @@ Listes des asserters
 ..    :depth: 2
 ..    :local:
 
-To write more explicit and less wordy tests, atoum provide several asserters who give access to specific assertions related to tested var.
+Pour écrire des tests plus explicites et moins verbeux, atoum fourni plusieurs asserter qui donnent accès a des assertions spécifiques associées aux valeurs testés.
 
-As atoum different asserters are specializations of manipulated items, asserters inherits from asserters they specialize.
-It help keep consistency between asserters and force to use same assertion names.
+atoum possède différents asserters spécialisés permettant de manipuler différents éléments, les assertes hérite des autres asserters qu'ils spécialisent.
+Ceci permettant d'aider à garder une consistance entre les différents asserters et force à utiliser les nom d'assertion.
 
-This is the asserters inheritance tree:
+Voici l'arbre d'héritage des asserters :
 
 .. code-block:: shell
 

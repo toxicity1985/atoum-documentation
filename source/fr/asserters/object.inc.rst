@@ -285,11 +285,11 @@ Deux objets sont considérés identiques lorsqu'ils font référence à la même
 isNotInstanceOf
 ===============
 
-``isNotInstanceOf`` check that an object is not:
+``isNotInstanceOf`` vérifie qu'un objet n'est pas :
 
-* an instance of the given class,
-* a subclass from the given class (abstract or not),
-* an instance of class that implements a given interface.
+* une instance de la classe donnée,
+* une sous-classe de la classe donnée (abstraite ou non),
+* une instance d'une classe qui implémente l'interface donnée.
 
 .. code-block:: php
 
@@ -298,12 +298,12 @@ isNotInstanceOf
 
    $this
        ->object($object)
-           ->isNotInstanceOf('\StdClass')     // fail
-           ->isNotInstanceOf('\Iterator')     // pass
+           ->isNotInstanceOf('\StdClass')     // échoue
+           ->isNotInstanceOf('\Iterator')     // échoue
    ;
 
 .. note::
-   As for :ref:`isInstanceOf<object-is-instance-of>`, the name of the classes and the interfaces must be absolute, because any namespace imports are ignored.
+   Tout comme :ref:`isInstanceOf<object-is-instance-of>`, le nom de la classe ou de l'interface doivent être absolue car les import de namespace seront ignoré.
 
 .. _object-is-not-tested-instance:
 
@@ -329,4 +329,4 @@ isTestedInstance
    $this->object($this->testedInstance)->isTestedInstance;
 
    $object = new TestedClass();
-   $this->object($object)->isTestedInstance; // fail
+   $this->object($object)->isTestedInstance; // échec
