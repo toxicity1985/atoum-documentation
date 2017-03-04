@@ -20,6 +20,7 @@ Exemple:
    $this
        ->generator($generator())
            ->size->isEqualTo(3)
+   ;
 
 
 .. _generator-yields:
