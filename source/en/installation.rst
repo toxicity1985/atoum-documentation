@@ -46,7 +46,7 @@ You can download the latest stable version of atoum directly from the official w
 
 
 Update
------------
+------
 
 To update the PHAR archive, just run the following command:
 
@@ -79,7 +79,7 @@ If there is no newer version, atoum will stop immediately:
 atoum doesn't require any confirmation from the user to be upgraded, because it's very easy to get back to a previous version.
 
 List the versions contained in the archive
---------------------------------------------
+------------------------------------------
 
 You can list versions in the archive by using the argument ``--list-available-versions``, or ``-lav``:
 
@@ -93,7 +93,7 @@ You can list versions in the archive by using the argument ``--list-available-ve
 The list of versions in the archive is displayed. The currently active version is preceded by ``*``.
 
 Change the current version
----------------------------
+--------------------------
 
 To activate another version, just use the argument ``--enable-version``, or ``-ev``, followed by the name of the version to use:
 
@@ -106,7 +106,7 @@ To activate another version, just use the argument ``--enable-version``, or ``-e
 
 
 Deleting older versions
---------------------------------
+-----------------------
 
 Over time, the archive may contain multiple versions of atoum which are no longer required.
 
