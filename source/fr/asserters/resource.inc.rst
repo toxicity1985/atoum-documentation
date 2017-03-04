@@ -11,7 +11,7 @@ C'est l'assertion dédié au ´ressource <http://php.net/language.types.resource
 isOfType
 ========
 
-Comparer le type de ressource avec le type de donnée fournie (comme une chaîne de caractère).
+Cette méthode permet de comparer le type de ressource avec le type de la valeur fournie en paramètre. Dans l'exemple suivant, on vérifie que le paramètre est un stream.
 
 .. code-block:: php
 
