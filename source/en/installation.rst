@@ -24,7 +24,7 @@ Be sure you have a working composer installation (`official documentation <https
 
 Add ``atoum/atoum`` as a dev dependency :
 
-.. code-block:: json
+.. code-block:: shell
 
    composer require --dev atoum/atoum
 
