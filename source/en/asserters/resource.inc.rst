@@ -11,7 +11,7 @@ It's the assertion dedicated to the ´resources <http://php.net/language.types.r
 isOfType
 ========
 
-Compare the type of resource with the given type (as string).
+This method compare the type of resource with the type of the given value provided by the argument. In the following example, we checks that the given value is a stream.
 
 .. code-block:: php
 
