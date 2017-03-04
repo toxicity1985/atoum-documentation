@@ -59,3 +59,93 @@ When running the tests, atoum will call test method ``testSum()`` with the argum
 
 .. warning::
    The insulation of the tests will not be used in this context, which means that each successive call to the method ``testSum()`` will be realized in the same PHP process.
+
+.. _data-provider-closure:
+
+Data provider as closure
+========================
+
+You can also use a closure to define a data provider instead of an annotation. In your method :ref:`beforeTestMethod<initialization_method>`, you can use this example:
+
+.. code-block:: php
+
+   <?php
+   class calculator extends atoum
+   {
+      // ...
+      public function beforeTestMethod($method)
+      {
+         if ($method == 'testSum')
+         {
+            $this->setDataProvider($method, function() {
+              return array(
+                  array( 1, 1),
+                  array( 1, 2),
+                  array(-1, 1),
+                  array(-1, 2),
+              );
+            });
+         }
+      }
+   }
+
+
+.. _data-provider-injected:
+
+Data provider injected in test method
+=====================================
+
+There is also, an injection of mock in the test method parameters. So take a simple example:
+
+.. code-block:: php
+
+   <?php
+   class cachingIterator extends atoum
+   {
+       public function test__construct()
+       {
+           $this
+               ->given($iterator = new \mock\iterator())
+               ->then
+                   ->object($this->newTestedInstance($iterator))
+           ;
+       }
+   }
+
+You can write this instead:
+
+.. code-block:: php
+
+   <?php
+
+   class cachingIterator extends atoum
+   {
+       public function test__construct(\iterator $iterator)
+       {
+           $this
+               ->object($this->newTestedInstance($iterator))
+           ;
+       }
+   }
+
+In this case, no need for data provider. But, if you want to customize the mock you will require it or use :ref:`beforeTestMethod<initialization_method>`.
+
+.. code-block:: php
+
+   <?php
+
+   class cachingIterator extends atoum
+   {
+       public function test__construct(\iterator $iterator)
+       {
+           $this
+               ->object($this->newTestedInstance($iterator))
+           ;
+       }
+
+       public function beforeTestMethod($method)
+       {
+           // orphanize the controller for the next mock generated, here $iterator
+           $this->mockGenerator->orphanize('__construct');
+       }
+   }

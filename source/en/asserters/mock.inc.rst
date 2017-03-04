@@ -15,7 +15,7 @@ It's the assertion dedicated to mocks.
    ;
 
 .. note::
-   Refer to the documentation of :ref:`mock <les-bouchons-mock>` for more information on how to create and manage mocks.
+   Refer to the documentation of :ref:`mock <mocking_systems>` for more information on how to create and manage mocks.
 
 .. _call-anchor:
 
@@ -147,6 +147,9 @@ exactly
            ->call('myMethod')
                ->exactly(2)
    ;
+
+.. note::
+   You can have a simplified version with ``->{2}``.
 
 .. _never-anchor:
 
