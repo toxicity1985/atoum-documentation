@@ -153,7 +153,7 @@ Imaginons que nous voulions tester cet Entity:
    }
 
 .. note::
-   Pour plus d'information sur la création d'Entity dans Symfony 2, référé vous au `manuel officiel <http://symfony.com/doc/current/doctrine.html#creating-an-entity-class>`_
+   Pour plus d'informations sur la création d'Entity dans Symfony 2, référez vous au `manuel officiel <http://symfony.com/doc/current/doctrine.html#creating-an-entity-class>`_
 
 Créez le répertoire Tests/Units dans votre Bundle (par exemple src/Acme/DemoBundle/Tests/Units). C'est dans ce répertoire que seront stockés tous les tests de ce Bundle.
 

@@ -4,7 +4,7 @@
 Data providers
 **************
 
-Afin de permettre de tester efficacement vos classes, atoum fourni des data provider (fournisseur de donnée).
+Afin de permettre de tester efficacement vos classes, atoum fourni des data provider (fournisseur de données).
 
 Un data provider est une méthode spécifique d'une classe de test chargée de générer des arguments pour une méthode de test, arguments qui seront utilisés par ladite méthode pour valider des assertions.
 
@@ -65,7 +65,7 @@ Lors de l'exécution des test, atoum va appeler la méthode ``testSum()`` avec l
 Data provider en tant que closure
 =================================
 
-Vous pouvez également utiliser une closure pour définir un data provider au lieu d’une annotation. Dans votre méthode :ref:`beforeTestMethod<initialization_method>`, vous pouvez utilisez cette exemple :
+Vous pouvez également utiliser une closure pour définir un data provider au lieu d’une annotation. Dans votre méthode :ref:`beforeTestMethod<initialization_method>`, vous pouvez utiliser l'exemple suivant pour définir une closure :
 
 .. code-block:: php
 
@@ -128,7 +128,7 @@ Vous pouvez l'écrire ainsi :
        }
    }
 
-Dans ce cas, pas besoin de data provider. Cependant, si vous désirez changer le comportement de vos bouchons, cela requière l'utilisation de  :ref:`beforeTestMethod<initialization_method>`.
+Dans ce cas, pas besoin de data provider. Cependant, si vous désirez changer le comportement de vos bouchons, cela requiert l'utilisation de  :ref:`beforeTestMethod<initialization_method>`.
 
 .. code-block:: php
 

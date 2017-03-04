@@ -4,14 +4,14 @@
 extension
 *********
 
-C'est l'assertion dédiée aux extension PHP.
+C'est l'assertion dédiée aux extensions PHP.
 
 .. _extension-is-loaded:
 
 isLoaded
 ========
 
-Vérifiez si l’extension est chargée (installée et activée).
+Vérifie si l’extension est chargée (installée et activée).
 
 .. code-block:: php
 

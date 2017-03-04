@@ -46,4 +46,4 @@ atoum permet de très facilement simuler le comportement des fonctions natives d
    ;
 
 .. note::
-	Vérifier les détails via :ref:`isTestedInstance()<object-is-tested-instance>`.
+	Plus d'information via :ref:`isTestedInstance()<object-is-tested-instance>`.

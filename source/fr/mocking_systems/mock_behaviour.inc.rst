@@ -50,7 +50,7 @@ Le ``mockController`` vous permet de redéfinir **uniquement les méthodes publi
    $this->calling($mockDbClient)->connect->throw = new \Database\Client\Exception();
 
 .. note::
-	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Reportez-vous
+	La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures) introduites en PHP 5.3. Reportez-vous
 	au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
 
 Comme vous pouvez le voir, il est possible d'utiliser plusieurs méthodes afin d'obtenir le comportement souhaité :
@@ -139,7 +139,7 @@ methods
 Dans le cas du dernier exemple, vous devriez plutôt utiliser :ref:`methodsMatching<mock_method_matching>`.
 
 .. note::
-	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Reportez-vous
+	La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures) introduites en PHP 5.3. Reportez-vous
 	au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
 
 
@@ -177,7 +177,7 @@ rationnelle passée en argument :
 isFluent && returnThis
 ======================
 
-Défini une méthode fluent, ainsi la méthode retourne la classe.
+Défini une méthode fluent (chaînable), ainsi la méthode appelée retourne l'instance de la classe.
 
 .. code-block:: php
 
@@ -193,18 +193,31 @@ Défini une méthode fluent, ainsi la méthode retourne la classe.
 doesNothing && doesSomething
 ============================
 
-Cette méthode ne fait rien et retourne null.
+Changer le comportement du mock avec ``doesNothing``, la méthode retournera simple null.
 
 .. code-block:: php
 
 	<?php
+		class foo {
+			public function bar() {
+				return 'baz';
+			}
+		}
+
+		//
+		// in your test
 		$foo = new \mock\foo();
 		$this->calling($foo)->bar = null;
 
 		// est identique à
 		$this->calling($foo)->bar->doesNothing;
+		$this->variable($foo->bar())->isNull;
 
-Si pour une raison quelconque, vous souhaitez rétablir le comportement de la méthode, utilisez ``doesSomething``.
+		// restaure le comportement
+		$this->calling($foo)->bar->doesSomething;
+		$this->string($foo->bar())->isEqualTo('baz');
+
+Comme on le voix dans l'exemple, si pour une raison quelconque, vous souhaitez rétablir le comportement de la méthode, utilisez ``doesSomething``.
 
 .. _mock_special_constructor:
 
@@ -228,4 +241,4 @@ Pour mocker le constructeur de la classe, vous avez besoin de :
 
    $mockDbClient = new \mock\Database\Client(DB_HOST, DB_USER, DB_PASS, $controller);
 
-Pour les cas simple, vous pouvez utilisez :ref:`orphanize('__constructor')<mock_orphan_method>` ou :ref:`shunt('__constructor')<mock_shunt>`.
+Pour les cas simple, vous pouvez utiliser :ref:`orphanize('__constructor')<mock_orphan_method>` ou :ref:`shunt('__constructor')<mock_shunt>`.
