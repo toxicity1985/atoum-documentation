@@ -10,10 +10,10 @@ Listes des asserters
 ..    :depth: 2
 ..    :local:
 
-Pour écrire des tests plus explicites et moins verbeux, atoum fourni plusieurs asserter qui donnent accès a des assertions spécifiques associées aux valeurs testés.
+Pour écrire des tests plus explicites et moins verbeux, atoum fourni plusieurs asserters qui donnent accès a des assertions spécifiques aux types testés.
 
-atoum possède différents asserters spécialisés permettant de manipuler différents éléments, les assertes hérite des autres asserters qu'ils spécialisent.
-Ceci permettant d'aider à garder une consistance entre les différents asserters et force à utiliser les nom d'assertion.
+atoum possède différents asserters spécialisés permettant de manipuler différents éléments, les assertes héritent d'autres qu'ils spécialisent.
+Ceci permettant d'aider à garder une consistance entre les différents asserters et force à utiliser les même noms d'assertion.
 
 Voici l'arbre d'héritage des asserters :
 
@@ -46,7 +46,7 @@ Voici l'arbre d'héritage des asserters :
 
 
 .. note::
-    La syntaxe général des asserter/assertion est :
+    La syntaxe générale des asserters/assertions est :
     ``$this->[asserter]($value)->[assertion];``
 
 .. note::

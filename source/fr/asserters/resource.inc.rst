@@ -3,7 +3,7 @@
 resource
 ********
 
-C'est l'assertion dédiée aux ressources.
+C'est l'assertion dédié au ´ressource <http://php.net/language.types.resource>´_.
 
 
 .. _resource-isOfType:

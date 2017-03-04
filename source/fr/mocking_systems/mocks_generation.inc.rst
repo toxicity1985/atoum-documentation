@@ -1,7 +1,7 @@
 
 .. _mock_generate_one:
 
-Générer une maquette
+Générer un bouchon
 ***************
 
 Il y a plusieurs manières de créer un bouchon à partir d'une interface ou d'une classe. Le plus simple est de créer un
@@ -54,7 +54,7 @@ atoum s'appuie sur un composant spécialisé pour générer les bouchons : le ``
 Vous avez accès à ce dernier dans vos tests afin de modifier la procédure de génération des mocks.
 
 Par défaut, le mock sera généré dans le namespace "mock" et fonctionnera exactement de la même manière que
-l'instance de la classe original (le mock hérite directement de la classe d'origine).
+l'instance de la classe originale (le mock hérite directement de la classe d'origine).
 
 .. _mock_change_name:
 
@@ -91,8 +91,8 @@ La méthode ``generate`` prend trois paramètres :
    $stdObject     = new \mock\OneClass;
 
 .. note::
-	Si vous n'utilisez que le premier argument et ne changer pas le namespace ou le nom de la classe,
-	alors la première solution est équivalente, plus simple à lire et recommandé.
+	Si vous n'utilisez que le premier argument et ne changez pas le namespace ou le nom de la classe,
+	alors la première solution est équivalente, plus simple à lire et recommandée.
 
 	Vous pouvez accéder au code généré pour la classe par le générateur de mock en appelant
 	``$this->mockGenerator->getMockedClassCode()``, pour débuguer par exemple. Cette
@@ -109,7 +109,7 @@ La méthode ``generate`` prend trois paramètres :
    $countableMock = new \mock\Countable;
 
 .. note::
-	Tout ce qui est décri ici avec le générateur de mock peut être utilisé avec :ref:`newMockInstance<mock_generate_fast>`
+	Tout ce qui est décrit ici avec le générateur de mock peut être utilisé avec :ref:`newMockInstance<mock_generate_fast>`
 
 .. _mock_shunt_parent_methods:
 
@@ -169,8 +169,8 @@ Rendre une méthode orpheline
 ============================
 
 Il peut parfois être intéressant de rendre une méthode orpheline, c'est-à-dire, lui donner une signature et une implémentation vide. Cela peut être
-particulièrement utile pour générer des bouchons sans avoir à instancier toutes leurs dépendances. Tous les paramètres de la méthode seront également défini
-avec comme valeur par défaut null. C'est donc la même chose que a :ref:`shunté une méthoe<mock_shunt>` mais avec tout les paramètres a null.
+particulièrement utile pour générer des bouchons sans avoir à instancier toutes leurs dépendances. Tous les paramètres de la méthode seront également définis
+avec comme valeur par défaut null. C'est donc la même chose que :ref:`shunter une méthode<mock_shunt>` mais avec tout les paramètres a null.
 
 .. code-block:: php
 

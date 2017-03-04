@@ -20,11 +20,11 @@ Composer
 
 `Composer <http://getcomposer.org>`_ est un outil de gestion de dépendance en PHP.
 
-Assurez-vous que vous disposez d'une installation de composer fonctionnel (`documentation officiel <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
+Assurez-vous que vous disposez d'une installation de composer fonctionnelle (`documentation officiel <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
 
-Ajouter ``atoum/atoum`` a vos dépendances de développement :
+Ajoutez ``atoum/atoum`` a vos dépendances de développement :
 
-.. code-block:: json
+.. code-block:: shell
 
    composer require --dev atoum/atoum
 
@@ -46,7 +46,7 @@ Vous pouvez télécharger la dernière version stable d'atoum directement depuis
 
 
 Mise à jour
-----------------------
+-----------
 
 Pour mettre à jour le PHAR, utiliser simplement la commande :
 
@@ -79,7 +79,7 @@ S'il n'existe pas de version plus récente, atoum s'arrêtera immédiatement :
 atoum ne demande aucune confirmation de la part de l'utilisateur pour réaliser la mise à jour, car il est très facile de revenir à une version précédente.
 
 Lister les versions contenues dans l'archive
---------------------------------------------------------
+--------------------------------------------
 
 Vous pouvez lister les versions disponibles dans les archives en utilisant ``--list-available-versions`` ou ``-lav``:
 
@@ -93,7 +93,7 @@ Vous pouvez lister les versions disponibles dans les archives en utilisant ``--l
 La liste des versions de l’archive est affichée. La version actuellement active est précédée par '' *''.
 
 Changer la version courante
------------------------------------
+---------------------------
 
 Pour activer une autre version, il suffit d'utiliser l'argument ``--enable-version``, ou ``-ev`` en version abrégée, suivi du nom de la version à utiliser :
 
@@ -106,7 +106,7 @@ Pour activer une autre version, il suffit d'utiliser l'argument ``--enable-versi
 
 
 Suppression d'anciennes versions
------------------------------------------
+--------------------------------
 
 Au cours du temps, l'archive peut contenir plusieurs versions d'atoum qui ne sont plus utilisées.
 

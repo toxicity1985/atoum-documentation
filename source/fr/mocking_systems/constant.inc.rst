@@ -4,7 +4,7 @@
 Les bouchons de constantes
 **************************
 
-Les constantes PHP peuvent être déclarée avec ``defined``, cependant avec atoum vous pouvez les bouchonner de cette manière :
+Les constantes PHP peuvent être déclarées avec ``defined``, cependant avec atoum vous pouvez les bouchonner de cette manière :
 
 .. code-block:: php
 
@@ -20,7 +20,7 @@ Les constantes PHP peuvent être déclarée avec ``defined``, cependant avec ato
            ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
    ;
 
-Attention, due à la nature des constantes en PHP, suivant :ref:`l'engine<@engine>` utiliser vous pouvez différent problème. En voici un exemple :
+Attention, due à la nature des constantes en PHP, suivant :ref:`l'engine<@engine>` utiliser vous pouvez rencontrer différent problème. En voici un exemple :
 
 .. code-block:: php
 

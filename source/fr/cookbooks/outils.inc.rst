@@ -105,7 +105,7 @@ Il est très simple d'intégrer les résultats de tests atoum à `Jenkins <http:
 Étape 1 : Ajout d'un rapport xUnit à la configuration atoum
 -----------------------------------------------------------
 
-Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifique <reports-using>' dans la configuration.
+Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifiques<reports-using>` dans la configuration.
 
 Si vous n'avez pas de fichier de configuration
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -227,11 +227,11 @@ Voici un exemple de fichier `.travis.yml` dont les tests présents dans le dossi
 
 .. _cookbook_utilisation_phing:
 
-Use with `Phing <https://www.phing.info/>`_
+Utilisation avec `Phing <https://www.phing.info/>`_
 *******************************************
 
-La suite de tests de atoum peu facilement être exécutée au sein de votre configuration phing via l'intégration de la tâche *phing/AtoumTask.php*.
-Un example valide peu être trouvé dans le fichier `resources/phing/build.xml <https://github.com/atoum/atoum/blob/master/resources/phing/build.xml>`_.
+La suite de tests de atoum peut facilement être exécutée au sein de votre configuration phing via l'intégration de la tâche *phing/AtoumTask.php*.
+Un exemple valide peut être trouvé dans le fichier `resources/phing/build.xml <https://github.com/atoum/atoum/blob/master/resources/phing/build.xml>`_.
 
 Vous devez néanmoins enregistrer votre tâche personnalisée en utilisant `taskdef <https://www.phing.info/docs/guide/stable/TaskdefTask.html>`_ , une tâche native de phing :
 
@@ -259,13 +259,13 @@ Ensuite vous pouvez l’utiliser à l’intérieur de l’une de vos étapes du 
       </atoum>
     </target>
 
-Les chemins donnés dans cet exemple a été prises à partir d’une installation standard via composer. Tous les paramètres possibles
-sont définis ci-dessous, vous pouvez modifier les valeurs ou en omettre certains et hérité des valeurs par défaut. Il y a trois types de paramètres :
+Les chemins donnés dans cet exemple a été pris à partir d’une installation standard via composer. Tous les paramètres possibles
+sont définis ci-dessous, vous pouvez modifier les valeurs ou en omettre certains et hériter des valeurs par défaut. Il y a trois types de paramètres :
 
-Configuration de atoum
-======================
+Configuration d'atoum
+=====================
 
-- :ref:`bootstrap<bootstrap_file>`: fichier de bootstrap à inclue, exécuté avant chaque méthode de test
+- :ref:`bootstrap<bootstrap_file>`: fichier de bootstrap à inclure, exécuté avant chaque méthode de test
 
   - default: ``.bootstrap.atoum.php``
 - :ref:`atoumpharpath<archive-phar>`: si atoum est utilisé au travers d'un phar, chemin vers celui-ci
@@ -293,13 +293,13 @@ Flags
 - `showmissingcodecoverage`: montre la couverture de code manquante
 
   - default: ``true``
-- `showprogress`: affiche la bar de progression de l'exécution des tests
+- `showprogress`: affiche la barre de progression de l'exécution des tests
 
   - default: ``true``
 - `branchandpathcoverage`: active la couverture de code sur les chemins et branches
 
   - default: ``false``
-- `telemetry <http://extensions.atoum.org/extensions/telemetry>`_: active le rapport telemetry(l'extension `atoum/reports-extension` doit être installée)
+- `telemetry <http://extensions.atoum.org/extensions/telemetry>`_: active le rapport telemetry (l'extension `atoum/reports-extension` doit être installée)
 
   - default: ``false``
 
@@ -322,4 +322,4 @@ Rapports
   - `codecodecoveragereportextensionurl`: url du rapport HTML
 - `Telemetry <http://extensions.atoum.org/extensions/telemetry>`_
 
-  - `telemetryprojectname`: nom du projet a envoyer a telemetry
+  - `telemetryprojectname`: nom du projet a envoyer à telemetry

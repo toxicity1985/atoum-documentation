@@ -303,7 +303,7 @@ isNotInstanceOf
    ;
 
 .. note::
-   Tout comme :ref:`isInstanceOf<object-is-instance-of>`, le nom de la classe ou de l'interface doivent être absolue car les import de namespace seront ignoré.
+   Tout comme :ref:`isInstanceOf<object-is-instance-of>`, le nom de la classe ou de l'interface doivent être absolus car les imports de namespace seront ignorés.
 
 .. _object-is-not-tested-instance:
 

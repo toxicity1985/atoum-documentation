@@ -5,9 +5,9 @@
 Les moteurs d'exécution
 ***********************
 
-Plusieurs moteurs d'exécutions des tests (au niveau de la classe ou des méthodes) existent. Ceci est configurer via l'annotation ``@engine``. Par défaut, les différents tests s'exécutent en parallèle, dans des sous-processus PHP, c'est le mode ``concurrent``.
+Plusieurs moteurs d'exécution des tests (au niveau de la classe ou des méthodes) existent. Ceci est configuré via l'annotation ``@engine``. Par défaut, les différents tests s'exécutent en parallèle, dans des sous-processus PHP, c'est le mode ``concurrent``.
 
-Il y a actuellement trois moteurs d'exécution :
+Il existe actuellement trois moteurs d'exécution :
 
 * *inline* : les tests s'exécutent dans le même processus, cela revient au même comportement que PHPUnit. Même si ce mode est très rapide, il n'y a pas d'isolation des tests.
 * *isolate* : les tests s'exécutent de manière séquentielle dans un sous-processus PHP. Ce mode d'exécution est assez lent.

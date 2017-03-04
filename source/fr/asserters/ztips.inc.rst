@@ -5,7 +5,7 @@ Asserter & assertion trucs et astuces
 
 Plusieurs trucs et astuces sont disponibles pour les assertions. Les connaître peuvent simplifier votre vie  ;)
 
-Le premier est que toute assertion sont fluent (chaînable). Donc vous pouvez les enchaîner, il suffit de regarder les exemples précédents.
+Le premier est que toutes assertions sont fluent (chaînable). Donc vous pouvez les enchaîner, il suffit de regarder les exemples précédents.
 
 Vous devez également savoir que toutes les assertions sans paramètres peuvent être écrites avec ou sans parenthèses.
 Donc ``$this->integer(0)->isZero()`` est la même chose que ``$this->integer(0)->isZero``.
@@ -45,7 +45,7 @@ En voici un exemple :
 	}
 
 Dans cet exemple, nous créons un alias pour faire un nouvel asserter ``equal```qui agira de la même manière que 
-``isEqualTo``. Vous pouvez utiliser :ref:`beforeTestMethod<initialization_method>` à la place du constructeur. Le mieux est de
+``isEqualTo``. Vous pouvez utiliser :ref:`beforeTestMethod<initialization_method>` à la place du constructeur. Afin de partager ces alias entre les différents tests, le mieux est de
 créer une classe de base pour vos tests à l'intérieur de votre projet que vous pourrez étendre à la place ``\atoum\test``.
 
 .. _asserter-custom:
@@ -86,14 +86,14 @@ Maintenant que nous avons vu alias, nous pouvons aller plus loin en créant un a
 	    }
 	}
 
-Tout comme pour un alias, le mieux est de créer une classe de base pour vos tests et déclarer l'asserter personnalisé à cet endroit.
+Tout comme pour un alias, il est conseillé de créer une classe de base pour vos tests et déclarer l'asserter personnalisé à cet endroit.
 
 .. _asserter_tips-short:
 
 Syntaxe courte
 ==============
 
-Avec un :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses interessantes. Mais comme atoum essaye d'aider dans la rédaction des tests, plusieurs alias sont disponible dès le départ.
+Avec un :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses intéressantes. Afin de vous aider d'aider dans la rédaction de vos tests,  plusieurs alias sont disponibles nativement.
 
 * **==** est la même chose que l'asserter :ref:`isEqualTo<variable-is-equal-to>`
 * **===** est la même chose que l'asserter :ref:`isIdenticalTo<variable-is-identical-to>`
@@ -117,7 +117,7 @@ Avec un :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses 
 	    {
 	        $this
 	            ->variable('foo')->{'=='}('foo')
-	            ->variable('foo')->{'foo'} // same as previous line
+	            ->variable('foo')->{'foo'} // équivalent à la ligne précédente
 	            ->variable('foo')->{'!='}('bar')
 
 	            ->object($this->newInstance)->{'=='}($this->newInstance)

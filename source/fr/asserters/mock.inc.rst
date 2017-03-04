@@ -149,7 +149,7 @@ exactly
    ;
 
 .. note::
-   il existe une version simplifier avec ``->{2}``.
+   il existe une version simplifiée avec ``->{2}``.
 
 .. _never-anchor:
 
