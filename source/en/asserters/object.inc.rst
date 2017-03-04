@@ -330,3 +330,28 @@ isTestedInstance
 
    $object = new TestedClass();
    $this->object($object)->isTestedInstance; // fail
+
+
+toString
+========
+
+The toString assertion casts the object to a string a returns a :ref:`string<_string-anchor>` asserter on the casted value.
+
+Exemple:
+
+.. code-block:: php
+
+   <?php
+   $this
+     ->object(
+       new class {
+         public function __toString()
+         {
+           return 'foo';
+         }
+       }
+     )
+       ->isIdenticalTo('foo') //fails
+       ->toString
+         ->isIdenticalTo('foo') //passes
+   ;
