@@ -157,7 +157,7 @@ Par défaut, atoum fournit un rapport HTML basique. Pour un rapport plus avancé
 .. _reports-cli:
 
 Rapport CLI
------------
+----------
 
 Le rapport CLI est celui qui s'affiche quand vous lancez le test. Ce rapport a quelques options de configuration disponibles
 
@@ -185,6 +185,7 @@ Afficher le logo d'atoum
    // Celle-ci va ajouter un logo vert ou rouge après chaque exécution en fonction du status de cette dernière
    $report->addField(new atoum\report\fields\runner\result\logo());
 
+.. _report-treemap:
 
 Rapport Treemap
 --------------
