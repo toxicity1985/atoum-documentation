@@ -19,9 +19,10 @@ Example:
    };
    $this
        ->generator($generator())
-           ->size->isEqualTo(3)
+           ->hasSize(3)
    ;
 
+In this example we create a generator that yields 3 values, and we check that the size of the generator is 3.
 
 .. _generator-yields:
 
@@ -46,9 +47,14 @@ Example:
        ->generator($generator())
            ->yields->variable->isEqualTo(1)
            ->yields->variable->isEqualTo(2)
-           ->yields->variable->isEqualTo(3)
-           ->yields->variable->isNull()
+           ->yields->integer->isEqualTo(3)
    ;
+
+In this example we create a generator that yields 3 values : 1, 2 and 3.
+Then we yield each value and run an assertion on this value to check it's type and value.
+In the first two yields we use the variable asserter and only check the value.
+In the third yields call we add a check on the type of the value by using the integer asserter (any asserter could by used on this value) before checking the value.
+
 
 
 .. _generator-returns:
@@ -78,11 +84,12 @@ Example:
        ->generator($generator())
            ->yields->variable->isEqualTo(1)
            ->yields->variable->isEqualTo(2)
-           ->yields->variable->isEqualTo(3)
-           ->yields->variable->isNull()
-           ->returns->variable->isEqualTo(42)
+           ->yields->integer->isEqualTo(3)
+           ->returns->integer->isEqualTo(42)
    ;
 
+In this example we run some checks on all the yielded values. 
+Then, we checks that the generator returns a integer with a value of 42 (just like a call to the yields assertion, you can use any asserter to check to returned value).
 
 History
 =======
