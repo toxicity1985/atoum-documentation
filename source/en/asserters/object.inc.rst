@@ -332,6 +332,8 @@ isTestedInstance
    $this->object($object)->isTestedInstance; // fail
 
 
+.. _object-tostring:
+
 toString
 ========
 
