@@ -599,7 +599,7 @@ values
 
 ``keys`` allows you to retrieve an asserter :ref:`array <array-anchor>` containing the tested table values.
 
-Exemple:
+Example:
 
 .. code-block:: php
 
