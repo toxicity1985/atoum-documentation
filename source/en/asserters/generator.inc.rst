@@ -3,7 +3,7 @@
 generator
 *********
 
-It's the assertion dedicated to tests on `generators <http://php.net/manual/en/language.generators.overview.php>`_.
+It's the assertion dedicated to tests on `generators <http://php.net/language.generators.overview>`_.
 
 The generator asserter extends the iterator asserter, so you can use any assertion from the iterator asserter.
 
