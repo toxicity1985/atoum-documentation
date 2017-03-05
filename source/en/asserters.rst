@@ -36,7 +36,9 @@ This is the asserters inheritance tree:
             |   |-- dateInterval
             |   |-- dateTime
             |   |   `-- mysqlDateTime
-            |   `-- exception
+            |   |-- exception
+            |   `-- iterator
+            |       `-- generator
             |-- resource
             `-- string
                 |-- castToString
@@ -80,6 +82,7 @@ This is the asserters inheritance tree:
 .. include:: asserters/string.inc.rst
 .. include:: asserters/utf8String.inc.rst
 .. include:: asserters/variable.inc.rst
+.. include:: asserters/generator.inc.rst
 
 
 
