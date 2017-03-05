@@ -7,7 +7,7 @@ It's the assertion dedicated to tests on `generators <http://php.net/language.ge
 
 The generator asserter extends the iterator asserter, so you can use any assertion from the iterator asserter.
 
-Exemple:
+Example:
 
 .. code-block:: php
 
@@ -57,8 +57,8 @@ returns
 =======
 
 This assertion will only work on PHP >= 7.0.
-Since this version, generators can return a value that can retrived via a call to the ``->getReturn(()`` method.
-When you call ``->returns`` on the generator asserter, atoum will retrive the value from a call on the ``->getReturn(()`` method on the asserter.
+Since this version, generators can return a value that can retrived via a call to the ``->getReturn()`` method.
+When you call ``->returns`` on the generator asserter, atoum will retrive the value from a call on the ``->getReturn()`` method on the asserter.
 Then you will be able to use any other asserter on this value just like the ``yields`` assertion.
 
 Example:
