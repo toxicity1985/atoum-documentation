@@ -95,7 +95,7 @@ Pour plus de détails sur l'utilisation du plug-in, une aide est disponible dans
    :help atoum
 
 Rapports de couverture pour vim
-===============================
+===========================
 
 Vous pouvez configurer un rapport :ref:`spécifique<reports-using>` pour la couverture au sein de vim. Dans votre fichier de configuration atoum, définissez  :
 

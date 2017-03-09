@@ -15,8 +15,7 @@ C'est l'assertion dédiée aux mocks.
    ;
 
 .. note::
-   Reportez-vous à la documentation sur :ref:`les bouchons (mock) <les-bouchons-mock>` pour obtenir plus d'informations sur la façon de créer et gérer les bouchons.
-
+   Reportez-vous à la documentation sur :ref:`les bouchons (mock) <mocking_systems>` pour obtenir plus d'informations sur la façon de créer et gérer les bouchons.
 
 .. _call-anchor:
 
@@ -95,7 +94,6 @@ atLeastOnce
                ->atLeastOnce()
    ;
 
-
 .. _mock-before:
 
 before
@@ -150,6 +148,9 @@ exactly
                ->exactly(2)
    ;
 
+.. note::
+   il existe une version simplifiée avec ``->{2}``.
+
 .. _never-anchor:
 
 never
@@ -171,7 +172,7 @@ never
    ;
 
 .. note::
-   ``never`` est équivalent à ``:ref:`exactly <exactly-anchor>`(0)``.
+   ``never`` est équivalent à :ref:`exactly(0)<exactly-anchor>`.
 
 
 .. _once-twice-thrice:
@@ -202,7 +203,7 @@ Ces assertions vérifient que la méthode testée (voir :ref:`call <call-anchor>
    ;
 
 .. note::
-   ``once``, ``twice`` et ``thrice`` sont respectivement équivalents à un appel à ``:ref:`exactly <exactly-anchor>`(1)``, ``:ref:`exactly <exactly-anchor>`(2)`` et ``:ref:`exactly <exactly-anchor>`(3)``.
+   ``once``, ``twice`` et ``thrice`` sont respectivement équivalents à un appel à :ref:`exactly(1)<exactly-anchor>`, :ref:`exactly(2)<exactly-anchor>` et :ref:`exactly(3)<exactly-anchor>`.
 
 
 .. _with-any-arguments:
@@ -210,7 +211,7 @@ Ces assertions vérifient que la méthode testée (voir :ref:`call <call-anchor>
 withAnyArguments
 ````````````````
 
-``withAnyArguments`` permet de ne pas spécifier les arguments attendus lors de l'appel à la méthode testée (voir :ref:`call <call-anchor>`) du mock testé.
+``withAnyArguments`` permet de ne pas spécifier les arguments attendus lors de l'appel à la méthode testée (voir :ref:`call<call-anchor>`) du mock testé.
 
 Cette méthode est surtout utile pour remettre à zéro les arguments, comme dans l'exemple suivant :
 
@@ -361,7 +362,7 @@ withoutAnyArgument
 receive
 =======
 
-C'est un alias de  :ref:`call-anchor`.
+Est un alias de :ref:`call-anchor`.
 
 .. code-block:: php
 
@@ -377,7 +378,7 @@ C'est un alias de  :ref:`call-anchor`.
            ->object($this->testedInstance->noMoreValue())->isTestedInstance
            ->mock($connection)->receive('newPacket')->withArguments(new packet)->once;
 
-      // same as
+      // Identique à
       $this->mock($connection)->call('newPacket')->withArguments(new packet)->once;
 
 .. _was-called:

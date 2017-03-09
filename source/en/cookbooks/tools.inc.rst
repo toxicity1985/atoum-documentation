@@ -239,7 +239,7 @@ You must register the custom task using the `taskdef <https://www.phing.info/doc
 
   <taskdef name="atoum" classpath="vendor/atoum/atoum/resources/phing" classname="AtoumTask"/>
 
-Then you can use it inside one of your buildfile target :
+Then you can use it inside one of your buildfile target:
 
 .. code-block:: xml
 
@@ -262,7 +262,8 @@ Then you can use it inside one of your buildfile target :
 The paths given in these examples have been taken from a standard composer installation. All the possible parameters
 are defined below, you can change values or omit some to rely on defaults. There is three kind of parameters:
 
-atoum configurations:
+atoum configurations
+====================
 
 - :ref:`bootstrap<bootstrap_file>`: Bootstrap file to be included before executing each test method
 
@@ -274,7 +275,8 @@ atoum configurations:
 - :ref:`phppath<cli-options-php>`: Path to ``php`` executable
 - :ref:`maxchildren<cli-options-max_children_number>`: Maximum number of sub-processus which will be run simultaneously
 
-Flags:
+Flags
+=====
 
 - `codecoverage`: Enable code coverage (only possible if XDebug in installed)
 
@@ -301,7 +303,8 @@ Flags:
 
   - default: ``false``
 
-Reports:
+Reports
+=======
 
 - `codecoveragexunitpath`: Path to xunit report file
 - `codecoveragecloverpath`: Path to clover report file

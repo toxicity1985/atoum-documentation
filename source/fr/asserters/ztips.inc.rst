@@ -3,19 +3,20 @@
 Asserter & assertion trucs et astuces
 *************************************
 
-Plusieurs trucs et astuces sont disponible pour les assertions. Knowing them can simplify your life ;)
+Plusieurs trucs et astuces sont disponibles pour les assertions. Les connaître peuvent simplifier votre vie  ;)
 
-The first one is that all assertion are fluent. So you can chain them, just look at the previous examples.
+Le premier est que toutes assertions sont fluent (chaînable). Donc vous pouvez les enchaîner, il suffit de regarder les exemples précédents.
 
-You should also know that all assertions without parameter can be written with or without parenthesis. So ``$this->integer(0)->isZero()`` is the same as ``$this->integer(0)
-->isZero``.
+Vous devez également savoir que toutes les assertions sans paramètres peuvent être écrites avec ou sans parenthèses.
+Donc ``$this->integer(0)->isZero()`` est la même chose que ``$this->integer(0)->isZero``.
 
 .. _asserter_tips-alias:
 
 Alias
 =====
 
-TODO
+Parfois, vous voulez utiliser quelque chose qui reflètent votre vocabulaire ou votre domaine. atoum fournis un mécanisme simple, les alias.
+En voici un exemple :
 
 .. code-block:: php
 
@@ -43,12 +44,16 @@ TODO
 	    }
 	}
 
+Dans cet exemple, nous créons un alias pour faire un nouvel asserter ``equal```qui agira de la même manière que 
+``isEqualTo``. Vous pouvez utiliser :ref:`beforeTestMethod<initialization_method>` à la place du constructeur. Afin de partager ces alias entre les différents tests, le mieux est de
+créer une classe de base pour vos tests à l'intérieur de votre projet que vous pourrez étendre à la place ``\atoum\test``.
+
 .. _asserter-custom:
 
-Custom asserter
-===============
+Asserter personnalisé
+=====================
 
-.. https://github.com/jubianchi/jubianchi.github.io/blob/371b9da3232cfa5b8ad5b7b9dc8860ff39fb663b/atoum-alias.md
+Maintenant que nous avons vu alias, nous pouvons aller plus loin en créant un asserter personnalisé. Voici un exemple d’un asserter pour carte de crédit.
 
 .. code-block:: php
 
@@ -81,23 +86,23 @@ Custom asserter
 	    }
 	}
 
-
+Tout comme pour un alias, il est conseillé de créer une classe de base pour vos tests et déclarer l'asserter personnalisé à cet endroit.
 
 .. _asserter_tips-short:
 
-Short syntax
-============
+Syntaxe courte
+==============
 
-Avec les :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses intéressantes. Mais, parce qu'atoum essaie de vous aider dans la rédaction de vos test, nous avons ajouté une série d'alias de base.
+Avec un :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses intéressantes. Afin de vous aider d'aider dans la rédaction de vos tests,  plusieurs alias sont disponibles nativement.
 
-* `==` est la même chose que l'asserter :ref`isEqualTo<variable-is-equal-to>`
-* `===` est la même chose que l'asserter :ref`isIdenticalTo<variable-is-identical-to>`
-* `!=` est la même chose que l'asserter :ref`isNotEqualTo<variable-is-not-equal-to>`
-* `!==` est la même chose que l'asserter :ref`isIdenticalTo<variable-is-not-identical-to>`
-* `<` est la même chose que l'asserter :ref`isLessThan<integer-is-less-than>`
-* `<=` est la même chose que l'asserter :ref`isLessThanOrEqualTo<integer-is-less-than-or-equal-to>`
-* `>` est la même chose que l'asserter :ref`isGreaterThan<integer-is-greater-than>`
-* `>=` est la même chose que l'asserter :ref`isGreaterThanOrEqualTo<integer-is-greater-than-or-equal-to>`
+* **==** est la même chose que l'asserter :ref:`isEqualTo<variable-is-equal-to>`
+* **===** est la même chose que l'asserter :ref:`isIdenticalTo<variable-is-identical-to>`
+* **!=** est la même chose que l'asserter :ref:`isNotEqualTo<variable-is-not-equal-to>`
+* **!==** est la même chose que l'asserter :ref:`isIdenticalTo<variable-is-not-identical-to>`
+* **<** est équivalent à :ref:`isLessThan<integer-is-less-than>`
+* **<=** est la même chose que l'asserter :ref:`isLessThanOrEqualTo<integer-is-less-than-or-equal-to>`
+* **>** est la même chose que l'asserter :ref:`isGreaterThan<integer-is-greater-than>`
+* **>=** est la même chose que l'asserter :ref:`isGreaterThanOrEqualTo<integer-is-greater-than-or-equal-to>`
 
 .. code-block:: php
 

@@ -193,18 +193,31 @@ Defines a fluent method, so the method return the class.
 doesNothing && doesSomething
 ============================
 
-The method do nothing and return null.
+Change the behaviour of the mock with ``doesNothing``, the method will simply return null.
 
 .. code-block:: php
 
 	<?php
+		class foo {
+			public function bar() {
+				return 'baz';
+			}
+		}
+
+		//
+		// in your test
 		$foo = new \mock\foo();
 		$this->calling($foo)->bar = null;
 
 		// is the same as
 		$this->calling($foo)->bar->doesNothing;
+		$this->variable($foo->bar())->isNull;
 
-If for any reason, you want to restore the behaviour of the method, use ``doesSomething``.
+		// restore the behaviour
+		$this->calling($foo)->bar->doesSomething;
+		$this->string($foo->bar())->isEqualTo('baz');
+
+Like you see in this example, if for any reason, you want to restore the behaviour of the method, use ``doesSomething``.
 
 .. _mock_special_constructor:
 

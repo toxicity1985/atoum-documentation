@@ -1,7 +1,7 @@
 .. _fichier-de-configuration:
 
 Fichier de configuration
-************************
+******************
 
 Le fichier de configuration vous permet de configurer comment atoum fonctionne.
 
@@ -13,7 +13,7 @@ Si vous avez un fichier ``.atoum.php`` dans le répertoire parent, il sera égal
 .. _coverage-code-config:
 
 Couverture du code
-==================
+=============
 
 Par défaut, si PHP dispose de l'extension `Xdebug <http://xdebug.org>`_, atoum indique en ligne de commande le taux de couverture du code par les tests venant d'être exécutés. Certains comportements de la couverture de code peuvent être adaptés via les :ref:`options de l'interface en ligne de commande<cli-options-coverage_reports>`.
  
@@ -52,7 +52,7 @@ Il est cependant possible d'obtenir une représentation plus précise du taux de
 Pour l'obtenir, il suffit de se baser sur les modèles de fichiers de configuration inclus dans atoum.
 
 Utilisateur du phar
--------------------
+-----------
 
 Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande suivante :
 
@@ -63,12 +63,12 @@ Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande su
 Une fois l'extraction effectuée, vous devriez avoir dans le répertoire /path/to/destination/directory un répertoire nommé resources/configurations/runner.
 
 Utilisateur de composer
------------------------
+--------------
 
 Dans le cas où vous utilisez atoum en ayant cloné le dépôt :ref:`installation-par-github` ou l'ayant installé via :ref:`installation-par-composer`, les modèles se trouvent dans ``/path/to/atoum/resources/configurations/runner``
 
 Rapport de couverture personalisée
-----------------------------------
+-----------------------
 
 Dans ce répertoire, il y a, entre autre chose intéressante, un modèle de fichier de configuration pour atoum nommé ``coverage.php.dist`` qu'il vous faudra copier à l'emplacement de votre choix. Renommez le ``coverage.php``.
 
@@ -120,7 +120,8 @@ Couverture des branches et chemins
 
 Dans le fichier de configuration, vous pouvez activer la couverture des branches et chemins à l'aide de l'option ``enableBranchAndPathCoverage``. Cette action améliorera la qualité de la couverture du code car elle ne se limitera pas à vérifier qu'une fonction est appelée, mais également
 que chaque branche l'est également.
-Pour faire simple, si vous avez un ``if``, le rapport changera si vous cherchez le else.
+  Pour faire simple, si vous avez un ``if``, le rapport changera si vous cherchez le 
+else.
 
 .. code-block:: php
 
@@ -156,7 +157,7 @@ Par défaut, atoum fournit un rapport HTML basique. Pour un rapport plus avancé
 .. _reports-cli:
 
 Rapport CLI
------------
+----------
 
 Le rapport CLI est celui qui s'affiche quand vous lancez le test. Ce rapport a quelques options de configuration disponibles
 
@@ -184,9 +185,10 @@ Afficher le logo d'atoum
    // Celle-ci va ajouter un logo vert ou rouge après chaque exécution en fonction du status de cette dernière
    $report->addField(new atoum\report\fields\runner\result\logo());
 
+.. _report-treemap:
 
 Rapport Treemap
----------------
+--------------
 
 
 .. code-block:: php

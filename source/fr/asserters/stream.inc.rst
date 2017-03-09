@@ -3,7 +3,7 @@
 stream
 ******
 
-C'est l'assertion dédiée aux streams.
+C'est l'assertion dédié au ´streams <http://php.net/intro.stream>´_.
 
 Elle est basée sur le système de fichier virtuel d'atoum (VFS). Un nouveau `stream wrapper <http://php.net/manual/fr/class.streamwrapper.php>`_ sera enregistré (qui commence par ``atoum://``).
 
@@ -65,7 +65,7 @@ isWritten
         $streamController = \atoum\mock\stream::get(),
         $streamController->file_put_contents = strlen($content = 'myTestContent')
       )
-      ->if() //we do nothing
+      ->if() // we do nothing
       ->stream($streamController)
          ->isWritten() // échoue
    ;

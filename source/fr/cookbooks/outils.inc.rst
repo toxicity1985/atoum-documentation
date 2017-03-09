@@ -105,7 +105,7 @@ Il est très simple d'intégrer les résultats de tests atoum à `Jenkins <http:
 Étape 1 : Ajout d'un rapport xUnit à la configuration atoum
 -----------------------------------------------------------
 
-Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifique <reports-using>` dans la configuration.
+Comme pour les autres rapports de couverture, vous pouvez définir des :ref:`rapports spécifiques<reports-using>` dans la configuration.
 
 Si vous n'avez pas de fichier de configuration
 """"""""""""""""""""""""""""""""""""""""""""""
@@ -176,7 +176,7 @@ Pour tester cette configuration, il suffit de lancer atoum en lui précisant le 
 Il existe pour cela plusieurs possibilités selon la façon dont vous construisez votre projet :
 
 * Si vous utilisez un script, il vous suffit d'y ajouter la commande précédente.
-* Si vous passez par un utilitaire tel que `phing <https://www.phing.info/>`_ ou `ant <http://ant.apache.org/>`_, il suffit d'ajouter une tâche. Dans le cas de ant, un tâche de type exec :
+* Si vous passez par un utilitaire tel que `phing <https://www.phing.info/>`_ ou `ant <http://ant.apache.org/>`_, il suffit d'ajouter une tâche exec :
 
 .. code-block:: xml
 
@@ -225,3 +225,101 @@ Voici un exemple de fichier `.travis.yml` dont les tests présents dans le dossi
    script: php atoum.phar -d tests/
 
 
+.. _cookbook_utilisation_phing:
+
+Utilisation avec `Phing <https://www.phing.info/>`_
+*******************************************
+
+La suite de tests de atoum peut facilement être exécutée au sein de votre configuration phing via l'intégration de la tâche *phing/AtoumTask.php*.
+Un exemple valide peut être trouvé dans le fichier `resources/phing/build.xml <https://github.com/atoum/atoum/blob/master/resources/phing/build.xml>`_.
+
+Vous devez néanmoins enregistrer votre tâche personnalisée en utilisant `taskdef <https://www.phing.info/docs/guide/stable/TaskdefTask.html>`_ , une tâche native de phing :
+
+.. code-block:: xml
+
+  <taskdef name="atoum" classpath="vendor/atoum/atoum/resources/phing" classname="AtoumTask"/>
+
+Ensuite vous pouvez l’utiliser à l’intérieur de l’une de vos étapes du fichier de build :
+
+.. code-block:: xml
+
+    <target name="test">
+      <atoum
+        atoumautoloaderpath="vendor/atoum/atoum/classes/autoloader.php"
+        phppath="/usr/bin/php"
+        codecoverage="true"
+        codecoveragereportpath="reports/html/"
+        showcodecoverage="true"
+        showmissingcodecoverage="true"
+        maxchildren="5"
+      >
+        <fileset dir="tests/units/">
+          <include name="**/*.php"/>
+        </fileset>
+      </atoum>
+    </target>
+
+Les chemins donnés dans cet exemple a été pris à partir d’une installation standard via composer. Tous les paramètres possibles
+sont définis ci-dessous, vous pouvez modifier les valeurs ou en omettre certains et hériter des valeurs par défaut. Il y a trois types de paramètres :
+
+Configuration d'atoum
+=====================
+
+- :ref:`bootstrap<bootstrap_file>`: fichier de bootstrap à inclure, exécuté avant chaque méthode de test
+
+  - default: ``.bootstrap.atoum.php``
+- :ref:`atoumpharpath<archive-phar>`: si atoum est utilisé au travers d'un phar, chemin vers celui-ci
+- :ref:`atoumautoloaderpath<autoloader_file>`: fichier d'autoloader, le fichier est exécuté avant chaque méthode de test
+
+  - default: ``.autoloader.atoum.php``
+- :ref:`phppath<cli-options-php>`: chemin vers l'exécutable ``php``
+- :ref:`maxchildren<cli-options-max_children_number>`: nombre maximum de sous-process qui peuvent tourner simultanément
+
+Flags
+=====
+
+- `codecoverage`: active la couverture de code(uniquement si XDebug est disponible)
+
+  - default: ``false``
+- `showcodecoverage`: montre le rapport de couverture de code
+
+  - default: ``true``
+- `showduration`: montre la durée de l'exécution des tests
+
+  - default: ``true``
+- `showmemory`: affiche la consommation mémoire
+
+  - default: ``true``
+- `showmissingcodecoverage`: montre la couverture de code manquante
+
+  - default: ``true``
+- `showprogress`: affiche la barre de progression de l'exécution des tests
+
+  - default: ``true``
+- `branchandpathcoverage`: active la couverture de code sur les chemins et branches
+
+  - default: ``false``
+- `telemetry <http://extensions.atoum.org/extensions/telemetry>`_: active le rapport telemetry (l'extension `atoum/reports-extension` doit être installée)
+
+  - default: ``false``
+
+Rapports
+========
+
+- `codecoveragexunitpath`: chemin vers le rapport xunit
+- `codecoveragecloverpath`: chemin vers le rapport clover
+- :ref:`Couverture de code basic<report-html-basic>`
+
+  - `codecoveragereportpath`: chemin vers le rapport html
+  - `codecoveragereporturl`: url dans le rapport HTML
+- :ref:`Couverture de code treemap<report-treemap>`:
+
+  - `codecoveragetreemappath`: chemin vers le rapport treemap
+  - `codecoveragetreemapurl`: url pour le treemap
+- `Couverture de code avancée <http://extensions.atoum.org/extensions/reports>`_
+
+  - `codecoveragereportextensionpath`: chemin vers le rapport html
+  - `codecodecoveragereportextensionurl`: url du rapport HTML
+- `Telemetry <http://extensions.atoum.org/extensions/telemetry>`_
+
+  - `telemetryprojectname`: nom du projet a envoyer à telemetry

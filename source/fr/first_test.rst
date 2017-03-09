@@ -8,6 +8,9 @@ Vous avez besoin d'écrire une classe de test pour chaque classe testé.
 
 Imaginez que vous vouliez tester la traditionnelle classe ``HelloWorld``, alors vous devez créer la classe de test ``test\units\HelloWorld``.
 
+.. warning::
+	Si vous débutez avec atoum, il est recommandé d’installer le paquet ´atoum-stubs <https://packagist.org/packages/atoum/stubs>´_. Celui-ci vous fournira de l'auto-complétion au sein de votre IDE.
+
 .. note::
 	atoum utilise les espaces de noms. Par exemple, pour tester la classe ``Vendor\Project\HelloWorld``, vous devez créer la classe ``Vendor\Project\tests\units\HelloWorld``.
 

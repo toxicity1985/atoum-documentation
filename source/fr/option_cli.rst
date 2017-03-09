@@ -1,9 +1,9 @@
 .. _cli-options:
 
 Option de la ligne de commande
-##############################
+####################
 
-La plupart des options existent sous 2 formes, une courte de 1 à 6 caractères et une longue, plus explicative. Ces 2 formes font strictement la même chose. Vous pouvez utiliser indifféremment l'une ou l'autre forme.
+La plupart des options existent sous deux formes, une courte de 1 à 6 caractères et une longue, plus explicative. Les deux formes différentes font exactement la même chose et peuvent être utilisés indifféremment.
 
 Certaines options acceptent plusieurs valeurs :
 
@@ -13,7 +13,7 @@ Certaines options acceptent plusieurs valeurs :
 
 
 .. note::
-   Vous ne devez mettre qu'une seule fois chaque option. Autrement, seul le dernier argument sera utilisé.
+   Si vous utilisez une option plusieurs fois, seul la dernière servira.
 
 
 .. code-block:: shell
@@ -179,7 +179,7 @@ Cette option vous permet de lancer les tests se trouvant dans les répertoires d
 --test-it
 =========
 
-Cette option vous permet de lancer les propre test unitaire pour vérifier qu'atoum fonctionne parfaitement sur votre serveur.
+Cette option vous permet de lancer les tests unitaires d'atoum pour vérifier qu'il fonctionne parfaitement sur votre serveur.
 
 .. code-block:: shell
 
@@ -200,7 +200,7 @@ Cette option vous permet de spécifier le ou les extensions des fichiers de test
 
 
 Débugage & boucle
-*****************
+*******************
 
 .. _cli-options-debug:
 
@@ -234,7 +234,7 @@ Cette option vous permet d'activer le mode loop d'atoum.
 .. _cli-options-coverage_reports:
 
 Couverture & rapports
-*********************
+***********************
 
 .. _cli-options-report-title:
 
@@ -311,7 +311,7 @@ Cette option vous permet de désactiver la génération du rapport de couverture
 -nccfns <namespaces> / --no-code-coverage-for-namespaces <namespaces>
 =====================================================================
 
-Cette option vous permet de désactiver la génération du rapport de couverture de code pour un ou plusieurs classes.
+Cette option vous permet de désactiver la génération du rapport de couverture de code pour un ou plusieurs namespaces.
 
 .. code-block:: shell
 
@@ -327,7 +327,7 @@ Cette option vous permet de désactiver la génération du rapport de couverture
 -nccid <directories> / --no-code-coverage-in-directories <directories>
 ======================================================================
 
-Cette option vous permet de désactiver la génération du rapport de couverture de code pour un ou plusieurs classes.
+Cette option vous permet de désactiver la génération du rapport de couverture de code pour un ou plusieurs répertoires.
 
 .. code-block:: shell
 

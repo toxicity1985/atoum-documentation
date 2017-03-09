@@ -3,7 +3,7 @@
 stream
 ******
 
-It's the assertion dedicated to the streams.
+It's the assertion dedicated to the ´streams <http://php.net/intro.stream>´_.
 
 It's based on atoum virtual filesystem (VFS). A new `stream wrapper <http://php.net/streamWrapper>`_ will be registered (starting with ``atoum://``).
 

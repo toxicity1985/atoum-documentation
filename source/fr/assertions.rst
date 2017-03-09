@@ -10,10 +10,10 @@ Listes des asserters
 ..    :depth: 2
 ..    :local:
 
-Afin de permettre d'écrire des tests trés explicites et le moins verbeux possible, atoum dispose d'une série d'asserters donnant accés à des assertions spécifiques au type de variable concernés.
+Pour écrire des tests plus explicites et moins verbeux, atoum fourni plusieurs asserters qui donnent accès a des assertions spécifiques aux types testés.
 
-Comme les différents asserters d'atoum sont des spécialisations de plus en plus précises des objets manipulés, les asserters héritent des asserters qu'ils précisent.
-Cela permet de conserver les mêmes noms d'assertions entre les asserters, et de garantir un fonctionnement homogène quel que soit l'asserter utilisé
+atoum possède différents asserters spécialisés permettant de manipuler différents éléments, les assertes héritent d'autres qu'ils spécialisent.
+Ceci permettant d'aider à garder une consistance entre les différents asserters et force à utiliser les même noms d'assertion.
 
 Voici l'arbre d'héritage des asserters :
 
@@ -46,11 +46,11 @@ Voici l'arbre d'héritage des asserters :
 
 
 .. note::
-    La syntaxe générale asserter/assertion est la suivante :
+    La syntaxe générale des asserters/assertions est :
     ``$this->[asserter]($value)->[assertion];``
 
 .. note::
-    La plupart des assertions sont chaînable, comme vous pourrez le voir dans les exemples.
+    La plupart des assertions sont fluent, comme vous le verrez ci-dessous.
 
 .. note::
 	A la fin du chapitre, vous trouverez plusieurs :ref:`trucs & astuces<asserter_tips>` relatif aux assertions et asserters, pensez à le lire!
@@ -74,6 +74,7 @@ Voici l'arbre d'héritage des asserters :
 .. include:: asserters/mysqlDateTime.inc.rst
 .. include:: asserters/object.inc.rst
 .. include:: asserters/output.inc.rst
+.. include:: asserters/resource.inc.rst
 .. include:: asserters/sizeOf.inc.rst
 .. include:: asserters/stream.inc.rst
 .. include:: asserters/string.inc.rst

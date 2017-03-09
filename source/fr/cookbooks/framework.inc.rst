@@ -95,7 +95,7 @@ Merci `Jérémy Poulain <https://github.com/Tharkun>`_ pour ce tutoriel.
 .. _utilisation-avec-symfony-2:
 
 Utilisation avec Symfony 2
-==========================
+==================
 
 Si vous souhaitez utiliser atoum au sein de vos projets Symfony, vous pouvez installer le Bundle `AtoumBundle <https://github.com/atoum/AtoumBundle>`_.
 
@@ -111,7 +111,7 @@ Si vous utilisez Symfony 2.1+, :ref:`ajoutez atoum dans votre fichier composer.j
 
 
 Étape 2: création de la classe de test
---------------------------------------
+-----------------------------
 
 Imaginons que nous voulions tester cet Entity:
 
@@ -153,8 +153,7 @@ Imaginons que nous voulions tester cet Entity:
    }
 
 .. note::
-   Pour plus d'informations sur la création d'Entity dans Symfony 2, reportez-vous au `manuel Symfony (EN) <http://symfony.com/doc/current/doctrine.html#creating-an-entity-class>`_.
-
+   Pour plus d'informations sur la création d'Entity dans Symfony 2, référez vous au `manuel officiel <http://symfony.com/doc/current/doctrine.html#creating-an-entity-class>`_
 
 Créez le répertoire Tests/Units dans votre Bundle (par exemple src/Acme/DemoBundle/Tests/Units). C'est dans ce répertoire que seront stockés tous les tests de ce Bundle.
 
@@ -247,7 +246,7 @@ Créons notre fichier de test:
 
 
 Étape 4: lancement des tests
-----------------------------
+--------------------
 
 Si vous utilisez Symfony 2.0:
 
@@ -299,7 +298,7 @@ Dans tous les cas, voilà ce que vous devriez obtenir:
    > Class Acme\DemoBundle\Entity\Car: 42.86%
    ==========================================
    > Acme\DemoBundle\Entity\Car::getId(): 0.00%
-   -----------------------------------------------
+   --------------------------------------------
    > Acme\DemoBundle\Entity\Car::setMaxSpeed(): 0.00%
    --------------------------------------------------
    > Acme\DemoBundle\Entity\Car::getMaxSpeed(): 0.00%
@@ -389,7 +388,7 @@ Les tests doivent inclure le fichier de bootstrap se trouvant dans le plugin :
 
 
 Lancer les tests
-----------------
+------------
 
 La commande symfony ``atoum:test`` est disponible. Les tests peuvent alors se lancer de cette façon :
 

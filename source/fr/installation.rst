@@ -8,11 +8,10 @@ Si vous souhaitez utiliser atoum, il vous suffit de télécharger la dernière v
 
 Vous pouvez installer atoum de plusieurs manières :
 
-* via `composer`_ ;
+* à l'aide de `composer`_ ;
 * en téléchargeant l'`archive PHAR`_ ;
 * en clonant le dépôt `Github`_ ;
 * voir aussi :ref:`l'integration d'atoum dans votre framework <utilisation-avec-frameworks>`.
-
 
 .. _installation-par-composer:
 
@@ -21,9 +20,9 @@ Composer
 
 `Composer <http://getcomposer.org>`_ est un outil de gestion de dépendance en PHP.
 
-Assurez vous de disposer d'une installation fonctionnelle de Composer (`documentation officielle (EN) <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
+Assurez-vous que vous disposez d'une installation de composer fonctionnelle (`documentation officiel <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
 
-Ajoutez ``atoum/atoum`` comme dépendance de développement :
+Ajoutez ``atoum/atoum`` a vos dépendances de développement :
 
 .. code-block:: shell
 
@@ -91,9 +90,7 @@ Vous pouvez lister les versions disponibles dans les archives en utilisant ``--l
      nightly-1568-201210311708
    * nightly-2416-201402121146
 
-La liste des versions de l'archive est affichée.
-
-La version actuellement active est précédée par `` *``.
+La liste des versions de l’archive est affichée. La version actuellement active est précédée par '' *''.
 
 Changer la version courante
 ---------------------------
@@ -127,7 +124,6 @@ La version est alors supprimée.
 .. note::
 	La suppression d'une version nécessite la modification de l'archive PHAR. par défaut la configuration de PHP ne l'autorise pas. 
 	Voilà pourquoi il faut utiliser la directive ``-d phar.readonly=0``.
-
 
 .. _installation-par-github:
 
