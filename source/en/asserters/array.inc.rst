@@ -592,3 +592,37 @@ strictlyNotContainsValues
 .. warning::
    | ``strictlyNotContainsValues`` tests data type.
    | If you don't want to check the types, use :ref:`notContainsValues <not-contains-values>`.
+
+
+.. _array-values:
+
+values
+======
+
+``keys`` allows you to retrieve an asserter :ref:`array <array-anchor>` containing the tested table values.
+
+Example:
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->given($arr = [0 => 'foo', 2 => 'bar', 3 => 'baz'])
+       ->then
+         ->array($arr)->values
+           ->string[0]->isEqualTo('foo')
+           ->string[1]->isEqualTo('bar')
+           ->string[2]->isEqualTo('baz')
+   ;
+
+
+History
+=======
+
++-----------+---------------------------+
+| Version   | Changes                   |
++===========+===========================+
+| `v2.9.0`_ | values assertion added.   |
++-----------+---------------------------+
+
+.. _v2.9.0: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#290---2017-02-11
