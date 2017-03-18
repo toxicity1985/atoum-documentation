@@ -98,7 +98,7 @@ With :ref:`alias<asserter_tips-alias>` you can define some intresting things. Bu
 * **==** is the same as the asserter :ref:`isEqualTo<variable-is-equal-to>`
 * **===** is the same as the asserter :ref:`isIdenticalTo<variable-is-identical-to>`
 * **!=** is the same as the asserter :ref:`isNotEqualTo<variable-is-not-equal-to>`
-* **!==** is the same as the asserter :ref:`isIdenticalTo<variable-is-not-identical-to>`
+* **!==** is the same as the asserter :ref:`isNotIdenticalTo<variable-is-not-identical-to>`
 * **<** is the same as the asserter :ref:`isLessThan<integer-is-less-than>`
 * **<=** is the same as the asserter :ref:`isLessThanOrEqualTo<integer-is-less-than-or-equal-to>`
 * **>** is the same as the asserter :ref:`isGreaterThan<integer-is-greater-than>`
