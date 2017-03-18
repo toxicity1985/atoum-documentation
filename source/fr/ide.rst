@@ -112,11 +112,11 @@ Vous pouvez configurer un rapport :ref:`spécifique<reports-using>` pour la couv
 PhpStorm
 ********
 
-atoum possède avec un plug-in officiel pour PHPStorm. Il vous aide, au quotidien, dans votre développement. Les principales fonctionnalités sont :
+atoum possède un plug-in officiel pour PhpStorm. Il vous aide, au quotidien, dans votre développement. Les principales fonctionnalités sont :
 
-* Accédez à la classe de test depuis la classe testée (raccourci : alt+shift+K)
-* Accédez à la classe testée depuis la de test (shortcut : alt+shift+K)
-* Exécuté les tests à l'intérieur PhpStorm (shortcut : alt+shift+M)
+* Accès à la classe de test depuis la classe testée (raccourci : alt+shift+K)
+* Accès à la classe testée depuis la classe de test (raccourci : alt+shift+K)
+* Exécution des tests à l'intérieur de PhpStorm (raccourci : alt+shift+M)
 * Identification facile des fichiers de test via une icône spécifique
 
 Installation
@@ -124,7 +124,7 @@ Installation
 
 C'est simple à installer, pour cela il suffit de suivre les étapes suivantes :
 
-* Ouvrir PHPStorm
+* Ouvrir PhpStorm
 * Aller dans *Fichier -> Paramètres*, cliquer sur *Plugins*
 * Cliquer sur parcourir le répertoire
 * Chercher *atoum* dans la liste, cliquer sur le bouton installation
@@ -137,7 +137,7 @@ Si vous avez besoin de plus d'information, il suffit de lire le `repository du p
 Atom
 ****
 
-atoum possède avec un plug-in officiel pour atom. Celui-ci vous aide dans plusieurs tâches :
+atoum possède un plug-in officiel pour atom. Celui-ci vous aide dans plusieurs tâches :
 
 * Un panneau avec tous les tests
 * Exécuter tous les tests, dans un répertoire ou dans le répertoire courant
