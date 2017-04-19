@@ -43,9 +43,9 @@ Comme mentionné en introduction, il suffit d'importer la classe d'asserter et d
    use Behat\Gherkin\Node\PyStringNode,
        Behat\Gherkin\Node\TableNode;
 
-   use mageekguy\atoum\asserter; // <- atoum asserter
+   use atoum\asserter; // <- atoum asserter
 
-   require_once __DIR__ . '/../../vendor/mageekguy/atoum/classes/autoloader.php'; // <- autoload
+   require_once __DIR__ . '/../../vendor/atoum/atoum/classes/autoloader.php'; // <- autoload
 
    class FeatureContext extends BehatContext
    {
