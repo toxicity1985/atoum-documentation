@@ -60,6 +60,7 @@ Voici l'arbre d'héritage des asserters :
 .. include:: asserters/afterDestructionOf.inc.rst
 .. include:: asserters/array.inc.rst
 .. include:: asserters/boolean.inc.rst
+.. include:: asserters/castToArray.inc.rst
 .. include:: asserters/castToString.inc.rst
 .. include:: asserters/class.inc.rst
 .. include:: asserters/dateInterval.inc.rst
