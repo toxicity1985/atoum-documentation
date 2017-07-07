@@ -62,6 +62,7 @@ This is the asserters inheritance tree:
 .. include:: asserters/afterDestructionOf.inc.rst
 .. include:: asserters/array.inc.rst
 .. include:: asserters/boolean.inc.rst
+.. include:: asserters/castToArray.inc.rst
 .. include:: asserters/castToString.inc.rst
 .. include:: asserters/class.inc.rst
 .. include:: asserters/dateInterval.inc.rst
@@ -83,7 +84,6 @@ This is the asserters inheritance tree:
 .. include:: asserters/utf8String.inc.rst
 .. include:: asserters/variable.inc.rst
 .. include:: asserters/generator.inc.rst
-
 
 
 .. include:: asserters/ztips.inc.rst
