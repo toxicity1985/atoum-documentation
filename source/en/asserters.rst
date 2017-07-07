@@ -71,6 +71,7 @@ This is the asserters inheritance tree:
 .. include:: asserters/exception.inc.rst
 .. include:: asserters/extension.inc.rst
 .. include:: asserters/float.inc.rst
+.. include:: asserters/generator.inc.rst
 .. include:: asserters/hash.inc.rst
 .. include:: asserters/integer.inc.rst
 .. include:: asserters/mock.inc.rst
@@ -83,7 +84,6 @@ This is the asserters inheritance tree:
 .. include:: asserters/string.inc.rst
 .. include:: asserters/utf8String.inc.rst
 .. include:: asserters/variable.inc.rst
-.. include:: asserters/generator.inc.rst
 
 
 .. include:: asserters/ztips.inc.rst
