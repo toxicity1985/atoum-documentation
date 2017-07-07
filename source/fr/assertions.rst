@@ -36,7 +36,9 @@ Voici l'arbre d'héritage des asserters :
             |   |-- dateInterval
             |   |-- dateTime
             |   |   `-- mysqlDateTime
-            |   `-- exception
+            |   |-- exception
+            |   `-- iterator
+            |       `-- generator
             |-- resource
             `-- string
                 |-- castToString
@@ -68,6 +70,7 @@ Voici l'arbre d'héritage des asserters :
 .. include:: asserters/exception.inc.rst
 .. include:: asserters/extension.inc.rst
 .. include:: asserters/float.inc.rst
+.. include:: asserters/generator.inc.rst
 .. include:: asserters/hash.inc.rst
 .. include:: asserters/integer.inc.rst
 .. include:: asserters/mock.inc.rst
@@ -80,7 +83,6 @@ Voici l'arbre d'héritage des asserters :
 .. include:: asserters/string.inc.rst
 .. include:: asserters/utf8String.inc.rst
 .. include:: asserters/variable.inc.rst
-
 
 
 .. include:: asserters/ztips.inc.rst
