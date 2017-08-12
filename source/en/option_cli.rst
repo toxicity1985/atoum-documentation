@@ -468,3 +468,16 @@ This option lets you display the current version of atoum.
    $ ./bin/atoum --version
 
    atoum version DEVELOPMENT by Frédéric Hardy (/path/to/atoum)
+
+.. _cli-options-verbose:
+
++verbose / ++verbose
+====================
+
+This option enable a mode verbose mode of atoum.
+
+
+.. code-block:: shell
+
+   $ ./bin/atoum ++verbose
+
