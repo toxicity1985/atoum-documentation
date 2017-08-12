@@ -52,7 +52,6 @@ This option lets you specify the path to the :ref:`bootstrap file<bootstrap_file
    $ ./bin/atoum -bf /path/to/bootstrap.php
    $ ./bin/atoum --bootstrap-file /path/to/bootstrap.php
 
-
 .. _cli-options-configuration:
 
 -c <file> / --configuration <file>
@@ -64,6 +63,15 @@ This option lets you specify the path to the :ref:`configuration file<fichier-de
 
    $ ./bin/atoum -c config/atoum.php
    $ ./bin/atoum --configuration tests/units/conf/coverage.php
+
+
+.. _cli-options-xc:
+
+-xc, --xdebug-config
+====================
+
+This option lets you specify the path to the `XDEBUG_CONFIG` variable.
+
 
 Filtering
 *********
@@ -231,6 +239,18 @@ This option allows you to activate the loop mode of atoum.
 .. note::
    Refer to the section on the :ref:`mode-loop` for more information.
 
+
+.. _cli-options-verbose:
+
++verbose / ++verbose
+====================
+
+This option enable a mode verbose mode of atoum.
+
+.. code-block:: shell
+
+   $ ./bin/atoum ++verbose
+
 .. _cli-options-coverage_reports:
 
 Coverage & reports
@@ -251,6 +271,17 @@ This option lets you specify atoum reports default title.
 .. note::
    If the title contains spaces, you must surround it with quotes.
 
+.. _cli-options-ebpc:
+
+-ebpc, --enable-branch-and-path-coverage
+========================================
+
+This option to enable branch and path coverage scoring
+
+.. code-block:: shell
+
+   $ ./bin/atoum -ebpc
+   $ ./bin/atoum --enable-branch-and-path-coverage
 
 .. _cli-options-force_terminal:
 
@@ -321,7 +352,6 @@ This option lets you disable the generation of the code coverage report for one 
 .. note::
    It's important to double each backslash to avoid them being interpreted by the shell.
 
-
 .. _cli-options-nccid:
 
 -nccid <directories> / --no-code-coverage-in-directories <directories>
@@ -333,6 +363,18 @@ This option lets you disable the generation of the code coverage report for one 
 
    $ ./bin/atoum -nccid /path/to/exclude
    $ ./bin/atoum --no-code-coverage-in-directories /path/to/exclude/1 /path/to/exclude/2
+
+.. _cli-options-nccfm:
+
+-nccfm <method> / --no-code-coverage-for-methods <method>
+=========================================================
+
+This option lets you disable the generation of the code coverage report for one or more methods.
+
+.. code-block:: shell
+
+   $ ./bin/atoum -nccfm foo\\test\\units\\myClass::testMyMethod foo\\test\\units\\myClassToo::testMyMethod
+   $ ./bin/atoum --no-code-coverage-for-methods foo\\test\\units\\myClass::testMyMethod foo\\test\\units\\myClassToo::testMyMethod
 
 .. _cli-options-ulr:
 
@@ -385,8 +427,8 @@ Failure & success
 
 .. _cli-options-fivm:
 
--fivm, --fail-if-void-methods
-=============================
+-fivm / --fail-if-void-methods
+==============================
 
 
 This option makes the test suite fail if there is at least one void test method.
@@ -399,8 +441,8 @@ This option makes the test suite fail if there is at least one void test method.
 
 .. _cli-opts-fail-if-skipped-methods:
 
--fism, --fail-if-skipped-methods
-================================
+-fism / --fail-if-skipped-methods
+=================================
 
 This option makes the test suite fail if there is at least one skipped test method
 
@@ -455,6 +497,17 @@ This option lets you display a list of available options.
    $ ./bin/atoum -h
    $ ./bin/atoum --help
 
+.. _cli-options-init:
+
+--init <directory>
+==================
+
+This command initialize some configuration files.
+
+.. code-block:: shell
+
+   $ ./bin/atoum --init path/to/test/directory
+
 .. _cli-options-vesion:
 
 -v / --version
@@ -468,16 +521,4 @@ This option lets you display the current version of atoum.
    $ ./bin/atoum --version
 
    atoum version DEVELOPMENT by Frédéric Hardy (/path/to/atoum)
-
-.. _cli-options-verbose:
-
-+verbose / ++verbose
-====================
-
-This option enable a mode verbose mode of atoum.
-
-
-.. code-block:: shell
-
-   $ ./bin/atoum ++verbose
 
