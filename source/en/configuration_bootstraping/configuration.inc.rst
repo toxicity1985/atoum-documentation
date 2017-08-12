@@ -4,9 +4,7 @@ Configuration file
 ******************
 
 The configuration file is the way you can configure how atoum works.
-
 The default name of the file is ``.atoum.php``, atoum will load it automatically if this file is located in the current directory. You can define it through the cli with ``-c``.
-
 If you have in one of the parent directory a ``.atoum.php`` it will also be loaded. So you can have a default configuration to have the loop or debug mode activated by default.
 
 

@@ -15,7 +15,7 @@ We can have a simplified view of theses special files with:
 	All of theses files are optional!
 
 .. note::
-	You can use atoum ``--init`` to generate theses files.
+	You can use atoum :ref:`--init<cli-options-init>` to generate theses files.
 
 .. include:: configuration_bootstraping/autoloader.inc.rst
 .. include:: configuration_bootstraping/configuration.inc.rst

@@ -187,7 +187,7 @@ This option lets you run the tests in directories defined in the configuration f
 --test-it
 =========
 
-This option lets you launch atoum own unit tests to check that it runs smoothly on your server.
+This option lets you launch atoum own unit tests to check that it runs smoothly on your server. You can also do it in the configuration with ``$script->testIt();``.
 
 .. code-block:: shell
 
@@ -239,6 +239,14 @@ This option allows you to activate the loop mode of atoum.
 .. note::
    Refer to the section on the :ref:`mode-loop` for more information.
 
+
+.. _cli-options-disable-loop:
+
+--disable-loop-mode
+===================
+
+This option allow you to force disabling loop mode. This allow you to overwrite a loop mode activated inside
+a configuration file.
 
 .. _cli-options-verbose:
 
@@ -508,7 +516,7 @@ This command initialize some configuration files.
 
 .. code-block:: shell
 
-   $ ./bin/atoum --init path/to/test/directory
+   $ ./bin/atoum --init path/to/configuration/directory
 
 .. _cli-options-vesion:
 
