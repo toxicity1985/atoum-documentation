@@ -70,7 +70,7 @@ This option lets you specify the path to the :ref:`configuration file<fichier-de
 -xc, --xdebug-config
 ====================
 
-This option lets you specify the path to the `XDEBUG_CONFIG` variable.
+This option lets you specify the path to the `XDEBUG_CONFIG` variable. This can also be configured with `$runner->setXdebugConfig()`.
 
 
 Filtering
@@ -81,7 +81,7 @@ Filtering
 -d <directories> / --directories <directories>
 ==============================================
 
-This option lets you specify the tests directory(ies) to run.
+This option lets you specify the tests directory(ies) to run. You can also :ref:`configure it<configuration-test>`.
 
 .. code-block:: shell
 
@@ -276,7 +276,7 @@ This option lets you specify atoum reports default title.
 -ebpc, --enable-branch-and-path-coverage
 ========================================
 
-This option to enable branch and path coverage scoring
+This option to enable branch and path coverage scoring. You can also do it by :ref:`configuration<reports-configuration_path-branch>`.
 
 .. code-block:: shell
 
@@ -450,6 +450,8 @@ This option makes the test suite fail if there is at least one skipped test meth
 
    $ ./bin/atoum -fism
    $ ./bin/atoum --fail-if-skipped-methods
+
+.. _cli-options-other-arguments:
 
 Other arguments
 ***************

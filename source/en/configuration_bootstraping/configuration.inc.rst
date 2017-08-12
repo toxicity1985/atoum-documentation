@@ -115,12 +115,14 @@ atoum come with a lot of standard reports: tap, xunit, html, cli, phing, vim, ..
 Report configuration
 --------------------
 
+.. _reports-configuration_path-branch:
+
 Branch and path coverage
 ''''''''''''''''''''''''
 
 You can enable the coverage of branch and path inside the configuration with ``enableBranchAndPathCoverage``. This will improve the value of the code coverage by not only
 checking  the method in the code called, but also that each branch is called. To make it simple, if you have an ``if`` the coverage report will change if you check the
-else.
+else. You can also enabled it with :ref:`cli option --epbc<cli-options-ebpc>`.
 
 .. code-block:: php
 
@@ -340,6 +342,8 @@ Because, a simple code will explain a lot more than a long text, just read this:
    $testGenerator->setRunnerPath('path/to/your/tests/units/runner.php');
 
    $script->getRunner()->setTestGenerator($testGenerator);
+   // or
+   $runner->setTestGenerator($testGenerator);
 
 You can also define the directory of your test with ``$runner->addTestsFromDirectory(path)``. atoum will load all the class that can be tested from this directory like you can do
 with :ref:`-d<cli-options-directories>` argument in cli.
