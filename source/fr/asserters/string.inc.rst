@@ -293,6 +293,30 @@ notEndWith
    ;
 
 
+.. _string-not-matches:
+
+notMatches
+==========
+
+``notMatches`` vérifie qu'une expression régulière ne correspond pas à la chaîne de caractères.
+
+.. code-block:: php
+
+   <?php
+   $phone = '0102030405';
+   $vdm = "Aujourd'hui, à 57 ans, mon père s'est fait tatouer une licorne sur l'épaule. VDM";
+
+   $this
+       ->string($phone)
+           ->notMatches('#azerty#') // passe
+           ->notMatches('#^0[1-9]\d{8}$#') // échoue
+
+       ->string($vdm)
+           ->notMatches("#^Hier.*VDM$#") // passe
+           ->notMatches("#^Aujourd'hui.*VDM$#") // échoue
+   ;
+
+
 .. _string-not-start-with:
 
 notStartWith
