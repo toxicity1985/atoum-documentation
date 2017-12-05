@@ -293,6 +293,30 @@ notEndWith
    ;
 
 
+.. _string-not-matches:
+
+notMatches
+==========
+
+``notMatches`` checks that a regular expression does not match the tested string.
+
+.. code-block:: php
+
+   <?php
+   $phone = '0102030405';
+   $vdm   = "Today at 57 years, my father got a tatoot of a Unicorn on his shoulder. VDM";
+
+   $this
+       ->string($phone)
+           ->notMatches('#qwerty#') // passes
+           ->notMatches('#^0[1-9]\d{8}$#') // fails
+
+       ->string($vdm)
+           ->notMatches("#^Yesterday.*VDM$#") // passes
+           ->notMatches("#^Today.*VDM$#") // fails
+   ;
+
+
 .. _string-not-start-with:
 
 notStartWith
