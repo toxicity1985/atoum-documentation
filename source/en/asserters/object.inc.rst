@@ -337,7 +337,7 @@ isTestedInstance
 toString
 ========
 
-The toString assertion casts the object to a string a returns a :ref:`string<_string-anchor>` asserter on the casted value.
+The toString assertion casts the object to a string a returns a :ref:`string<string-anchor>` asserter on the casted value.
 
 Example:
 
