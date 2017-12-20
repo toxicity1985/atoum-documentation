@@ -5,17 +5,14 @@ Configuration & bootstraping
 
 When atoum start, several steps will be involved, some of them can be influenced by some special files.
 
-We can have a simplified view of theses special files with:
+We can have a simplified view of theses special and *optional* files with:
 
 #. Load the :ref:`autoloader file<autoloader_file>`
 #. Load the :ref:`configuration file<fichier-de-configuration>`
 #. Load the :ref:`bootstrap file<bootstrap_file>`
 
 .. note::
-	All of theses files are optional!
-
-.. note::
-	You can use atoum ``--init`` to generate theses files.
+	You can use atoum :ref:`--init<cli-options-init>` to generate theses files.
 
 .. include:: configuration_bootstraping/autoloader.inc.rst
 .. include:: configuration_bootstraping/configuration.inc.rst

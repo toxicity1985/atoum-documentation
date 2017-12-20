@@ -45,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'atoum'
-copyright = '2014-2016 atoum team CC by-nc-sa 4.0'
+copyright = '2014-2017 atoum team CC by-nc-sa 4.0'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -105,7 +105,7 @@ html_theme_path = ["../../_themes", ]
 html_theme_options = {
   'logo_only': True,
   'display_version': False
-}
+ }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".

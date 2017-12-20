@@ -4,11 +4,34 @@ Configuration file
 ******************
 
 The configuration file is the way you can configure how atoum works.
-
 The default name of the file is ``.atoum.php``, atoum will load it automatically if this file is located in the current directory. You can define it through the cli with ``-c``.
 
-If you have in one of the parent directory a ``.atoum.php`` it will also be loaded. So you can have a default configuration to have the loop or debug mode activated by default.
+.. note::
+   atoum configuration support inheritance of configuration files. So if you have in one of the parent directory a ``.atoum.php`` it will also be loaded.
+   So you can have a default configuration to have the loop or debug mode activated by default.
 
+.. _config-file-example:
+
+Existing example
+================
+
+atoum provides basic configuration files as examples. Following atoum installation types, there is several way to see them:
+
+From phar installation
+----------------------
+
+If you use the PHAR archive, it must retrieve them by using the following command:
+
+.. code-block:: shell
+
+   php atoum.phar -er /path/to/destination/directory
+
+Once the extraction is done, you should have in the "directory/path/to/destination/directory" a directory called "resources/configurations/runner".
+
+From composer installation
+--------------------------
+
+If you are using atoum with a github repository clone :ref:`installation-par-github` or with composer :ref:`installation-par-composer`, the models can be found in ``/path/to/atoum/resources/configurations/runner``
 
 .. _coverage-code-config:
 
@@ -47,25 +70,10 @@ If the coverage rate is 100%, atoum merely indicated. But otherwise, it displays
    > Running duration: 2.36 seconds.
    Success (1 test, 27 methods, 485 assertions, 0 error, 0 exception) !
 
-However, it is possible to get a more accurate representation of the rate of code coverage by tests, in HTML report.
+However, it is possible to get a more accurate representation of the rate of code coverage by tests, in HTML report. These can be
+found from `report extensions <http://extensions.atoum.org/extensions/reports>`_.
 
-To get it, simply rely on models of configuration files included in atoum.
-
-Phar users
-----------
-
-If you use the PHAR archive, it must retrieve them by using the following command:
-
-.. code-block:: shell
-
-   php atoum.phar -er /path/to/destination/directory
-
-Once the extraction is done, you should have in the "directory/path/to/destination/directory" a directory called "resources/configurations/runner".
-
-Composer users
---------------
-
-If you are using atoum with a github repository clone :ref:`installation-par-github` or with composer :ref:`installation-par-composer`, the models can be found in ``/path/to/atoum/resources/configurations/runner``
+.. _coverage-code-reports:
 
 Custom coverage reports
 -----------------------
@@ -115,12 +123,14 @@ atoum come with a lot of standard reports: tap, xunit, html, cli, phing, vim, ..
 Report configuration
 --------------------
 
+.. _reports-configuration_path-branch:
+
 Branch and path coverage
 ''''''''''''''''''''''''
 
 You can enable the coverage of branch and path inside the configuration with ``enableBranchAndPathCoverage``. This will improve the value of the code coverage by not only
 checking  the method in the code called, but also that each branch is called. To make it simple, if you have an ``if`` the coverage report will change if you check the
-else.
+else. You can also enabled it with :ref:`cli option --epbc<cli-options-ebpc>`.
 
 .. code-block:: php
 
@@ -340,6 +350,8 @@ Because, a simple code will explain a lot more than a long text, just read this:
    $testGenerator->setRunnerPath('path/to/your/tests/units/runner.php');
 
    $script->getRunner()->setTestGenerator($testGenerator);
+   // or
+   $runner->setTestGenerator($testGenerator);
 
 You can also define the directory of your test with ``$runner->addTestsFromDirectory(path)``. atoum will load all the class that can be tested from this directory like you can do
 with :ref:`-d<cli-options-directories>` argument in cli.

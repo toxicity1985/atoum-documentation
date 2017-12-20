@@ -201,7 +201,7 @@ Simply enable the publication of report with JUnit or xUnit format of the plugin
 Use with Travis-CI
 ==================
 
-It's simple to use atoum with a tool like `Travis-CI <https://travis-ci.org>`_. Indeed, all the steps are described in the `official documentation <http://docs.travis-ci.com/user/languages/php/#Working-with-atoum>`_ :
+It's simple to use atoum with a tool like `Travis-CI <https://travis-ci.org>`_. Indeed, all the steps are described in the `travis documentation <http://docs.travis-ci.com/user/languages/php/#Working-with-atoum>`_ :
 * Create your .travis.yml in your project;
 * Add it the next two lines:
 
