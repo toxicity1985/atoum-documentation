@@ -84,6 +84,43 @@ If you want to test a static method of your class, you can retrieve the tested c
     }
 
 
+.. _testedInstance-class:
+
+Accessing constant of the tested class
+======================================
+
+If you require to access to the constant of your tested class, you can access it in two ways:
+
+.. code-block:: php
+
+	<?php
+
+	namespace
+	{
+	    class Foo
+	    {
+	        const A = 'a';
+	    }
+	}
+
+	namespace tests\units
+	{
+	    class Foo extends \atoum\test
+	    {
+	        public function testFoo()
+	        {
+	            $this
+	                ->given($this->newTestedInstance())
+	                ->then
+	                    ->string($this->getTestedClassName()::A)->isEqualTo('a')
+	                    ->string($this->testedInstance::A)->isEqualTo('a')
+	            ;
+	        }
+	    }
+	}
+
+.. remarks::
+	You firstly need to initiate the instance with the ``newTestedInstance``, to have access to constant.
 
 .. _testedClass:
 
