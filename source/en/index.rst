@@ -36,7 +36,6 @@ You can find more information on the `official website <http://atoum.org/>`_.
    annotations
    option_cli
    cookbook
-   extensions
    ide
    faq
    contribute

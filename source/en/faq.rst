@@ -11,6 +11,7 @@ If you use `error_log`, you will meet "Error UNKNOWN in" error from atoum. To av
 
 .. code-block:: php
 
+	<?php
 	namespace Foo
 	{
 		class TestErrorLog

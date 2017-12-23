@@ -116,7 +116,7 @@ Using standard reports
 atoum come with a lot of standard reports: tap, xunit, html, cli, phing, vim, ...  There is also some :ref:`fun reports<fun-with-atoum>` too. You will find the most important of them here.
 
 .. note::
-   If you want to go further, there is an :ref:`extension<extensions>` dedicated to the reports called ``reports-extension``.
+   If you want to go further, there is an `extension <http://extensions.atoum.org/extensions/reports>`_ dedicated to the reports called ``reports-extension``.
 
 .. _reports-configuration:
 
