@@ -119,7 +119,7 @@ If you require to access to the constant of your tested class, you can access it
 	    }
 	}
 
-.. remarks::
+.. note::
 	You firstly need to initiate the instance with the ``newTestedInstance``, to have access to constant.
 
 .. _testedClass:
