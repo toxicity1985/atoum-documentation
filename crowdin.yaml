@@ -27,12 +27,20 @@ files:
     dest        : '/source/en/asserters/boolean.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
   -
+    source      : '/source/en/asserters/castToArray.inc.rst'
+    dest        : '/source/en/asserters/castToArray.inc.txt'
+    translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
+  -
     source      : '/source/en/asserters/castToString.inc.rst'
     dest        : '/source/en/asserters/castToString.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
   -
     source      : '/source/en/asserters/class.inc.rst'
     dest        : '/source/en/asserters/class.inc.txt'
+    translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
+  -
+    source      : '/source/en/asserters/constant.inc.rst'
+    dest        : '/source/en/asserters/constant.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
   -
     source      : '/source/en/asserters/dateInterval.inc.rst'
@@ -57,6 +65,14 @@ files:
   -
     source      : '/source/en/asserters/float.inc.rst'
     dest        : '/source/en/asserters/float.inc.txt'
+    translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
+  -
+    source      : '/source/en/asserters/function.inc.rst'
+    dest        : '/source/en/asserters/function.inc.txt'
+    translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
+  -
+    source      : '/source/en/asserters/generator.inc.rst'
+    dest        : '/source/en/asserters/generator.inc.txt'
     translation : '/source/%two_letters_code%/asserters/%file_name%.rst'
   -
     source      : '/source/en/asserters/hash.inc.rst'
@@ -220,6 +236,10 @@ files:
   -
     source      : '/source/en/first_test.rst'
     dest        : '/source/en/first_test.txt'
+    translation : '/source/%two_letters_code%/%file_name%.rst'
+  -
+    source      : '/source/en/faq.rst'
+    dest        : '/source/en/faq.txt'
     translation : '/source/%two_letters_code%/%file_name%.rst'
   -
     source      : '/source/en/fine_tuning.rst'
