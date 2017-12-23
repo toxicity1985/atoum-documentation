@@ -43,20 +43,16 @@ If you want you can do one more assertion by counting the number of call.
 
 .. code-block:: php
 
-	<?php
-	public function testMethodWithAnErrorLog()
-	{
-		$this->function->error_log = true;
+   <?php
+   $this->function->error_log = true;
 
-		$this
-			->if($this->newTestedInstance())
-			->and($this->testedInstance->methodWithAnErrorLog($notExcepted = uniqid()))
-			->then
-				->function('error_log')
-					->wasCalledWithArguments('Value ' . $notExcepted . ' is not excepted here')
-						->once()
-		;
-	}
+   $this
+      ->if($this->newTestedInstance())
+      ->and($this->testedInstance->methodWithAnErrorLog($notExcepted = uniqid()))
+      ->then
+          ->function('error_log')
+              ->wasCalledWithArguments('Value ' . $notExcepted . ' is not excepted here')
+                  ->once();
 
 Here, we assert that our mocked function was called once, with the given arguments.
 

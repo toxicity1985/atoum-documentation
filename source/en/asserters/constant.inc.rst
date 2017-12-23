@@ -14,19 +14,22 @@ isEqualTo
 
 .. code-block:: php
 
-	<?php
-	define('YOLO', 'yolo');
+   <?php
+   namespace
+   {
+      define('YOLO', 'yolo');
+   }
 
-	namespace Foo\test\unit
-	{
-		class Bar extends \atoum
-		{
-		    public function testWithConstant()
-		    {
-				$this->constant(YOLO)
-					->isEqualTo('yolo');
-				$this->string(YOLO)
-					->isEqualTo('yolo');
-		    }
-		}
-	}
+   namespace Foo\test\unit
+   {
+      class Bar extends \atoum
+      {
+         public function testWithConstant()
+         {
+            $this->constant(YOLO)
+               ->isEqualTo('yolo');
+            $this->string(YOLO)
+               ->isEqualTo('yolo');
+            }
+         }
+   }
