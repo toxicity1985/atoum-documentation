@@ -1,4 +1,7 @@
 
+.. only:: pdf and epub
+   This documentation is officialy hosted on http://docs.atoum.org/ and his license is explain on the ´appropriate chapter<licences>´.
+
 .. _start_with_atoum:
 
 Start with atoum

@@ -3,10 +3,6 @@
    Nevertheless, in the doc atoum, here's the selected order: #, *, =,-, ', ^, ',:,., ' "
    If you have more than 4 levels, split your file into multiple files.
 
-.. only:: pdf and epub
-
-   This documentation is officialy hosted on http://docs.atoum.org/ and his license is explain on the ´appropriate chapter<licences>´.
-
 .. _home:
 
 What is atoum?
