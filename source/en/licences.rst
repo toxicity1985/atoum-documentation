@@ -1,7 +1,7 @@
 .. _licences:
 
 Licences
-##############
+########
 
 First there is the documentation of this documentation. It's under `CC by-nc-sa 4.0 <https://github.com/atoum/atoum-documentation/blob/master/LICENCE.md>`__ .
 
