@@ -2,7 +2,7 @@
 .. _mock_generate_one:
 
 Générer un bouchon
-***************
+******************
 
 Il y a plusieurs manières de créer un bouchon à partir d'une interface ou d'une classe. Le plus simple est de créer un
 objet avec le nom absolu préfixé de ``mock`` :

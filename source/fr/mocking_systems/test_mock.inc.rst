@@ -2,7 +2,7 @@
 .. _mock_test_mock:
 
 Tester un bouchon
-*********
+*****************
 
 atoum vous permet de vérifier qu'un bouchon a été utilisé correctement.
 

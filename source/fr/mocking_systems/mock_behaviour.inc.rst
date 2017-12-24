@@ -2,7 +2,7 @@
 .. _mock_behaviour_change:
 
 Modifier le comportement d'un bouchon
-******************************
+*************************************
 
 Une fois le bouchon créé et instancié, il est souvent utile de pouvoir modifier le comportement de ses méthodes. Pour cela,
 il faut passer par son contrôleur en utilisant l'une des méthodes suivantes :

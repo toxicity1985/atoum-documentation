@@ -56,7 +56,7 @@ isCallable
    Pour être identifiés comme ``callable``, vos objets devront être instanciés à partir de classes qui implémentent la méthode magique `__invoke <http://www.php.net/manual/fr/language.oop5.magic.php#object.invoke>`_.
 
 
-.. hint::
+.. seealso::
    ``isCallable`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isCallable <variable-is-callable>`
 
@@ -121,7 +121,7 @@ Deux objets sont considérés égaux lorsqu'ils ont les mêmes attributs et vale
    Pour plus de précision, lisez la documentation PHP sur `la comparaison d'objet <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -138,7 +138,7 @@ Deux objets sont considérés identiques lorsqu'ils font référence à la même
    Pour plus de précision, lisez la documentation PHP sur `la comparaison d'objet <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -242,7 +242,7 @@ isNotCallable
            ->isNotCallable()   // passe
    ;
 
-.. hint::
+.. seealso::
    ``isNotCallable`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotCallable <variable-is-not-callable>`
 
@@ -259,7 +259,7 @@ Deux objets sont considérés égaux lorsqu'ils ont les mêmes attributs et vale
    Pour plus de précision, lisez la documentation PHP sur `la comparaison d'objet <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -276,7 +276,7 @@ Deux objets sont considérés identiques lorsqu'ils font référence à la même
    Pour plus de précision, lisez la documentation PHP sur `la comparaison d'objet <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -330,3 +330,30 @@ isTestedInstance
 
    $object = new TestedClass();
    $this->object($object)->isTestedInstance; // échec
+
+
+.. _object-tostring:
+
+toString
+========
+
+L'assertion toString caste un objet en string et retourne un asserter :ref:`string<string-anchor>` sur cette valeur.
+
+Exemple :
+
+.. code-block:: php
+
+   <?php
+   $this
+     ->object(
+       new class {
+         public function __toString()
+         {
+           return 'foo';
+         }
+       }
+     )
+       ->isIdenticalTo('foo') // rate
+       ->toString
+         ->isIdenticalTo('foo') // passe
+   ;

@@ -2,7 +2,7 @@
 .. _bootstrap_file:
 
 Fichier de bootstrap
-**************
+********************
 
 atoum autorise la définition d'un fichier de ``bootstrap`` qui sera exécuté avant chaque méthode de test et qui permet donc d'initialiser l'environnement d'exécution des tests.
 

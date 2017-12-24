@@ -197,7 +197,7 @@ hasYear
 isCloneOf
 =========
 
-.. hint::
+.. seealso::
    ``isCloneOf`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isCloneOf <object-is-clone-of>`
 
@@ -207,7 +207,7 @@ isCloneOf
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isEqualTo <object-is-equal-to>`
 
@@ -217,17 +217,40 @@ isEqualTo
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isIdenticalTo <object-is-identical-to>`
 
+.. _date-time-is-immutable:
+
+isImmutable
+===========
+
+``isImmutable`` vérifie que qu'un objet ``DateTime`` est immuable.
+
+.. code-block:: php
+
+   <?php
+   $dt = new DateTime('1981-02-13');
+
+   $this
+       ->dateTime($dt)
+           ->isImmutable(1981)     // rate
+   ;
+
+   $dt = new DateTimeImmutable('1981-02-13');
+
+   $this
+       ->dateTime($dt)
+           ->isImmutable(1981)     // réussit
+   ;
 
 .. _date-time-is-instance-of:
 
 isInstanceOf
 ============
 
-.. hint::
+.. seealso::
    ``isInstanceOf`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isInstanceOf <object-is-instance-of>`
 
@@ -237,7 +260,7 @@ isInstanceOf
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotEqualTo <object-is-not-equal-to>`
 
@@ -247,6 +270,6 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotIdenticalTo <object-is-not-identical-to>`

@@ -26,7 +26,7 @@ C'est l'assertion dédiée aux tests sur les sorties, c'est-à-dire tout ce qui 
 contains
 ========
 
-.. hint::
+.. seealso::
    ``contains`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::contains <string-contains>`
 
@@ -36,7 +36,7 @@ contains
 hasLength
 =========
 
-.. hint::
+.. seealso::
    ``hasLength`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::hasLength <string-has-length>`
 
@@ -46,7 +46,7 @@ hasLength
 hasLengthGreaterThan
 ====================
 
-.. hint::
+.. seealso::
    ``hasLengthGreaterThan`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::hasLengthGreaterThan <string-has-length-greater-than>`
 
@@ -56,7 +56,7 @@ hasLengthGreaterThan
 hasLengthLessThan
 =================
 
-.. hint::
+.. seealso::
    ``hasLengthLessThan`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::hasLengthLessThan <string-has-length-less-than>`
 
@@ -66,7 +66,7 @@ hasLengthLessThan
 isEmpty
 =======
 
-.. hint::
+.. seealso::
    ``isEmpty`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::isEmpty <string-is-empty>`
 
@@ -76,7 +76,7 @@ isEmpty
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -86,7 +86,7 @@ isEqualTo
 isEqualToContentsOfFile
 =======================
 
-.. hint::
+.. seealso::
    ``isEqualToContentsOfFile`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::isEqualToContentsOfFile <string-is-equal-to-contents-of-file>`
 
@@ -96,7 +96,7 @@ isEqualToContentsOfFile
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -106,7 +106,7 @@ isIdenticalTo
 isNotEmpty
 ==========
 
-.. hint::
+.. seealso::
    ``isNotEmpty`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::isNotEmpty <string-is-not-empty>`
 
@@ -116,7 +116,7 @@ isNotEmpty
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -126,7 +126,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -136,7 +136,7 @@ isNotIdenticalTo
 matches
 =======
 
-.. hint::
+.. seealso::
    ``matches`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::matches <string-matches>`
 
@@ -146,6 +146,6 @@ matches
 notContains
 ===========
 
-.. hint::
+.. seealso::
    ``notContains`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::notContains <string-not-contains>`

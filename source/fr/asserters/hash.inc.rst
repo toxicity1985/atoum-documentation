@@ -10,7 +10,7 @@ C'est l'assertion dédiée aux tests sur les hashs (empreintes numériques).
 contains
 ========
 
-.. hint::
+.. seealso::
    ``contains`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::contains <string-contains>`
 
@@ -20,7 +20,7 @@ contains
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -30,7 +30,7 @@ isEqualTo
 isEqualToContentsOfFile
 =======================
 
-.. hint::
+.. seealso::
    ``isEqualToContentsOfFile`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::isEqualToContentsOfFile <string-is-equal-to-contents-of-file>`
 
@@ -40,7 +40,7 @@ isEqualToContentsOfFile
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -70,7 +70,7 @@ isMd5
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -80,7 +80,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -150,6 +150,6 @@ isSha512
 notContains
 ===========
 
-.. hint::
+.. seealso::
    ``notContains`` est une méthode héritée de l'asserter ``string``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`string::notContains <string-not-contains>`

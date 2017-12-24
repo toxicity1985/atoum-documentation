@@ -8,9 +8,7 @@ C'est l'assertion dédiée aux tableaux.
 .. note::
    ``array`` étant un mot réservé en PHP, il n'a pas été possible de créer une assertion ``array``. Elle s'appelle donc ``phpArray`` et un alias ``array`` a été créé. Vous pourrez donc rencontrer des ``->phpArray()`` ou des ``->array()``.
 
-
 Il est conseillé d'utiliser exclusivement ``->array()`` afin de simplifier la lecture des tests.
-
 
 .. _sucre-syntaxique:
 
@@ -247,17 +245,16 @@ isEmpty
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isEqualTo <variable-is-equal-to>`
-
 
 .. _array-is-identical-to:
 
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -288,7 +285,7 @@ isNotEmpty
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -298,7 +295,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``variable``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -592,3 +589,28 @@ strictlyNotContainsValues
 .. warning::
    | ``strictlyNotContainsValues`` teste le type des données.
    | Si vous ne souhaitez pas vérifier leurs types, utilisez :ref:`notContainsValues <not-contains-values>`.
+
+
+.. _array-values:
+
+values
+======
+
+``keys`` vous permet de récupérer un asserter de type :ref:`array <array-anchor>` contenant les clefs du tableau testé.
+
+Exemple :
+
+.. code-block:: php
+
+   <?php
+   $this
+       ->given($arr = [0 => 'foo', 2 => 'bar', 3 => 'baz'])
+       ->then
+         ->array($arr)->values
+           ->string[0]->isEqualTo('foo')
+           ->string[1]->isEqualTo('bar')
+           ->string[2]->isEqualTo('baz')
+   ;
+
+.. versionadded:: 2.9.0
+  `assertion values ajouté <https://github.com/atoum/atoum/blob/master/CHANGELOG.md#290---2017-02-11>`_

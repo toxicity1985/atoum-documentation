@@ -1,19 +1,42 @@
 .. _fichier-de-configuration:
 
 Fichier de configuration
-******************
+************************
 
 Le fichier de configuration vous permet de configurer comment atoum fonctionne.
-
 Si vous nommez votre fichier de configuration ``.atoum.php``, atoum le chargera automatiquement si ce fichier se trouve dans le répertoire courant. Le paramètre ``-c`` est donc optionnel dans ce cas.
 
-Si vous avez un fichier ``.atoum.php`` dans le répertoire parent, il sera également chargé. Vous pouvez ainsi avoir un fichier de configuration par défaut afin d'avoir le mode loop ou debug activé par défaut.
+.. note::
+   La configuration de atoum supporte l'héritage de fichier. Si vous avez un fichier ``.atoum.php`` dans le répertoire parent, il sera également chargé.
+   Vous pouvez ainsi avoir un fichier de configuration par défaut afin d'avoir le mode loop ou debug activé par défaut.
 
+.. _config-file-example:
+
+Exemple existant
+================
+
+atoum fourni un fichier d'exemple basique. Suivant le type d’installation de atoum, il y a plusieurs façons de les voir :
+
+Depuis une installation PHAR
+----------------------------
+
+Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande suivante :
+
+.. code-block:: shell
+
+   php atoum.phar -er /path/to/destination/directory
+
+Une fois l'extraction effectuée, vous devriez avoir dans le répertoire /path/to/destination/directory un répertoire nommé resources/configurations/runner.
+
+Depuis une installation composer
+--------------------------------
+
+Dans le cas où vous utilisez atoum en ayant cloné le dépôt :ref:`installation-par-github` ou l'ayant installé via :ref:`installation-par-composer`, les modèles se trouvent dans ``/path/to/atoum/resources/configurations/runner``
 
 .. _coverage-code-config:
 
 Couverture du code
-=============
+==================
 
 Par défaut, si PHP dispose de l'extension `Xdebug <http://xdebug.org>`_, atoum indique en ligne de commande le taux de couverture du code par les tests venant d'être exécutés. Certains comportements de la couverture de code peuvent être adaptés via les :ref:`options de l'interface en ligne de commande<cli-options-coverage_reports>`.
  
@@ -47,28 +70,13 @@ Si le taux de couverture est de 100%, atoum se contente de l'indiquer. Mais dans
    > Running duration: 2.36 seconds.
    Success (1 test, 27 methods, 485 assertions, 0 error, 0 exception) !
 
-Il est cependant possible d'obtenir une représentation plus précise du taux de couverture du code par les tests, sous la forme d'un rapport au format HTML.
+Il est cependant possible d'obtenir une représentation plus précise du taux de couverture du code par les tests, sous la forme d'un rapport au format HTML. Cela peut être
+trouver dans `l'extension report <http://extensions.atoum.org/extensions/reports>`_.
 
-Pour l'obtenir, il suffit de se baser sur les modèles de fichiers de configuration inclus dans atoum.
+.. _coverage-code-reports:
 
-Utilisateur du phar
------------
-
-Si vous utlisez l'archive PHAR, il faut les extraire en utilisant la commande suivante :
-
-.. code-block:: shell
-
-   php atoum.phar -er /path/to/destination/directory
-
-Une fois l'extraction effectuée, vous devriez avoir dans le répertoire /path/to/destination/directory un répertoire nommé resources/configurations/runner.
-
-Utilisateur de composer
---------------
-
-Dans le cas où vous utilisez atoum en ayant cloné le dépôt :ref:`installation-par-github` ou l'ayant installé via :ref:`installation-par-composer`, les modèles se trouvent dans ``/path/to/atoum/resources/configurations/runner``
-
-Rapport de couverture personalisée
------------------------
+Rapport de couverture personnalisée
+-----------------------------------
 
 Dans ce répertoire, il y a, entre autre chose intéressante, un modèle de fichier de configuration pour atoum nommé ``coverage.php.dist`` qu'il vous faudra copier à l'emplacement de votre choix. Renommez le ``coverage.php``.
 
@@ -108,12 +116,14 @@ Utilisation de rapports standards
 atoum est fourni avec de nombreux rapports standards : tap, xunit, html, cli, phing, vim, ...  Il y a aussi quelques :ref:`rapports funs<fun-with-atoum>`. Vous trouverez les plus importants ici.
 
 .. note::
-   Si vous souhaitez aller plus loin, il y a une :ref:`extension<extensions>` dédiée aux rapports appelée ``reports-extension``.
+   Si vous souhaitez aller plus loin, il y a une :ref:`extension<http://extensions.atoum.org/extensions/reports>`_ dédiée aux rapports appelée ``reports-extension``.
 
 .. _reports-configuration:
 
 Configuration de rapports
 -------------------------
+
+.. _reports-configuration_path-branch:
 
 Couverture des branches et chemins
 ''''''''''''''''''''''''''''''''''
@@ -121,7 +131,7 @@ Couverture des branches et chemins
 Dans le fichier de configuration, vous pouvez activer la couverture des branches et chemins à l'aide de l'option ``enableBranchAndPathCoverage``. Cette action améliorera la qualité de la couverture du code car elle ne se limitera pas à vérifier qu'une fonction est appelée, mais également
 que chaque branche l'est également.
   Pour faire simple, si vous avez un ``if``, le rapport changera si vous cherchez le 
-else.
+else. Vous pouvez aussi l'activer via la ligne commande avec :ref:`l'option --epbc<cli-options-ebpc>`.
 
 .. code-block:: php
 
@@ -157,7 +167,7 @@ Par défaut, atoum fournit un rapport HTML basique. Pour un rapport plus avancé
 .. _reports-cli:
 
 Rapport CLI
-----------
+-----------
 
 Le rapport CLI est celui qui s'affiche quand vous lancez le test. Ce rapport a quelques options de configuration disponibles
 
@@ -188,7 +198,7 @@ Afficher le logo d'atoum
 .. _report-treemap:
 
 Rapport Treemap
---------------
+---------------
 
 
 .. code-block:: php
@@ -341,6 +351,8 @@ Un code simple valant une longue explication, l'exemple suivant devrait être ex
    $testGenerator->setRunnerPath('path/to/your/tests/units/runner.php');
 
    $script->getRunner()->setTestGenerator($testGenerator);
+   // ou
+   $runner->setTestGenerator($testGenerator);
 
 Vous pouvez également définir le répertoire du test avec ``$runner->addTestsFromDirectory(path)``. atoum chargera toutes les classes qui puissent être testées présentes dans ce dossier tout comme vous pouvez faire
 avec l'argument en ligne de commande :ref:`-d<cli-options-directories>`.

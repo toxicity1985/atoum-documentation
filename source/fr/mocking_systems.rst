@@ -1,7 +1,7 @@
 .. _mocking_systems:
 
 Système de mocks
-###############
+################
 
 Les mocks(bouchons) sont des classes virtuels créer à la volée. Ils sont utilisé pour isolé les tests du comportements des autres classes. atoum a
 un système de mock simple et puissant, permettant de générer des mocks depuis une classe ou une interface qui existe ou est virtuel,

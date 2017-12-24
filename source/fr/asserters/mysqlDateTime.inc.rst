@@ -17,7 +17,7 @@ Si vous essayez de tester une variable qui n'est pas un objet ``DateTime`` (ou u
 hasDate
 =======
 
-.. hint::
+.. seealso::
    ``hasDate`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasDate <date-time-has-date>`
 
@@ -27,7 +27,7 @@ hasDate
 hasDateAndTime
 ==============
 
-.. hint::
+.. seealso::
    ``hasDateAndTime`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasDateAndTime <date-time-has-date-and-time>`
 
@@ -37,7 +37,7 @@ hasDateAndTime
 hasDay
 ======
 
-.. hint::
+.. seealso::
    ``hasDay`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasDay <date-time-has-day>`
 
@@ -47,7 +47,7 @@ hasDay
 hasHours
 ========
 
-.. hint::
+.. seealso::
    ``hasHours`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasHours <date-time-has-hours>`
 
@@ -67,7 +67,7 @@ hasMinutes
 hasMonth
 ========
 
-.. hint::
+.. seealso::
    ``hasMonth`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasMonth <date-time-has-month>`
 
@@ -77,7 +77,7 @@ hasMonth
 hasSeconds
 ==========
 
-.. hint::
+.. seealso::
    ``hasSeconds`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasSeconds <date-time-has-seconds>`
 
@@ -87,7 +87,7 @@ hasSeconds
 hasTime
 =======
 
-.. hint::
+.. seealso::
    ``hasTime`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasTime <date-time-has-time>`
 
@@ -97,7 +97,7 @@ hasTime
 hasTimezone
 ===========
 
-.. hint::
+.. seealso::
    ``hasTimezone`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasTimezone <date-time-has-timezone>`
 
@@ -107,7 +107,7 @@ hasTimezone
 hasYear
 =======
 
-.. hint::
+.. seealso::
    ``hasYear`` est une méthode héritée de l'asserter ``dateTime``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`dateTime::hasYear <date-time-has-timezone>`
 
@@ -117,7 +117,7 @@ hasYear
 isCloneOf
 =========
 
-.. hint::
+.. seealso::
    ``isCloneOf`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isCloneOf <object-is-clone-of>`
 
@@ -127,7 +127,7 @@ isCloneOf
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isEqualTo <object-is-equal-to>`
 
@@ -137,7 +137,7 @@ isEqualTo
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isIdenticalTo <object-is-identical-to>`
 
@@ -157,7 +157,7 @@ isInstanceOf
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotEqualTo <object-is-not-equal-to>`
 
@@ -167,6 +167,6 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotIdenticalTo <object-is-not-identical-to>`

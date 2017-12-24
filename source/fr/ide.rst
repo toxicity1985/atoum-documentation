@@ -95,7 +95,7 @@ Pour plus de détails sur l'utilisation du plug-in, une aide est disponible dans
    :help atoum
 
 Rapports de couverture pour vim
-===========================
+===============================
 
 Vous pouvez configurer un rapport :ref:`spécifique<reports-using>` pour la couverture au sein de vim. Dans votre fichier de configuration atoum, définissez  :
 
@@ -112,11 +112,11 @@ Vous pouvez configurer un rapport :ref:`spécifique<reports-using>` pour la couv
 PhpStorm
 ********
 
-atoum possède un plug-in officiel pour PhpStorm. Il vous aide, au quotidien, dans votre développement. Les principales fonctionnalités sont :
+atoum possède avec un plug-in officiel pour PHPStorm. Il vous aide, au quotidien, dans votre développement. Les principales fonctionnalités sont :
 
 * Accès à la classe de test depuis la classe testée (raccourci : alt+shift+K)
-* Accès à la classe testée depuis la classe de test (raccourci : alt+shift+K)
-* Exécution des tests à l'intérieur de PhpStorm (raccourci : alt+shift+M)
+* Accès à la classe testée depuis la de test (raccourcis : alt+shift+K)
+* Execute tests inside PhpStorm (shortcut : alt+shift+M)
 * Identification facile des fichiers de test via une icône spécifique
 
 Installation
@@ -124,7 +124,7 @@ Installation
 
 C'est simple à installer, pour cela il suffit de suivre les étapes suivantes :
 
-* Ouvrir PhpStorm
+* Ouvrir PHPStorm
 * Aller dans *Fichier -> Paramètres*, cliquer sur *Plugins*
 * Cliquer sur parcourir le répertoire
 * Chercher *atoum* dans la liste, cliquer sur le bouton installation

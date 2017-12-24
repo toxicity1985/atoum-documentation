@@ -12,7 +12,7 @@ Si vous essayez de tester une variable qui n'est pas un objet ``DateInterval`` (
 isCloneOf
 =========
 
-.. hint::
+.. seealso::
    ``isCloneOf`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isCloneOf <object-is-clone-of>`
 
@@ -91,7 +91,7 @@ isGreaterThanOrEqualTo
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isIdenticalTo <object-is-identical-to>`
 
@@ -101,7 +101,7 @@ isIdenticalTo
 isInstanceOf
 ============
 
-.. hint::
+.. seealso::
    ``isInstanceOf`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isInstanceOf <object-is-instance-of>`
 
@@ -158,7 +158,7 @@ isLessThanOrEqualTo
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotEqualTo <object-is-not-equal-to>`
 
@@ -168,7 +168,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotIdenticalTo <object-is-not-identical-to>`
 

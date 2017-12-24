@@ -84,6 +84,43 @@ Si vous voulez tester une méthode statique de votre classe, vous pouvez récup�
     }
 
 
+.. _testedInstance-class:
+
+Accès aux constantes de la classe testée
+========================================
+
+Si vous avez besoin d’accéder aux constantes de la classe testée, vous pouvez y accéder de deux façons :
+
+.. code-block:: php
+
+	<?php
+
+	namespace
+	{
+	    class Foo
+	    {
+	        const A = 'a';
+	    }
+	}
+
+	namespace tests\units
+	{
+	    class Foo extends \atoum\test
+	    {
+	        public function testFoo()
+	        {
+	            $this
+	                ->given($this->newTestedInstance())
+	                ->then
+	                    ->string($this->getTestedClassName()::A)->isEqualTo('a')
+	                    ->string($this->testedInstance::A)->isEqualTo('a')
+	            ;
+	        }
+	    }
+	}
+
+.. warning::
+	Vous avez besoin d'initialiser l'instance avec ``newTestedInstance``, pour avoir accès aux constantes.
 
 .. _testedClass:
 

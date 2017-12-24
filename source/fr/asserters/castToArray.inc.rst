@@ -22,6 +22,6 @@ C'est l'assertion dédiée aux tests sur le transtypage d'objets en tableaux.
    ;
 
 
-.. hint::
-   L'asserter ``castToArray`` retourne une instance de l'assertion ``array``.
-   Vous pouvez donc utiliser toutes les méthodes de l'assertion :ref:`array <array-anchor>`
+.. seealso::
+   L'asserter ``castToArray`` retourne une instance de l'asserter ``array``.
+   Vous pouvez donc utiliser toutes les assertions de l'asserter :ref:`array <array-anchor>`

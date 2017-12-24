@@ -201,7 +201,7 @@ Il suffit tout simplement d'activer la publication des rapports au format JUnit 
 Utilisation avec Travis-ci
 ==========================
 
-Il est assez simple d'utiliser atoum dans l'outil qu'est `Travis-CI <https://travis-ci.org>`__. En effet, l'ensemble des étapes est indiqué dans la `documentation officielle <http://docs.travis-ci.com/user/languages/php/#Working-with-atoum>`__ :
+Il est assez simple d'utiliser atoum dans l'outil qu'est `Travis-CI <https://travis-ci.org>`__. En effet, l'ensemble des étapes est indiqué dans la `documentation de travis <http://docs.travis-ci.com/user/languages/php/#Working-with-atoum>`__ :
 * Créer votre fichier .travis.yml dans votre projet;
 * Ajoutez-y les deux lignes suivantes :
 
@@ -228,7 +228,7 @@ Voici un exemple de fichier `.travis.yml` dont les tests présents dans le dossi
 .. _cookbook_utilisation_phing:
 
 Utilisation avec `Phing <https://www.phing.info/>`_
-*******************************************
+***************************************************
 
 La suite de tests de atoum peut facilement être exécutée au sein de votre configuration phing via l'intégration de la tâche *phing/AtoumTask.php*.
 Un exemple valide peut être trouvé dans le fichier `resources/phing/build.xml <https://github.com/atoum/atoum/blob/master/resources/phing/build.xml>`_.

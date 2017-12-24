@@ -20,7 +20,7 @@ Composer
 
 `Composer <http://getcomposer.org>`_ est un outil de gestion de dépendance en PHP.
 
-Assurez-vous que vous disposez d'une installation de composer fonctionnelle (`documentation officiel <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_)
+Assurez-vous que vous disposez d'une installation de `composer fonctionnelle <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_
 
 Ajoutez ``atoum/atoum`` a vos dépendances de développement :
 
@@ -90,7 +90,7 @@ Vous pouvez lister les versions disponibles dans les archives en utilisant ``--l
      nightly-1568-201210311708
    * nightly-2416-201402121146
 
-La liste des versions de l’archive est affichée. La version actuellement active est précédée par '' *''.
+La liste des versions de l’archive est affichée. La version actuellement active est précédée par ``*``.
 
 Changer la version courante
 ---------------------------

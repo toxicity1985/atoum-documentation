@@ -38,6 +38,9 @@ Nous pouvons même facilement récupérer la dernière exception via ``$this->ex
    $this->exception->hasCode(42); // passes
    $this->exception->hasMessage('erreur'); // passes
 
+.. note::
+   Avant atoum 3.0.0, si vous avez besoin d'effectuer des assertions, vous aviez besoin d'ajouter ``atoum\test $test`` en argument de la closure. Après la version 3.0.0, vous pouvez simplement utiliser $this à l'intérieur de la closure, afin d'effectuer des assertions.
+
 .. _has-code:
 
 hasCode
@@ -148,7 +151,7 @@ hasNestedException
 isCloneOf
 =========
 
-.. hint::
+.. seealso::
    ``isCloneOf`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isCloneOf <object-is-clone-of>`
 
@@ -158,7 +161,7 @@ isCloneOf
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isEqualTo <object-is-equal-to>`
 
@@ -168,7 +171,7 @@ isEqualTo
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isIdenticalTo <object-is-identical-to>`
 
@@ -178,7 +181,7 @@ isIdenticalTo
 isInstanceOf
 ============
 
-.. hint::
+.. seealso::
    ``isInstanceOf`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isInstanceOf <object-is-instance-of>`
 
@@ -188,7 +191,7 @@ isInstanceOf
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotEqualTo <object-is-not-equal-to>`
 
@@ -198,7 +201,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` est une méthode héritée de l'asserter ``object``.
    Pour plus d'informations, reportez-vous à la documentation de :ref:`object::isNotIdenticalTo <object-is-not-identical-to>`
 

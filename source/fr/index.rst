@@ -36,7 +36,7 @@ Vous pouvez trouver plus d'information sur le `site officiel <http://atoum.org/>
    annotations
    option_cli
    cookbook
-   extensions
    ide
+   faq
    participer
    licences

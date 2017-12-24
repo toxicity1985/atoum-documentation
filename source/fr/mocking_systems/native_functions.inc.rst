@@ -2,7 +2,7 @@
 .. _mock-native-function:
 
 Le bouchonnage (mock) des fonctions natives de PHP
-******************************************
+**************************************************
 
 atoum permet de très facilement simuler le comportement des fonctions natives de PHP.
 

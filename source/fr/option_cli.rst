@@ -1,7 +1,7 @@
 .. _cli-options:
 
 Option de la ligne de commande
-####################
+##############################
 
 La plupart des options existent sous deux formes, une courte de 1 à 6 caractères et une longue, plus explicative. Les deux formes différentes font exactement la même chose et peuvent être utilisés indifféremment.
 
@@ -52,7 +52,6 @@ Cette option vous permet de spécifier le chemin du :ref:`fichier de bootstrap <
    $ ./bin/atoum -bf /path/to/bootstrap.php
    $ ./bin/atoum --bootstrap-file /path/to/bootstrap.php
 
-
 .. _cli-options-configuration:
 
 -c <file> / --configuration <file>
@@ -65,6 +64,15 @@ Cette option vous permet de spécifier le chemin vers le :ref:`fichier de config
    $ ./bin/atoum -c config/atoum.php
    $ ./bin/atoum --configuration tests/units/conf/coverage.php
 
+
+.. _cli-options-xc:
+
+-xc, --xdebug-config
+====================
+
+Cette option vous permet de spécifié la variable `XDEBUG_CONFIG`. Ceci peux aussi être configurer avec  `$runner->setXdebugConfig()`.
+
+
 Filtrage
 *********
 
@@ -73,7 +81,7 @@ Filtrage
 -d <directories> / --directories <directories>
 ==============================================
 
-Cette option vous permet de spécifier le répertoire des test à exécuter.
+Cette option vous permet de spécifier le répertoire des test à exécuter. Vous pouvez aussi le :ref:`configurer<configuration-test>`.
 
 .. code-block:: shell
 
@@ -179,7 +187,7 @@ Cette option vous permet de lancer les tests se trouvant dans les répertoires d
 --test-it
 =========
 
-Cette option vous permet de lancer les tests unitaires d'atoum pour vérifier qu'il fonctionne parfaitement sur votre serveur.
+Cette option vous permet de lancer les tests unitaires d'atoum pour vérifier qu'il fonctionne parfaitement sur votre serveur. Vous pouvez aussi le configurer avec ``$script->testIt();``.
 
 .. code-block:: shell
 
@@ -231,6 +239,26 @@ Cette option vous permet d'activer le mode loop d'atoum.
 .. note::
    Reportez-vous à la section sur le :ref:`mode-loop` pour avoir plus d'informations.
 
+
+.. _cli-options-disable-loop:
+
+--disable-loop-mode
+===================
+
+Cette option vous permet de désactivé le mode loop. Ceci permet d’écraser un mode loop activé via
+le fichier de configuration.
+
+.. _cli-options-verbose:
+
++verbose / ++verbose
+====================
+
+Cette option active le mode verbose de atoum.
+
+.. code-block:: shell
+
+   $ ./bin/atoum ++verbose
+
 .. _cli-options-coverage_reports:
 
 Couverture & rapports
@@ -251,6 +279,17 @@ Cette option permet de spécifier le titre par défaut du rapport d'atoum.
 .. note::
    Si le titre comporte des espaces, il faut obligatoirement l'entourer de guillemets.
 
+.. _cli-options-ebpc:
+
+-ebpc, --enable-branch-and-path-coverage
+========================================
+
+Cette option active la couverture sur les branches et chemin. Vous pouvez aussi le faire :ref:`au travers de la configuration<reports-configuration_path-branch>`.
+
+.. code-block:: shell
+
+   $ ./bin/atoum -ebpc
+   $ ./bin/atoum --enable-branch-and-path-coverage
 
 .. _cli-options-force_terminal:
 
@@ -321,7 +360,6 @@ Cette option vous permet de désactiver la génération du rapport de couverture
 .. note::
    Il est important de doubler chaque backslash pour éviter qu'ils soient interprétés par le shell.
 
-
 .. _cli-options-nccid:
 
 -nccid <directories> / --no-code-coverage-in-directories <directories>
@@ -333,6 +371,18 @@ Cette option vous permet de désactiver la génération du rapport de couverture
 
    $ ./bin/atoum -nccid /path/to/exclude
    $ ./bin/atoum --no-code-coverage-in-directories /path/to/exclude/1 /path/to/exclude/2
+
+.. _cli-options-nccfm:
+
+-nccfm <method> / --no-code-coverage-for-methods <method>
+=========================================================
+
+Cette option vous permet de désactiver la génération du rapport de couverture de code pour une ou plusieurs méthodes.
+
+.. code-block:: shell
+
+   $ ./bin/atoum -nccfm foo\\test\\units\\myClass::testMyMethod foo\\test\\units\\myClassToo::testMyMethod
+   $ ./bin/atoum --no-code-coverage-for-methods foo\\test\\units\\myClass::testMyMethod foo\\test\\units\\myClassToo::testMyMethod
 
 .. _cli-options-ulr:
 
@@ -368,13 +418,25 @@ Cette option vous permet d'alléger la sortie généré par atoum.
    [SSSSSSSSSSSSSSSSSSSS________________________________________][1141/1141]
    Success (154 tests, 1141/1141 methods, 0 void method, 0 skipped method, 16875 assertions) !
 
+.. _cli-options-utr:
+
+-utr / --use-tap-report
+=======================
+
+Cette option créer un rapport de type tap
+
+.. code-block:: shell
+
+   $ ./bin/atoum -utr
+   $ ./bin/atoum --use-tap-report
+
 Échec & succès
 **************
 
 .. _cli-options-fivm:
 
--fivm, --fail-if-void-methods
-=============================
+-fivm / --fail-if-void-methods
+==============================
 
 
 Cette option va faire échouer la suite de tests s'il y a au moins une méthode vide.
@@ -387,8 +449,8 @@ Cette option va faire échouer la suite de tests s'il y a au moins une méthode 
 
 .. _cli-opts-fail-if-skipped-methods:
 
--fism, --fail-if-skipped-methods
-================================
+-fism / --fail-if-skipped-methods
+=================================
 
 Cette option va faire échouer la suite de tests s'il y a au moins une méthode ignorée
 
@@ -396,6 +458,8 @@ Cette option va faire échouer la suite de tests s'il y a au moins une méthode 
 
    $ ./bin/atoum -fism
    $ ./bin/atoum --fail-if-skipped-methods
+
+.. _cli-options-other-arguments:
 
 Autres arguments
 ****************
@@ -442,6 +506,17 @@ Cette option vous permet d'afficher la liste des options disponibles.
 
    $ ./bin/atoum -h
    $ ./bin/atoum --help
+
+.. _cli-options-init:
+
+--init <directory>
+==================
+
+Cette commande initialise quelques fichiers de configuration.
+
+.. code-block:: shell
+
+   $ ./bin/atoum --init path/to/configuration/directory
 
 .. _cli-options-vesion:
 
