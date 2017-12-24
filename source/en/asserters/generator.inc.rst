@@ -91,13 +91,5 @@ Example:
 In this example we run some checks on all the yielded values.
 Then, we checks that the generator returns a integer with a value of 42 (just like a call to the yields assertion, you can use any asserter to check to returned value).
 
-History
-=======
-
-+-----------+---------------------------+
-| Version   | Changes                   |
-+===========+===========================+
-| `v3.0.0`_ | Generator asserter added. |
-+-----------+---------------------------+
-
-.. _v3.0.0: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#300---2017-02-22
+.. versionadded:: 3.0.0
+   `Generator asserter added <https://github.com/atoum/atoum/blob/master/CHANGELOG.md#300---2017-02-22>`_

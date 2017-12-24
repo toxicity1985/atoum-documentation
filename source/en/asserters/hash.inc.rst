@@ -10,7 +10,7 @@ It's the assertion dedicated to tests on hashes (digital fingerprints).
 contains
 ========
 
-.. hint::
+.. seealso::
    ``contains`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::contains <string-contains>`
 
@@ -20,7 +20,7 @@ contains
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -30,7 +30,7 @@ isEqualTo
 isEqualToContentsOfFile
 =======================
 
-.. hint::
+.. seealso::
    ``isEqualToContentsOfFile`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::isEqualToContentsOfFile <string-is-equal-to-contents-of-file>`
 
@@ -40,7 +40,7 @@ isEqualToContentsOfFile
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -70,7 +70,7 @@ isMd5
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -80,7 +80,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -150,6 +150,6 @@ isSha512
 notContains
 ===========
 
-.. hint::
+.. seealso::
    ``notContains`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::notContains <string-not-contains>`

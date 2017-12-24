@@ -6,11 +6,9 @@ array
 It's the assertion dedicated to arrays.
 
 .. note::
-   ``array`` is a reserved word in PHP, it hasn't been possible to create an ``array`` assertion. It's therefore called ``phpArray`` and an alias ``array`` was created. So, you can meet either``->phpArray()`` or ``->array()``.
-
+   ``array`` is a reserved word in PHP, it hasn't been possible to create an ``array`` assertion. It's therefore called ``phpArray`` and an alias ``array`` was created. So, you can meet either ``->phpArray()`` or ``->array()``.
 
 It's recommended to use only ``->array()`` in order to simplify the reading of tests.
-
 
 .. _sucre-syntaxique:
 
@@ -247,17 +245,16 @@ isEmpty
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isEqualTo <variable-is-equal-to>`
-
 
 .. _array-is-identical-to:
 
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -288,7 +285,7 @@ isNotEmpty
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -298,7 +295,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -615,14 +612,5 @@ Example:
            ->string[2]->isEqualTo('baz')
    ;
 
-
-History
-=======
-
-+-----------+---------------------------+
-| Version   | Changes                   |
-+===========+===========================+
-| `v2.9.0`_ | values assertion added.   |
-+-----------+---------------------------+
-
-.. _v2.9.0: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#290---2017-02-11
+.. versionadded:: 2.9.0
+  `values assertion added <https://github.com/atoum/atoum/blob/master/CHANGELOG.md#290---2017-02-11>`_

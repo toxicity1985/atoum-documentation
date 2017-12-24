@@ -12,7 +12,7 @@ If you try to test a value that is not a ``DateInterval`` (or a child class) wit
 isCloneOf
 =========
 
-.. hint::
+.. seealso::
    ``isCloneOf`` is a method inherited from asserter ``object``.
    For more information, refer to the documentation of :ref:`object::isCloneOf <object-is-clone-of>`
 
@@ -91,7 +91,7 @@ isGreaterThanOrEqualTo
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is an inherited method from ``object`` asserter.
    For more information, refer to the documentation of :ref:`object::isIdenticalTo <object-is-identical-to>`
 
@@ -101,7 +101,7 @@ isIdenticalTo
 isInstanceOf
 ============
 
-.. hint::
+.. seealso::
    ``isInstanceOf`` is a method inherited from asserter ``object``.
    For more information, refer to the documentation of :ref:`object::isInstanceOf <object-is-instance-of>`
 
@@ -158,7 +158,7 @@ isLessThanOrEqualTo
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from ``object`` asserter.
    For more information, refer to the documentation of :ref:`object::isNotEqualTo <object-is-not-equal-to>`
 
@@ -168,7 +168,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is an inherited method from ``object`` asserter.
    For more information, refer to the documentation of :ref:`object::isNotIdenticalTo <object-is-not-identical-to>`
 

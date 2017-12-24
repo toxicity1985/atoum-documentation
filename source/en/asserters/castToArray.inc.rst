@@ -22,6 +22,6 @@ It's the assertion dedicated to tests on the cast of objects to arrays.
    ;
 
 
-.. hint::
+.. seealso::
    ``castToArray`` asserter return an instance of ``array`` asserter.
    You can use all assertions from :ref:`array <array-anchor>` asserter

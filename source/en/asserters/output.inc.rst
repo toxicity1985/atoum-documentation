@@ -26,7 +26,7 @@ It's the assertion dedicated to tests on outputs, so everything witch supposed t
 contains
 ========
 
-.. hint::
+.. seealso::
    ``contains`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::contains <string-contains>`
 
@@ -36,7 +36,7 @@ contains
 hasLength
 =========
 
-.. hint::
+.. seealso::
    ``hasLength`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::hasLength <string-has-length>`
 
@@ -46,7 +46,7 @@ hasLength
 hasLengthGreaterThan
 ====================
 
-.. hint::
+.. seealso::
    ``hasLengthGreaterThan`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::hasLengthGreaterThan <string-has-length-greater-than>`
 
@@ -56,7 +56,7 @@ hasLengthGreaterThan
 hasLengthLessThan
 =================
 
-.. hint::
+.. seealso::
    ``hasLengthLessThan`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::hasLengthLessThan <string-has-length-less-than>`
 
@@ -66,7 +66,7 @@ hasLengthLessThan
 isEmpty
 =======
 
-.. hint::
+.. seealso::
    ``isEmpty`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::isEmpty <string-is-empty>`
 
@@ -76,7 +76,7 @@ isEmpty
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -86,7 +86,7 @@ isEqualTo
 isEqualToContentsOfFile
 =======================
 
-.. hint::
+.. seealso::
    ``isEqualToContentsOfFile`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::isEqualToContentsOfFile <string-is-equal-to-contents-of-file>`
 
@@ -96,7 +96,7 @@ isEqualToContentsOfFile
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -106,7 +106,7 @@ isIdenticalTo
 isNotEmpty
 ==========
 
-.. hint::
+.. seealso::
    ``isNotEmpty`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::isNotEmpty <string-is-not-empty>`
 
@@ -116,7 +116,7 @@ isNotEmpty
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -126,7 +126,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -136,7 +136,7 @@ isNotIdenticalTo
 matches
 =======
 
-.. hint::
+.. seealso::
    ``matches`` is a method inherited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::match <string-matches>`
 
@@ -146,6 +146,6 @@ matches
 notContains
 ===========
 
-.. hint::
+.. seealso::
    ``notContains`` is a method herited from the ``string`` asserter.
    For more information, refer to the documentation of :ref:`string::notContains <string-not-contains>`

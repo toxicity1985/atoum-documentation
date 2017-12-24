@@ -16,7 +16,7 @@ If you try to test a variable that is not a boolean with this assertion, it will
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -47,7 +47,7 @@ isFalse
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is a method inherited from ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -57,7 +57,7 @@ isIdenticalTo
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -67,7 +67,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is a method inherited from ``variable`` asserter.
    For more information, refer to the documentation of  :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 

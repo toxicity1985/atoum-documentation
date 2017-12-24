@@ -56,7 +56,7 @@ isCallable
    To be identified as ``callable``, your objects should be instantiated from classes that implements the magic `__invoke <http://www.php.net/manual/fr/language.oop5.magic.php#object.invoke>`_.
 
 
-.. hint::
+.. seealso::
    ``isCallable`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isCallable <variable-is-callable>`
 
@@ -121,7 +121,7 @@ Two objects are consider equals when they have the same attributes and values, a
    For more details, read the PHP's documentation about `comparing objects <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -138,7 +138,7 @@ Two objects are considered identical when they refer to the same instance of the
    For more details, read the PHP's documentation about `comparing objects <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -242,7 +242,7 @@ isNotCallable
            ->isNotCallable()   // passes
    ;
 
-.. hint::
+.. seealso::
    ``isNotCallable`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotCallable <variable-is-not-callable>`
 
@@ -259,7 +259,7 @@ Two objects are consider equals when they have the same attributes and values, a
    For more details, read the PHP's documentation about `comparing objects <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -276,7 +276,7 @@ Two objects are considered identical when they refer to the same instance of sam
    For more details, read the PHP's documentation about `comparing objects <http://php.net/language.oop5.object-comparison>`_.
 
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 

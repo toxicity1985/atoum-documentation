@@ -16,7 +16,7 @@ If you try to test a variable that is not a decimal number with this assertion, 
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isEqualTo <variable-is-equal-to>`
 
@@ -26,7 +26,7 @@ isEqualTo
 isGreaterThan
 =============
 
-.. hint::
+.. seealso::
    ``isGreaterThan`` is a method inherited from the ``integer`` asserter.
    For more information, refer to the documentation of :ref:`integer::isGreaterThan <integer-is-greater-than>`
 
@@ -36,7 +36,7 @@ isGreaterThan
 isGreaterThanOrEqualTo
 ======================
 
-.. hint::
+.. seealso::
    ``isGreaterThanOrEqualTo`` is a method inherited from the ``integer`` asserter.
    For more information, refer to the documentation of :ref:`integer::isGreaterThanOrEqualTo <integer-is-greater-than-or-equal-to>`
 
@@ -46,7 +46,7 @@ isGreaterThanOrEqualTo
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isIdenticalTo <variable-is-identical-to>`
 
@@ -56,7 +56,7 @@ isIdenticalTo
 isLessThan
 ==========
 
-.. hint::
+.. seealso::
    ``isLessThan`` is a method inherited from the ``integer`` asserter.
    For more informations, refer to the documentation of :ref:`integer::isLessThan <integer-is-less-than>`
 
@@ -66,7 +66,7 @@ isLessThan
 isLessThanOrEqualTo
 ===================
 
-.. hint::
+.. seealso::
    ``isLessThanOrEqualTo`` is a method inherited from the ``integer`` asserter.
    For more information, refer to the documentation of :ref:`integer::isLessThanOrEqualTo <integer-is-less-than-or-equal-to>`
 
@@ -113,7 +113,7 @@ This method is therefore seeking to reduce this problem.
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotEqualTo <variable-is-not-equal-to>`
 
@@ -123,7 +123,7 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is a method inherited from the ``variable`` asserter.
    For more information, refer to the documentation of :ref:`variable::isNotIdenticalTo <variable-is-not-identical-to>`
 
@@ -133,6 +133,6 @@ isNotIdenticalTo
 isZero
 ======
 
-.. hint::
+.. seealso::
    ``isZero`` is a method inherited from the ``integer`` asserter.
    For more information, refer to the documentation of :ref:`integer::isZero <integer-is-zero>`

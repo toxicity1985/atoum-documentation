@@ -197,7 +197,7 @@ hasYear
 isCloneOf
 =========
 
-.. hint::
+.. seealso::
    ``isCloneOf`` is a method inherited from asserter ``object``.
    For more information, refer to the documentation of :ref:`object::isCloneOf <object-is-clone-of>`
 
@@ -207,7 +207,7 @@ isCloneOf
 isEqualTo
 =========
 
-.. hint::
+.. seealso::
    ``isEqualTo`` is a method inherited from ``object`` asserter.
    For more information, refer to the documentation of :ref:`object::isEqualTo <object-is-equal-to>`
 
@@ -217,17 +217,40 @@ isEqualTo
 isIdenticalTo
 =============
 
-.. hint::
+.. seealso::
    ``isIdenticalTo`` is an inherited method from ``object`` asserter.
    For more information, refer to the documentation of :ref:`object::isIdenticalTo <object-is-identical-to>`
 
+.. _date-time-is-immutable:
+
+isImmutable
+===========
+
+``isImmutable`` checks that a ``DateTime`` object is immutable.
+
+.. code-block:: php
+
+   <?php
+   $dt = new DateTime('1981-02-13');
+
+   $this
+       ->dateTime($dt)
+           ->isImmutable(1981)     // failed
+   ;
+
+   $dt = new DateTimeImmutable('1981-02-13');
+
+   $this
+       ->dateTime($dt)
+           ->isImmutable(1981)     // success
+   ;
 
 .. _date-time-is-instance-of:
 
 isInstanceOf
 ============
 
-.. hint::
+.. seealso::
    ``isInstanceOf`` is a method inherited from asserter ``object``.
    For more information, refer to the documentation of :ref:`object::isInstanceOf <object-is-instance-of>`
 
@@ -237,7 +260,7 @@ isInstanceOf
 isNotEqualTo
 ============
 
-.. hint::
+.. seealso::
    ``isNotEqualTo`` is a method inherited from ``object`` asserter.
    For more information, refer to the documentation of :ref:`object::isNotEqualTo <object-is-not-equal-to>`
 
@@ -247,6 +270,6 @@ isNotEqualTo
 isNotIdenticalTo
 ================
 
-.. hint::
+.. seealso::
    ``isNotIdenticalTo`` is an inherited method from ``object`` asserter.
    For more information, refer to the documentation of :ref:`object::isNotIdenticalTo <object-is-not-identical-to>`

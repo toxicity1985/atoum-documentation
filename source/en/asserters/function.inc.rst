@@ -64,7 +64,7 @@ after
 ``after`` checks if the mocked function has been called after the one passed as parameter.
 
 
-.. hint::
+.. seealso::
    ``after`` is the same as the one on the ``mock`` asserter.
    For more information, refer to the documentation of :ref:`mock::after <mock-after>`
 
@@ -75,7 +75,7 @@ atLeastOnce
 
 ``atLeastOnce`` check if mocked function has been called at least once.
 
-.. hint::
+.. seealso::
    ``atLeastOnce`` is the same as the one on the ``mock`` asserter.
    For more information, refer to the documentation of :ref:`mock::atLeastOnce <at-least-once>`
 
@@ -86,7 +86,7 @@ before
 
 ``before`` checks if the mocked function has been called before the one passed as parameter.
 
-.. hint::
+.. seealso::
    ``before`` is the same as the one on the ``mock`` asserter.
    For more information, refer to the documentation of :ref:`mock::before <mock-before>`
 
@@ -97,7 +97,7 @@ exactly
 
 ``exactly`` check that the mocked function has been called a specific number of times.
 
-.. hint::
+.. seealso::
    ``exactly`` is the same as the one on the ``mock`` asserter.
    For more information, refer to the documentation of :ref:`mock::exactly <exactly-anchor>`
 
@@ -108,7 +108,7 @@ never
 
 ``never`` check that the mocked function has never been called.
 
-.. hint::
+.. seealso::
    ``never`` is the same as the one on the ``mock`` asserter.
    For more information, refer to the documentation of :ref:`mock::never <never-anchor>`
 
@@ -122,6 +122,6 @@ This asserters check that the mocked function has been called exactly:
 * twice
 * thrice
 
-.. hint::
+.. seealso::
    ``once`` is the same as the one on the ``mock`` asserter.
    For more information, refer to the documentation of :ref:`mock::once/twice/thrice <once-twice-thrice>`
