@@ -72,6 +72,14 @@ This option lets you specify the path to the :ref:`configuration file<fichier-de
 
 This option lets you specify the path to the `XDEBUG_CONFIG` variable. This can also be configured with `$runner->setXdebugConfig()`.
 
+Typically te usage will be
+
+.. code-block:: shell
+
+   $ ./bin/atoum -xc idekey=PHPSTORM
+
+.. note::
+   You can ready the `Xdebug configuration<https://xdebug.org/docs/remote>` on this topic.
 
 Filtering
 *********
