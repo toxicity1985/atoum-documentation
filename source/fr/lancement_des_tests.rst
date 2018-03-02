@@ -90,7 +90,7 @@ Pour lancer les tests d'un répertoire, il vous suffit d'utiliser l'option -d ou
    $ ./bin/atoum -d tests/units
 
 
-Vous trouverez d'autres arguments dans la section approprié lié à la :ref`ligne de commande <cli-options>`.
+Vous trouverez d'autres arguments dans la section approprié lié à la :ref:`ligne de commande <cli-options>`.
 
 Filtres
 *******
