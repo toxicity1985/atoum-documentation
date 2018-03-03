@@ -50,11 +50,11 @@ Example:
            ->yields->integer->isEqualTo(3)
    ;
 
-In this example we create a generator that yields 3 values : 1, 2 and 3.
+
+In this example we create a generator that yields 3 values: 1, 2 and 3.
 Then we yield each value and run an assertion on this value to check it's type and value.
 In the first two yields we use the ``variable`` asserter and only check the value.
 In the third yields call we add a check on the type of the value by using the integer asserter (any asserter could by used on this value) before checking the value.
-
 
 
 .. _generator-returns:

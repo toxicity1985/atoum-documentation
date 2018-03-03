@@ -116,7 +116,7 @@ Utilisation de rapports standards
 atoum est fourni avec de nombreux rapports standards : tap, xunit, html, cli, phing, vim, ...  Il y a aussi quelques :ref:`rapports funs<fun-with-atoum>`. Vous trouverez les plus importants ici.
 
 .. note::
-   Si vous souhaitez aller plus loin, il y a une :ref:`extension<http://extensions.atoum.org/extensions/reports>`_ dédiée aux rapports appelée ``reports-extension``.
+   Si vous souhaitez aller plus loin, il y a une `extension <http://extensions.atoum.org/extensions/reports>`_ dédiée aux rapports appelée ``reports-extension``.
 
 .. _reports-configuration:
 
@@ -130,8 +130,7 @@ Couverture des branches et chemins
 
 Dans le fichier de configuration, vous pouvez activer la couverture des branches et chemins à l'aide de l'option ``enableBranchAndPathCoverage``. Cette action améliorera la qualité de la couverture du code car elle ne se limitera pas à vérifier qu'une fonction est appelée, mais également
 que chaque branche l'est également.
-  Pour faire simple, si vous avez un ``if``, le rapport changera si vous cherchez le 
-else. Vous pouvez aussi l'activer via la ligne commande avec :ref:`l'option --epbc<cli-options-ebpc>`.
+Pour faire simple, si vous avez un ``if``, le rapport changera si vous cherchez le ``else``. Vous pouvez aussi l'activer via la ligne commande avec :ref:`l'option --epbc<cli-options-ebpc>`.
 
 .. code-block:: php
 

@@ -50,9 +50,10 @@ Exemple :
            ->yields->integer->isEqualTo(3)
    ;
 
+
 Dans cette exemple nous créer un générateur qui produit 3 valeurs : 1, 2 et 3.
 Ensuite nous produisons chaque valeurs et effectuons une assertion sur celle-ci pour vérifier le type et la valeur.
-Dans les deux premières valeurs produite, nous utilisons l'asserter ``variable et nous ne vérifions que la valeur.
+Dans les deux premières valeurs produite, nous utilisons l'asserter ``variable`` et nous ne vérifions que la valeur.
 Avec la troisième valeur produite, nous vérifions qu'il s'agit bien d'un entier (toute asserter peut-être utiliser sur cette valeur) avant de vérifier la valeur.
 
 
@@ -92,4 +93,4 @@ Dans cet exemple, nous effectuons quelques vérifications sur toutes les valeurs
 On vérifie ensuite que le générateur renvoie un entier avec une valeur de 42 (tout comme un appel à l’assertion yields, vous pouvez utiliser n’importe quel asserter pour vérifier la valeur retournée).
 
 .. versionadded:: 3.0.0
-   `Asserter generator ajouté<https://github.com/atoum/atoum/blob/master/CHANGELOG.md#300---2017-02-22>`_
+   `Asserter generator ajouté <https://github.com/atoum/atoum/blob/master/CHANGELOG.md#300---2017-02-22>`_
