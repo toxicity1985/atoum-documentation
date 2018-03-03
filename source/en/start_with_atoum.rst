@@ -24,5 +24,5 @@ You need to write a test class for each tested class. When you want to test a va
 Extension
 *********
 
-Atoum came with a set of extension you can use. To discover them, just go to the `dedicated website <http://extensions.atoum.org/>`_.
+atoum came with a set of extension you can use. To discover them, just go to the `dedicated website <http://extensions.atoum.org/>`_.
 

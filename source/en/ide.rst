@@ -27,7 +27,7 @@ It's possible to navigate through errors, or even to go to the line in the edito
 Installation of the plug-in atoum for VIM
 =========================================
 
-You will find the file corresponding to the plug-in, named ``atoum.vmb``, in the directory named ``resources/vim``.
+You will find the file corresponding to the plug-in, named ``atoum.vmb``, in the directory named ``resources/vim``. Or inside its `dedicated repository <https://github.com/atoum/vim-plugin>`_.
 
 If you are using the PHAR archive, you must extract the file with the following command:
 
@@ -137,7 +137,7 @@ If you need more information check the `repository of the plugins <https://githu
 Atom
 ****
 
-atoum comes with an official package for atom. It helps you in several tasks :
+atoum comes with an official package for atom. It helps you in several tasks:
 
 * A panel with all tests
 * Run all the tests, a directory or the current one
@@ -153,6 +153,14 @@ It's easy to install, simply follow the `official documentation <http://flight-m
 
 If you need more information check the `repository of the package <https://github.com/atoum/atom-plugin>`_.
 
+
+.. _ide_netbeans:
+
+netbeans
+********
+
+atoum is officially integrated into netbeans since a long time, so you have nothing to do. Check this tutorial on `how to use netbeans with atoum <https://github.com/atoum/netbeans-sample>`_.
+
 .. _ide_auto-open-test:
 
 Automatically open failed tests
@@ -165,7 +173,10 @@ atoum is able to automatically open files from failed tests at the end of there 
 * :ref:`PhpStorm<ide_auto-open_phpstorm>` (Mac OS X/Unix)
 * :ref:`gedit<ide_auto-open_gedit>` (Unix)
 
-To use this feature, you need to change the :ref:`configuration file <fichier-de-configuration>`:
+To use this feature, you need to change the :ref:`configuration file <fichier-de-configuration>` following you ide:
+
+.. note::
+	You also simplfy you life using an `extension that do it for you <http://extensions.atoum.org/extensions/atoum-ide-helper>`_.
 
 .. _ide_auto-open_macvim:
 
