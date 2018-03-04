@@ -27,16 +27,7 @@ It's possible to navigate through errors, or even to go to the line in the edito
 Installation of the plug-in atoum for VIM
 =========================================
 
-You will find the file corresponding to the plug-in, named ``atoum.vmb``, in the directory named ``resources/vim``. Or inside its `dedicated repository <https://github.com/atoum/vim-plugin>`_.
-
-If you are using the PHAR archive, you must extract the file with the following command:
-
-.. code-block:: shell
-
-   $ php atoum.phar --extractResourcesTo path/to/a/directory
-
-Once the extraction is performed, the file ``atoum.vmb`` corresponding to the plug-in for VIM will be in the directory ``path/to/a/directory/resources/vim``.
-
+You will find the file corresponding to the plug-in, named ``atoum.vmb`` inside the `dedicated repository <https://github.com/atoum/vim-plugin>`_.
 Once you have the ``atoum.vmb`` file, you need to edit it with VIM:
 
 .. code-block:: shell
