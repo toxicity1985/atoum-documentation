@@ -90,7 +90,7 @@ Coverage reports inside vim
 
 You can configure a specific :ref:`report<reports-using>` for the coverage in vim. In your atoum configuration file, set:
 
-... code-block:: php
+.. code-block:: php
 
    <?php
    use \mageekguy\atoum;
