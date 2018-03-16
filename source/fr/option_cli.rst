@@ -262,7 +262,7 @@ Cette option active le mode verbose de atoum.
 .. _cli-options-coverage_reports:
 
 Couverture & rapports
-***********************
+*********************
 
 .. _cli-options-report-title:
 
@@ -383,6 +383,22 @@ Cette option vous permet de désactiver la génération du rapport de couverture
 
    $ ./bin/atoum -nccfm foo\\test\\units\\myClass::testMyMethod foo\\test\\units\\myClassToo::testMyMethod
    $ ./bin/atoum --no-code-coverage-for-methods foo\\test\\units\\myClass::testMyMethod foo\\test\\units\\myClassToo::testMyMethod
+
+.. _cli-options-udr:
+
+-udr / --use-dot-report
+=======================
+
+Cette option vous permet d'afficher uniquement la progression de l'exécution avec des points.
+
+
+.. code-block:: shell
+
+   $ bin/atoum -udr
+   $ bin/atoum --use-dot-report
+............................................................ [60/65]
+.....                                                        [65/65]
+Success (1 test, 65/65 methods, 0 void method, 0 skipped method, 872 assertions)!
 
 .. _cli-options-ulr:
 
@@ -531,3 +547,6 @@ Cette option vous permet d'afficher la version courante d'atoum.
    $ ./bin/atoum --version
 
    atoum version DEVELOPMENT by Frédéric Hardy (/path/to/atoum)
+
+.. versionadded:: 3.3.0
+   Ajout du dot report

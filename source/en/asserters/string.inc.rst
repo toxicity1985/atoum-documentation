@@ -357,3 +357,6 @@ startWith
            ->startWith(' ')        // fails
 
    ;
+
+.. versionadded:: 3.3.0
+   `notMatches` assertion added
