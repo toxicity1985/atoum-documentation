@@ -547,3 +547,6 @@ Cette option vous permet d'afficher la version courante d'atoum.
    $ ./bin/atoum --version
 
    atoum version DEVELOPMENT by Frédéric Hardy (/path/to/atoum)
+
+.. versionadded:: 3.3.0
+   Ajout du dot report

@@ -554,3 +554,6 @@ This option lets you display the current version of atoum.
    $ ./bin/atoum --version
 
    atoum version DEVELOPMENT by Frédéric Hardy (/path/to/atoum)
+
+.. versionadded:: 3.3.0
+   Dot report added
