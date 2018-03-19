@@ -403,9 +403,9 @@ This option lets you get only execution progression with dots.
 
    $ bin/atoum -udr
    $ bin/atoum --use-dot-report
-............................................................ [60/65]
-.....                                                        [65/65]
-Success (1 test, 65/65 methods, 0 void method, 0 skipped method, 872 assertions)!
+   ............................................................ [60/65]
+   .....                                                        [65/65]
+   Success (1 test, 65/65 methods, 0 void method, 0 skipped method, 872 assertions)!
 
 .. _cli-options-ulr:
 
