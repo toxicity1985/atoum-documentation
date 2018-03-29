@@ -55,9 +55,9 @@ This method is quick and simple to implement, but it has the disadvantage of hav
    {
       public function __construct(score $score = null, locale $locale = null, adapter $adapter = null)
       {
-         $this->setTestNamespace('\\my\\tests');
-
          parent::__construct($score, $locale, $adapter);
+        
+         $this->setTestNamespace('\\my\\tests');
       }
 
       public function testBar()
