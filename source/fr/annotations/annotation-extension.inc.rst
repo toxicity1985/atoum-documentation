@@ -3,7 +3,7 @@
 PHP Extensions
 **************
 
-Certains des tests peuvent requérir une ou plusieurs extensions PHP. Atoum permet de définir cela directement à travers une annotation ``@extensions``. Après l'annotation ``@extensions``, ajouter simplement le nom d'une ou plusieurs extensions, séparés par une virgule.
+Certains des tests peuvent requérir une ou plusieurs extensions PHP. atoum permet de définir cela directement à travers une annotation ``@extensions``. Après l'annotation ``@extensions``, ajouter simplement le nom d'une ou plusieurs extensions, séparés par une virgule.
 
 
 .. code-block:: php
