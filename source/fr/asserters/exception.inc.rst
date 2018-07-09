@@ -46,7 +46,7 @@ Nous pouvons même facilement récupérer la dernière exception via ``$this->ex
 hasCode
 =======
 
-``hasMessage`` vérifie le code de l'exception.
+``hasCode`` vérifie le code de l'exception.
 
 .. code-block:: php
 
