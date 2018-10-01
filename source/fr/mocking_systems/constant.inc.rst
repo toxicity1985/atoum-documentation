@@ -20,7 +20,7 @@ Les constantes PHP peuvent être déclarées avec ``defined``, cependant avec at
            ->variable($this->testedInstance->hello())->isEqualTo(PHP_VERSION_ID)
    ;
 
-Attention, due à la nature des constantes en PHP, suivant :ref:`l'engine<@engine>` utiliser vous pouvez rencontrer différent problème. En voici un exemple :
+Attention, due à la nature des constantes en PHP, suivant :ref:`l'engine<@engine>` utilisé vous pouvez rencontrer différents problèmes. En voici un exemple :
 
 .. code-block:: php
 
