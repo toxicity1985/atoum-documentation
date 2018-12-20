@@ -31,7 +31,7 @@ Ainsi, ``given``, ``if`` et ``and`` permettent de définir les conditions préal
 
 Cependant, il n’y a aucune règle ou grammaire qui régissent la syntaxe de l’ordre de ces mots-clés pour atoum.
 
-Ainsi, le développeurs utiliseras ces mots-clés a bon escient pour rendre les tests aussi lisibles que possible. Cependant, si elle est utilisé de façon incorrecte, vous pourriez finir avec tests comme suit :
+Ainsi, le développeur utilisera ces mots-clés à bon escient pour rendre les tests aussi lisibles que possible. Cependant, si elle est utilisé de façon incorrecte, vous pourriez finir avec des tests comme suit :
 
 .. code-block:: php
 
