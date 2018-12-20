@@ -5,7 +5,7 @@ Asserter & assertion trucs et astuces
 
 Plusieurs trucs et astuces sont disponibles pour les assertions. Les connaître peuvent simplifier votre vie  ;)
 
-Le premier est que toutes assertions sont fluent (chaînable). Donc vous pouvez les enchaîner, il suffit de regarder les exemples précédents.
+Le premier est que chaque assertion est fluent (chaînable). Donc vous pouvez les enchaîner, il suffit de regarder les exemples précédents.
 
 Vous devez également savoir que toutes les assertions sans paramètres peuvent être écrites avec ou sans parenthèses.
 Donc ``$this->integer(0)->isZero()`` est la même chose que ``$this->integer(0)->isZero``.
@@ -93,7 +93,7 @@ Tout comme pour un alias, il est conseillé de créer une classe de base pour vo
 Syntaxe courte
 ==============
 
-Avec un :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses intéressantes. Afin de vous aider d'aider dans la rédaction de vos tests,  plusieurs alias sont disponibles nativement.
+Avec un :ref:`alias<asserter_tips-alias>` vous pouvez définir plusieurs choses intéressantes. Afin de vous aider dans la rédaction de vos tests,  plusieurs alias sont disponibles nativement.
 
 * **==** est la même chose que l'asserter :ref:`isEqualTo<variable-is-equal-to>`
 * **===** est la même chose que l'asserter :ref:`isIdenticalTo<variable-is-identical-to>`
