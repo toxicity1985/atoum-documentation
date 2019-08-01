@@ -22,7 +22,7 @@ Composer
 
 Assurez-vous que vous disposez d'une installation de `composer fonctionnelle <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_
 
-Ajoutez ``atoum/atoum`` a vos dépendances de développement :
+Ajoutez ``atoum/atoum`` à vos dépendances de développement :
 
 .. code-block:: shell
 
