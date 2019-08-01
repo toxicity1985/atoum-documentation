@@ -14,7 +14,7 @@ Vous devez d'abord :ref:`l'installer <installation>`, et puis essayez de démarr
 La philosophie d'atoum
 **********************
 
-Vous avez besoin d'écrire une classe de test pour chaque classe testé. Lorsque vous voulez tester une valeur, vous devez :
+Vous avez besoin d'écrire une classe de test pour chaque classe testée. Lorsque vous voulez tester une valeur, vous devez :
 
 * indiquer le type de cette valeur (entier, décimal, tableau, chaîne de caractères, etc.);
 * indiquer les contraintes devant s'appliquer à cette valeur (égal à, nulle, contenant quelque chose, etc.).
