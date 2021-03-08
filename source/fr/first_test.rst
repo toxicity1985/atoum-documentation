@@ -101,7 +101,7 @@ Vous devriez voir quelque chose comme ça :
 Nous venons de tester que la méthode ``getHiAtoum`` :
 
 * retourne une :ref:`chaîne de caractère <string-anchor>`;
-* que :ref:`c'est égale à <string-is-equal-to>` ``"Hi atoum !"``.
+* que :ref:`c'est égal à <string-is-equal-to>` ``"Hi atoum !"``.
 
 Les tests sont passés, tout est au vert. Voilà, votre code est solide comme un roc grâce à atoum !
 
