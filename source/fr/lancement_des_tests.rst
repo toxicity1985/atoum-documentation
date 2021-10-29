@@ -95,14 +95,14 @@ Vous trouverez d'autres arguments dans la section approprié lié à la :ref:`li
 Filtres
 *******
 
-Une fois que vous avez préciser à atoum les :ref:`fichiers à exécuter <fichiers-a-executer>`, vous pouvez filtrer ce qui sera réellement exécuter.
+Une fois que vous avez préciser à atoum les :ref:`fichiers à exécuter <fichiers-a-executer>`, vous pouvez filtrer ce qui sera réellement exécuté.
 
 .. _filtres-par-namespace:
 
 Par espace de noms
 ==================
 
-Pour filtrer sur les espace de nom, par example exécuter le test seulement sur un espace de nom, il suffit d'utiliser l'option ``-ns`` or ``--namespaces``.
+Pour filtrer sur les espace de nom, par exemple exécuter le test seulement sur un espace de nom, il suffit d'utiliser l'option ``-ns`` or ``--namespaces``.
 
 .. code-block:: shell
 
