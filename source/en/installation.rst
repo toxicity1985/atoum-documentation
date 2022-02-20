@@ -9,7 +9,7 @@ If you want to use atoum, simply download the latest version.
 You can install atom in several ways:
 
 * using `composer`_;
-* download the `PHAR archive`_ ;
+* download the `PHAR archive`_;
 * clone the `Github`_ repository;
 * see also the :ref:`integration with your frameworks <utilisation-avec-frameworks>`.
 
@@ -33,6 +33,9 @@ Add ``atoum/atoum`` as a dev dependency :
 
 PHAR archive
 ============
+
+.. warning::
+	For the moment the phar build is broken, so this is not avilable....
 
 A PHAR (PHp ARchive) is created automatically on each modification of atoum.
 

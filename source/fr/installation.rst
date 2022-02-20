@@ -1,4 +1,5 @@
 
+
 .. _installation:
 
 Installation
@@ -33,6 +34,10 @@ Ajoutez ``atoum/atoum`` à vos dépendances de développement :
 
 Archive PHAR
 ============
+
+
+.. warning::
+	Pour le moment, la construction du phar est cassé, du coup ce n'est pas possible pour le moment...
 
 Une archive PHAR (PHp ARchive) est créée automatiquement à chaque modification d'atoum.
 
