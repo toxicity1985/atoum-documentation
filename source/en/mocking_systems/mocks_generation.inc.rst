@@ -201,3 +201,137 @@ as default value null. So it's the same a :ref:`shunted method<mock_shunt>`, but
 
 .. note::
 	``orphanize`` will *only* be applied to the next generated mock.
+
+.. _mock_php8_support:
+
+PHP 8.x Support
+===============
+
+Since atoum 4.1, the mock generator fully supports modern PHP type declarations, including features introduced in PHP 8.0 and later versions.
+
+Static Return Type
+------------------
+
+The mock generator correctly handles the ``static`` return type introduced in PHP 8.0:
+
+.. code-block:: php
+
+   <?php
+   class MyClass
+   {
+       public function getInstance(): static
+       {
+           return new static();
+       }
+   }
+
+   // atoum will generate a mock that respects the static return type
+   $mock = new \mock\MyClass();
+   
+   $this
+       ->object($mock->getInstance())
+           ->isInstanceOf(MyClass::class);
+
+.. note::
+   Support for ``static`` return type was added in atoum 4.1.0 (November 2022).
+
+Literal Types (null, true, false)
+----------------------------------
+
+Since atoum 4.2.0, the mock generator supports standalone literal types:
+
+.. code-block:: php
+
+   <?php
+   class Config
+   {
+       public function isEnabled(): true
+       {
+           return true;
+       }
+
+       public function getOptionalValue(): null
+       {
+           return null;
+       }
+
+       public function validateStrict(): false
+       {
+           return false;
+       }
+   }
+
+   $mock = new \mock\Config();
+   
+   // The mock will respect the literal return types
+   $this
+       ->boolean($mock->isEnabled())
+           ->isTrue()
+       ->variable($mock->getOptionalValue())
+           ->isNull()
+       ->boolean($mock->validateStrict())
+           ->isFalse();
+
+Union and Intersection Types
+-----------------------------
+
+atoum 4.x fully supports union types (PHP 8.0) and intersection types (PHP 8.1):
+
+.. code-block:: php
+
+   <?php
+   class DataProcessor
+   {
+       // Union type (PHP 8.0+)
+       public function process(int|string $data): array|false
+       {
+           // ...
+       }
+
+       // Intersection type (PHP 8.1+)
+       public function validate(Countable&Traversable $collection): bool
+       {
+           // ...
+       }
+   }
+
+   $mock = new \mock\DataProcessor();
+   
+   // Mock methods maintain proper type declarations
+   $this
+       ->array($mock->process('test'))
+       ->boolean($mock->validate(new ArrayIterator([1, 2, 3])));
+
+.. note::
+   The mock generator automatically adapts to the PHP version you're using and supports all type declarations available in that version.
+
+Compatibility with self and parent
+-----------------------------------
+
+The mock generator correctly handles ``self`` and ``parent`` return types, which were fixed in atoum 4.4.1:
+
+.. code-block:: php
+
+   <?php
+   class BaseClass
+   {
+       public function getParent(): parent
+       {
+           return parent::getInstance();
+       }
+   }
+
+   class ChildClass extends BaseClass
+   {
+       public function getSelf(): self
+       {
+           return new self();
+       }
+   }
+
+   $mock = new \mock\ChildClass();
+   
+   // Return types are properly preserved
+   $this
+       ->object($mock->getSelf())
+           ->isInstanceOf(ChildClass::class);
