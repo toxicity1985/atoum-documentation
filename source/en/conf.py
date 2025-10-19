@@ -96,15 +96,19 @@ pygments_style = 'sphinx'
 
 
 # -- Options for HTML output ----------------------------------------------
-html_theme = "atoum"
-html_theme_path = ["../../_themes", ]
+html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-  'logo_only': True,
-  'display_version': False
+  'logo_only': False,
+  'display_version': True,
+  'prev_next_buttons_location': 'bottom',
+  'style_external_links': False,
+  'collapse_navigation': True,
+  'sticky_navigation': True,
+  'navigation_depth': 4,
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
@@ -126,7 +130,7 @@ html_logo = 'atoum.png'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["../../_themes/atoum/static", ]
+# html_static_path = ["../../_themes/atoum/static", ]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
