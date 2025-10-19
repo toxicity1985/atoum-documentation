@@ -33,7 +33,7 @@ C'est d'ailleurs la raison pour laquelle les méthodes ``beforeTestMethod()`` et
    namespace vendor\project\tests\units;
 
    use
-       mageekguy\atoum,
+       atoum\atoum,
        vendor\project
    ;
 

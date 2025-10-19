@@ -53,20 +53,20 @@ If the coverage rate is 100%, atoum merely indicated. But otherwise, it displays
    => Copyright (c) 1997-2011 The PHP Group
    => Zend Engine v2.3.0, Copyright (c) 1998-2011 Zend Technologies
    =>     with Xdebug v2.1.1, Copyright (c) 2002-2011, by Derick Rethans
-   > mageekguy\atoum\tests\units\template...
+   > atoum\atoum\tests\units\template...
    [SSSSSSSSSSSSSSSSSSSSSSSSSSS_________________________________][27/27]
    => Test duration: 15.63 seconds.
    => Memory usage: 8.25 Mb.
    > Total test duration: 15.63 seconds.
    > Total test memory usage: 8.25 Mb.
    > Code coverage value: 92.52%
-   => Class mageekguy\atoum\template: 91.14%
-   ==> mageekguy\atoum\template::setWith(): 80.00%
-   ==> mageekguy\atoum\template::resetChildrenData(): 25.00%
-   ==> mageekguy\atoum\template::addToParent(): 0.00%
-   ==> mageekguy\atoum\template::unsetAttribute(): 0.00%
-   => Class mageekguy\atoum\template\data: 96.43%
-   ==> mageekguy\atoum\template\data::__toString(): 0.00%
+   => Class atoum\atoum\template: 91.14%
+   ==> atoum\atoum\template::setWith(): 80.00%
+   ==> atoum\atoum\template::resetChildrenData(): 25.00%
+   ==> atoum\atoum\template::addToParent(): 0.00%
+   ==> atoum\atoum\template::unsetAttribute(): 0.00%
+   => Class atoum\atoum\template\data: 96.43%
+   ==> atoum\atoum\template\data::__toString(): 0.00%
    > Running duration: 2.36 seconds.
    Success (1 test, 27 methods, 485 assertions, 0 error, 0 exception) !
 
@@ -94,7 +94,7 @@ For example:
    $coverageField->setRootUrl('http://url/of/web/site');
 
 .. note::
-   It is also possible to change the title of the report using the first argument to the constructor of the class ``mageekguy\atoum\report\fields\runner\coverage\html``.
+   It is also possible to change the title of the report using the first argument to the constructor of the class ``atoum\atoum\report\fields\runner\coverage\html``.
 
 
 Once this is done, you just have to use the configuration file (or include it in your configuration file) when running the tests, as follows:
@@ -243,7 +243,7 @@ Then just add the following code to your configuration file:
    <?php
    $images = '/path/to/atoum/resources/images/logo';
 
-   $notifier = new \mageekguy\atoum\report\fields\runner\result\notifier\image\growl();
+   $notifier = new \atoum\atoum\report\fields\runner\result\notifier\image\growl();
    $notifier
        ->setSuccessImage($images . DIRECTORY_SEPARATOR . 'success.png')
        ->setFailureImage($images . DIRECTORY_SEPARATOR . 'failure.png')
@@ -273,7 +273,7 @@ Then just add the following code to your configuration file:
 .. code-block:: php
 
    <?php
-   $notifier = new \mageekguy\atoum\report\fields\runner\result\notifier\terminal();
+   $notifier = new \atoum\atoum\report\fields\runner\result\notifier\terminal();
 
    $report = $script->AddDefaultReport();
    $report->addField($notifier, array(atoum\runner::runStop));
@@ -289,7 +289,7 @@ On OS X, you can define a command to be executed when the user clicks on the not
    );
    $coverage->setRootUrl('file://' . $path);
 
-   $notifier = new \mageekguy\atoum\report\fields\runner\result\notifier\terminal();
+   $notifier = new \atoum\atoum\report\fields\runner\result\notifier\terminal();
    $notifier->setCallbackCommand('open file://' . $path . '/index.html');
 
    $report = $script->AddDefaultReport();
@@ -319,7 +319,7 @@ Then just add the following code to your configuration file:
    <?php
    $images = '/path/to/atoum/resources/images/logo';
 
-   $notifier = new \mageekguy\atoum\report\fields\runner\result\notifier\image\libnotify();
+   $notifier = new \atoum\atoum\report\fields\runner\result\notifier\image\libnotify();
    $notifier
        ->setSuccessImage($images . DIRECTORY_SEPARATOR . 'success.png')
        ->setFailureImage($images . DIRECTORY_SEPARATOR . 'failure.png')

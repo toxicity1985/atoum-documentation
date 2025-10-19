@@ -19,8 +19,8 @@ The eZ Publish framework have already a directory dedicated to tests, logically 
 Step 2: Creating the class of the base tests
 --------------------------------------------
 
-A class based on atoum must extend the class ``\mageekguy\atoum\test``. However, this one doesn't take into account of *eZ Publish* specificities. It's therefore mandatory to
-define a base test class, derived from ``\mageekguy\atoum\test``, which will take into account these specificities and will derive all of the classes of unit tests. To do this, just defined the following class in the file ``tests\atoum\test.php``:
+A class based on atoum must extend the class ``\atoum\atoum\test``. However, this one doesn't take into account of *eZ Publish* specificities. It's therefore mandatory to
+define a base test class, derived from ``\atoum\atoum\test``, which will take into account these specificities and will derive all of the classes of unit tests. To do this, just defined the following class in the file ``tests\atoum\test.php``:
 
 .. code-block:: php
 
@@ -28,7 +28,7 @@ define a base test class, derived from ``\mageekguy\atoum\test``, which will tak
 
 	namespace ezp;
 
-	use mageekguy\atoum;
+	use atoum\atoum;
 
 	require_once __DIR__ . '/atoum.phar';
 
@@ -179,7 +179,7 @@ Create a Test.php file that will serve as a base for all new tests in this Bundl
 
    $loader->register();
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    // For Symfony 2.0 only !
    require_once __DIR__ . '/../../../../../vendor/atoum.phar';

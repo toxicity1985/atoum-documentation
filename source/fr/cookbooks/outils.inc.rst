@@ -4,7 +4,7 @@
 Utilisation dans behat
 **********************
 
-Les *asserters* d'atoum sont très facilement utilisables hors de vos tests unitaires classiques. Il vous suffit d'importer la classe *mageekguy\atoum\asserter* en n'oubliant pas d'assurer le chargement des classes nécessaires (atoum fournit une classe d'autoload disponible dans *classes/autoloader.php*).
+Les *asserters* d'atoum sont très facilement utilisables hors de vos tests unitaires classiques. Il vous suffit d'importer la classe *atoum\atoum\asserter* en n'oubliant pas d'assurer le chargement des classes nécessaires (atoum fournit une classe d'autoload disponible dans *classes/autoloader.php*).
 L'exemple suivant illustre cette utilisation des asserters atoum à l'intérieur de vos *steps* Behat.
 
 Installation

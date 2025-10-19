@@ -28,10 +28,10 @@ The example below makes no sense but shows in more in detail the way in which th
 
    <?php
 
-   namespace mageekguy\atoum\coding;
+   namespace atoum\atoum\coding;
 
    use
-       mageekguy\atoum,
+       atoum\atoum,
        type\hinting
    ;
 
@@ -108,11 +108,11 @@ Also here is an example of an unit test:
 
    <?php
 
-   namespace tests\units\mageekguy\atoum\coding;
+   namespace tests\units\atoum\atoum\coding;
 
    use
-       mageekguy\atoum,
-       mageekguy\atoum\coding\standards as testedClass
+       atoum\atoum,
+       atoum\atoum\coding\standards as testedClass
    ;
 
    class standards extends atoum\test
@@ -132,7 +132,7 @@ Also here is an example of an unit test:
                                $object->publicFunction(uniqid());
                            }
                        )
-                           ->IsInstanceOf('\\mageekguy\\atoum\\exception')
+                           ->IsInstanceOf('\\atoum\\atoum\\exception')
            ;
        }
    }

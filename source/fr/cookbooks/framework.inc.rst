@@ -19,8 +19,8 @@ Le framework eZ Publish possède déjà un répertoire dédié aux tests, nommé
 Étape 2 : Création de la classe de test de base
 -----------------------------------------------
 
-Une classe de test basée sur atoum doit étendre la classe ``\mageekguy\atoum\test``. Toutefois, celle-ci ne tient pas compte des spécifications de *eZ Publish*. .
-Il est donc nécessaire de définir une classe de test de base, dérivée de ``\mageekguy\atoum\test``, qui prendra en compte ces spécifités et donc dérivera l'ensemble des classes de tests unitaires. Pour cela, il suffit de définir la classe suivante dans le fichier ``tests\atoum\test.php`` :
+Une classe de test basée sur atoum doit étendre la classe ``\atoum\atoum\test``. Toutefois, celle-ci ne tient pas compte des spécifications de *eZ Publish*. .
+Il est donc nécessaire de définir une classe de test de base, dérivée de ``\atoum\atoum\test``, qui prendra en compte ces spécifités et donc dérivera l'ensemble des classes de tests unitaires. Pour cela, il suffit de définir la classe suivante dans le fichier ``tests\atoum\test.php`` :
 
 .. code-block:: php
 
@@ -28,7 +28,7 @@ Il est donc nécessaire de définir une classe de test de base, dérivée de ``\
 
 	namespace ezp;
 
-	use mageekguy\atoum;
+	use atoum\atoum;
 
 	require_once __DIR__ . '/atoum.phar';
 
@@ -179,7 +179,7 @@ Créez un fichier Test.php qui servira de base à tous les futurs tests de ce Bu
 
    $loader->register();
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    // Pour Symfony 2.0 uniquement !
    require_once __DIR__ . '/../../../../../vendor/atoum.phar';

@@ -15,8 +15,8 @@ Pour cela, dans le :ref:`fichier de configuration <fichier-de-configuration>` d'
 	// Le fichier de configuration par défaut est .atoum.php
 	// ...
 
-	$stdout = new \mageekguy\atoum\writers\std\out;
-	$report = new \mageekguy\atoum\reports\realtime\nyancat;
+	$stdout = new \atoum\atoum\writers\std\out;
+	$report = new \atoum\atoum\reports\realtime\nyancat;
 	$script->addReport($report->addWriter($stdout));
 
-Vous pouvez aussi essayer ``\mageekguy\atoum\reports\realtime\santa`` comme rapport ;)
+Vous pouvez aussi essayer ``\atoum\atoum\reports\realtime\santa`` comme rapport ;)

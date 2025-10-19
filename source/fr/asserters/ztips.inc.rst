@@ -23,7 +23,7 @@ En voici un exemple :
 	<?php
 	namespace tests\units;
 
-	use mageekguy\atoum;
+	use atoum\atoum;
 
 	class stdClass extends atoum\test
 	{
@@ -59,7 +59,7 @@ Maintenant que nous avons vu alias, nous pouvons aller plus loin en créant un a
 
 	<?php
 	namespace tests\units;
-	use mageekguy\atoum;
+	use atoum\atoum;
 
 	class creditcard extends atoum\asserters\string
 	{

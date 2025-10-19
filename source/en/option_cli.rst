@@ -157,8 +157,8 @@ This option lets you filter the classes and methods tested, based on namespaces.
 
 .. code-block:: shell
 
-   $ ./bin/atoum -ns mageekguy\\atoum\\tests\\units\\asserters
-   $ ./bin/atoum --namespaces mageekguy\\atoum\\tests\\units\\asserters
+   $ ./bin/atoum -ns atoum\\atoum\\tests\\units\\asserters
+   $ ./bin/atoum --namespaces atoum\\atoum\\tests\\units\\asserters
 
 .. note::
    Refer to the section on filters  :ref:`filtres-par-namespace` for more information.

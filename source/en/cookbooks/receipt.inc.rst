@@ -10,7 +10,7 @@ Thus, if the test class name is ``vendor\project\tests\units\foo``, it will dedu
 
 .. code-block:: shell
 
-   > exception 'mageekguy\atoum\exceptions\runtime' with message 'Test class 'project\vendor\my\tests\foo' is not in a namespace which match pattern '#(?:^|\\)ests?\\unit?s\#i'' in /path/to/unit/tests/foo.php
+   > exception 'atoum\atoum\exceptions\runtime' with message 'Test class 'project\vendor\my\tests\foo' is not in a namespace which match pattern '#(?:^|\\)ests?\\unit?s\#i'' in /path/to/unit/tests/foo.php
    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -24,7 +24,7 @@ We must therefore change the regular expression we used, this is possible in sev
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    /**
     * @namespace \my\tests
@@ -49,7 +49,7 @@ This method is quick and simple to implement, but it has the disadvantage of hav
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    abstract class aClass extends atoum
    {
@@ -77,7 +77,7 @@ The ``atoum\test:setTestNamespace()`` method indeed accepts a single argument wh
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    abstract class Test extends atoum
    {
@@ -100,7 +100,7 @@ Thus, you will only have to do derive your unit test classes from this abstract 
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
    use vendor\project\my\tests;
 
    class aModule extends tests\Test
@@ -134,7 +134,7 @@ However, in general, the namespace used to test classes is fixed, and it's not n
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    /**
     * @namespace \my\tests\

@@ -106,7 +106,7 @@ Pour filtrer sur les espace de nom, par exemple exécuter le test seulement sur 
 
 .. code-block:: shell
 
-   $ ./bin/atoum -d tests/units -ns mageekguy\\atoum\\tests\\units\\asserters
+   $ ./bin/atoum -d tests/units -ns atoum\\atoum\\tests\\units\\asserters
 
 .. note::
    Il est important de doubler chaque backslash pour éviter qu'ils soient interprétés par le shell.
@@ -121,7 +121,7 @@ Pour filtrer sur une classe ou une méthode, c'est-à-dire exécuter seulement d
 
 .. code-block:: shell
 
-   $ ./bin/atoum -d tests/units -m mageekguy\\atoum\\tests\\units\\asserters\\string::testContains
+   $ ./bin/atoum -d tests/units -m atoum\\atoum\\tests\\units\\asserters\\string::testContains
 
 .. note::
    Il est important de doubler chaque backslash pour éviter qu'ils soient interprétés par le shell.
@@ -131,7 +131,7 @@ Vous pouvez remplacer le nom de la classe ou de la méthode par ``*`` pour signi
 
 .. code-block:: shell
 
-   $ ./bin/atoum -d tests/units -m mageekguy\\atoum\\tests\\units\\asserters\\string::*
+   $ ./bin/atoum -d tests/units -m atoum\\atoum\\tests\\units\\asserters\\string::*
 
 En utilisant "*" au lieu d'un nom de classe signifie que vous pouvez filtrer par nom de la méthode.
 
@@ -159,7 +159,7 @@ Cela se fait très simplement grâce aux annotations et à la balise @tags :
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    /**
     * @tags thisIsOneTag thisIsTwoTag thisIsThreeTag
@@ -186,7 +186,7 @@ De la même manière, il est également possible de taguer les méthodes de test
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    class foo extends atoum\test
    {

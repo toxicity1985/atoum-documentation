@@ -138,7 +138,7 @@ hasKey
    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
    $atoum     = array(
        'name'        => 'atoum',
-       'owner'       => 'mageekguy',
+       'owner'       => 'atoum',
    );
 
    $this
@@ -174,7 +174,7 @@ hasKeys
    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
    $atoum     = array(
        'name'        => 'atoum',
-       'owner'       => 'mageekguy',
+       'owner'       => 'atoum',
    );
 
    $this
@@ -431,7 +431,7 @@ notHasKeys
    $fibonacci = array('1', 2, '3', 5, '8', 13, '21');
    $atoum     = array(
        'name'        => 'atoum',
-       'owner'       => 'mageekguy',
+       'owner'       => 'atoum',
    );
 
    $this

@@ -37,7 +37,7 @@ Once the tests are complete, if the tests passed, atoum simply waits:
    => PHP 5.6.3 (cli) (built: Nov 13 2014 18:31:57)
    => Copyright (c) 1997-2014 The PHP Group
    => Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
-   > mageekguy\atoum\tests\units\adapter...
+   > atoum\atoum\tests\units\adapter...
    [SS__________________________________________________________][2/2]
    => Test duration: 0.00 second.
    => Memory usage: 0.50 Mb.
@@ -59,7 +59,7 @@ In the case where the code doesn't pass the tests successfully, i.e. if assertio
    => PHP 5.6.3 (cli) (built: Nov 13 2014 18:31:57)
    => Copyright (c) 1997-2014 The PHP Group
    => Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
-   > mageekguy\atoum\tests\units\adapter...
+   > atoum\atoum\tests\units\adapter...
    [FS__________________________________________________________][2/2]
    => Test duration: 0.00 second.
    => Memory usage: 0.25 Mb.
@@ -68,8 +68,8 @@ In the case where the code doesn't pass the tests successfully, i.e. if assertio
    > Running duration: 0.05 second.
    Failure (1 test, 2/2 methods, 0 void method, 0 skipped method, 0 uncompleted method, 1 failure, 0 error, 0 exception)!
    > There is 1 failure:
-   => mageekguy\atoum\tests\units\adapter::test__call():
-   In file /media/data/dev/atoum-documentation/tests/vendor/atoum/atoum/tests/units/classes/adapter.php on line 16, mageekguy\atoum\asserters\string() failed: strings are not equal
+   => atoum\atoum\tests\units\adapter::test__call():
+   In file /media/data/dev/atoum-documentation/tests/vendor/atoum/atoum/tests/units/classes/adapter.php on line 16, atoum\atoum\asserters\string() failed: strings are not equal
    -Expected
    +Actual
    @@ -1 +1 @@
@@ -92,7 +92,7 @@ Once all failed tests pass successfully, atoum will automatically run all test s
    => PHP 5.6.3 (cli) (built: Nov 13 2014 18:31:57)
    => Copyright (c) 1997-2014 The PHP Group
    => Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
-   > mageekguy\atoum\tests\units\adapter...
+   > atoum\atoum\tests\units\adapter...
    [S___________________________________________________________][1/1]
    => Test duration: 0.00 second.
    => Memory usage: 0.25 Mb.
@@ -105,7 +105,7 @@ Once all failed tests pass successfully, atoum will automatically run all test s
    => PHP 5.6.3 (cli) (built: Nov 13 2014 18:31:57)
    => Copyright (c) 1997-2014 The PHP Group
    => Zend Engine v2.6.0, Copyright (c) 1998-2014 Zend Technologies
-   > mageekguy\atoum\tests\units\adapter...
+   > atoum\atoum\tests\units\adapter...
    [SS__________________________________________________________][2/2]
    => Test duration: 0.00 second.
    => Memory usage: 0.50 Mb.

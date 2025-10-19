@@ -106,7 +106,7 @@ To filter on the namespace, i.e. execute only test on given namespace, you have 
 
 .. code-block:: shell
 
-   $ ./bin/atoum -d tests/units -ns mageekguy\\atoum\\tests\\units\\asserters
+   $ ./bin/atoum -d tests/units -ns atoum\\atoum\\tests\\units\\asserters
 
 .. note::
    It's important to use double backslashes to prevent them from being interpreted by the shell.
@@ -121,7 +121,7 @@ To filter on a class or a method, i.e. only run tests of a class or a method, ju
 
 .. code-block:: shell
 
-   $ ./bin/atoum -d tests/units -m mageekguy\\atoum\\tests\\units\\asserters\\string::testContains
+   $ ./bin/atoum -d tests/units -m atoum\\atoum\\tests\\units\\asserters\\string::testContains
 
 .. note::
    It's important to use double backslashes to prevent them from being interpreted by the shell.
@@ -131,7 +131,7 @@ You can replace the name of the class or the method with ``*`` to mean ``all``.
 
 .. code-block:: shell
 
-   $ ./bin/atoum -d tests/units -m mageekguy\\atoum\\tests\\units\\asserters\\string::*
+   $ ./bin/atoum -d tests/units -m atoum\\atoum\\tests\\units\\asserters\\string::*
 
 Using "*" instead of class name mean you can filter by method name.
 
@@ -159,7 +159,7 @@ This is easily done through annotations and the @tags tag:
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    /**
     * @tags thisIsOneTag thisIsTwoTag thisIsThreeTag
@@ -186,7 +186,7 @@ In the same way, it is also possible to tag test methods.
 
    require_once __DIR__ . '/atoum.phar';
 
-   use mageekguy\atoum;
+   use atoum\atoum;
 
    class foo extends atoum\test
    {

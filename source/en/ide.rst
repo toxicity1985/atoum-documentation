@@ -93,7 +93,7 @@ You can configure a specific :ref:`report<reports-using>` for the coverage in vi
 .. code-block:: php
 
    <?php
-   use \mageekguy\atoum;
+   use \atoum\atoum;
    $vimReport = new atoum\reports\asynchronous\vim();
    $vimReport->addWriter($stdOutWriter);
    $runner->addReport($vimReport);
@@ -178,8 +178,8 @@ macvim
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\macos
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\macos
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -199,8 +199,8 @@ gvim
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\unix
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\unix
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -222,8 +222,8 @@ If you are under Mac OS X, use the following configuration:
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\macos
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\macos
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -252,8 +252,8 @@ Under Unix environment, use the following configuration:
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\unix
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\unix
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -277,8 +277,8 @@ gedit
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\unix
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\unix
    ;
 
    $stdOutWriter = new atoum\writers\std\out();

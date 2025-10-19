@@ -149,8 +149,8 @@ Cette option vous permet de filtrer les classes et les méthodes en fonction des
 
 .. code-block:: shell
 
-   $ ./bin/atoum -ns mageekguy\\atoum\\tests\\units\\asserters
-   $ ./bin/atoum --namespaces mageekguy\\atoum\\tests\\units\\asserters
+   $ ./bin/atoum -ns atoum\\atoum\\tests\\units\\asserters
+   $ ./bin/atoum --namespaces atoum\\atoum\\tests\\units\\asserters
 
 .. note::
    Reportez-vous à la section sur les filtres :ref:`filtres-par-namespace` pour avoir plus d'informations.

@@ -102,7 +102,7 @@ Vous pouvez configurer un rapport :ref:`spécifique<reports-using>` pour la couv
 ... code-block:: php
 
    <?php
-   use \mageekguy\atoum;
+   use \atoum\atoum;
    $vimReport = new atoum\reports\asynchronous\vim();
    $vimReport->addWriter($stdOutWriter);
    $runner->addReport($vimReport);
@@ -176,8 +176,8 @@ macvim
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\macos
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\macos
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -197,8 +197,8 @@ gvim
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\unix
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\unix
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -220,8 +220,8 @@ Si vous travaillez sous Mac OS X, utilisez la configuration suivante :
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\macos
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\macos
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -250,8 +250,8 @@ Dans un environnement Unix, utilisez la configuration suivante :
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\unix
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\unix
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
@@ -275,8 +275,8 @@ gedit
 
    <?php
    use
-       mageekguy\atoum,
-       mageekguy\atoum\report\fields\runner\failures\execute\unix
+       atoum\atoum,
+       atoum\atoum\report\fields\runner\failures\execute\unix
    ;
 
    $stdOutWriter = new atoum\writers\std\out();
