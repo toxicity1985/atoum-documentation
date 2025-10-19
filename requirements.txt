@@ -1,0 +1,4 @@
+# Sphinx dependencies for building the documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.2.0
+
