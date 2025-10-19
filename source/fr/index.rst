@@ -23,6 +23,7 @@ Vous pouvez trouver plus d'information sur le `site officiel <http://atoum.org/>
 
    start_with_atoum
    installation
+   upgrading
    first_test
    lancement_des_tests
    how_to_write_test_cases
