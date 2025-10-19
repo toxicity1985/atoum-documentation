@@ -6,6 +6,34 @@ Installation
 
 If you want to use atoum, simply download the latest version.
 
+.. _installation-requirements:
+
+Requirements
+============
+
+atoum requires **PHP 8.0 or higher** to work.
+
+Here is the compatibility table between PHP and atoum versions:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 30
+
+   * - PHP Version
+     - atoum Version
+   * - 5.3 → 5.6
+     - 1.x → 3.x
+   * - 7.2 → 8.1
+     - 4.0 → 4.1
+   * - 8.0+
+     - 4.1+ (current)
+
+.. note::
+   For PHP 8.0+, we recommend using the latest version of atoum via Composer to benefit from the latest features and bug fixes.
+
+Installation methods
+====================
+
 You can install atom in several ways:
 
 * using `composer`_;

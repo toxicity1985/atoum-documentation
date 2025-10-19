@@ -31,7 +31,7 @@ In order to simplify the writing of tests with arrays, some syntactic sugar is a
    ;
 
 .. note::
-   This writing form is available from PHP 5.4.
+   This writing form has been available since PHP 5.4 and is supported in all current PHP versions.
 
 .. _array-child:
 
@@ -66,7 +66,7 @@ With ``child`` you can assert on a subarray.
          });
 
 .. note::
-   This is available from PHP 5.4.
+   This syntax has been available since PHP 5.4 and is supported in all current PHP versions.
 
 .. _array-contains:
 

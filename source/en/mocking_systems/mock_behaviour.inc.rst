@@ -50,8 +50,8 @@ The ``mockController`` allows you to redefine **only public and abstract protect
    $this->calling($mockDbClient)->connect->throw = new \Database\Client\Exception();
 
 .. note::
-	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Refer
-	to `PHP manual <http://php.net/functions.anonymous>`__ for more information on the subject.
+	The syntax uses anonymous functions (also called closures), which are a standard feature in PHP.
+	Refer to the `PHP manual <http://php.net/functions.anonymous>`__ for more information on the subject.
 
 As you can see, it is possible to use several methods to get the desired behaviour:
 
@@ -139,8 +139,8 @@ methods
 In the last example, you should instead use `methodsMatching<mock_method_matching>`.
 
 .. note::
-	The syntax uses anonymous functions (also called closures) introduced in PHP 5.3. Refer
-	to `PHP manual <http://php.net/functions.anonymous>`__ for more information on the subject.
+	The syntax uses anonymous functions (also called closures), which are a standard feature in PHP.
+	Refer to the `PHP manual <http://php.net/functions.anonymous>`__ for more information on the subject.
 
 
 .. _mock_method_matching:

@@ -17,7 +17,7 @@ It's the assertion dedicated to tests on outputs, so everything witch supposed t
    ;
 
 .. note::
-   The syntax uses anonymous functions (also called closures) introduced in PHP 5.3.
+   The syntax uses anonymous functions (also called closures), which are a standard feature in PHP.
    For more details, read the PHP's documentation on `anonymous functions <http://php.net/functions.anonymous>`_.
 
 

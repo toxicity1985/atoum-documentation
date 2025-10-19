@@ -66,7 +66,7 @@ Avec ``child`` vous pouvez faire une assertion sur un sous tableau.
          });
 
 .. note::
-   Cette forme d'écriture n'est disponible qu'à partir de PHP 5.4.
+   Cette forme d'écriture est disponible depuis PHP 5.4 et est supportée dans toutes les versions actuelles de PHP.
 
 .. _array-contains:
 

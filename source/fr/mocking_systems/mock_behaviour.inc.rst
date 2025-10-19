@@ -50,8 +50,8 @@ Le ``mockController`` vous permet de redéfinir **uniquement les méthodes publi
    $this->calling($mockDbClient)->connect->throw = new \Database\Client\Exception();
 
 .. note::
-	La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures) introduites en PHP 5.3. Reportez-vous
-	au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
+	La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures), qui sont une fonctionnalité standard de PHP.
+	Reportez-vous au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
 
 Comme vous pouvez le voir, il est possible d'utiliser plusieurs méthodes afin d'obtenir le comportement souhaité :
 
@@ -139,8 +139,8 @@ methods
 Dans le cas du dernier exemple, vous devriez plutôt utiliser :ref:`methodsMatching<mock_method_matching>`.
 
 .. note::
-	La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures) introduites en PHP 5.3. Reportez-vous
-	au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
+	La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures), qui sont une fonctionnalité standard de PHP.
+	Reportez-vous au `manuel de PHP <http://php.net/functions.anonymous>`__ pour avoir plus d'informations sur le sujet.
 
 
 .. _mock_method_matching:

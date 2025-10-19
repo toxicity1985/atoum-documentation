@@ -19,7 +19,7 @@ C'est l'assertion dédiée aux erreurs.
    ;
 
 .. note::
-   La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures) introduites en PHP 5.3.
+   La syntaxe utilise les fonctions anonymes (aussi appelées fermetures ou closures), qui sont une fonctionnalité standard de PHP.
    Pour plus de précision, lisez la documentation PHP sur `les fonctions anonymes <http://php.net/functions.anonymous>`_.
 
 
